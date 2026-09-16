@@ -1,0 +1,54 @@
+---
+title: Intelligence
+lens: intelligence
+kind: brief
+tags: [lens]
+updated: 2026-09-16
+---
+
+# Intelligence — the synthesis lens
+
+**Owns:** deciding.
+
+This lens is not in the original article. It exists because you are one person
+playing four roles, and somebody has to hold the four views together and choose.
+That is a different job from any of the four, and it is the one that goes missing
+when you work alone — which is usually why the thinking feels like it is going in
+circles.
+
+## What to ask it
+
+- What do the four lenses disagree about right now?
+- What is the single next question that would unblock the most work?
+- What am I avoiding because it is boring or scary?
+- Which artifacts are still `draft` that I keep pretending I have read?
+- Has the bet in the anchor note changed since I wrote it?
+
+## What you can expect back
+
+A decision note, or a shorter list. Its main output is removal: killing questions
+that no longer matter.
+
+## Artifact kinds here
+
+`decision`, `digest`, `brief`
+
+Output goes in `ideas/<idea>/decisions/`, not in a lens folder. Use
+[templates/decision.md](../templates/decision.md).
+
+## The rule for this lens
+
+A decision note is only finished when it says how you will know it was wrong.
+Without that line it is not a decision, it is a mood.
+
+## Background reading
+
+[What "intelligence" means](../library/what-intelligence-means.md) — the owner's
+notes on why this lens is named that.
+
+## Open questions
+
+-
+
+---
+Everything still in `draft` is flagged in [INDEX.md](../INDEX.md).
