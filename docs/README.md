@@ -40,7 +40,7 @@ docs/
 Inside one idea:
 
 ```
-ideas/routine-app/
+ideas/santian/
   README.md      Anchor note (the hub). Always start and end here.
   hound/         User research, evidence, opportunity areas.
   hipster/       Wireframes, flows, UI critiques, copy and tone.

@@ -1,4 +1,4 @@
-# AGENTS.md — RoutineApp
+# AGENTS.md — Santian
 
 This folder holds two things:
 

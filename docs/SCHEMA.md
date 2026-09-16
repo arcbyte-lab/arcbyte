@@ -47,7 +47,7 @@ Every note under `ideas/` and `library/` starts with this block. Copy it from
 ```yaml
 ---
 title: Google Tasks UX playbook        # human title, free text
-idea: routine-app                      # folder name under ideas/
+idea: santian                      # folder name under ideas/
 lens: hipster                          # see below
 kind: critique                         # see below
 status: draft                          # see below
@@ -55,7 +55,7 @@ source: gemini-2.5-pro (browser)       # see below
 evidence: none                         # none | weak | strong
 created: 2026-09-16                    # YYYY-MM-DD, never changes
 updated: 2026-09-16                    # YYYY-MM-DD, bump on every edit
-inputs: ["../assets/routine-wireframe-snapshot.png"]   # relative paths, may be []
+inputs: ["../assets/santian-wireframe-snapshot.png"]   # relative paths, may be []
 tags: [artifact]
 ---
 ```
@@ -137,9 +137,9 @@ Plain Markdown relative links, not `[[wiki links]]`. This folder is read on
 GitHub and by tools that do not understand Obsidian syntax.
 
 ```markdown
-Part of [Routine App](../README.md)
+Part of [Santian](../README.md)
 See also [the wireframe spec](../hipster/wireframe-geometry-spec.md)
-![Wireframe snapshot](../assets/routine-wireframe-snapshot.png)
+![Wireframe snapshot](../assets/santian-wireframe-snapshot.png)
 ```
 
 Every artifact ends with a `Part of [<Idea>](../README.md)` line.
