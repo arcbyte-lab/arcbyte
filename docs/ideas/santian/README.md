@@ -48,7 +48,7 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 | lens | where it stands |
 |---|---|
 | [Hound](../../lenses/hound.md) | Nothing. No real person has been asked anything. One open question. |
-| [Hipster](../../lenses/hipster.md) | A wireframe exists and has been described precisely. The interactions are intentions, not drawings. |
+| [Hipster](../../lenses/hipster.md) | A hi-fi mockup now exists for the 8 core Tasks screens, light and dark. It reads as a close Google Tasks clone on a generic, partly-unedited theme — see open questions. |
 | [Hacker](../../lenses/hacker.md) | One model-generated stack sketch, now out of date. Old aggregate retired, replacement undecided. |
 | [Hustler](../../lenses/hustler.md) | Mostly closed for this idea — no market, no pricing, no channel. See decision 0003. |
 
@@ -66,6 +66,7 @@ the replacement, and nothing else can be modelled until it is answered.
 **Hipster**
 - [Wireframe geometry spec](./hipster/wireframe-geometry-spec.md) — what is actually drawn in the Penpot file
 - [Google Tasks UX playbook](./hipster/google-tasks-ux-playbook.md) — patterns to copy
+- [Hi-fi mockup is a Google Tasks clone riding an unused generic theme](./hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md) — critique of the new hi-fi export
 
 **Hacker**
 - [Offline task module architecture](./hacker/offline-task-module-architecture.md) — model's Flutter stack sketch
@@ -78,12 +79,17 @@ the replacement, and nothing else can be modelled until it is answered.
 
 **Assets**
 - [Wireframe snapshot](./assets/santian-wireframe-snapshot.png)
+- [Hi-fi mockup snapshot](./assets/santian-hifi-snapshot.png)
+- [Hi-fi export (HTML)](./assets/santian-hifi-export.html)
+- [Theme CSS](./assets/exodus.css)
+- [Tailwind config](./assets/tailwind.config.ts)
 
 ## Decisions
 
 - [0001 — Rethink the Focus aggregate](./decisions/0001-rethink-the-focus-aggregate.md) — 2026-09-16
 - [0002 — Build Tasks before Clockface](./decisions/0002-build-tasks-before-clockface.md) — 2026-09-17
 - [0003 — Santian is a personal tool, not a product](./decisions/0003-personal-tool-not-a-product.md) — 2026-09-17
+- [0004 — Clone Google Tasks' interaction model, only change the visual skin](./decisions/0004-clone-google-tasks-interactions.md) — 2026-09-17
 
 ## Health check
 
