@@ -1,7 +1,7 @@
 ---
 title: SCHEMA — frontmatter and naming
 kind: meta
-updated: 2026-09-16
+updated: 2026-09-17
 ---
 
 # Schema
@@ -14,13 +14,16 @@ fields, so a typo here means the note disappears from `INDEX.md`.
 
 | The note is about | Path |
 |---|---|
-| A specific idea, seen through one lens | `docs/ideas/<idea>/<lens>/<name>.md` |
-| A choice that was made | `docs/ideas/<idea>/decisions/<name>.md` |
-| The idea as a whole | `docs/ideas/<idea>/README.md` (the anchor — one per idea) |
-| How to think, not what to build | `docs/lenses/<lens>.md` |
-| Somebody else's work | `docs/library/<name>.md` |
-| Not placeable yet | `docs/inbox/<name>.md` |
-| An image or export | `docs/ideas/<idea>/assets/` (no text notes here) |
+| A specific idea, seen through one lens | `ideas/<idea>/<lens>/<name>.md` |
+| A choice that was made | `ideas/<idea>/decisions/<name>.md` |
+| The idea as a whole | `ideas/<idea>/README.md` (the anchor — one per idea) |
+| One idea's vocabulary | `ideas/<idea>/CONTEXT.md` (plain prose, no frontmatter) |
+| Long-form synthesis of one idea | `ideas/<idea>/narrative/<name>.md` |
+| Arcbyte's own vocabulary | `CONTEXT.md` at the root (plain prose, no frontmatter) |
+| How to think, not what to build | `lenses/<lens>.md` |
+| Somebody else's work | `library/<name>.md` |
+| Not placeable yet | `inbox/<name>.md` |
+| An image or export | `ideas/<idea>/assets/` (no text notes here) |
 
 `<lens>` is one of: `hound`, `hipster`, `hacker`, `hustler`. There is no
 `intelligence/` folder — intelligence output is a decision, so it goes in
@@ -122,14 +125,30 @@ wearing a lab coat — pretending to be more certain than it is. Label it honest
 | `teardown` | a competitor pulled apart | hustler |
 | `decision` | a choice made, with the reason | intelligence |
 | `digest` | a weekly roll-up of what changed | intelligence |
+| `narrative` | long-form synthesis of a whole idea, built from other artifacts | intelligence |
 | `analysis` | catch-all when nothing above fits | any |
 | `meta` | a file about the vault itself | none |
+
+### `stage` — anchor notes only
+
+Only `ideas/<idea>/README.md` carries this field. It describes the **idea**, not
+the note, and it is the one field an AI may never change.
+
+| value | means |
+|---|---|
+| `idea` | Thinking only. No code has been started. |
+| `project` | Someone is building it. Add a `repo:` line saying where the code lives. |
+| `parked` | Stopped on purpose, kept so the thinking is not lost. |
+
+Promotion from `idea` to `project` is a decision and gets a note in
+`decisions/`. Nothing moves on disk when it happens.
 
 ### Optional fields
 
 - `url:` — required when `source: article`.
 - `supersedes:` / `superseded_by:` — relative path to the other note.
 - `aliases:` — other titles this note has been called.
+- `repo:` — anchor notes with `stage: project`. Where the code actually lives.
 
 ## Linking
 
@@ -146,6 +165,6 @@ Every artifact ends with a `Part of [<Idea>](../README.md)` line.
 
 ## After you write
 
-1. Add the note to the **Artifacts** list in `docs/ideas/<idea>/README.md`.
+1. Add the note to the **Artifacts** list in `ideas/<idea>/README.md`.
 2. Update **Status by lens** in that anchor note if the lens moved forward.
-3. Run `python3 docs/scripts/build_index.py` from the repo root.
+3. Run `python3 scripts/build_index.py` from the repo root.

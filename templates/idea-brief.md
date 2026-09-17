@@ -1,6 +1,7 @@
 ---
 title:
 idea:
+stage: idea
 lens: intelligence
 kind: brief
 status: draft
@@ -14,6 +15,11 @@ tags: [anchor]
 # Idea name
 
 > The anchor note. The only note that must stay current.
+
+## Stage
+`stage: idea` — thinking only, no code yet. It becomes a `project` the day a
+repository is started: change the field, add a `repo:` line, and write the
+decision that says why.
 
 ## One line
 What it is, for whom, in one sentence.
@@ -36,6 +42,9 @@ One question. Not a list.
 
 ## Artifacts
 -
+
+## Narrative
+- none yet. Only add this section if the idea grows a `narrative/` folder.
 
 ## Decisions
 - none yet

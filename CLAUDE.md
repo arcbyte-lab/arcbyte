@@ -1,2 +1,2 @@
 See [AGENTS.md](./AGENTS.md). Everything for agents lives there, and in
-`docs/AGENTS.md` and `docs/SCHEMA.md`.
+[CONTEXT.md](./CONTEXT.md) and [SCHEMA.md](./SCHEMA.md).

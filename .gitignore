@@ -1,13 +1,4 @@
 .DS_Store
 *.swp
-
-# Flutter / Dart (for when the app code lands here)
-.dart_tool/
-.packages
-build/
-.flutter-plugins
-.flutter-plugins-dependencies
-*.iml
-.idea/
 __pycache__/
 *.pyc

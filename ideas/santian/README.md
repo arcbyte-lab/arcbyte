@@ -1,13 +1,14 @@
 ---
 title: Santian
 idea: santian
+stage: idea
 lens: intelligence
 kind: brief
 status: draft
 source: me
 evidence: none
 created: 2026-09-16
-updated: 2026-09-16
+updated: 2026-09-17
 tags: [anchor]
 ---
 
@@ -15,6 +16,21 @@ tags: [anchor]
 
 > The anchor note. The only note here that must stay current. Blank sections are
 > blank on purpose — nobody has answered them yet. Do not fill them with guesses.
+
+## Stage
+
+`stage: idea`. No code exists yet, so this is still thinking only. It becomes a
+`project` the day a repository is started — that is the owner's call and needs
+its own decision note. See [Arcbyte's glossary](../../CONTEXT.md) for what the
+two words mean here.
+
+## Vision-led documentation
+
+A separate synthesis of this idea as a whole — vision, experimentation, current
+identity, the personal dimension, and the path toward public release — lives in
+[`narrative/`](./narrative/product-narrative.md), starting with
+[the product narrative](./narrative/product-narrative.md). It is written from the
+artifacts below and does not replace them.
 
 ## One line
 _What it is, for whom, in one sentence._
@@ -34,7 +50,7 @@ Renamed from "Routine App" to **Santian** on 2026-09-16. This is a deliberate
 rethink of the `timez_core` model — see
 [decision 0001](./decisions/0001-rethink-the-focus-aggregate.md). The product
 needs both a repeating weekly **Routine** and real calendar **Days** the user can
-adjust. Vocabulary lives in [CONTEXT.md](../../../CONTEXT.md).
+adjust. Vocabulary lives in [CONTEXT.md](./CONTEXT.md), beside this note.
 
 Build order: Tasks module first. Clockface does not start until Tasks is
 settled — see
@@ -76,6 +92,14 @@ the replacement, and nothing else can be modelled until it is answered.
 
 **Hustler**
 - [Why would anyone switch from Google Tasks?](./hustler/why-switch-from-google-tasks.md) — answered: it doesn't apply, this is a personal tool
+
+**Narrative** — long-form synthesis, written from the artifacts above
+- [Product narrative](./narrative/product-narrative.md) — the entry point
+- [The Vision](./narrative/vision.md)
+- [The Experiment](./narrative/experiment-synthesis.md)
+- [The Core Identity](./narrative/core-identity.md)
+- [The Personal Dimension](./narrative/personal-dimension.md)
+- [Toward Public Release](./narrative/toward-public-release.md)
 
 **Assets**
 - [Wireframe snapshot](./assets/santian-wireframe-snapshot.png)

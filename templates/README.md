@@ -20,3 +20,6 @@ Copy one of these, do not edit it in place. Field values are defined in
 | `spike.md` | a small technical experiment and what it proved. |
 | `teardown.md` | a competitor pulled apart. |
 | `digest.md` | the weekly roll-up. Goes in `ideas/<idea>/decisions/`. |
+
+A glossary (`CONTEXT.md`, at the root or inside an idea) has no template and no
+frontmatter. It is plain prose, and the index skips it on purpose.

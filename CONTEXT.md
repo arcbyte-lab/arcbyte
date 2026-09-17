@@ -1,61 +1,93 @@
-# Santian
+# Arcbyte
 
-A mobile app for planning a day. The user keeps a repeating weekly Routine and
-adjusts it for specific dates. One screen shows a day as a circular clockface;
-another shows it as a linear list.
+A thinking space for product ideas, organised around five lenses.
 
-This file is a glossary and nothing else. No implementation details, no plans.
-Product thinking lives in [docs/](./docs/README.md).
+This file is a glossary and nothing else. It defines the words Arcbyte uses
+about itself — idea, project, artifact, lens. It says nothing about any
+particular product. Each idea keeps its own glossary at
+`ideas/<idea>/CONTEXT.md`; Santian's is
+[here](./ideas/santian/CONTEXT.md).
 
-Santian here is a deliberate rethink of the model in `timez_core`. See
-[decision 0001](./docs/ideas/santian/decisions/0001-rethink-the-focus-aggregate.md)
-for what changed and why. Terms from that older model — `Focus`, `Schedule` —
-are not current here.
+Field values and file naming are in [SCHEMA.md](./SCHEMA.md). How to behave in
+here is in [AGENTS.md](./AGENTS.md).
 
 ## Language
 
-**Santian**:
-The product.
-_Avoid_: RoutineApp, Timez, Routine. The folder on disk is still called
-`RoutineApp` and the older codebase is called `timez_core`; neither is the
-product's name, and "Routine" now means something specific — see below.
+**Arcbyte**:
+This whole space. Not a product, not a company, not a codebase. The place where
+ideas are collected and thought about.
+_Avoid_: vault, workspace, repo, org
 
-**Block**:
-A span of time with a start and a duration, carrying one thing the user intends
-to do. The core unit of the whole product. A Block is an interval, never a point
-in time.
-_Avoid_: task, event, entry, item, slot, session
+**Idea**:
+One product thought, with a folder of its own under `ideas/`. An idea exists the
+moment it has an anchor note. It does not need to be good, funded, or started.
+_Avoid_: concept, initiative, venture
 
-**Routine**:
-The repeating weekly plan — what a typical Tuesday looks like. Has no dates. A
-Routine positions Blocks on a DayOfWeek. This is a domain term and refers to
-nothing else; the repo folder name `RoutineApp` predates it and is unrelated.
-_Avoid_: Pattern, Template, Schedule, Focus, week
+**Project**:
+An idea someone has started building. It is not a different folder or a
+different kind of thing — it is an idea whose `stage` is `project` and whose
+code lives somewhere else. Promotion is a decision, and gets a note in
+`decisions/`.
+_Avoid_: product, app, build
 
-**DayOfWeek**:
-Where a Block sits inside a Routine: Tuesday, not 16 September.
+**Stage**:
+Where an idea stands: `idea` (thinking only), `project` (being built), `parked`
+(stopped, kept). Lives in the anchor note's frontmatter. One value.
+_Avoid_: status — `status` is about a single note, not the idea. The two words
+are not interchangeable here.
 
-**Day**:
-One real calendar date. What the user actually sees and lives. A Day starts from
-the Routine for its DayOfWeek and may differ from it.
+**Artifact**:
+Any note in here that says something about an idea. Every artifact declares
+where it came from (`source`) and how much evidence is behind it (`evidence`).
+A model's guess and a real user's words are both artifacts, and the frontmatter
+is what keeps them apart.
+_Avoid_: doc, note, output, deliverable
 
-**Clockface**:
-The circular view of a Day, where time runs around a dial.
-_Avoid_: dial, clock, radial view, wheel
+**Lens**:
+One of five ways of looking at an idea: **hound** (what is true about the user),
+**hipster** (what it feels like), **hacker** (how it is built), **hustler** (who
+pays and how they find it), **intelligence** (weighing the four and choosing).
+An artifact has exactly one lens. Four of them are also folders inside an idea;
+intelligence is not, because its output is a decision.
+_Avoid_: hat, role, perspective, discipline
 
-**Block list**:
-The linear view of a Day, where Blocks are stacked top to bottom.
-_Avoid_: task list, agenda, feed
+**Anchor note**:
+`ideas/<idea>/README.md`. The hub for one idea, and the only note in the whole
+space that must stay current. Everything else is allowed to go stale.
+_Avoid_: index, overview, main note
+
+**Decision**:
+A choice that was made, with the reason attached, numbered and dated in
+`ideas/<idea>/decisions/`. A decision is intelligence output. It outlives the
+notes that fed it.
+_Avoid_: ADR, RFC, conclusion
+
+**Narrative**:
+Long-form synthesis of one idea as a whole, in `ideas/<idea>/narrative/`.
+Written from artifacts, never in place of them. Optional, and most ideas will
+never need one.
+_Avoid_: story, whitepaper, pitch
+
+**Library**:
+Somebody else's work, kept whole: articles, competitor docs, quotes. Shared
+across ideas, which is why it sits at the root and not inside one.
+_Avoid_: references, resources, reading
+
+**Inbox**:
+Raw input dropped in without filing it. A holding pen, emptied weekly, not a
+folder anything lives in.
+
+**Archive**:
+Where superseded and rejected artifacts go. Nothing is ever deleted here; it is
+moved and marked, so the same dead end is not rediscovered later.
 
 ## Not yet defined
 
 Do not invent definitions for these. They are open questions, not gaps to fill.
 
-- **How a Day differs from its Routine.** Stored as an adjustment on top of the
-  Routine, or copied out into a real Day the moment it is touched? See
-  [how does a Day differ from its Routine?](./docs/ideas/santian/hacker/day-versus-routine.md).
-  Nothing else can be modelled until this is answered.
-- **Whether Blocks may overlap.** The older model forbade it outright. Whether
-  that survives the rethink is open, and it decides whether the Clockface or the
-  Block list is the source of truth. See
-  [is the Clockface or the list the source of truth?](./docs/ideas/santian/hacker/clockface-or-list-source-of-truth.md).
+- **What happens to an idea's thinking once its code exists.** Arcbyte keeps
+  the thinking and the code repo keeps the code, but nothing says which one owns
+  a domain model once both are real, or how they are kept from drifting apart.
+- **Whether two ideas can share an artifact.** Today every artifact belongs to
+  exactly one idea, and anything shared gets copied into `library/`. That has
+  not been tested with a second idea, because there is not one yet.
