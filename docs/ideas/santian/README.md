@@ -36,6 +36,13 @@ rethink of the `timez_core` model — see
 needs both a repeating weekly **Routine** and real calendar **Days** the user can
 adjust. Vocabulary lives in [CONTEXT.md](../../../CONTEXT.md).
 
+Build order: Tasks module first. Clockface does not start until Tasks is
+settled — see
+[decision 0002](./decisions/0002-build-tasks-before-clockface.md).
+
+This is a personal tool for the owner, not a product aimed at strangers — see
+[decision 0003](./decisions/0003-personal-tool-not-a-product.md).
+
 ## Status by lens
 
 | lens | where it stands |
@@ -43,7 +50,7 @@ adjust. Vocabulary lives in [CONTEXT.md](../../../CONTEXT.md).
 | [Hound](../../lenses/hound.md) | Nothing. No real person has been asked anything. One open question. |
 | [Hipster](../../lenses/hipster.md) | A wireframe exists and has been described precisely. The interactions are intentions, not drawings. |
 | [Hacker](../../lenses/hacker.md) | One model-generated stack sketch, now out of date. Old aggregate retired, replacement undecided. |
-| [Hustler](../../lenses/hustler.md) | Nothing. One open question. |
+| [Hustler](../../lenses/hustler.md) | Mostly closed for this idea — no market, no pricing, no channel. See decision 0003. |
 
 ## Next question to answer
 
@@ -67,7 +74,7 @@ the replacement, and nothing else can be modelled until it is answered.
 - [Isar or sqflite?](./hacker/isar-or-sqflite.md) — question, unanswered, blocked by both of the above
 
 **Hustler**
-- [Why would anyone switch from Google Tasks?](./hustler/why-switch-from-google-tasks.md) — question, unanswered
+- [Why would anyone switch from Google Tasks?](./hustler/why-switch-from-google-tasks.md) — answered: it doesn't apply, this is a personal tool
 
 **Assets**
 - [Wireframe snapshot](./assets/santian-wireframe-snapshot.png)
@@ -75,6 +82,8 @@ the replacement, and nothing else can be modelled until it is answered.
 ## Decisions
 
 - [0001 — Rethink the Focus aggregate](./decisions/0001-rethink-the-focus-aggregate.md) — 2026-09-16
+- [0002 — Build Tasks before Clockface](./decisions/0002-build-tasks-before-clockface.md) — 2026-09-17
+- [0003 — Santian is a personal tool, not a product](./decisions/0003-personal-tool-not-a-product.md) — 2026-09-17
 
 ## Health check
 

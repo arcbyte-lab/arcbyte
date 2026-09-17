@@ -30,7 +30,13 @@ is backwards.
   and watch whether they lean in.
 
 ## Answer
-Empty.
+The question doesn't apply. Santian is a personal tool for the owner, not a
+product aimed at strangers who currently use Google Tasks. There is no one to
+switch — see
+[0003 — Santian is a personal tool, not a product](../decisions/0003-personal-tool-not-a-product.md).
+
+The build-order concern raised above is separately settled — see
+[0002 — build Tasks before Clockface](../decisions/0002-build-tasks-before-clockface.md).
 
 ---
 Part of [Santian](../README.md)

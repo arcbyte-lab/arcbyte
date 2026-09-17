@@ -117,6 +117,10 @@ Here is a logical roadmap to kick off development:
 
 You've already got a solid visual foundation going in your wireframes. Are you thinking of building this as a standalone mobile app, or are you planning to integrate it into a larger web/desktop ecosystem later down the line?
 
+## Note added 2026-09-17
+This Tasks-first, Clockface-later sequencing is now the confirmed build order —
+see [0002 — build Tasks before Clockface](../decisions/0002-build-tasks-before-clockface.md).
+
 ## What would change my mind
 This is a model's default Flutter stack, not a decision. Isar vs sqflite is still
 open — see [Isar or sqflite](./isar-or-sqflite.md). Nothing here has been checked
