@@ -60,8 +60,13 @@ Read from `Tasks List` rows and the `Task Detail` sheet:
 - `id`
 - `listId` — which List it belongs to (shown via `List Selector` in Detail)
 - `title`
-- `description` / `notes` — see open question below, might be one field wearing
-  two names
+- `description` — one field. Confirmed by the owner (2026-09-18, in
+  conversation): on the "Create Task + Note" screen, the title and
+  description are two separate text columns, but the second (description)
+  column is hidden until the user taps the description icon — Create Task
+  opens with only the title column shown. Task Detail's `Description Field`
+  is the same field, just always visible once a task exists. `notes` was not
+  a second field, just the other name this note used for the same thing.
 - `reminderAt` — the removable `Date Chip` ("Wed, Sep 17 · 7:00 AM"), shown in
   the list row as `Task Time`. Confirmed by the owner (2026-09-18, in
   conversation): this is a reminder, not just a display time — the app fires a
@@ -94,10 +99,10 @@ usage) showing a populated subtask row, or the owner saying what `deadline`
 actually does now that `reminderAt` is confirmed as a notification trigger.
 
 ## Open questions
-- **Description vs. Notes.** Task Detail's `Description Field` shows body text
-  ("30 min cardio + stretching routine"); the separate "Create Task + Note"
-  screen has its own `Notes Field`. Same field shown two ways, or two real
-  fields? This changes whether Task has one text column or two.
+- **Description vs. Notes.** Resolved 2026-09-18 — one field, `description`.
+  Create Task starts as a single title column; tapping the description icon
+  reveals a second column for it. Task Detail always shows both because the
+  task already exists.
 - **Deadline vs. DateTime.** Resolved 2026-09-18: the owner confirmed the
   date chip (`reminderAt`) is a reminder that triggers a notification at
   that time, not a plain display time. That still leaves `deadline` as a
