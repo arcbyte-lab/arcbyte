@@ -8,7 +8,7 @@ status: draft
 source: me
 evidence: none
 created: 2026-09-16
-updated: 2026-09-17
+updated: 2026-09-18
 tags: [anchor]
 ---
 
@@ -65,14 +65,15 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 |---|---|
 | [Hound](../../lenses/hound.md) | Nothing. No real person has been asked anything. One open question. |
 | [Hipster](../../lenses/hipster.md) | A hi-fi mockup now exists for the 8 core Tasks screens, light and dark. It reads as a close Google Tasks clone on a generic, partly-unedited theme — see open questions. |
-| [Hacker](../../lenses/hacker.md) | One model-generated stack sketch, now out of date. Old aggregate retired, replacement undecided. |
+| [Hacker](../../lenses/hacker.md) | Task/List/Subtask fields now read off the hi-fi mockup — see [data model](./hacker/task-list-subtask-data-model.md). [Decision 0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md) says the two Clockface questions don't gate a Tasks-only build. [Decision 0006](./decisions/0006-isar-for-tasks-storage.md) picks Isar for the Tasks data layer; the Clockface's own storage question is still open. |
 | [Hustler](../../lenses/hustler.md) | Mostly closed for this idea — no market, no pricing, no channel. See decision 0003. |
 
 ## Next question to answer
 
-[How does a Day differ from its Routine?](./hacker/day-versus-routine.md)
-Decision 0001 retired the old aggregate without naming a replacement. This is
-the replacement, and nothing else can be modelled until it is answered.
+[How does a Day differ from its Routine?](./hacker/day-versus-routine.md) is
+still open and still unblocks Clockface modelling — decision 0001 retired the
+old aggregate without naming a replacement — but per decision 0005 it no
+longer blocks the Tasks build that is happening first.
 
 ## Artifacts
 
@@ -86,9 +87,10 @@ the replacement, and nothing else can be modelled until it is answered.
 
 **Hacker**
 - [Offline task module architecture](./hacker/offline-task-module-architecture.md) — model's Flutter stack sketch
-- [How does a Day differ from its Routine?](./hacker/day-versus-routine.md) — question, unanswered, blocks everything else
-- [Is the Clockface or the list the source of truth?](./hacker/clockface-or-list-source-of-truth.md) — question, unanswered
-- [Isar or sqflite?](./hacker/isar-or-sqflite.md) — question, unanswered, blocked by both of the above
+- [Task, List and Subtask fields, read off the hi-fi mockup](./hacker/task-list-subtask-data-model.md) — data model inventory, flags an unresolved Deadline-vs-DateTime split and one interval-shaped task row
+- [How does a Day differ from its Routine?](./hacker/day-versus-routine.md) — question, unanswered, blocks Clockface modelling — see decision 0005
+- [Is the Clockface or the list the source of truth?](./hacker/clockface-or-list-source-of-truth.md) — question, unanswered, blocks Clockface modelling — see decision 0005
+- [Isar or sqflite?](./hacker/isar-or-sqflite.md) — answered: Isar, for Tasks only — see decision 0006
 
 **Hustler**
 - [Why would anyone switch from Google Tasks?](./hustler/why-switch-from-google-tasks.md) — answered: it doesn't apply, this is a personal tool
@@ -114,6 +116,8 @@ the replacement, and nothing else can be modelled until it is answered.
 - [0002 — Build Tasks before Clockface](./decisions/0002-build-tasks-before-clockface.md) — 2026-09-17
 - [0003 — Santian is a personal tool, not a product](./decisions/0003-personal-tool-not-a-product.md) — 2026-09-17
 - [0004 — Clone Google Tasks' interaction model, only change the visual skin](./decisions/0004-clone-google-tasks-interactions.md) — 2026-09-17
+- [0005 — The open Clockface hacker questions don't block starting the Tasks data layer](./decisions/0005-clockface-questions-dont-block-tasks-build.md) — 2026-09-18
+- [0006 — Isar for the Tasks data layer](./decisions/0006-isar-for-tasks-storage.md) — 2026-09-18
 
 ## Health check
 
