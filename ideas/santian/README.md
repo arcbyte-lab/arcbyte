@@ -65,17 +65,18 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 |---|---|
 | [Hound](../../lenses/hound.md) | Nothing. No real person has been asked anything. One open question. |
 | [Hipster](../../lenses/hipster.md) | A hi-fi mockup now exists for the 8 core Tasks screens, light and dark. It reads as a close Google Tasks clone on a generic, partly-unedited theme — see open questions. [Add-list method](./hipster/add-list-method.md) designs the not-yet-drawn "create a list" flow. |
-| [Hacker](../../lenses/hacker.md) | Task/List/Subtask fields now read off the hi-fi mockup — see [data model](./hacker/task-list-subtask-data-model.md). [Decision 0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md) says the two Clockface questions don't gate a Tasks-only build. [Decision 0006](./decisions/0006-isar-for-tasks-storage.md) picks Isar for the Tasks data layer; the Clockface's own storage question is still open. |
+| [Hacker](../../lenses/hacker.md) | Task/List/Subtask fields are now fully settled — see [data model](./hacker/task-list-subtask-data-model.md). [Decision 0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md) says the two Clockface questions don't gate a Tasks-only build. [Decision 0006](./decisions/0006-isar-for-tasks-storage.md) picks Isar for the Tasks data layer; the Clockface's own storage question is still open. [Decision 0007](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md) confirms Deadline is intentional scope beyond Google Tasks parity. |
 | [Hustler](../../lenses/hustler.md) | Mostly closed for this idea — no market, no pricing, no channel. See decision 0003. |
 
 ## Next question to answer
 
-**What `deadline` actually does** — a second date field alongside
-`reminderAt`, still with no confirmed behaviour of its own (does it show on
-the list row, does it get its own notification, does it drive overdue
-styling). See the open question in
-[the data model note](./hacker/task-list-subtask-data-model.md). Subtask
-fields and Repeat's shape are now both settled — see that note.
+The Task/List/Subtask field-level questions are now settled — see
+[the data model note](./hacker/task-list-subtask-data-model.md) and
+[decision 0007](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md).
+What's left before the Isar schema can be written is design, not data:
+[decision 0007](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md)
+flags that the deadline list-row badge and overdue styling have never been
+drawn — a hipster question, not a hacker one.
 
 [How does a Day differ from its Routine?](./hacker/day-versus-routine.md) is
 also still open and still unblocks Clockface modelling — decision 0001
@@ -95,7 +96,7 @@ retired the old aggregate without naming a replacement — but per decision
 
 **Hacker**
 - [Offline task module architecture](./hacker/offline-task-module-architecture.md) — model's Flutter stack sketch
-- [Task, List and Subtask fields, read off the hi-fi mockup](./hacker/task-list-subtask-data-model.md) — data model inventory, flags an unresolved Deadline-vs-DateTime split and one interval-shaped task row
+- [Task, List and Subtask fields, read off the hi-fi mockup](./hacker/task-list-subtask-data-model.md) — data model inventory; fields fully settled, one open question remains (the interval-shaped task row)
 - [How does a Day differ from its Routine?](./hacker/day-versus-routine.md) — question, unanswered, blocks Clockface modelling — see decision 0005
 - [Is the Clockface or the list the source of truth?](./hacker/clockface-or-list-source-of-truth.md) — question, unanswered, blocks Clockface modelling — see decision 0005
 - [Isar or sqflite?](./hacker/isar-or-sqflite.md) — answered: Isar, for Tasks only — see decision 0006
@@ -126,6 +127,7 @@ retired the old aggregate without naming a replacement — but per decision
 - [0004 — Clone Google Tasks' interaction model, only change the visual skin](./decisions/0004-clone-google-tasks-interactions.md) — 2026-09-17
 - [0005 — The open Clockface hacker questions don't block starting the Tasks data layer](./decisions/0005-clockface-questions-dont-block-tasks-build.md) — 2026-09-18
 - [0006 — Isar for the Tasks data layer](./decisions/0006-isar-for-tasks-storage.md) — 2026-09-18
+- [0007 — Deadline is intentional scope beyond Google Tasks parity](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md) — 2026-09-18
 
 ## Health check
 

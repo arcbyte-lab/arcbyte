@@ -75,8 +75,12 @@ Read from `Tasks List` rows and the `Task Detail` sheet:
   say what it does. Optional: "Morning workout" has one, nothing in the
   mockup shows a task with no time set.
 - `deadline` — a **separate** field, its own row below Description, currently
-  empty ("Add deadline") on every screen shown. Google Tasks itself has no such
-  field — see open question.
+  empty ("Add deadline") on every screen shown. Behaviour confirmed by the
+  owner (2026-09-18, in conversation) — see
+  [decision 0007](../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md):
+  shown on the Tasks List row alongside `reminderAt` (`Task Time`), fires its
+  own notification independent of `reminderAt`'s, and drives overdue styling
+  when `isCompleted: false` and now is past `deadline`.
 - `repeat` — nullable. When set, matches real Google Tasks' Repeat dialog per
   [decision 0004](../decisions/0004-clone-google-tasks-interactions.md),
   confirmed by the owner (2026-09-18, in conversation):
@@ -118,26 +122,19 @@ Deliberately minimal: no `description`, no `reminderAt` of its own. Subtasks
 are lightweight, same as real Google Tasks.
 
 ## What would change my mind
-The owner saying what `deadline` actually does now that `reminderAt` is
-confirmed as a notification trigger.
+Nothing left open on Task, List, or Subtask right now — see Open questions
+for what's still genuinely unresolved (none of it blocks the schema).
 
 ## Open questions
 - **Description vs. Notes.** Resolved 2026-09-18 — one field, `description`.
   Create Task starts as a single title column; tapping the description icon
   reveals a second column for it. Task Detail always shows both because the
   task already exists.
-- **Deadline vs. DateTime.** Resolved 2026-09-18: the owner confirmed the
-  date chip (`reminderAt`) is a reminder that triggers a notification at
-  that time, not a plain display time. That still leaves `deadline` as a
-  second, separate date field with no confirmed behaviour of its own —
-  Google Tasks has one date field, this mockup has two, and now they read as
-  different *kinds* of date (a notification trigger vs. a target date), not
-  duplicates of the same thing. Still open: what `deadline` actually does —
-  does it show on the list row, does it get its own notification, does it
-  interact with `isCompleted` (e.g. overdue styling)? That decides whether
-  this is real scope past [decision 0004](../decisions/0004-clone-google-tasks-interactions.md)
-  or a natural two-field model once `reminderAt` is understood as a
-  notification, not a due date.
+- **Deadline vs. DateTime.** Resolved 2026-09-18: two real, different fields.
+  `reminderAt` is a notification trigger; `deadline` is a target date with
+  its own notification, its own list-row display, and overdue styling. This
+  is genuine scope past Google Tasks parity, not a mockup artifact — see
+  [decision 0007](../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md).
 - **The one time-range row.** "Deep work: API migration" shows
   "11:00 AM – 1:00 PM" where every other task shows a single time. If
   `reminderAt` can hold an end time, Task already has an interval sometimes —
