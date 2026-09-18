@@ -58,9 +58,12 @@ Read from `Tasks List` rows and the `Task Detail` sheet:
 - `title`
 - `description` / `notes` — see open question below, might be one field wearing
   two names
-- `scheduledAt` — the removable `Date Chip` ("Wed, Sep 17 · 7:00 AM"), shown in
-  the list row as `Task Time`. Optional: "Morning workout" has one, nothing in
-  the mockup shows a task with no time set.
+- `reminderAt` — the removable `Date Chip` ("Wed, Sep 17 · 7:00 AM"), shown in
+  the list row as `Task Time`. Confirmed by the owner (2026-09-18, in
+  conversation): this is a reminder, not just a display time — the app fires a
+  notification for the task at this datetime. Renamed from `scheduledAt` to
+  say what it does. Optional: "Morning workout" has one, nothing in the
+  mockup shows a task with no time set.
 - `deadline` — a **separate** field, its own row below Description, currently
   empty ("Add deadline") on every screen shown. Google Tasks itself has no such
   field — see open question.
@@ -83,25 +86,29 @@ would be invented, not read off this file.
 
 ## What would change my mind
 A hi-fi screen (or a real screenshot from the owner's actual Google Tasks
-usage) showing a populated subtask row, or the owner answering the Deadline
-vs. DateTime question directly.
+usage) showing a populated subtask row, or the owner saying what `deadline`
+actually does now that `reminderAt` is confirmed as a notification trigger.
 
 ## Open questions
 - **Description vs. Notes.** Task Detail's `Description Field` shows body text
   ("30 min cardio + stretching routine"); the separate "Create Task + Note"
   screen has its own `Notes Field`. Same field shown two ways, or two real
   fields? This changes whether Task has one text column or two.
-- **Deadline vs. DateTime — is this scope creep past decision 0004?**
-  [Decision 0004](../decisions/0004-clone-google-tasks-interactions.md) commits
-  to Google Tasks' interaction model, and real Google Tasks has one date
-  field. This mockup draws two: an always-empty "Add deadline" row and a
-  populated, removable date/time chip. Either this is a deliberate addition
-  the owner wants, or it's an artifact of an unedited pasted design (the same
-  hipster critique already raised about the theme tokens) and Task should
-  only have one date field.
+- **Deadline vs. DateTime.** Resolved 2026-09-18: the owner confirmed the
+  date chip (`reminderAt`) is a reminder that triggers a notification at
+  that time, not a plain display time. That still leaves `deadline` as a
+  second, separate date field with no confirmed behaviour of its own —
+  Google Tasks has one date field, this mockup has two, and now they read as
+  different *kinds* of date (a notification trigger vs. a target date), not
+  duplicates of the same thing. Still open: what `deadline` actually does —
+  does it show on the list row, does it get its own notification, does it
+  interact with `isCompleted` (e.g. overdue styling)? That decides whether
+  this is real scope past [decision 0004](../decisions/0004-clone-google-tasks-interactions.md)
+  or a natural two-field model once `reminderAt` is understood as a
+  notification, not a due date.
 - **The one time-range row.** "Deep work: API migration" shows
   "11:00 AM – 1:00 PM" where every other task shows a single time. If
-  `scheduledAt` can hold an end time, Task already has an interval sometimes —
+  `reminderAt` can hold an end time, Task already has an interval sometimes —
   which bears directly on
   [Is the Clockface or the list the source of truth?](./clockface-or-list-source-of-truth.md).
   That question assumed the Task model was point-only; this mockup says
