@@ -70,10 +70,18 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 
 ## Next question to answer
 
+**Subtask fields** — title, its own `isCompleted`, ordering, whether
+completing all subtasks affects the parent. Entirely inferred from one icon
+in [the data model note](./hacker/task-list-subtask-data-model.md), not
+observed anywhere in the hi-fi export. [Decision 0006](./decisions/0006-isar-for-tasks-storage.md)
+already committed to an Isar schema that embeds Subtask inside Task, but that
+schema can't actually be written until Subtask's own fields are pinned down —
+this is now the most build-blocking open question for the Tasks module.
+
 [How does a Day differ from its Routine?](./hacker/day-versus-routine.md) is
-still open and still unblocks Clockface modelling — decision 0001 retired the
-old aggregate without naming a replacement — but per decision 0005 it no
-longer blocks the Tasks build that is happening first.
+also still open and still unblocks Clockface modelling — decision 0001
+retired the old aggregate without naming a replacement — but per decision
+0005 it does not block the Tasks build that is happening first.
 
 ## Artifacts
 
