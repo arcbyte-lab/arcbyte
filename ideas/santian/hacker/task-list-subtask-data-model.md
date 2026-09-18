@@ -77,7 +77,23 @@ Read from `Tasks List` rows and the `Task Detail` sheet:
 - `deadline` — a **separate** field, its own row below Description, currently
   empty ("Add deadline") on every screen shown. Google Tasks itself has no such
   field — see open question.
-- `repeat` — a single row, opens something not included in this export
+- `repeat` — nullable. When set, matches real Google Tasks' Repeat dialog per
+  [decision 0004](../decisions/0004-clone-google-tasks-interactions.md),
+  confirmed by the owner (2026-09-18, in conversation):
+  - `frequency` — `daily` | `weekly` | `monthly` | `yearly` | `custom`
+  - `interval` — int, N for "every N days/weeks/months/years" (custom only;
+    1 otherwise)
+  - `unit` — `days` | `weeks` | `months` | `years`, custom only
+  - `weekdays` — set of weekdays, used when `frequency: weekly` or
+    `frequency: custom, unit: weeks`
+  - No end condition (`endDate` / `endCount`). Repeats indefinitely until the
+    user turns Repeat off on the Task.
+
+  Completion mechanics: one Task row per repeating series, not a new Task
+  generated per occurrence. Checking it off advances `reminderAt`/`deadline`
+  to the next occurrence per the repeat rule and resets `isCompleted` back
+  to `false` — so for a repeating Task, `isCompleted` is a transient "this
+  occurrence is done" signal, not a durable completed state.
 - `isStarred` — boolean, drives the Starred tab
 - `isCompleted` — boolean, the round checkbox
 - `subtasks` — see below
@@ -103,7 +119,7 @@ are lightweight, same as real Google Tasks.
 
 ## What would change my mind
 The owner saying what `deadline` actually does now that `reminderAt` is
-confirmed as a notification trigger, or Repeat's actual shape once designed.
+confirmed as a notification trigger.
 
 ## Open questions
 - **Description vs. Notes.** Resolved 2026-09-18 — one field, `description`.
@@ -133,7 +149,7 @@ confirmed as a notification trigger, or Repeat's actual shape once designed.
 - **Is the three-list set fixed or user-creatable?** Resolved 2026-09-18 —
   user-creatable, via a trailing action button on the scrollable
   `List Tab Bar`. See [the add-list method](../hipster/add-list-method.md).
-- **Repeat's actual shape.** Not drawn beyond the single row.
+- **Repeat's actual shape.** Resolved 2026-09-18 — see above.
 - **Subtask fields.** Resolved 2026-09-18 — see above.
 
 ---
