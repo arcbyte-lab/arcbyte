@@ -8,7 +8,7 @@ source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
 updated: 2026-09-18
-inputs: ["../assets/santian-hifi-export.html", "../decisions/0004-clone-google-tasks-interactions.md"]
+inputs: ["../assets/santian-hifi-export.html", "../decisions/0004-clone-google-tasks-interactions.md", "../hipster/date-time-picker-interactions.md"]
 tags: [artifact, data-model]
 ---
 
@@ -135,14 +135,14 @@ for what's still genuinely unresolved (none of it blocks the schema).
   its own notification, its own list-row display, and overdue styling. This
   is genuine scope past Google Tasks parity, not a mockup artifact — see
   [decision 0007](../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md).
-- **The one time-range row.** "Deep work: API migration" shows
-  "11:00 AM – 1:00 PM" where every other task shows a single time. If
-  `reminderAt` can hold an end time, Task already has an interval sometimes —
-  which bears directly on
-  [Is the Clockface or the list the source of truth?](./clockface-or-list-source-of-truth.md).
-  That question assumed the Task model was point-only; this mockup says
-  otherwise in at least one row. Worth checking with the owner whether that
-  row is meaningful or a mockup slip.
+- **The one time-range row.** Resolved 2026-09-18 — mockup slip, not real
+  scope. The owner confirmed "Deep work: API migration"'s "11:00 AM – 1:00
+  PM" doesn't reflect an intended feature; `reminderAt` stays a single point
+  in time, and
+  [Is the Clockface or the list the source of truth?](./clockface-or-list-source-of-truth.md)'s
+  point-only assumption about the Task model holds. That row gets rebuilt
+  with a single time once the screen is implemented — see
+  [the date/time picker spec](../hipster/date-time-picker-interactions.md).
 - **Is the three-list set fixed or user-creatable?** Resolved 2026-09-18 —
   user-creatable, via a trailing action button on the scrollable
   `List Tab Bar`. See [the add-list method](../hipster/add-list-method.md).

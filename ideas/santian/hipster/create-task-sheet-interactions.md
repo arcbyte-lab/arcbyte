@@ -28,8 +28,9 @@ what submitting does. What's the spec?
   `Subtask` in the mockup, but that's a leftover/copy-paste labeling
   mistake — the icon itself (`star`) is correct. Create Task has no subtask
   entry point; that stays exclusive to Task Detail.
-- Submitting creates the Task with `title` as the only required field;
-  everything else starts empty, per
+- Submitting creates the Task with `title` as the only required field and
+  **closes the sheet** back to Tasks List (resolved: one tap per Task, not
+  a stay-open rapid-add flow); everything else starts empty, per
   [the data model](../hacker/task-list-subtask-data-model.md#task).
 
 ## Detail
@@ -92,8 +93,18 @@ commits to). Creates a Task with:
 - everything else (`description`, `reminderAt`, `deadline`, `repeat`,
   `isStarred`, `subtasks`) — empty/null/false, set later from Task Detail.
 
-Whether the sheet closes after one submission or stays open to quickly add
-another (a common Google Tasks pattern) is not drawn either way.
+**Resolved 2026-09-18**, confirmed by the owner: the sheet **closes** after
+each submission, back to the Tasks List. One tap creates one Task; adding
+several means reopening via the FAB each time — the owner chose the simpler
+mental model over Google Tasks' own stay-open-for-rapid-add behavior.
+
+**Recommendation, not a ruling** for empty title: submitting with an empty
+compose field does nothing — no Task is created, sheet stays open, no error
+message. Keyboard Enter/Done on empty text is a no-op rather than a
+disallowed/disabled state, since there's no separate "submit" button to
+disable in the first place (this app is icon/keyboard-driven, not
+button-driven, per
+[decision 0004](../decisions/0004-clone-google-tasks-interactions.md)).
 
 ## What would change my mind
 Nothing left open on the third icon. If a real subtask-at-creation need
@@ -101,7 +112,9 @@ shows up later, that's a new field/flow to design, not a reinterpretation of
 this icon.
 
 ## Open questions
-- Whether the sheet closes or stays open after creating a Task.
+- None left open on this note's original scope — sheet-close behavior and
+  the third icon are both resolved. Empty-title handling is a
+  recommendation, not confirmed.
 - Whether an empty title on submit does nothing, or is disallowed some other
   way (disabled submit, no-op on Enter) — not drawn.
 

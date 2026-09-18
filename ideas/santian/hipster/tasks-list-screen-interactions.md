@@ -22,12 +22,14 @@ actually touches it: switches tabs, taps a row, taps a checkbox, taps the FAB?
   Star, the `isStarred` filter). Exactly one tab active at a time.
 - The row splits into two tap zones: the `Checkbox` toggles completion only;
   anywhere else on the row opens `Task Detail` for that Task.
-- The FAB always creates a task in whichever list tab is currently active —
-  except when Star is active, which is unresolved (see Open questions).
-- The completed-task visual, the empty state, and a repeating Task's
-  on-screen behaviour mid-recompute are still **not drawn anywhere** in the
-  8 exported screens. This spec does not invent them. Delete is resolved —
-  see below.
+- The FAB creates a task in whichever list tab is currently active; when
+  Star is active, it defaults to whichever named list was last active
+  before switching to Star.
+- Completing a Task dims it and moves it to the bottom of the list — no
+  reordering otherwise, no auto-hide.
+- The empty state, list-identity on Starred rows, and a repeating Task's
+  on-screen behaviour mid-recompute are still genuinely open — recommended
+  defaults below, not settled. Delete is resolved — see below.
 
 ## Detail
 
@@ -60,10 +62,13 @@ area but two separate tap targets:
   Task's description, deadline, repeat, or subtasks.
 
 ### Checkbox / completion behaviour
-- **Non-repeating Task:** tap toggles `isCompleted` true/false. Nothing in
-  the 8 screens draws a "checked" state — no strikethrough, no dimming, no
-  reorder-to-bottom. That visual is genuinely undecided, not just omitted
-  here (see Open questions).
+- **Non-repeating Task:** tap toggles `isCompleted` true/false.
+  **Resolved 2026-09-18**, confirmed by the owner: the row dims (muted
+  text, filled checkbox) and moves to the bottom of `Task List`, below every
+  still-incomplete row — matching Google Tasks' own default. No auto-hide,
+  no collapsed "Completed" section; the row stays visible, just demoted.
+  Same visual applies to `Task Detail`'s `Mark Completed` pill — see
+  [Task Detail's identity spec](./task-detail-identity-and-fields.md).
 - **Repeating Task:** per [the data model](../hacker/task-list-subtask-data-model.md#task),
   tapping the checkbox marks the current occurrence done, advances
   `reminderAt`/`deadline` to the next occurrence per the repeat rule, and
@@ -80,14 +85,23 @@ rising from the bottom, keyboard focused immediately on the title field (the
 `Create Task + Keyboard` frame shows this risen state).
 
 The new Task's `listId` is whichever named-list tab is currently active.
-**When Star is the active tab**, there is no list to default to — Star is a
-filter, not a `listId` — and this isn't resolved anywhere in the mockup or
-the data model note. Flagged, not invented.
+**When Star is the active tab, resolved 2026-09-18:** the FAB defaults to
+whichever named list (`Personal Interest`, `My Tasks`, `Building`, …) was
+last active before the user switched to Star. This needs the app to
+remember "last active real list" as a small piece of session state,
+separate from "currently active tab." If the app is opened fresh with no
+prior tab history, falls back to the first list tab (`Personal Interest`,
+per the drawn tab order) — not specified by the owner, reasoned default.
 
 ### Empty state
-Not drawn. Every list shown in the export has tasks (Personal Interest: 20,
-My Tasks: 1, Building: unspecified count). No empty-list treatment exists
-yet.
+Not drawn — every list shown in the export has tasks (Personal Interest: 20,
+My Tasks: 1, Building: unspecified count). **Recommendation, not a
+ruling:** reuse the same muted text style already used for `Task Time`
+(`12px`, `#78716c`/`#a8a29e`) centered in the empty `Task List` area, copy
+"No tasks yet" — no illustration, no new component, consistent with this
+app's restraint elsewhere (see
+[the overdue-styling note](./deadline-badge-and-overdue-styling.md)'s
+"monochrome-plus-one-accent" observation). Not confirmed by the owner.
 
 ### Delete
 **Resolved 2026-09-18** — there is no delete affordance on the Tasks List
@@ -105,9 +119,13 @@ Per the data model, Starred is a filter over `Task.isStarred`, rendered on
 its own screen ("Starred recently" header, no per-list grouping) but reusing
 the same row component (`Checkbox` + `Text Group`) as every other list.
 Because Starred mixes tasks from multiple lists in one view, whether a row
-needs some indicator of which list it belongs to (the `List Dot` color, an
-icon) is a real question the export doesn't answer — no such indicator is
-drawn on the Starred screen.
+needs some indicator of which list it belongs to is a real question the
+export doesn't answer. **Recommendation, not a ruling:** add the `List Dot`
+(the same small color swatch already used in Task Detail's List Selector)
+before the `Task Title` on Starred rows only — smallest possible addition,
+reuses an existing token, and only appears where the ambiguity actually
+exists (every other screen already shows tasks from one list, so the dot
+would be redundant there). Not confirmed by the owner.
 
 ## What would change my mind
 Seeing these interactions next to the built screen and finding the two-tap-
@@ -117,13 +135,13 @@ targets are the most likely place this breaks down, particularly the
 between them.
 
 ## Open questions
-- **Completed-task visual** — strikethrough, dimming, reorder-to-bottom, or
-  something else. Undrawn for both the non-repeating checked state and the
-  repeating-Task mid-recompute moment.
-- **FAB target when Star is active** — which `listId` does a new task get?
-- **Empty state** — no treatment exists once a list has zero tasks.
-- **Starred rows and list identity** — not drawn whether/how the source list
-  is indicated when rows from multiple lists are mixed together.
+- Repeating-Task mid-recompute visual (instant flip-back, brief animation,
+  disabled state) — still undrawn and undecided; the completed-task visual
+  itself is resolved above, but this specific transition moment isn't.
+- Empty-state copy/treatment — recommended above, not confirmed.
+- Starred row list-identity indicator — recommended above, not confirmed.
+- FAB fallback when opened fresh with no "last active list" history —
+  reasoned default above (first list tab), not asked.
 
 ---
 Part of [Santian](../README.md)

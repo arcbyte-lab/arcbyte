@@ -26,8 +26,12 @@ interaction, and does it also cover `deadline`, or only `reminderAt`?
   Detail's `Deadline Field` gets its own **calendar-only variant** —
   resolved 2026-09-18, confirmed by the owner: no `Set Time` row, no
   `Repeat` row.
-- "Set time" and "Repeat" are both entry rows only — neither shows what
-  happens after tapping them. Not invented here.
+- "Set time" opens the native system time picker (recommended). "Repeat"
+  opens a proposed (not drawn) frequency/interval/weekday dialog mapping
+  directly onto the data model's already-confirmed Repeat fields — worth
+  its own follow-up spec once reviewed.
+- A date-only `reminderAt` is valid (recommended default time, not forced).
+  The one time-range Tasks List row was a mockup slip, resolved.
 
 ## Detail
 
@@ -36,38 +40,54 @@ Matches [decision 0004](../decisions/0004-clone-google-tasks-interactions.md)'s
 committed "month-grid date picker" pattern exactly: `Month Nav`
 (chevron-left/right around a `Month Label`), a `Weekday Header` (M–S), and a
 `Calendar Grid` of `Day Cell`s, one marked `Selected Day`. Tapping a cell
-selects that date — single date only, no drawn range-selection UI. Worth
-flagging: [the data model note](../hacker/task-list-subtask-data-model.md)
-found one Tasks List row ("Deep work: API migration") showing a time
+selects that date — single date only, no range-selection UI, which is
+correct: [the data model note](../hacker/task-list-subtask-data-model.md)
+flagged one Tasks List row ("Deep work: API migration") showing a time
 **range** ("11:00 AM – 1:00 PM") where every other row shows a point in
-time — that open question isn't resolved by anything drawn in this picker
-either; this dialog only supports picking one date.
+time, but the owner confirmed 2026-09-18 that row was a mockup slip, not
+real scope — `reminderAt` stays a single point in time. That row gets
+rebuilt with a single time once the screen is implemented.
 
 ### Set Time
 `Set Time Row` (clock icon + "Set time" label). Tapping it isn't drawn
-anywhere — no time-picker UI exists in this export, native or custom. Two
-things aren't decided: what UI actually appears (a native time picker is
-the natural assumption per
+anywhere — no time-picker UI exists in this export, native or custom.
+**Recommendation, not a ruling:** open the platform's native time picker
+(iOS wheel / Android Material dial), per
 [decision 0004](../decisions/0004-clone-google-tasks-interactions.md)'s
-"native-feeling" direction, but that's an assumption, not a drawn fact), and
-whether the "Set time" label updates to show the chosen time (e.g. "7:00
-AM") once set — the export only shows the untouched default state.
+"native-feeling" direction — cheapest to build, matches what users already
+know, no new component to design. Once set, the `Set Time Label` updates
+from "Set time" to the chosen time (e.g. "7:00 AM") — this part isn't
+really a design choice, an unlabeled "Set time" row after a time's already
+been picked would just be a bug, so treat it as settled rather than open.
 
 ### Repeat
-`Repeat Row` (repeat icon + "Repeat" label). Same situation as Set Time:
-tapping it presumably opens the Repeat configuration
-([frequency/interval/unit/weekdays](../hacker/task-list-subtask-data-model.md#task)),
-but **no Repeat dialog UI is drawn anywhere in the export** — only this
-entry row exists. This is the least-specified part of the whole picker.
+`Repeat Row` (repeat icon + "Repeat" label). **No Repeat dialog UI is drawn
+anywhere in the export** — only this entry row exists, the least-specified
+part of the whole picker. **Proposal, not a reconstruction** (same caveat as
+[the Subtask Field note](./task-detail-subtasks.md) — there's no partial
+drawing here to anchor to): a simple list, mapping directly onto
+[the confirmed Repeat fields](../hacker/task-list-subtask-data-model.md#task)
+— radio rows for `frequency` (Daily / Weekly / Monthly / Yearly / Custom);
+when `Weekly` (or `Custom` with `unit: weeks`), a row of weekday chips
+appears for `weekdays`, same chip shape as the `Date Chip`; when `Custom`,
+an interval stepper ("every [N] [days/weeks/months/years]") for `interval` +
+`unit`. No end-condition field, since
+[the data model](../hacker/task-list-subtask-data-model.md#task) already
+confirmed Repeat has none. This needs its own follow-up spec once the owner
+reviews the proposal — it's too large a dialog to fully resolve as a
+sub-section here.
 
 ### Cancel / Done
 `Button Row`: **Cancel** (`#57534e`, muted) discards date/time/repeat
 selections made in this dialog session and returns to wherever it was
 opened from, unchanged. **Done** (`#0284c7`, accent) commits: sets
-`reminderAt` from the picked date + time, and `repeat` if configured. Not
-decided: whether Done requires a time to be set, or a date-only selection is
-a valid `reminderAt` (every drawn Tasks List row has a time, none show a
-bare date).
+`reminderAt` from the picked date + time, and `repeat` if configured.
+**Recommendation, not a ruling:** a date-only selection (Set Time never
+tapped) is a valid `reminderAt` — defaults to a fixed time of day (e.g.
+9:00 AM) rather than blocking Done or forcing the picker to require a time.
+Every drawn Tasks List row happens to show a time, but nothing about the
+data model requires one, and forcing a time on every reminder adds friction
+for a task that's really just "sometime that day."
 
 ### `deadline`'s picker: calendar-only, resolved
 Only one `Date Time Picker` frame exists in the whole export — there's no
@@ -94,17 +114,10 @@ calendar-only decision and add `Set Time` back — a real product need
 outgrowing this call, not a mistake in it.
 
 ## Open questions
-- Set Time's actual UI (native system picker vs. something custom) — not
-  drawn, applies to the `reminderAt` picker only now that `deadline` is
-  calendar-only.
-- Whether "Set time" updates to reflect a chosen time.
-- The Repeat dialog's UI — entirely undrawn beyond its entry row.
-- Whether Done requires both date and time, or date alone is valid, for the
-  `reminderAt` picker.
-- The one time-range Tasks List row ("11:00 AM – 1:00 PM") — this picker
-  offers no way to select a range; cross-references
-  [the data model's open question](../hacker/task-list-subtask-data-model.md)
-  on the same point.
+- The Repeat dialog's exact UI — a proposal exists above, but it's sized as
+  its own follow-up spec, not fully resolved here.
+- The default time used when `reminderAt` is set date-only (proposed 9:00
+  AM above, not confirmed by the owner).
 
 ---
 Part of [Santian](../README.md)
