@@ -70,13 +70,11 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 
 ## Next question to answer
 
-**Subtask fields** — title, its own `isCompleted`, ordering, whether
-completing all subtasks affects the parent. Entirely inferred from one icon
-in [the data model note](./hacker/task-list-subtask-data-model.md), not
-observed anywhere in the hi-fi export. [Decision 0006](./decisions/0006-isar-for-tasks-storage.md)
-already committed to an Isar schema that embeds Subtask inside Task, but that
-schema can't actually be written until Subtask's own fields are pinned down —
-this is now the most build-blocking open question for the Tasks module.
+**Repeat's actual shape** — the "Repeat" row on Task Detail opens something
+not included in the hi-fi export. Along with what `deadline` actually does
+(still open in [the data model note](./hacker/task-list-subtask-data-model.md)),
+this is what's left before the Task schema is final. Subtask's fields are now
+settled — see that note.
 
 [How does a Day differ from its Routine?](./hacker/day-versus-routine.md) is
 also still open and still unblocks Clockface modelling — decision 0001

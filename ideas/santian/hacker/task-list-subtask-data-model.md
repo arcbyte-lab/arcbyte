@@ -23,9 +23,10 @@ hi-fi export already draws across its 8 screens?
   **two separate date concepts** (Deadline and a removable DateTime chip), and
   one task row shows a **time range** where every other row shows a single
   point in time.
-- Subtasks are drawn only as an empty "Add subtasks" entry point. No screen
-  shows a populated subtask, so their shape (fields, nesting, completion
-  rules) is inferred from one icon, not observed.
+- Subtasks are drawn only as an empty "Add subtasks" entry point in the
+  mockup, but the owner confirmed their shape directly: `title` +
+  `isCompleted`, manually reorderable, completion independent of the parent
+  in both directions.
 
 ## Detail
 
@@ -84,19 +85,25 @@ Read from `Tasks List` rows and the `Task Detail` sheet:
 ### Subtask
 Every one of the four `Subtask Field` instances in this export is the same
 empty state: a `corner-down-right` icon and the text "Add subtasks". None is
-populated. What can be read directly:
+populated in the mockup. Fields confirmed by the owner (2026-09-18, in
+conversation), matching real Google Tasks behaviour per
+[decision 0004](../decisions/0004-clone-google-tasks-interactions.md):
 
-- Subtasks belong to exactly one Task (`taskId`)
-- The icon implies they render indented under the parent
+- `id`
+- `taskId` — belongs to exactly one Task, renders indented under it
+- `title`
+- `isCompleted` — its own boolean, independent of the parent. Completing all
+  subtasks does **not** auto-complete the parent Task, and completing the
+  parent does **not** auto-complete its subtasks.
+- `order` — manually reorderable (drag), so this is an explicit position
+  field, not implicit insertion order.
 
-Everything else — `title`, whether they have their own `isCompleted`, ordering,
-whether completing all subtasks affects the parent — is not drawn anywhere and
-would be invented, not read off this file.
+Deliberately minimal: no `description`, no `reminderAt` of its own. Subtasks
+are lightweight, same as real Google Tasks.
 
 ## What would change my mind
-A hi-fi screen (or a real screenshot from the owner's actual Google Tasks
-usage) showing a populated subtask row, or the owner saying what `deadline`
-actually does now that `reminderAt` is confirmed as a notification trigger.
+The owner saying what `deadline` actually does now that `reminderAt` is
+confirmed as a notification trigger, or Repeat's actual shape once designed.
 
 ## Open questions
 - **Description vs. Notes.** Resolved 2026-09-18 — one field, `description`.
@@ -127,7 +134,7 @@ actually does now that `reminderAt` is confirmed as a notification trigger.
   user-creatable, via a trailing action button on the scrollable
   `List Tab Bar`. See [the add-list method](../hipster/add-list-method.md).
 - **Repeat's actual shape.** Not drawn beyond the single row.
-- **Subtask fields.** Entirely inferred, not observed — see above.
+- **Subtask fields.** Resolved 2026-09-18 — see above.
 
 ---
 Part of [Santian](../README.md)
