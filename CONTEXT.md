@@ -81,13 +81,30 @@ folder anything lives in.
 Where superseded and rejected artifacts go. Nothing is ever deleted here; it is
 moved and marked, so the same dead end is not rediscovered later.
 
+**Domain model** _(confirmed 2026-09-18)_:
+The vocabulary and rules for one idea — what a Block is, what a Routine is
+allowed to do. Owned by that idea's own `CONTEXT.md` under `ideas/<idea>/`,
+never by the code repo, even once the idea is a `project` with real code
+elsewhere. Code *implements* the domain model; it does not define it. A new or
+changed term is decided in the idea's `CONTEXT.md` first, then carried into
+code — never the other way round, and never invented independently in code
+because a class needed a name.
+_Avoid_: schema, data model, entities — those describe how the domain model is
+stored or coded, not what it means. See `SCHEMA.md`'s `kind: data-model` for
+that coded shape, which is a downstream artifact of the domain model, not the
+domain model itself.
+
+> This entry answers the first "not yet defined" question below. Santian is
+> the first idea to test it — see its own repo's `AGENTS.md` for how the rule
+> is enforced from the code side. Santian's
+> [decision 0008](./ideas/santian/decisions/0008-promote-santian-to-project.md)
+> names the signal to watch for if this rule turns out wrong once code exists:
+> vocabulary invented in code that never makes it back here.
+
 ## Not yet defined
 
 Do not invent definitions for these. They are open questions, not gaps to fill.
 
-- **What happens to an idea's thinking once its code exists.** Arcbyte keeps
-  the thinking and the code repo keeps the code, but nothing says which one owns
-  a domain model once both are real, or how they are kept from drifting apart.
 - **Whether two ideas can share an artifact.** Today every artifact belongs to
   exactly one idea, and anything shared gets copied into `library/`. That has
   not been tested with a second idea, because there is not one yet.

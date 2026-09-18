@@ -143,12 +143,25 @@ the note, and it is the one field an AI may never change.
 Promotion from `idea` to `project` is a decision and gets a note in
 `decisions/`. Nothing moves on disk when it happens.
 
+Every idea's code repo checks out locally under `../Dev/<idea>` — a sibling
+of Arcbyte's own parent folder, not nested inside Arcbyte. For Santian that's
+`~/Projects/Dev/Santian` next to `~/Projects/Arcbyte`. Set this up the same
+way each time: an `AGENTS.md`/`CLAUDE.md` pair in the new code repo (see
+`~/Projects/Dev/Santian/AGENTS.md` as the template — a separate repo, so not
+a followable link from here) that points back at
+`ideas/<idea>/CONTEXT.md` for vocabulary and `ideas/<idea>/hipster|hacker/`
+for specs, the same split the **Domain model** entry in the root
+[CONTEXT.md](./CONTEXT.md) describes.
+
 ### Optional fields
 
 - `url:` — required when `source: article`.
 - `supersedes:` / `superseded_by:` — relative path to the other note.
 - `aliases:` — other titles this note has been called.
-- `repo:` — anchor notes with `stage: project`. Where the code actually lives.
+- `repo:` — anchor notes with `stage: project`. The durable reference (its
+  git remote URL, e.g. `https://github.com/<org>/<repo>`), not the local
+  path — the local checkout always follows the `../Dev/<idea>` convention
+  above, so it doesn't need recording per idea.
 
 ## Linking
 

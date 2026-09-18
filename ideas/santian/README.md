@@ -1,7 +1,8 @@
 ---
 title: Santian
 idea: santian
-stage: idea
+stage: project
+repo: https://github.com/arcbyte-lab/Santian
 lens: intelligence
 kind: brief
 status: draft
@@ -19,10 +20,14 @@ tags: [anchor]
 
 ## Stage
 
-`stage: idea`. No code exists yet, so this is still thinking only. It becomes a
-`project` the day a repository is started — that is the owner's call and needs
-its own decision note. See [Arcbyte's glossary](../../CONTEXT.md) for what the
-two words mean here.
+`stage: project`. Code has started, at
+[github.com/arcbyte-lab/Santian](https://github.com/arcbyte-lab/Santian)
+(local checkout: `~/Projects/Dev/Santian`) — separate from this repo, per
+[AGENTS.md](../../AGENTS.md). Promoted on 2026-09-18 by the owner; see
+[decision 0008](./decisions/0008-promote-santian-to-project.md). See
+[Arcbyte's glossary](../../CONTEXT.md) for what `idea` and `project` mean
+here, and its **Domain model** entry (proposed, not yet confirmed) for who
+owns vocabulary now that both this vault and the code repo are real.
 
 ## Vision-led documentation
 
@@ -130,6 +135,7 @@ retired the old aggregate without naming a replacement — but per decision
 - [0005 — The open Clockface hacker questions don't block starting the Tasks data layer](./decisions/0005-clockface-questions-dont-block-tasks-build.md) — 2026-09-18
 - [0006 — Isar for the Tasks data layer](./decisions/0006-isar-for-tasks-storage.md) — 2026-09-18
 - [0007 — Deadline is intentional scope beyond Google Tasks parity](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md) — 2026-09-18
+- [0008 — Promote Santian from idea to project](./decisions/0008-promote-santian-to-project.md) — 2026-09-18
 
 ## Health check
 
