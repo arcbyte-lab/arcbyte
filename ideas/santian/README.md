@@ -69,7 +69,7 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 | lens | where it stands |
 |---|---|
 | [Hound](../../lenses/hound.md) | Nothing. No real person has been asked anything. One open question. |
-| [Hipster](../../lenses/hipster.md) | A hi-fi mockup now exists for the 8 core Tasks screens, light and dark. It reads as a close Google Tasks clone on a generic, partly-unedited theme — see open questions. [Add-list method](./hipster/add-list-method.md) and [deadline badge/overdue styling](./hipster/deadline-badge-and-overdue-styling.md) design the affordances the mockup never drew. |
+| [Hipster](../../lenses/hipster.md) | A hi-fi mockup now exists for the 8 core Tasks screens, light and dark. It reads as a close Google Tasks clone on a generic, partly-unedited theme — see open questions. [Add-list method](./hipster/add-list-method.md) and [deadline badge/overdue styling](./hipster/deadline-badge-and-overdue-styling.md) design the affordances the mockup never drew. all 8 core Tasks screens now have a hipster spec: [Tasks List](./hipster/tasks-list-screen-interactions.md), [Create Task](./hipster/create-task-sheet-interactions.md), [the date/time picker](./hipster/date-time-picker-interactions.md), and [Task Detail](./hipster/task-detail-identity-and-fields.md) (plus its [More menu/delete](./hipster/task-detail-more-menu-and-delete.md) and [subtasks](./hipster/task-detail-subtasks.md), the least-drawn piece of the whole mockup). Several fields still have real open questions — see each note. |
 | [Hacker](../../lenses/hacker.md) | Task/List/Subtask fields are now fully settled — see [data model](./hacker/task-list-subtask-data-model.md). [Decision 0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md) says the two Clockface questions don't gate a Tasks-only build. [Decision 0006](./decisions/0006-isar-for-tasks-storage.md) picks Isar for the Tasks data layer; the Clockface's own storage question is still open. [Decision 0007](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md) confirms Deadline is intentional scope beyond Google Tasks parity. |
 | [Hustler](../../lenses/hustler.md) | Mostly closed for this idea — no market, no pricing, no channel. See decision 0003. |
 
@@ -100,6 +100,12 @@ retired the old aggregate without naming a replacement — but per decision
 - [Hi-fi mockup is a Google Tasks clone riding an unused generic theme](./hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md) — critique of the new hi-fi export
 - [Add-list method for the scrollable List Tab Bar](./hipster/add-list-method.md) — design for the not-yet-drawn "create a list" affordance
 - [Deadline list-row badge and overdue styling](./hipster/deadline-badge-and-overdue-styling.md) — design for decision 0007's not-yet-drawn behaviour
+- [Tasks List screen — tab switching, row tap, checkbox, and FAB behaviour](./hipster/tasks-list-screen-interactions.md) — spec for the primary screen's interactions; flags the completed-task visual and the empty state as genuinely undecided
+- [Task Detail's More menu and delete](./hipster/task-detail-more-menu-and-delete.md) — resolves delete: lives behind Task Detail's `More` icon, never a Tasks List gesture; no confirm dialog, yes undo toast
+- [Create Task sheet — compose row, notes toggle, and the mislabeled third icon](./hipster/create-task-sheet-interactions.md) — spec for opening the sheet and its action icons; flags a genuinely mislabeled icon layer rather than guessing its function
+- [Date & time picker — month grid, Set Time, Repeat, Cancel/Done](./hipster/date-time-picker-interactions.md) — spec for the shared date/time dialog; `deadline` gets a calendar-only variant, `reminderAt` gets the full dialog
+- [Task Detail — Star, List Selector, Title, Description, and Mark Completed](./hipster/task-detail-identity-and-fields.md) — spec for Detail's identity fields; flags that the `+ Keyboard` frame doesn't show which field is actually focused
+- [Task Detail's Subtask Field — add, reorder, and independent completion](./hipster/task-detail-subtasks.md) — the one field with zero populated-state drawing anywhere in the mockup; a proposal, not a reconstruction
 
 **Hacker**
 - [Offline task module architecture](./hacker/offline-task-module-architecture.md) — model's Flutter stack sketch
