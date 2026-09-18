@@ -41,8 +41,12 @@ in Task Detail:
 - `taskCount` — shown as a `Count Badge`; almost certainly derived (count of
   non-completed Tasks in that list), not stored
 
-No "add list" affordance appears anywhere in the 8 screens. The three lists
-above may be a fixed starter set or the mockup just never drew list creation.
+No "add list" affordance appears anywhere in the 8 screens, but the owner
+confirmed (2026-09-18, in conversation) that lists are user-creatable: the
+`List Tab Bar` scrolls horizontally, and a trailing action button at the end
+of the scroll creates a new list. Not drawn in the current mockup — see
+[the add-list method](../hipster/add-list-method.md) for the design of that
+affordance.
 
 **Starred** is a fourth tab, always first, with its own icon (star) and no
 count badge. Its own screen ("HiFi — Starred") groups tasks under a "Starred
@@ -114,8 +118,9 @@ actually does now that `reminderAt` is confirmed as a notification trigger.
   That question assumed the Task model was point-only; this mockup says
   otherwise in at least one row. Worth checking with the owner whether that
   row is meaningful or a mockup slip.
-- **Is the three-list set fixed or user-creatable?** No creation flow is
-  drawn.
+- **Is the three-list set fixed or user-creatable?** Resolved 2026-09-18 —
+  user-creatable, via a trailing action button on the scrollable
+  `List Tab Bar`. See [the add-list method](../hipster/add-list-method.md).
 - **Repeat's actual shape.** Not drawn beyond the single row.
 - **Subtask fields.** Entirely inferred, not observed — see above.
 

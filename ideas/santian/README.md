@@ -64,7 +64,7 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 | lens | where it stands |
 |---|---|
 | [Hound](../../lenses/hound.md) | Nothing. No real person has been asked anything. One open question. |
-| [Hipster](../../lenses/hipster.md) | A hi-fi mockup now exists for the 8 core Tasks screens, light and dark. It reads as a close Google Tasks clone on a generic, partly-unedited theme — see open questions. |
+| [Hipster](../../lenses/hipster.md) | A hi-fi mockup now exists for the 8 core Tasks screens, light and dark. It reads as a close Google Tasks clone on a generic, partly-unedited theme — see open questions. [Add-list method](./hipster/add-list-method.md) designs the not-yet-drawn "create a list" flow. |
 | [Hacker](../../lenses/hacker.md) | Task/List/Subtask fields now read off the hi-fi mockup — see [data model](./hacker/task-list-subtask-data-model.md). [Decision 0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md) says the two Clockface questions don't gate a Tasks-only build. [Decision 0006](./decisions/0006-isar-for-tasks-storage.md) picks Isar for the Tasks data layer; the Clockface's own storage question is still open. |
 | [Hustler](../../lenses/hustler.md) | Mostly closed for this idea — no market, no pricing, no channel. See decision 0003. |
 
@@ -84,6 +84,7 @@ longer blocks the Tasks build that is happening first.
 - [Wireframe geometry spec](./hipster/wireframe-geometry-spec.md) — what is actually drawn in the Penpot file
 - [Google Tasks UX playbook](./hipster/google-tasks-ux-playbook.md) — patterns to copy
 - [Hi-fi mockup is a Google Tasks clone riding an unused generic theme](./hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md) — critique of the new hi-fi export
+- [Add-list method for the scrollable List Tab Bar](./hipster/add-list-method.md) — design for the not-yet-drawn "create a list" affordance
 
 **Hacker**
 - [Offline task module architecture](./hacker/offline-task-module-architecture.md) — model's Flutter stack sketch
