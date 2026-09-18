@@ -85,6 +85,14 @@ language, which is good — a user only has to learn it once.
 ## Open questions
 - Now answered by [decision 0004](../decisions/0004-clone-google-tasks-interactions.md):
   the Google Tasks resemblance is deliberate, not accidental drift.
+- This note's title claim — "unused theme tokens" — is now checked
+  precisely, not just asserted, in
+  [the exodus.css → Flutter theming spec](../hacker/exodus-theme-to-flutter.md):
+  `--secondary`, `--accent`, every chart/sidebar token, and two of three
+  fonts are confirmed genuinely unused by real usage counts. It also found
+  the one token that looked like a bug and wasn't — see
+  [decision 0011](../decisions/0011-blue-by-day-orange-by-night.md) on the
+  light/dark primary-color hue swap.
 
 ---
 Part of [Santian](../README.md)
