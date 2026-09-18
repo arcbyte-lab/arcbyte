@@ -8,7 +8,7 @@ source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
 updated: 2026-09-18
-inputs: ["../hacker/task-list-subtask-data-model.md", "../decisions/0004-clone-google-tasks-interactions.md", "../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "../assets/santian-hifi-export.html", "./create-task-sheet-interactions.md"]
+inputs: ["../hacker/task-list-subtask-data-model.md", "../decisions/0004-clone-google-tasks-interactions.md", "../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "../assets/santian-hifi-export.html", "./create-task-sheet-interactions.md", "./repeat-dialog-interactions.md"]
 tags: [artifact]
 ---
 
@@ -27,9 +27,8 @@ interaction, and does it also cover `deadline`, or only `reminderAt`?
   resolved 2026-09-18, confirmed by the owner: no `Set Time` row, no
   `Repeat` row.
 - "Set time" opens the native system time picker (recommended). "Repeat"
-  opens a proposed (not drawn) frequency/interval/weekday dialog mapping
-  directly onto the data model's already-confirmed Repeat fields — worth
-  its own follow-up spec once reviewed.
+  opens [its own resolved dialog](./repeat-dialog-interactions.md), built
+  from a real reference the owner supplied.
 - A date-only `reminderAt` is valid (recommended default time, not forced).
   The one time-range Tasks List row was a mockup slip, resolved.
 
@@ -61,21 +60,12 @@ really a design choice, an unlabeled "Set time" row after a time's already
 been picked would just be a bug, so treat it as settled rather than open.
 
 ### Repeat
-`Repeat Row` (repeat icon + "Repeat" label). **No Repeat dialog UI is drawn
-anywhere in the export** — only this entry row exists, the least-specified
-part of the whole picker. **Proposal, not a reconstruction** (same caveat as
-[the Subtask Field note](./task-detail-subtasks.md) — there's no partial
-drawing here to anchor to): a simple list, mapping directly onto
-[the confirmed Repeat fields](../hacker/task-list-subtask-data-model.md#task)
-— radio rows for `frequency` (Daily / Weekly / Monthly / Yearly / Custom);
-when `Weekly` (or `Custom` with `unit: weeks`), a row of weekday chips
-appears for `weekdays`, same chip shape as the `Date Chip`; when `Custom`,
-an interval stepper ("every [N] [days/weeks/months/years]") for `interval` +
-`unit`. No end-condition field, since
-[the data model](../hacker/task-list-subtask-data-model.md#task) already
-confirmed Repeat has none. This needs its own follow-up spec once the owner
-reviews the proposal — it's too large a dialog to fully resolve as a
-sub-section here.
+`Repeat Row` (repeat icon + "Repeat" label). **Resolved 2026-09-18** — see
+[the Repeat dialog spec](./repeat-dialog-interactions.md), built from a real
+reference screenshot the owner supplied (Google's own Repeat dialog):
+"Every [N] [unit]" stepper+dropdown, weekday chips when unit is week, no
+Starts/Set Time/Ends rows (all redundant with this outer picker or already
+ruled out by the data model's no-end-condition decision).
 
 ### Cancel / Done
 `Button Row`: **Cancel** (`#57534e`, muted) discards date/time/repeat
@@ -114,8 +104,6 @@ calendar-only decision and add `Set Time` back — a real product need
 outgrowing this call, not a mistake in it.
 
 ## Open questions
-- The Repeat dialog's exact UI — a proposal exists above, but it's sized as
-  its own follow-up spec, not fully resolved here.
 - The default time used when `reminderAt` is set date-only (proposed 9:00
   AM above, not confirmed by the owner).
 
