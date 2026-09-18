@@ -70,7 +70,7 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 |---|---|
 | [Hound](../../lenses/hound.md) | Nothing. No real person has been asked anything. One open question. |
 | [Hipster](../../lenses/hipster.md) | A hi-fi mockup exists for the 8 core Tasks screens, light and dark, and every one now has a full interaction spec: [Tasks List](./hipster/tasks-list-screen-interactions.md), [Create Task](./hipster/create-task-sheet-interactions.md), [the date/time picker](./hipster/date-time-picker-interactions.md), and [Task Detail](./hipster/task-detail-identity-and-fields.md) (plus its [More menu/delete](./hipster/task-detail-more-menu-and-delete.md) and [subtasks](./hipster/task-detail-subtasks.md), the least-drawn piece of the mockup). [Add-list method](./hipster/add-list-method.md) and [deadline badge/overdue styling](./hipster/deadline-badge-and-overdue-styling.md) cover the two affordances the mockup never drew at all. Everything is now resolved or has an owner-confirmed default, including [the Repeat dialog](./hipster/repeat-dialog-interactions.md); the few remaining gaps are small recommendations awaiting sign-off (a couple of visual states, month/year repeat's day-selection), not open design questions. |
-| [Hacker](../../lenses/hacker.md) | Task/List/Subtask fields are now fully settled — see [data model](./hacker/task-list-subtask-data-model.md). [Decision 0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md) says the two Clockface questions don't gate a Tasks-only build. [Decision 0006](./decisions/0006-isar-for-tasks-storage.md) picks Isar for the Tasks data layer; the Clockface's own storage question is still open. [Decision 0007](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md) confirms Deadline is intentional scope beyond Google Tasks parity. |
+| [Hacker](../../lenses/hacker.md) | Task/List/Subtask fields are fully settled — see [data model](./hacker/task-list-subtask-data-model.md). [Decision 0006](./decisions/0006-isar-for-tasks-storage.md) picks Isar; [the Isar schema](./hacker/isar-schema.md) has the concrete collections. [Decision 0007](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md) confirms Deadline is intentional scope. [Decision 0009](./decisions/0009-cubit-for-state-management.md) picks Cubit over full BLoC. [Decision 0010](./decisions/0010-flutter-local-notifications-package.md) picks flutter_local_notifications; [its scheduling spec](./hacker/notification-scheduling.md) covers IDs, lifecycle triggers, and permissions, and [the repeat-advance algorithm](./hacker/repeat-advance-algorithm.md) supplies the date math — including why no catch-up logic is needed at all. [The module structure note](./hacker/flutter-module-structure.md) ties all of this together and adds a `TaskRepository` to avoid duplicating the complete-a-Task logic across Cubits. [Decision 0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md) keeps the two Clockface questions from gating this — they're still open. Flutter itself is still just a pasted model's unvalidated default. |
 | [Hustler](../../lenses/hustler.md) | Mostly closed for this idea — no market, no pricing, no channel. See decision 0003. |
 
 ## Next question to answer
@@ -109,11 +109,17 @@ retired the old aggregate without naming a replacement — but per decision
 - [Task Detail's Subtask Field — add, reorder, and independent completion](./hipster/task-detail-subtasks.md) — the one field with zero populated-state drawing anywhere in the mockup; a proposal, not a reconstruction
 
 **Hacker**
-- [Offline task module architecture](./hacker/offline-task-module-architecture.md) — model's Flutter stack sketch
-- [Task, List and Subtask fields, read off the hi-fi mockup](./hacker/task-list-subtask-data-model.md) — data model inventory; fields fully settled, one open question remains (the interval-shaped task row)
+- [Offline task module architecture](./hacker/offline-task-module-architecture.md) — model's Flutter stack sketch; Flutter itself is still an unvalidated default, state management is now settled
+- [Cubit or full BLoC?](./hacker/cubit-or-bloc.md) — answered: Cubit — see decision 0009
+- [Which package schedules the reminder/deadline notifications?](./hacker/local-notifications-package.md) — answered: flutter_local_notifications — see decision 0010
+- [Notification scheduling — IDs, lifecycle triggers, permissions, tap-to-open](./hacker/notification-scheduling.md) — spec for how Task fields turn into scheduled/cancelled/rescheduled notifications
+- [Repeat-advance algorithm — next occurrence, and why there's no catch-up](./hacker/repeat-advance-algorithm.md) — the date math, plus the reasoning for why no catch-up logic is needed at all (advance only happens on completion, never on elapsed time)
+- [Flutter module structure — folders, and one repository instead of duplicated Cubit logic](./hacker/flutter-module-structure.md) — folder layout, and a real gap it surfaced: a shared `TaskRepository.toggleCompleted()` so the complete-a-repeating-Task logic isn't written once per Cubit
+- [Task, List and Subtask fields, read off the hi-fi mockup](./hacker/task-list-subtask-data-model.md) — data model inventory; fully settled, including the once-open time-range row (resolved: mockup slip)
 - [How does a Day differ from its Routine?](./hacker/day-versus-routine.md) — question, unanswered, blocks Clockface modelling — see decision 0005
 - [Is the Clockface or the list the source of truth?](./hacker/clockface-or-list-source-of-truth.md) — question, unanswered, blocks Clockface modelling — see decision 0005
 - [Isar or sqflite?](./hacker/isar-or-sqflite.md) — answered: Isar, for Tasks only — see decision 0006
+- [Isar schema — TaskList, Task, embedded Repeat and Subtask](./hacker/isar-schema.md) — the concrete collections; flags a real Dart naming collision (`List`) and that decision 0006's "by day" query isn't needed by any resolved Tasks screen yet
 
 **Hustler**
 - [Why would anyone switch from Google Tasks?](./hustler/why-switch-from-google-tasks.md) — answered: it doesn't apply, this is a personal tool
@@ -143,6 +149,8 @@ retired the old aggregate without naming a replacement — but per decision
 - [0006 — Isar for the Tasks data layer](./decisions/0006-isar-for-tasks-storage.md) — 2026-09-18
 - [0007 — Deadline is intentional scope beyond Google Tasks parity](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md) — 2026-09-18
 - [0008 — Promote Santian from idea to project](./decisions/0008-promote-santian-to-project.md) — 2026-09-18
+- [0009 — Cubit for the Tasks module's state management](./decisions/0009-cubit-for-state-management.md) — 2026-09-18
+- [0010 — flutter_local_notifications for reminder and deadline notifications](./decisions/0010-flutter-local-notifications-package.md) — 2026-09-18
 
 ## Health check
 

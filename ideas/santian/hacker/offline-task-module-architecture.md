@@ -7,8 +7,8 @@ status: draft
 source: unknown (pasted by owner)
 evidence: none
 created: 2026-09-16
-updated: 2026-09-16
-inputs: ["../hipster/google-tasks-ux-playbook.md"]
+updated: 2026-09-18
+inputs: ["../hipster/google-tasks-ux-playbook.md", "./isar-or-sqflite.md", "./cubit-or-bloc.md"]
 tags: [artifact]
 ---
 
@@ -122,9 +122,13 @@ This Tasks-first, Clockface-later sequencing is now the confirmed build order �
 see [0002 — build Tasks before Clockface](../decisions/0002-build-tasks-before-clockface.md).
 
 ## What would change my mind
-This is a model's default Flutter stack, not a decision. Isar vs sqflite is still
-open — see [Isar or sqflite](./isar-or-sqflite.md). Nothing here has been checked
-against a real build.
+This was a model's default Flutter stack, not a decision. Isar vs sqflite is
+now settled — see [Isar or sqflite](./isar-or-sqflite.md) and
+[decision 0006](../decisions/0006-isar-for-tasks-storage.md). Cubit vs full
+BLoC is now settled too — see [Cubit or full BLoC?](./cubit-or-bloc.md) and
+[decision 0009](../decisions/0009-cubit-for-state-management.md). Flutter
+itself as the framework is still unvalidated — nothing here has been
+checked against a real build.
 
 ## Open questions
 - Does the clockface need the same store as the task list, or a different shape
