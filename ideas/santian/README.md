@@ -75,12 +75,24 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 
 ## Next question to answer
 
-The Task/List/Subtask field-level questions are now settled — see
+Four small product decisions are drafted and waiting on the owner to
+confirm, each currently blocking one open Santian issue:
+[0012](./decisions/0012-add-list-icon-set.md) and
+[0013](./decisions/0013-add-list-color-palette.md) (the add-list picker's
+icon set and color palette), [0014](./decisions/0014-first-launch-default-list.md)
+(what a fresh install shows with zero Lists) — all three block
+[Santian#8](https://github.com/arcbyte-lab/Santian/issues/8) — and
+[0015](./decisions/0015-deadline-notification-defaults-to-9am.md) (what time
+a deadline notification fires), blocking the deadline half of
+[Santian#12](https://github.com/arcbyte-lab/Santian/issues/12). All four are
+`status: draft` with a recommended default; none should be treated as
+settled until the owner promotes them.
+
+The Task/List/Subtask field-level questions are otherwise settled — see
 [the data model note](./hacker/task-list-subtask-data-model.md),
 [decision 0007](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md),
 and [the deadline badge/overdue-styling design](./hipster/deadline-badge-and-overdue-styling.md).
-Nothing is currently naming a next open question — the remaining unanswered
-items ([Day vs Routine](./hacker/day-versus-routine.md),
+The remaining unanswered items ([Day vs Routine](./hacker/day-versus-routine.md),
 [Clockface-or-list source of truth](./hacker/clockface-or-list-source-of-truth.md))
 block Clockface only, not the Tasks build, per decision 0005.
 
@@ -153,6 +165,10 @@ retired the old aggregate without naming a replacement — but per decision
 - [0009 — Cubit for the Tasks module's state management](./decisions/0009-cubit-for-state-management.md) — 2026-09-18
 - [0010 — flutter_local_notifications for reminder and deadline notifications](./decisions/0010-flutter-local-notifications-package.md) — 2026-09-18
 - [0011 — Keep the light/dark hue swap: blue by day, orange by night](./decisions/0011-blue-by-day-orange-by-night.md) — 2026-09-18
+- [0012 — Icon set for the add-list picker grid](./decisions/0012-add-list-icon-set.md) — 2026-09-22 (draft, awaiting the owner's confirmation)
+- [0013 — Color palette for the add-list picker row](./decisions/0013-add-list-color-palette.md) — 2026-09-22 (draft, awaiting the owner's confirmation)
+- [0014 — First launch seeds one default List](./decisions/0014-first-launch-default-list.md) — 2026-09-22 (draft, awaiting the owner's confirmation)
+- [0015 — A deadline notification fires at 9:00 AM, same default as reminderAt](./decisions/0015-deadline-notification-defaults-to-9am.md) — 2026-09-22 (draft, awaiting the owner's confirmation)
 
 ## Health check
 
