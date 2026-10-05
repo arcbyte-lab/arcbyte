@@ -27,6 +27,7 @@ means — then [SCHEMA.md](./SCHEMA.md). If you are an AI, read
 | idea | stage | what it is |
 |---|---|---|
 | [Santian](./ideas/santian/README.md) | idea | A day planner with a circular Clockface and a Block list. Flutter, once it starts. |
+| [Tasko](./ideas/tasko/README.md) | idea | Not written yet. |
 
 ## Folder map
 
