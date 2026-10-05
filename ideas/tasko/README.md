@@ -44,4 +44,4 @@ decision that says why.
 - none yet
 
 ## Decisions
-- none yet
+- [0001 — Adopt sqlite-schema.sql over schema-zero](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)
