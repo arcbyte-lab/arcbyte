@@ -111,8 +111,8 @@ support would need a sync design that does not exist.
 
 ## Open questions
 - ~~Which status values exist, and which transitions can the checkbox
-  trigger?~~ Settled by [0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md), except
-  unticking and who reviews.
+  trigger?~~ Settled by [0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md), including
+  who reviews. Unticking is still open.
 - Repeat: show each occurrence as its own Task, or add "next one on
   completion"?
 - Undo: delay the delete, or add soft delete?
