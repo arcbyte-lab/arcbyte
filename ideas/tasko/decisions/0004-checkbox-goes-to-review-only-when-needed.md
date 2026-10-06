@@ -26,9 +26,22 @@ A reviewer then **approves** the task (`done`, `completed_date = now`) or
 **rejects** it (back to `in_progress`). Each outcome is a `task_reviews`
 row with a `decision` and a `reason`.
 
-**What "needs review" means:** proposed as `required_proof_type` is set.
-The owner picked this option, with this rule given as the example. The rule
-itself still needs confirming, see the open questions.
+**What "needs review" means:** `required_proof_type` is set. The owner
+confirmed this on 2026-10-06 for both project and division tasks.
+
+**Who reviews** (also confirmed by the owner, 2026-10-06):
+
+| Task | Reviewer |
+|---|---|
+| In a project (`project_id` set) | that project's person-in-charge (`project_members.role = 'person-in-charge'`), **and** its author (`projects.creator_id`) |
+| In a division only (`project_id` null) | that division's management (`division_members.role_type` in `admin`, `supervisor`) |
+
+Both roles can have more than one member. Any of them can review, and the
+first decision wins. That rule is an assumption the owner has not confirmed.
+
+Because the author always counts, **every project has a reviewer**. An
+assignee who is also a person-in-charge **may review their own task**
+(owner, 2026-10-06).
 
 ## Context
 
@@ -79,10 +92,11 @@ its own flag.
 
 ## Open questions
 
-- **Is `required_proof_type` the right trigger?** Can a task need review
-  without a proof, or have a proof without review?
-- **Who reviews?** The project's person-in-charge, a division supervisor, or
-  the creator?
+- ~~Is `required_proof_type` the right trigger?~~ Yes, confirmed.
+- ~~Who reviews?~~ Confirmed, see the table above.
+- ~~Self-review?~~ Allowed for a person-in-charge. Not yet confirmed for
+  a division admin or supervisor reviewing their own division task.
+- ~~No reviewer?~~ Cannot happen: the project's author always reviews.
 - **Unticking:** does `done` go back to `waiting` or `in_progress`? Can an
   assignee withdraw a task from `review`?
 - **`cancelled_date` exists, but there is no `cancelled` status.** How is a

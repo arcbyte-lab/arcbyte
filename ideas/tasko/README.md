@@ -39,10 +39,10 @@ decision that says why.
 
 ## Next question to answer
 
-**Is `required_proof_type` the right trigger for review, and who reviews?**
-[0004](./decisions/0004-checkbox-goes-to-review-only-when-needed.md) sends a ticked task to `review`
-only when it needs review. The status values themselves are settled
-(`waiting`, `in_progress`, `review`, `done`). After that: does the star
+**What does unticking a task do, and how is a task cancelled?** The rest of
+[0004](./decisions/0004-checkbox-goes-to-review-only-when-needed.md) is settled: review happens when
+`required_proof_type` is set. A project's person-in-charge reviews project
+tasks, and division admins or supervisors review division tasks. After that: does the star
 survive without a Star tab, and what is the slider icon in the header?
 
 
