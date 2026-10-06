@@ -73,7 +73,11 @@ other differences are formatting: table order, and `IF NOT EXISTS`.
    several assignees also have to collapse to one.
 4. **`tasks.status` still has no check constraint**, while `projects.status`
    now has one. With `on_hold_date` removed, an `on_hold` task status probably
-   should not exist any more, but nothing stops it.
+   should not exist any more, but nothing stops it. The owner confirmed
+   on 2026-10-06 that the values are `waiting`, `in_progress`, `review` and
+   `done`. A check constraint should enforce them. Also, `cancelled_date`
+   exists but there is no `cancelled` status (see
+   [0004](./0004-checkbox-goes-to-review-only-when-needed.md)).
 5. **The file was edited by hand.** The `projects` table has written comments,
    and `tasks` has two blank lines where `on_hold_date` used to be. So
    `sqlite-schema.sql` describes the target schema, not a dump of a live

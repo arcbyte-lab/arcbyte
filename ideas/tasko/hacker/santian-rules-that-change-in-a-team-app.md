@@ -43,19 +43,21 @@ Tasko intent below is read from the schema only (`evidence: weak`).
 | Subtask completion independent of its parent | Tasko subtasks are full Tasks, so this holds naturally. |
 
 ### Completing a Task
-Santian flips one boolean. Tasko has `status` (values unknown, default
-`waiting`), `required_proof_type` plus `proofs`, and `task_reviews` plus
-`review_date`. A guess at the flow:
+Santian flips one boolean. Tasko's `status` is `waiting` (default),
+`in_progress`, `review` or `done`, and
+[0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md) sets the flow:
 
-1. Checkbox tapped. If a proof is required and none exists, ask for one
-   before anything else.
-2. Status moves to a "submitted for review" value if the Task is reviewed,
-   otherwise straight to done. Set `completed_date`.
-3. A reviewer approves or rejects. If rejected, the Task becomes open again.
+1. Checkbox tapped. If `required_proof_type` is set, ask for a proof if
+   none exists, then set `review` and `review_date`.
+2. Otherwise set `done` and `completed_date`. Personal tasks always go
+   straight to `done`.
+3. A reviewer approves (→ `done`) or rejects (→ `in_progress`), and each
+   outcome is a `task_reviews` row.
 
-So the row's checkbox needs at least **three looks**: open, waiting for
-review, and done. Santian has two. Un-completing is probably not free
-either: who is allowed to reopen a reviewed Task?
+So the row's checkbox has **three looks**: open, in review, and done.
+Santian has two. "Open" means `waiting` or `in_progress`, and only open
+tasks count as due or overdue. Unticking is still open: see 0004's open
+questions.
 
 ### Repeat
 | | Santian | Tasko (from schema) |
@@ -108,8 +110,9 @@ support would need a sync design that does not exist.
   the schema suggests.
 
 ## Open questions
-- Which status values exist, and which transitions can the checkbox
-  trigger?
+- ~~Which status values exist, and which transitions can the checkbox
+  trigger?~~ Settled by [0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md), except
+  unticking and who reviews.
 - Repeat: show each occurrence as its own Task, or add "next one on
   completion"?
 - Undo: delay the delete, or add soft delete?

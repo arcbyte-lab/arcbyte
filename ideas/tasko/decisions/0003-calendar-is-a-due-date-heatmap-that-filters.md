@@ -53,7 +53,9 @@ due". Then the completed-per-day view comes back as its own screen.
 
 ## Open questions
 
-- What counts as "open"? It depends on which `tasks.status` values exist.
+- ~~What counts as "open"?~~ Settled by [0004](./0004-checkbox-goes-to-review-only-when-needed.md):
+  `waiting` or `in_progress` (`todo` or `in_progress` for personal tasks).
+  Tasks in `review` are not counted.
 - Shading scale: a count, or only empty versus some?
 - Are overdue days (before today, with open tasks) shown differently?
 - What does "monthly" switch to?

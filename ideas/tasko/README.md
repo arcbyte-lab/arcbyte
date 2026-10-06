@@ -39,10 +39,10 @@ decision that says why.
 
 ## Next question to answer
 
-**Which `tasks.status` values exist, and what does the checkbox set?** The
-column has no check constraint. Completing a task, the calendar's "open"
-count ([0003](./decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md)),
-and the task row's look all depend on it. After that: does the star
+**Is `required_proof_type` the right trigger for review, and who reviews?**
+[0004](./decisions/0004-checkbox-goes-to-review-only-when-needed.md) sends a ticked task to `review`
+only when it needs review. The status values themselves are settled
+(`waiting`, `in_progress`, `review`, `done`). After that: does the star
 survive without a Star tab, and what is the slider icon in the header?
 
 
@@ -60,3 +60,4 @@ survive without a Star tab, and what is the slider icon in the header?
 - [0001 — Adopt sqlite-schema.sql over schema-zero](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)
 - [0002 — Tabs are workspaces, then projects; each task in exactly one tab](./decisions/0002-tabs-are-workspaces-then-projects.md) — 2026-10-06 (draft, owner approved in chat)
 - [0003 — The calendar is a due-date heatmap that filters the list](./decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md) — 2026-10-06 (draft, owner approved in chat)
+- [0004 — The checkbox goes to review only when needed, otherwise done](./decisions/0004-checkbox-goes-to-review-only-when-needed.md) — 2026-10-06 (draft, owner approved in chat)
