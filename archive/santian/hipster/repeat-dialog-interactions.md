@@ -3,14 +3,16 @@ title: Repeat dialog — Every N unit, weekday chips, no Starts/Ends
 idea: santian
 lens: hipster
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: weak
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["./date-time-picker-interactions.md", "../hacker/task-list-subtask-data-model.md", "../assets/repeat-dialog-ui-reference.jpeg"]
+updated: 2026-10-06
+inputs: ["./date-time-picker-interactions.md", "../hacker/task-list-subtask-data-model.md", "../../../ideas/santian/assets/repeat-dialog-ui-reference.jpeg"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [date-pickers-and-repeat-as-built](../../../ideas/santian/hipster/date-pickers-and-repeat-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 [The date/time picker spec](./date-time-picker-interactions.md) found the
@@ -113,4 +115,4 @@ an oversight.
   (implicit, same day-of-month/year as `reminderAt`), not confirmed.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

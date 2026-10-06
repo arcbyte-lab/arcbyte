@@ -3,19 +3,21 @@ title: Notification scheduling — IDs, lifecycle triggers, permissions, tap-to-
 idea: santian
 lens: hacker
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["./local-notifications-package.md", "../decisions/0010-flutter-local-notifications-package.md", "../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "./isar-schema.md", "../hipster/tasks-list-screen-interactions.md", "../hipster/task-detail-more-menu-and-delete.md", "./repeat-advance-algorithm.md"]
+updated: 2026-10-06
+inputs: ["../../../ideas/santian/hacker/local-notifications-package.md", "../../../ideas/santian/decisions/0010-flutter-local-notifications-package.md", "../../../ideas/santian/decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "./isar-schema.md", "../hipster/tasks-list-screen-interactions.md", "../hipster/task-detail-more-menu-and-delete.md", "../../../ideas/santian/hacker/repeat-advance-algorithm.md"]
 tags: [artifact]
 ---
 
+> **Superseded 2026-10-06** by [notifications-as-built](../../../ideas/santian/hacker/notifications-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
+
 ## Question
-[Decision 0007](../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md)
+[Decision 0007](../../../ideas/santian/decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md)
 confirmed two independent notifications per Task, and
-[decision 0010](../decisions/0010-flutter-local-notifications-package.md)
+[decision 0010](../../../ideas/santian/decisions/0010-flutter-local-notifications-package.md)
 picked the package to fire them. Neither says how a Task's fields actually
 turn into scheduled, cancelled, and rescheduled notifications as the app is
 used. What's the spec?
@@ -24,7 +26,7 @@ used. What's the spec?
 - Each Task gets up to **two notification IDs**, derived deterministically
   from `Task.id` — no separate ID storage needed. No catch-up logic is
   needed after the app's been closed a while — see
-  [the repeat-advance algorithm](./repeat-advance-algorithm.md), which
+  [the repeat-advance algorithm](../../../ideas/santian/hacker/repeat-advance-algorithm.md), which
   resolves this note's original open question.
 - Every write that touches `reminderAt`, `deadline`, `isCompleted`, or
   deletes the Task re-syncs its notifications: schedule if a date is set and
@@ -70,7 +72,7 @@ Every path that changes a Task's `reminderAt`, `deadline`, or `isCompleted`
   advances `reminderAt`/`deadline` to the next occurrence and resets
   `isCompleted` to `false` — so this is **not** a cancel, it's a
   **reschedule** of both IDs to the newly-computed dates, using
-  [the repeat-advance algorithm](./repeat-advance-algorithm.md).
+  [the repeat-advance algorithm](../../../ideas/santian/hacker/repeat-advance-algorithm.md).
 - **Task deleted** (via [Task Detail's More menu](../hipster/task-detail-more-menu-and-delete.md)):
   cancel both IDs. Since delete shows an undo toast, cancelling immediately
   and **re-scheduling on Undo** is simpler and safer than trying to "pause"
@@ -111,7 +113,7 @@ Not addressed by any hipster spec. Each scheduled notification needs a
 
 ### What this note deferred — now resolved
 - **The next-occurrence date math** and **catch-up behavior** are both
-  resolved in [the repeat-advance algorithm spec](./repeat-advance-algorithm.md):
+  resolved in [the repeat-advance algorithm spec](../../../ideas/santian/hacker/repeat-advance-algorithm.md):
   a `nextOccurrence()` function applied independently to `reminderAt` and
   `deadline`, and **no catch-up logic at all** — a missed occurrence just
   stays overdue until the user completes it, advancing exactly once per
@@ -121,7 +123,7 @@ Not addressed by any hipster spec. Each scheduled notification needs a
 ## What would change my mind
 If Android's exact-alarm and battery-optimization restrictions turn out to
 delay or drop reminders in practice on the owner's actual device — that's a
-real-world signal or [decision 0010](../decisions/0010-flutter-local-notifications-package.md)
+real-world signal or [decision 0010](../../../ideas/santian/decisions/0010-flutter-local-notifications-package.md)
 being wrong, not something this scheduling spec can fix on its own.
 
 ## Open questions
@@ -130,4 +132,4 @@ being wrong, not something this scheduling spec can fix on its own.
   reminder/deadline set), not confirmed.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

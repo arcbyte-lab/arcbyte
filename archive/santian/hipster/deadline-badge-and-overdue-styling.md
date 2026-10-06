@@ -3,17 +3,19 @@ title: Deadline list-row badge and overdue styling
 idea: santian
 lens: hipster
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "../assets/santian-hifi-export.html", "../assets/exodus.css"]
+updated: 2026-10-06
+inputs: ["../../../ideas/santian/decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "../../../ideas/santian/assets/santian-hifi-export.html", "../../../ideas/santian/assets/exodus.css"]
 tags: [artifact]
 ---
 
+> **Superseded 2026-10-06** by [task-row-as-built](../../../ideas/santian/hipster/task-row-as-built.md), [task-detail-as-built](../../../ideas/santian/hipster/task-detail-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
+
 ## Question
-[Decision 0007](../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md)
+[Decision 0007](../../../ideas/santian/decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md)
 confirmed `deadline` shows on the Tasks List row and drives overdue styling,
 but neither was ever drawn. What should they look like, using only what's
 already in the hi-fi export and theme?
@@ -29,7 +31,7 @@ already in the hi-fi export and theme?
 - **Overdue:** reuse the `--destructive` token already defined in
   `exodus.css` (light and dark) but never used anywhere in the hi-fi export.
   No new color, no new component — this resolves one instance of
-  [the "unused theme tokens" critique](./hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md)
+  [the "unused theme tokens" critique](../../../ideas/santian/hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md)
   instead of adding to it.
 
 ## Detail
@@ -95,4 +97,4 @@ deadline line into one line separated by a middot instead of stacking them.
   default — not separately confirmed.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

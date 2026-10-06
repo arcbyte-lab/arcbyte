@@ -29,7 +29,7 @@ frontmatter now reads `stage: project` with that `repo:` line.
 ## Context
 
 The Tasks data layer is settled enough to build: fields are fully inventoried
-([data model](../hacker/task-list-subtask-data-model.md)), storage is chosen
+([data model](../../../archive/santian/hacker/task-list-subtask-data-model.md)), storage is chosen
 ([decision 0006](./0006-isar-for-tasks-storage.md)), and the two open
 Clockface questions don't block a Tasks-only build
 ([decision 0005](./0005-clockface-questions-dont-block-tasks-build.md)). The

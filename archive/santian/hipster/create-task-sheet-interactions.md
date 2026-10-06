@@ -3,14 +3,16 @@ title: Create Task sheet — compose row, notes toggle, and the mislabeled third
 idea: santian
 lens: hipster
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["../hacker/task-list-subtask-data-model.md", "../decisions/0004-clone-google-tasks-interactions.md", "../assets/santian-hifi-export.html", "./tasks-list-screen-interactions.md", "./hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md"]
+updated: 2026-10-06
+inputs: ["../hacker/task-list-subtask-data-model.md", "../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md", "../../../ideas/santian/assets/santian-hifi-export.html", "./tasks-list-screen-interactions.md", "../../../ideas/santian/hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [create-sheets-as-built](../../../ideas/santian/hipster/create-sheets-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 The Create Task bottom sheet exists in three drawn variants (base, +Keyboard,
@@ -40,7 +42,7 @@ Tapping the `FAB` on Tasks List should go straight to the risen,
 keyboard-focused state — the `Create Task + Keyboard` frame, not
 `Create Task` (which shows the sheet lower, keyboard hidden). Nothing in the
 export suggests a two-step open (collapsed, then rising); Google Tasks'
-real behavior, which [decision 0004](../decisions/0004-clone-google-tasks-interactions.md)
+real behavior, which [decision 0004](../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md)
 commits to, opens straight into a focused compose field. Treat the collapsed
 frame as a transitional/dismissing state, not a resting one the user is
 meant to see and tap again.
@@ -74,7 +76,7 @@ Opens the Date & Time Picker dialog — see
 icon has `data-pencil-name="Subtask"` but renders the `star` icon (same SVG
 as `Star Tab` and every other `isStarred` indicator in this export) — the
 icon is correct, the layer name is a copy-paste leftover, consistent with
-[the "unused theme tokens" critique](./hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md)
+[the "unused theme tokens" critique](../../../ideas/santian/hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md)
 already finding sloppiness elsewhere in this export. Tapping it toggles
 `isStarred` on the Task being composed. Create Task has no subtask entry
 point — that stays exclusive to `Task Detail`'s "Add subtasks" field
@@ -84,7 +86,7 @@ point — that stays exclusive to `Task Detail`'s "Add subtasks" field
 ### Submitting
 Not explicitly drawn (no visible "Add" button — presumably keyboard
 Enter/Done submits, matching the icon-driven, button-light feel
-[decision 0004](../decisions/0004-clone-google-tasks-interactions.md)
+[decision 0004](../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md)
 commits to). Creates a Task with:
 - `title` — required, from the compose row.
 - `listId` — the currently active List tab, per
@@ -104,7 +106,7 @@ message. Keyboard Enter/Done on empty text is a no-op rather than a
 disallowed/disabled state, since there's no separate "submit" button to
 disable in the first place (this app is icon/keyboard-driven, not
 button-driven, per
-[decision 0004](../decisions/0004-clone-google-tasks-interactions.md)).
+[decision 0004](../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md)).
 
 ## What would change my mind
 Nothing left open on the third icon. If a real subtask-at-creation need
@@ -119,4 +121,4 @@ this icon.
   way (disabled submit, no-op on Enter) — not drawn.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

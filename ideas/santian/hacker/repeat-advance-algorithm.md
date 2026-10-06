@@ -8,12 +8,12 @@ source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
 updated: 2026-09-18
-inputs: ["./isar-schema.md", "./notification-scheduling.md", "../hipster/repeat-dialog-interactions.md", "./task-list-subtask-data-model.md", "./flutter-module-structure.md"]
+inputs: ["../../../archive/santian/hacker/isar-schema.md", "../../../archive/santian/hacker/notification-scheduling.md", "../../../archive/santian/hipster/repeat-dialog-interactions.md", "../../../archive/santian/hacker/task-list-subtask-data-model.md", "../../../archive/santian/hacker/flutter-module-structure.md"]
 tags: [artifact]
 ---
 
 ## Question
-[Notification scheduling](./notification-scheduling.md) deferred two things
+[Notification scheduling](../../../archive/santian/hacker/notification-scheduling.md) deferred two things
 to this note: the actual date math for advancing a repeating Task's
 `reminderAt`/`deadline`, and whether the app needs to "catch up" if it was
 closed past one or more occurrences. What's the algorithm, and does catch-up
@@ -23,7 +23,7 @@ logic need to exist at all?
 - One function, `nextOccurrence(DateTime current, Repeat repeat)`, called
   **independently** on `reminderAt` and on `deadline` (when set) — not a
   shared delta between them. Simpler, and correct for every frequency shape
-  [the Repeat dialog](../hipster/repeat-dialog-interactions.md) supports.
+  [the Repeat dialog](../../../archive/santian/hipster/repeat-dialog-interactions.md) supports.
 - Weekly-with-multiple-weekdays is the one genuinely non-trivial case:
   finding the next matching weekday, not just adding 7 days.
 - Monthly/yearly need explicit **clamping** for dates that don't exist in
@@ -32,7 +32,7 @@ logic need to exist at all?
 - **No catch-up logic is needed at all.** Advance only happens when the
   user completes the Task — a missed occurrence just sits there, correctly
   shown as overdue by
-  [the already-resolved overdue styling](../hipster/deadline-badge-and-overdue-styling.md),
+  [the already-resolved overdue styling](../../../archive/santian/hipster/deadline-badge-and-overdue-styling.md),
   until the user acts on it. This isn't an oversight; it falls directly out
   of how completion is already defined.
 
@@ -108,14 +108,14 @@ the next month) is surprising and not how any reference this project has
 used behaves.
 
 ### Why there's no catch-up logic
-[The data model](./task-list-subtask-data-model.md#task) already ties
+[The data model](../../../archive/santian/hacker/task-list-subtask-data-model.md#task) already ties
 advancing to **completion**, not to time passing: "Checking it off advances
 `reminderAt`/`deadline` to the next occurrence." Nothing says the app should
 notice three days have passed and silently fast-forward through three
 missed occurrences on its own. Given that:
 - A missed occurrence's `reminderAt`/`deadline` just **stays where it
   was** — which is exactly what
-  [overdue styling](../hipster/deadline-badge-and-overdue-styling.md) is
+  [overdue styling](../../../archive/santian/hipster/deadline-badge-and-overdue-styling.md) is
   for. A repeating Task that's overdue is not a bug state; it's the
   intended visual signal that it wasn't completed on time.
 - Completing it — whenever that happens, today or three days late — runs
@@ -129,19 +129,19 @@ missed occurrences on its own. Given that:
 - Local notifications for occurrences that already fired while the app was
   closed are the OS's problem, not this algorithm's — `flutter_local_notifications`
   schedules one notification at a time (per
-  [the scheduling spec](./notification-scheduling.md)'s reschedule-on-complete
+  [the scheduling spec](../../../archive/santian/hacker/notification-scheduling.md)'s reschedule-on-complete
   model), so there's never a backlog of *pending* notifications to reconcile,
   only the single next one.
 
 ### Integration with notification scheduling
-[The scheduling spec](./notification-scheduling.md) already says completing
+[The scheduling spec](../../../archive/santian/hacker/notification-scheduling.md) already says completing
 a repeating Task reschedules both notification IDs rather than cancelling
 them. This note is what computes the dates that reschedule call uses:
 `nextOccurrence(task.reminderAt, task.repeat!)` and, if `deadline` is set,
 `nextOccurrence(task.deadline!, task.repeat!)` — called once, synchronously,
 in `TaskRepository.toggleCompleted()`, the single method that flips
 `isCompleted` for **any** Cubit's "complete this Task" action. See
-[the module structure note](./flutter-module-structure.md) for why that
+[the module structure note](../../../archive/santian/hacker/flutter-module-structure.md) for why that
 logic lives in one repository method rather than being duplicated per
 Cubit.
 

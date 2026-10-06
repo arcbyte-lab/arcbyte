@@ -8,7 +8,7 @@ source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
 updated: 2026-09-18
-inputs: ["../hacker/task-list-subtask-data-model.md", "./0004-clone-google-tasks-interactions.md"]
+inputs: ["../../../archive/santian/hacker/task-list-subtask-data-model.md", "./0004-clone-google-tasks-interactions.md"]
 tags: [artifact, decision]
 ---
 
@@ -23,7 +23,7 @@ styling), not an artifact of an unedited pasted mockup.
 
 ## Context
 
-[The data model note](../hacker/task-list-subtask-data-model.md) flagged
+[The data model note](../../../archive/santian/hacker/task-list-subtask-data-model.md) flagged
 this mockup drawing two date concepts where real Google Tasks has one, and
 left open whether that was real scope past
 [decision 0004](./0004-clone-google-tasks-interactions.md) or a mockup slip.

@@ -3,14 +3,16 @@ title: Flutter module structure — folders, and one repository instead of dupli
 idea: santian
 lens: hacker
 kind: architecture
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["./isar-schema.md", "./notification-scheduling.md", "./repeat-advance-algorithm.md", "../decisions/0009-cubit-for-state-management.md", "../decisions/0003-personal-tool-not-a-product.md"]
+updated: 2026-10-06
+inputs: ["./isar-schema.md", "./notification-scheduling.md", "../../../ideas/santian/hacker/repeat-advance-algorithm.md", "../../../ideas/santian/decisions/0009-cubit-for-state-management.md", "../../../ideas/santian/decisions/0003-personal-tool-not-a-product.md"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [tasks-architecture-as-built](../../../ideas/santian/hacker/tasks-architecture-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 Every piece of the Tasks module has its own spec now — schema, notification
@@ -31,20 +33,20 @@ runs "in the same Cubit method" — which one, if there are two?
   advance-then-reschedule logic written twice, once per Cubit that offers a
   "complete" action.
 - Folder layout is feature-first and flat — no clean-architecture
-  domain/usecase layers. [Decision 0003](../decisions/0003-personal-tool-not-a-product.md)
+  domain/usecase layers. [Decision 0003](../../../ideas/santian/decisions/0003-personal-tool-not-a-product.md)
   (personal tool, one developer) doesn't justify that ceremony.
 
 ## Detail
 
 ### Why a repository, when decision 0009 didn't mention one
-[Decision 0009](../decisions/0009-cubit-for-state-management.md) described
+[Decision 0009](../../../ideas/santian/decisions/0009-cubit-for-state-management.md) described
 "each [Cubit] subscribing to an Isar `watch()` stream" — true for reads, but
 underspecified for writes. Three different UI actions all need to run the
 exact same "complete a Task" logic:
 [Tasks List's checkbox](../hipster/tasks-list-screen-interactions.md),
 [Task Detail's Mark Completed pill](../hipster/task-detail-identity-and-fields.md),
 and (per
-[the repeat-advance algorithm](./repeat-advance-algorithm.md)) that logic
+[the repeat-advance algorithm](../../../ideas/santian/hacker/repeat-advance-algorithm.md)) that logic
 branches on whether the Task repeats, and either way ends with
 [a notification reschedule](./notification-scheduling.md). Writing that
 three times across three Cubits — or worse, having them drift out of sync
@@ -135,7 +137,7 @@ lib/
       deadline_badge.dart
 ```
 No `domain/`, no `usecases/`, no interface-per-repository indirection —
-[decision 0003](../decisions/0003-personal-tool-not-a-product.md) already
+[decision 0003](../../../ideas/santian/decisions/0003-personal-tool-not-a-product.md) already
 settled that this is a personal tool with one developer; a layer that
 exists to let multiple teams swap implementations independently has no
 audience here. `repeat_advance.dart` sits directly under `tasks/`, not
@@ -154,4 +156,4 @@ split it — not a reason to avoid starting with one file now.
   owner has reviewed line-by-line.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

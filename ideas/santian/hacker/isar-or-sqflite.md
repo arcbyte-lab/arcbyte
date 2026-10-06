@@ -8,7 +8,7 @@ source: claude-opus-5 (cowork)
 evidence: none
 created: 2026-09-16
 updated: 2026-09-18
-inputs: ["./offline-task-module-architecture.md", "./task-list-subtask-data-model.md", "../decisions/0005-clockface-questions-dont-block-tasks-build.md"]
+inputs: ["./offline-task-module-architecture.md", "../../../archive/santian/hacker/task-list-subtask-data-model.md", "../decisions/0005-clockface-questions-dont-block-tasks-build.md"]
 tags: [artifact, question]
 ---
 
@@ -40,7 +40,7 @@ against this app's real queries or against the current state of both packages.
 [decision 0006](../decisions/0006-isar-for-tasks-storage.md) for the full
 reasoning. Short version: the three queries Tasks needs (by list, by star, by
 day) are plain indexed lookups either store handles fine, so the tiebreaker is
-fit, not speed. [The data model](./task-list-subtask-data-model.md) shows
+fit, not speed. [The data model](../../../archive/santian/hacker/task-list-subtask-data-model.md) shows
 Subtask only ever belonging to one Task, never queried on its own — that is
 Isar's embedded-object shape with no join required. Isar's built-in
 `watch()` also pairs directly with the Cubit/BLoC pattern named in

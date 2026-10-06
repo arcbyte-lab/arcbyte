@@ -3,14 +3,16 @@ title: Add-list method for the scrollable List Tab Bar
 idea: santian
 lens: hipster
 kind: flow
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["../hacker/task-list-subtask-data-model.md", "./hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md", "../decisions/0004-clone-google-tasks-interactions.md"]
+updated: 2026-10-06
+inputs: ["../hacker/task-list-subtask-data-model.md", "../../../ideas/santian/hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md", "../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [create-sheets-as-built](../../../ideas/santian/hipster/create-sheets-as-built.md), [0017-lists-are-name-only](../../../ideas/santian/decisions/0017-lists-are-name-only.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 The owner confirmed the `List Tab Bar` (Star / Personal Interest / My Tasks /
@@ -31,7 +33,7 @@ flow behind it look like, given the app's existing patterns?
 ## Detail
 
 ### Why a trailing tab, not a FAB or menu item
-[Decision 0004](../decisions/0004-clone-google-tasks-interactions.md) commits
+[Decision 0004](../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md) commits
 to cloning Google Tasks' interaction model and only changing the skin. Real
 Google Tasks puts "Create new list" behind a dropdown menu, not a tab bar —
 but this app has already departed from that by making lists a horizontally
@@ -52,7 +54,7 @@ covers.
 
 ### The sheet
 Reuses the Create Task bottom sheet's shape exactly, per
-[the hi-fi mockup](./hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md):
+[the hi-fi mockup](../../../ideas/santian/hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md):
 same corner radius, same rise-with-keyboard behaviour, same "compose row
 focused on open" pattern used when the Create Task sheet opens.
 
@@ -88,4 +90,4 @@ fit the pattern already on screen.
   unwieldy? Not addressed — no evidence either way.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

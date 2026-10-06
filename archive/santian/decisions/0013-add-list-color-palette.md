@@ -3,14 +3,16 @@ title: Color palette for the add-list picker row
 idea: santian
 lens: intelligence
 kind: decision
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-22
-updated: 2026-09-22
-inputs: ["../hipster/add-list-method.md", "../assets/exodus.css", "./0011-blue-by-day-orange-by-night.md"]
+updated: 2026-10-06
+inputs: ["../hipster/add-list-method.md", "../../../ideas/santian/assets/exodus.css", "../../../ideas/santian/decisions/0011-blue-by-day-orange-by-night.md"]
 tags: [artifact, decision]
 ---
+
+> **Superseded 2026-10-06** by [0017-lists-are-name-only](../../../ideas/santian/decisions/0017-lists-are-name-only.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Decision
 
@@ -44,20 +46,20 @@ build the picker from.
 - **Hacker:** `TaskList.color` already stores a plain ARGB int
   (`Color(value)`), so any 8 values work with no schema change.
 - **Hustler:** not applicable, per
-  [decision 0003](./0003-personal-tool-not-a-product.md).
+  [decision 0003](../../../ideas/santian/decisions/0003-personal-tool-not-a-product.md).
 
 ## Options rejected
 
 - **Reuse `exodus.css`'s `--chart-1`..`--chart-5` tokens** (a 5-step teal
   gradient, currently unused anywhere in the mockup). Rejected even though
   reusing an existing token would resolve one more instance of
-  [the unused-theme-tokens critique](../hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md) —
+  [the unused-theme-tokens critique](../../../ideas/santian/hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md) —
   they're all the same hue at different lightness, which is the wrong shape
   for a palette whose whole job is letting the owner tell Lists apart by
   color. A real accessibility/legibility need overrides the reuse instinct.
 - **Reuse `--primary`/`--secondary`** for two of the eight dots. Rejected —
   those already mean "the app's own accent" (see
-  [decision 0011](./0011-blue-by-day-orange-by-night.md)); a List using the
+  [decision 0011](../../../ideas/santian/decisions/0011-blue-by-day-orange-by-night.md)); a List using the
   same color as active-state UI chrome would be confusing, not helpful.
 
 ## How we will know we were wrong
@@ -67,4 +69,4 @@ wants a color not in this set — that's the signal to revise the palette, not
 a sign the 8-dot-row shape is wrong.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)
