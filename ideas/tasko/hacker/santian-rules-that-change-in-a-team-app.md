@@ -35,7 +35,7 @@ Tasko intent below is read from the schema only (`evidence: weak`).
 | Rule | Note |
 |---|---|
 | Order by date, empty last, ties by id | Use `due_date` instead of `reminderAt`. |
-| Day headers Past / Today / Tomorrow / date / No date | Group on `due_date`. |
+| Day headers Past / Today / Tomorrow / date / No date | Group on `due_date`. The calendar above the tabs narrows the list to one day ([0003](../decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md)). |
 | Short date and relative day text | Pure formatting. |
 | Overdue = not done and calendar day before today | Ignore the time part of `due_date`, or the rule shifts during the day. |
 | Title and name trimmed, never blank; description blank → null | — |
@@ -81,6 +81,8 @@ row would bring back none of those. Options:
   already uses.
 
 ### List options
+Tabs are workspaces and projects ([0002](../decisions/0002-tabs-are-workspaces-then-projects.md)),
+so these act on a division or a project. `private` has no options.
 - Rename List → rename project. Needs owner or person-in-charge role.
 - Delete List → `tasks.project_id` is `on delete set null`, so the Tasks
   would survive without a project. Tasko already has `projects.status =

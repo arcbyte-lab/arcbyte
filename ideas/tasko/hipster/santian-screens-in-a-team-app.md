@@ -23,8 +23,10 @@ what does each screen keep, and what does Tasko's data force it to add?
 - **Must add:** assignee, status beyond done/not done (review, proof),
   and priority. Each one competes for room on a row that Santian kept
   minimal.
-- **Blocked:** what a tab *is* (project, division, personal). This note
-  cannot design the tab bar until that is decided.
+- **Settled since:** a tab is `private`, a division, or a project, and
+  there is no Star tab ([0002](../decisions/0002-tabs-are-workspaces-then-projects.md)).
+  A due-date calendar sits above the tabs ([0003](../decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md),
+  [wireframe](./home-screen-wireframe.md)).
 
 ## Detail
 
@@ -33,7 +35,7 @@ Tasko UI to compare against.
 
 | Santian screen | Keep | Add or change for Tasko |
 |---|---|---|
-| [Tasks List](../../santian/hipster/tasks-list-screen-as-built.md) | card, Star tab, swipe, day headers, Completed section, FAB | Tabs = whatever a List becomes. Group by `due_date`. Completed could sort by `completed_date`. List options become project actions (rename, archive), shown by role. |
+| [Tasks List](../../santian/hipster/tasks-list-screen-as-built.md) | swipe, day headers, Completed section, FAB | Tabs per 0002, with no Star tab and no `+`. The calendar sits above them. Group by `due_date`. Completed could sort by `completed_date`. List options become project actions (rename, archive), shown by role. |
 | [Task row](../../santian/hipster/task-row-as-built.md) | checkbox, title, 2-line description, date line, star | An assignee avatar (on the right, beside the star?). A third checkbox state for "in review". Priority: maybe a colored date or a mark, not a new line. |
 | [Create sheets](../../santian/hipster/create-sheets-as-built.md) | title-first, Enter saves, notes, date, star | An assignee chip (default: me). `code`, division and creator are filled in by the server, so the user never sees them. Create List → create project only if the user may. |
 | [Task Detail](../../santian/hipster/task-detail-as-built.md) | top bar, title, description, dates as chips, subtasks, the big completion pill | Rows for assignee, status, priority, and proof (upload when required). Comments and attachments below the subtasks. The pill's text follows status ("Submit for review", "Approve"). |
