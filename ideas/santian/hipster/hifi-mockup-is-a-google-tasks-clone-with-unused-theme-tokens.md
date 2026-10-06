@@ -87,7 +87,7 @@ language, which is good — a user only has to learn it once.
   the Google Tasks resemblance is deliberate, not accidental drift.
 - This note's title claim — "unused theme tokens" — is now checked
   precisely, not just asserted, in
-  [the exodus.css → Flutter theming spec](../hacker/exodus-theme-to-flutter.md):
+  [the exodus.css → Flutter theming spec](../../../archive/santian/hacker/exodus-theme-to-flutter.md):
   `--secondary`, `--accent`, every chart/sidebar token, and two of three
   fonts are confirmed genuinely unused by real usage counts. It also found
   the one token that looked like a bug and wasn't — see

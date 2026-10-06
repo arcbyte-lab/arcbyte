@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-05
-updated: 2026-10-05
+updated: 2026-10-06
 inputs: ["../assets/sqlite-schema-zero.sql", "../assets/sqlite-schema.sql"]
 tags: [artifact, decision]
 ---
@@ -81,6 +81,11 @@ other differences are formatting: table order, and `IF NOT EXISTS`.
 6. **Not changed, but noticed:** `activity_logs.project_id` has no foreign
    key in either version, while `division_id` does. Deleting a project leaves
    log rows pointing at it. This may be on purpose for an audit log.
+7. **A live table may still be on schema-zero.** On 2026-10-06 the owner
+   pasted a `tasks` table that still has `on_hold_date` and no
+   `assignee_id`. That is the schema-zero shape. If it came from a running
+   database, that database has not been migrated to this schema yet.
+   Findings 1 and 3 then apply now, not later.
 
 ## What each lens said
 

@@ -3,14 +3,16 @@ title: Date & time picker — month grid, Set Time, Repeat, Cancel/Done
 idea: santian
 lens: hipster
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["../hacker/task-list-subtask-data-model.md", "../decisions/0004-clone-google-tasks-interactions.md", "../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "../assets/santian-hifi-export.html", "./create-task-sheet-interactions.md", "./repeat-dialog-interactions.md"]
+updated: 2026-10-06
+inputs: ["../hacker/task-list-subtask-data-model.md", "../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md", "../../../ideas/santian/decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "../../../ideas/santian/assets/santian-hifi-export.html", "./create-task-sheet-interactions.md", "./repeat-dialog-interactions.md"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [date-pickers-and-repeat-as-built](../../../ideas/santian/hipster/date-pickers-and-repeat-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 The `HiFi — Date Time Picker` frame draws a month-grid calendar, a "Set
@@ -35,7 +37,7 @@ interaction, and does it also cover `deadline`, or only `reminderAt`?
 ## Detail
 
 ### Date: month grid
-Matches [decision 0004](../decisions/0004-clone-google-tasks-interactions.md)'s
+Matches [decision 0004](../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md)'s
 committed "month-grid date picker" pattern exactly: `Month Nav`
 (chevron-left/right around a `Month Label`), a `Weekday Header` (M–S), and a
 `Calendar Grid` of `Day Cell`s, one marked `Selected Day`. Tapping a cell
@@ -52,7 +54,7 @@ rebuilt with a single time once the screen is implemented.
 anywhere — no time-picker UI exists in this export, native or custom.
 **Recommendation, not a ruling:** open the platform's native time picker
 (iOS wheel / Android Material dial), per
-[decision 0004](../decisions/0004-clone-google-tasks-interactions.md)'s
+[decision 0004](../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md)'s
 "native-feeling" direction — cheapest to build, matches what users already
 know, no new component to design. Once set, the `Set Time Label` updates
 from "Set time" to the chosen time (e.g. "7:00 AM") — this part isn't
@@ -92,7 +94,7 @@ Reasoning confirmed: `repeat` is a single whole-Task field already set once
 from the `reminderAt` picker, so a second `Repeat` entry point on the
 deadline picker would let the user try to set it twice from two places for
 one Task; and `deadline` per
-[decision 0007](../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md)
+[decision 0007](../../../ideas/santian/decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md)
 is a target date, not a time-of-day commitment the way `reminderAt`'s
 "7:00 AM" is, so it doesn't need `Set Time` either. `deadline` therefore
 stores a date only, no time component.
@@ -108,4 +110,4 @@ outgrowing this call, not a mistake in it.
   AM above, not confirmed by the owner).
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

@@ -3,14 +3,16 @@ title: Tasks List screen — tab switching, row tap, checkbox, and FAB behaviour
 idea: santian
 lens: hipster
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["../hacker/task-list-subtask-data-model.md", "../decisions/0004-clone-google-tasks-interactions.md", "../assets/santian-hifi-export.html", "./add-list-method.md", "./deadline-badge-and-overdue-styling.md", "./google-tasks-ux-playbook.md", "./task-detail-more-menu-and-delete.md"]
+updated: 2026-10-06
+inputs: ["../hacker/task-list-subtask-data-model.md", "../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md", "../../../ideas/santian/assets/santian-hifi-export.html", "./add-list-method.md", "./deadline-badge-and-overdue-styling.md", "../../../ideas/santian/hipster/google-tasks-ux-playbook.md", "./task-detail-more-menu-and-delete.md"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [tasks-list-screen-as-built](../../../ideas/santian/hipster/tasks-list-screen-as-built.md), [task-row-as-built](../../../ideas/santian/hipster/task-row-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 The hi-fi export draws the Tasks List screen's static geometry — tab bar,
@@ -110,7 +112,7 @@ Detail, behind the `more-vertical` (`More`) icon already drawn in its
 `Top Bar` — see
 [Task Detail's More menu and delete](./task-detail-more-menu-and-delete.md).
 This rules out the swipe-to-delete pattern [the pasted Google Tasks UX
-playbook](./google-tasks-ux-playbook.md) suggested — that note was
+playbook](../../../ideas/santian/hipster/google-tasks-ux-playbook.md) suggested — that note was
 `evidence: none`, describing real Google Tasks in general, never checked
 against what this app's screens actually draw or decide.
 
@@ -144,4 +146,4 @@ between them.
   reasoned default above (first list tab), not asked.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

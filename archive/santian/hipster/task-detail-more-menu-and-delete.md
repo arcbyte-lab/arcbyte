@@ -3,14 +3,16 @@ title: Task Detail's More menu and delete
 idea: santian
 lens: hipster
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["./tasks-list-screen-interactions.md", "../assets/santian-hifi-export.html", "../decisions/0004-clone-google-tasks-interactions.md"]
+updated: 2026-10-06
+inputs: ["./tasks-list-screen-interactions.md", "../../../ideas/santian/assets/santian-hifi-export.html", "../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [task-detail-as-built](../../../ideas/santian/hipster/task-detail-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 [Tasks List screen interactions](./tasks-list-screen-interactions.md) left
@@ -64,7 +66,7 @@ Tapping **Delete**:
    [the data model](../hacker/task-list-subtask-data-model.md#subtask) —
    a Subtask belongs to exactly one Task, so it has nowhere to exist once
    its parent is gone). No confirm dialog — per
-   [decision 0003](../decisions/0003-personal-tool-not-a-product.md), this
+   [decision 0003](../../../ideas/santian/decisions/0003-personal-tool-not-a-product.md), this
    is a single-user tool, and the More → Delete tap-through (open Task
    Detail → tap More → tap Delete) is already the accident-guard a confirm
    dialog would otherwise exist for.
@@ -89,4 +91,4 @@ longer toast, a confirm dialog after all, or both.
 - What else eventually joins the `More` menu, if anything.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

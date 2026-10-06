@@ -8,7 +8,7 @@ source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-22
 updated: 2026-09-22
-inputs: ["../hipster/add-list-method.md", "../hipster/tasks-list-screen-interactions.md"]
+inputs: ["../../../archive/santian/hipster/add-list-method.md", "../../../archive/santian/hipster/tasks-list-screen-interactions.md"]
 tags: [artifact, decision]
 ---
 
@@ -17,13 +17,13 @@ tags: [artifact, decision]
 Proposed, not yet adopted — see status. A fresh install with zero Lists
 seeds exactly one List on first launch — name "My Tasks", icon
 `footprints` (already used for that name throughout the mockup), a color
-from [decision 0013](./0013-add-list-color-palette.md)'s palette — so the
+from [decision 0013](../../../archive/santian/decisions/0013-add-list-color-palette.md)'s palette — so the
 Tasks List screen, the FAB, and Task creation always have somewhere to land.
 No other onboarding UI is added.
 
 ## Context
 
-[Add-list method](../hipster/add-list-method.md) flags this as unaddressed:
+[Add-list method](../../../archive/santian/hipster/add-list-method.md) flags this as unaddressed:
 nothing says what a Lists-empty first run shows, or which List the FAB
 creates a Task into when none exist yet. Santian issue
 [#8](https://github.com/arcbyte-lab/Santian/issues/8) names this as a real
@@ -35,7 +35,7 @@ stand-in, which is fine for building but was never meant to ship.
 
 - **Hound:** not applicable — no real person has been asked; this is a
   reasonable-default proposal.
-- **Hipster:** [Tasks List interactions](../hipster/tasks-list-screen-interactions.md)
+- **Hipster:** [Tasks List interactions](../../../archive/santian/hipster/tasks-list-screen-interactions.md)
   already flags the true empty state (a List that exists but has zero
   Tasks) as genuinely undecided. Seeding one List on first launch sidesteps
   a *harder*, still-open question — "what does the Lists-tab-bar-is-itself-empty
@@ -50,7 +50,7 @@ stand-in, which is fine for building but was never meant to ship.
 
 - **Show a genuinely empty Tasks List screen with no Lists at all.**
   Rejected — the FAB (per
-  [Tasks List interactions](../hipster/tasks-list-screen-interactions.md))
+  [Tasks List interactions](../../../archive/santian/hipster/tasks-list-screen-interactions.md))
   needs an active List to create into; a Lists-less first run has no answer
   for what tapping it does, and this app has no separate "create your first
   list" onboarding flow drawn or specified anywhere.

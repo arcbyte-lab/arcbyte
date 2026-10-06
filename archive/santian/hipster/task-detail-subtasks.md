@@ -3,14 +3,16 @@ title: Task Detail's Subtask Field — add, reorder, and independent completion
 idea: santian
 lens: hipster
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["../hacker/task-list-subtask-data-model.md", "../assets/santian-hifi-export.html", "./task-detail-identity-and-fields.md"]
+updated: 2026-10-06
+inputs: ["../hacker/task-list-subtask-data-model.md", "../../../ideas/santian/assets/santian-hifi-export.html", "./task-detail-identity-and-fields.md"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [task-detail-as-built](../../../ideas/santian/hipster/task-detail-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 Every `Subtask Field` instance across all 8 exported screens is the same
@@ -50,7 +52,7 @@ keyboard opens, type" pattern as the Create Task compose row and (per [Task
 Detail's identity spec](./task-detail-identity-and-fields.md)) Title and
 Description. Pressing Enter/Done creates the Subtask and, per Google Tasks'
 own behavior (which
-[decision 0004](../decisions/0004-clone-google-tasks-interactions.md)
+[decision 0004](../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md)
 commits this app to), immediately opens a new empty input below it — so
 adding several subtasks in a row doesn't require re-tapping "Add subtasks"
 each time.
@@ -106,4 +108,4 @@ revisit row density.
 - Checkbox size (`16×16` proposed) — not confirmed.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

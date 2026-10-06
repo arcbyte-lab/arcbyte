@@ -8,7 +8,7 @@ source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
 updated: 2026-09-18
-inputs: ["../hacker/cubit-or-bloc.md", "../hacker/isar-schema.md", "./0003-personal-tool-not-a-product.md", "../hipster/tasks-list-screen-interactions.md"]
+inputs: ["../hacker/cubit-or-bloc.md", "../../../archive/santian/hacker/isar-schema.md", "./0003-personal-tool-not-a-product.md", "../../../archive/santian/hipster/tasks-list-screen-interactions.md"]
 tags: [artifact, decision]
 ---
 
@@ -17,7 +17,7 @@ tags: [artifact, decision]
 Use **Cubit** (via `flutter_bloc`'s `Cubit` class), not full BLoC, for
 Santian's Tasks-module state management — one Cubit per screen/feature area
 (e.g. `TasksListCubit`, `TaskDetailCubit`), each subscribing to an
-[Isar `watch()` stream](../hacker/isar-schema.md) and emitting state
+[Isar `watch()` stream](../../../archive/santian/hacker/isar-schema.md) and emitting state
 directly from method calls.
 
 ## Context
@@ -26,7 +26,7 @@ directly from method calls.
 named "BLoC or Cubit" without choosing — an unvalidated model default, the
 same situation [Isar or sqflite?](../hacker/isar-or-sqflite.md) was in
 before decision 0006. Asked to settle it now that every Tasks-module screen
-has a resolved interaction spec and [the Isar schema](../hacker/isar-schema.md)
+has a resolved interaction spec and [the Isar schema](../../../archive/santian/hacker/isar-schema.md)
 exists to build against.
 
 ## What each lens said
@@ -44,7 +44,7 @@ exists to build against.
   contributors touching the same state machine. Cubit's direct-method-call
   model gets the same `flutter_bloc` widget integration (`BlocProvider`,
   `BlocBuilder`) and the same compatibility with
-  [Isar's `watch()` streams](../hacker/isar-schema.md) (subscribe once in
+  [Isar's `watch()` streams](../../../archive/santian/hacker/isar-schema.md) (subscribe once in
   the Cubit's constructor, `emit()` on each stream event) without the event
   layer in between.
 - **Hustler:** not applicable, per

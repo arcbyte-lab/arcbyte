@@ -9,7 +9,7 @@ status: draft
 source: me
 evidence: none
 created: 2026-09-16
-updated: 2026-09-18
+updated: 2026-10-06
 tags: [anchor]
 ---
 
@@ -69,70 +69,64 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 | lens | where it stands |
 |---|---|
 | [Hound](../../lenses/hound.md) | Nothing. No real person has been asked anything. One open question. |
-| [Hipster](../../lenses/hipster.md) | A hi-fi mockup exists for the 8 core Tasks screens, light and dark, and every one now has a full interaction spec: [Tasks List](./hipster/tasks-list-screen-interactions.md), [Create Task](./hipster/create-task-sheet-interactions.md), [the date/time picker](./hipster/date-time-picker-interactions.md), and [Task Detail](./hipster/task-detail-identity-and-fields.md) (plus its [More menu/delete](./hipster/task-detail-more-menu-and-delete.md) and [subtasks](./hipster/task-detail-subtasks.md), the least-drawn piece of the mockup). [Add-list method](./hipster/add-list-method.md) and [deadline badge/overdue styling](./hipster/deadline-badge-and-overdue-styling.md) cover the two affordances the mockup never drew at all. Everything is now resolved or has an owner-confirmed default, including [the Repeat dialog](./hipster/repeat-dialog-interactions.md); the few remaining gaps are small recommendations awaiting sign-off (a couple of visual states, month/year repeat's day-selection), not open design questions. |
-| [Hacker](../../lenses/hacker.md) | Task/List/Subtask fields are fully settled — see [data model](./hacker/task-list-subtask-data-model.md). [Decision 0006](./decisions/0006-isar-for-tasks-storage.md) picks Isar; [the Isar schema](./hacker/isar-schema.md) has the concrete collections. [Decision 0007](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md) confirms Deadline is intentional scope. [Decision 0009](./decisions/0009-cubit-for-state-management.md) picks Cubit over full BLoC. [Decision 0010](./decisions/0010-flutter-local-notifications-package.md) picks flutter_local_notifications; [its scheduling spec](./hacker/notification-scheduling.md) covers IDs, lifecycle triggers, and permissions, and [the repeat-advance algorithm](./hacker/repeat-advance-algorithm.md) supplies the date math — including why no catch-up logic is needed at all. [The module structure note](./hacker/flutter-module-structure.md) ties all of this together and adds a `TaskRepository` to avoid duplicating the complete-a-Task logic across Cubits. [The theming spec](./hacker/exodus-theme-to-flutter.md) maps exodus.css to ThemeData; [decision 0011](./decisions/0011-blue-by-day-orange-by-night.md) confirms the light/dark hue swap (blue by day, orange by night) is intentional, not an unedited-theme artifact. [Decision 0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md) keeps the two Clockface questions from gating this — they're still open. Flutter itself is still just a pasted model's unvalidated default. |
+| [Hipster](../../lenses/hipster.md) | The Tasks module is built. Its screens are described **as built** (Santian at `f64e2c0`, 2026-10-02): [Tasks List](./hipster/tasks-list-screen-as-built.md), [task row](./hipster/task-row-as-built.md), [create sheets](./hipster/create-sheets-as-built.md), [Task Detail](./hipster/task-detail-as-built.md), [date pickers and Repeat](./hipster/date-pickers-and-repeat-as-built.md). Where the app follows Google Tasks rather than the hi-fi mockup, the app wins — [decision 0016](./decisions/0016-follow-google-tasks-mobile-over-the-mockup.md). The mockup-era specs are in [`archive/santian/`](../../archive/santian/) as `superseded`. |
+| [Hacker](../../lenses/hacker.md) | Described as built: [data model](./hacker/tasks-data-model-as-built.md), [behaviour rules](./hacker/tasks-behaviour-rules-as-built.md) (written to be portable to Tasko), [notifications](./hacker/notifications-as-built.md), [architecture](./hacker/tasks-architecture-as-built.md), [theme tokens](./hacker/theme-tokens-as-built.md). Stack decisions stand: Isar ([0006](./decisions/0006-isar-for-tasks-storage.md)), Cubit ([0009](./decisions/0009-cubit-for-state-management.md)), flutter_local_notifications ([0010](./decisions/0010-flutter-local-notifications-package.md)), blue by day / orange by night ([0011](./decisions/0011-blue-by-day-orange-by-night.md)). One known defect: completing a repeating Task from Task Detail. Clockface questions are still open and still don't block Tasks ([0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md)). |
 | [Hustler](../../lenses/hustler.md) | Mostly closed for this idea — no market, no pricing, no channel. See decision 0003. |
 
 ## Next question to answer
 
-Four small product decisions are drafted and waiting on the owner to
-confirm, each currently blocking one open Santian issue:
-[0012](./decisions/0012-add-list-icon-set.md) and
-[0013](./decisions/0013-add-list-color-palette.md) (the add-list picker's
-icon set and color palette), [0014](./decisions/0014-first-launch-default-list.md)
-(what a fresh install shows with zero Lists) — all three block
-[Santian#8](https://github.com/arcbyte-lab/Santian/issues/8) — and
-[0015](./decisions/0015-deadline-notification-defaults-to-9am.md) (what time
-a deadline notification fires), blocking the deadline half of
-[Santian#12](https://github.com/arcbyte-lab/Santian/issues/12). All four are
-`status: draft` with a recommended default; none should be treated as
-settled until the owner promotes them.
+**For the owner to confirm (all `draft`):**
+- [0016](./decisions/0016-follow-google-tasks-mobile-over-the-mockup.md) — the app, not the mockup, is the reference.
+- [0017](./decisions/0017-lists-are-name-only.md) — Lists are name-only; supersedes the archived 0012/0013.
+- [0014](./decisions/0014-first-launch-default-list.md) and
+  [0015](./decisions/0015-deadline-notification-defaults-to-9am.md) — both
+  already built; code comments say the owner confirmed them on 2026-09-22
+  outside Arcbyte. Promote them if that is right.
 
-The Task/List/Subtask field-level questions are otherwise settled — see
-[the data model note](./hacker/task-list-subtask-data-model.md),
-[decision 0007](./decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md),
-and [the deadline badge/overdue-styling design](./hipster/deadline-badge-and-overdue-styling.md).
-The remaining unanswered items ([Day vs Routine](./hacker/day-versus-routine.md),
-[Clockface-or-list source of truth](./hacker/clockface-or-list-source-of-truth.md))
-block Clockface only, not the Tasks build, per decision 0005.
+**Then:** carry the as-built behaviour into [Tasko](../tasko/README.md). The
+[behaviour rules](./hacker/tasks-behaviour-rules-as-built.md) and
+[data model](./hacker/tasks-data-model-as-built.md) list what Tasko's schema
+would need (Lists, star, reminder vs deadline, repeat) and what Santian lacks
+(timestamps, manual order).
 
-[How does a Day differ from its Routine?](./hacker/day-versus-routine.md) is
-also still open and still unblocks Clockface modelling — decision 0001
-retired the old aggregate without naming a replacement — but per decision
-0005 it does not block the Tasks build that is happening first.
+**Still open, Clockface only** (per decision 0005):
+[Day vs Routine](./hacker/day-versus-routine.md) and
+[Clockface-or-list source of truth](./hacker/clockface-or-list-source-of-truth.md).
 
 ## Artifacts
 
 **Hound**
 - [Who plans their day by the clock?](./hound/who-plans-their-day-by-the-clock.md) — question, unanswered
 
-**Hipster**
+**Hipster** — as built (`evidence: strong`)
+- [Tasks List screen](./hipster/tasks-list-screen-as-built.md) — card, tabs, swipe, day groups, Completed, List options menu
+- [Task row](./hipster/task-row-as-built.md) — checkbox, wrapping title, relative date line, star, tap zones
+- [Create Task and Create List sheets](./hipster/create-sheets-as-built.md) — compose, notes, reminder, star; name-only List
+- [Task Detail](./hipster/task-detail-as-built.md) — fields, save-on-blur, subtasks, Mark completed, delete + undo
+- [Reminder picker, deadline picker, Repeat dialog](./hipster/date-pickers-and-repeat-as-built.md)
+
+**Hipster** — inputs and history
 - [Wireframe geometry spec](./hipster/wireframe-geometry-spec.md) — what is actually drawn in the Penpot file
 - [Google Tasks UX playbook](./hipster/google-tasks-ux-playbook.md) — patterns to copy
-- [Hi-fi mockup is a Google Tasks clone riding an unused generic theme](./hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md) — critique of the new hi-fi export
-- [Add-list method for the scrollable List Tab Bar](./hipster/add-list-method.md) — design for the not-yet-drawn "create a list" affordance
-- [Deadline list-row badge and overdue styling](./hipster/deadline-badge-and-overdue-styling.md) — design for decision 0007's not-yet-drawn behaviour
-- [Tasks List screen — tab switching, row tap, checkbox, and FAB behaviour](./hipster/tasks-list-screen-interactions.md) — spec for the primary screen's interactions; flags the completed-task visual and the empty state as genuinely undecided
-- [Task Detail's More menu and delete](./hipster/task-detail-more-menu-and-delete.md) — resolves delete: lives behind Task Detail's `More` icon, never a Tasks List gesture; no confirm dialog, yes undo toast
-- [Create Task sheet — compose row, notes toggle, and the mislabeled third icon](./hipster/create-task-sheet-interactions.md) — spec for opening the sheet and its action icons; flags a genuinely mislabeled icon layer rather than guessing its function
-- [Date & time picker — month grid, Set Time, Repeat, Cancel/Done](./hipster/date-time-picker-interactions.md) — spec for the shared date/time dialog; `deadline` gets a calendar-only variant, `reminderAt` gets the full dialog
-- [Repeat dialog — Every N unit, weekday chips, no Starts/Ends](./hipster/repeat-dialog-interactions.md) — built from a real reference screenshot the owner supplied; drops Starts/Set Time (redundant with the outer picker) and Ends (already ruled out by the data model)
-- [Task Detail — Star, List Selector, Title, Description, and Mark Completed](./hipster/task-detail-identity-and-fields.md) — spec for Detail's identity fields; flags that the `+ Keyboard` frame doesn't show which field is actually focused
-- [Task Detail's Subtask Field — add, reorder, and independent completion](./hipster/task-detail-subtasks.md) — the one field with zero populated-state drawing anywhere in the mockup; a proposal, not a reconstruction
+- [Hi-fi mockup is a Google Tasks clone riding an unused generic theme](./hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md) — critique of the hi-fi export
 
-**Hacker**
-- [Offline task module architecture](./hacker/offline-task-module-architecture.md) — model's Flutter stack sketch; Flutter itself is still an unvalidated default, state management is now settled
+**Hacker** — as built (`evidence: strong`)
+- [Tasks data model](./hacker/tasks-data-model-as-built.md) — TaskList, Task, Repeat, Subtask; what's deliberately absent
+- [Tasks behaviour rules](./hacker/tasks-behaviour-rules-as-built.md) — order, grouping, date text, overdue, completion/repeat, delete; known defects
+- [Notifications](./hacker/notifications-as-built.md) — ids, sync points, 9 AM deadline, lazy permission, tap-to-open
+- [Tasks module architecture](./hacker/tasks-architecture-as-built.md) — folders, repositories, Cubits, View/Panel split
+- [Theme tokens](./hacker/theme-tokens-as-built.md) — colors, fonts, −0.8 tracking, radii
+
+**Hacker** — still current
+- [Repeat-advance algorithm — next occurrence, and why there's no catch-up](./hacker/repeat-advance-algorithm.md) — the date math; as built it uses calendar arithmetic, not `Duration`
+- [Offline task module architecture](./hacker/offline-task-module-architecture.md) — pasted model's Flutter stack sketch
 - [Cubit or full BLoC?](./hacker/cubit-or-bloc.md) — answered: Cubit — see decision 0009
 - [Which package schedules the reminder/deadline notifications?](./hacker/local-notifications-package.md) — answered: flutter_local_notifications — see decision 0010
-- [Notification scheduling — IDs, lifecycle triggers, permissions, tap-to-open](./hacker/notification-scheduling.md) — spec for how Task fields turn into scheduled/cancelled/rescheduled notifications
-- [Repeat-advance algorithm — next occurrence, and why there's no catch-up](./hacker/repeat-advance-algorithm.md) — the date math, plus the reasoning for why no catch-up logic is needed at all (advance only happens on completion, never on elapsed time)
-- [Flutter module structure — folders, and one repository instead of duplicated Cubit logic](./hacker/flutter-module-structure.md) — folder layout, and a real gap it surfaced: a shared `TaskRepository.toggleCompleted()` so the complete-a-repeating-Task logic isn't written once per Cubit
-- [exodus.css → Flutter ThemeData — what maps, what's dead](./hacker/exodus-theme-to-flutter.md) — ColorScheme, fonts, radii, and shadows, checked against actual usage counts in the export; confirms `--secondary`, `--accent`, chart/sidebar tokens, and two of three fonts are genuinely unused
-- [Task, List and Subtask fields, read off the hi-fi mockup](./hacker/task-list-subtask-data-model.md) — data model inventory; fully settled, including the once-open time-range row (resolved: mockup slip)
+- [Isar or sqflite?](./hacker/isar-or-sqflite.md) — answered: Isar, for Tasks only — see decision 0006
 - [How does a Day differ from its Routine?](./hacker/day-versus-routine.md) — question, unanswered, blocks Clockface modelling — see decision 0005
 - [Is the Clockface or the list the source of truth?](./hacker/clockface-or-list-source-of-truth.md) — question, unanswered, blocks Clockface modelling — see decision 0005
-- [Isar or sqflite?](./hacker/isar-or-sqflite.md) — answered: Isar, for Tasks only — see decision 0006
-- [Isar schema — TaskList, Task, embedded Repeat and Subtask](./hacker/isar-schema.md) — the concrete collections; flags a real Dart naming collision (`List`) and that decision 0006's "by day" query isn't needed by any resolved Tasks screen yet
+
+**Archived** — mockup-era specs, superseded 2026-10-06, kept in [`archive/santian/`](../../archive/santian/)
 
 **Hustler**
 - [Why would anyone switch from Google Tasks?](./hustler/why-switch-from-google-tasks.md) — answered: it doesn't apply, this is a personal tool
@@ -165,13 +159,18 @@ retired the old aggregate without naming a replacement — but per decision
 - [0009 — Cubit for the Tasks module's state management](./decisions/0009-cubit-for-state-management.md) — 2026-09-18
 - [0010 — flutter_local_notifications for reminder and deadline notifications](./decisions/0010-flutter-local-notifications-package.md) — 2026-09-18
 - [0011 — Keep the light/dark hue swap: blue by day, orange by night](./decisions/0011-blue-by-day-orange-by-night.md) — 2026-09-18
-- [0012 — Icon set for the add-list picker grid](./decisions/0012-add-list-icon-set.md) — 2026-09-22 (draft, awaiting the owner's confirmation)
-- [0013 — Color palette for the add-list picker row](./decisions/0013-add-list-color-palette.md) — 2026-09-22 (draft, awaiting the owner's confirmation)
-- [0014 — First launch seeds one default List](./decisions/0014-first-launch-default-list.md) — 2026-09-22 (draft, awaiting the owner's confirmation)
-- [0015 — A deadline notification fires at 9:00 AM, same default as reminderAt](./decisions/0015-deadline-notification-defaults-to-9am.md) — 2026-09-22 (draft, awaiting the owner's confirmation)
+- ~~0012 — Icon set for the add-list picker grid~~ — [archived](../../archive/santian/decisions/0012-add-list-icon-set.md), superseded by 0017
+- ~~0013 — Color palette for the add-list picker row~~ — [archived](../../archive/santian/decisions/0013-add-list-color-palette.md), superseded by 0017
+- [0014 — First launch seeds one default List](./decisions/0014-first-launch-default-list.md) — 2026-09-22 (draft, awaiting the owner's confirmation; already built)
+- [0015 — A deadline notification fires at 9:00 AM, same default as reminderAt](./decisions/0015-deadline-notification-defaults-to-9am.md) — 2026-09-22 (draft, awaiting the owner's confirmation; already built)
+- [0016 — Follow the Google Tasks mobile app, not the hi-fi mockup](./decisions/0016-follow-google-tasks-mobile-over-the-mockup.md) — 2026-10-06 (draft)
+- [0017 — Lists are name-only, managed from a More menu](./decisions/0017-lists-are-name-only.md) — 2026-10-06 (draft)
 
 ## Health check
 
-Three of six artifacts are open questions, and every filled artifact has
-`evidence: none` or `weak`. That is normal this early. It stops being normal once
-code exists.
+Code exists now, so the bar has moved. The ten as-built notes are
+`evidence: strong` because they describe shipped behaviour. Everything else
+is still `none` or `weak`. The risk to watch is the one decision 0016 names:
+behaviour changed in code without a note. If the app drifts again, re-read
+the as-built notes against the Santian repo's `git log` before writing new
+specs.

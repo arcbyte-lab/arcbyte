@@ -3,14 +3,16 @@ title: exodus.css → Flutter ThemeData — what maps, what's dead
 idea: santian
 lens: hacker
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["../assets/exodus.css", "../assets/tailwind.config.ts", "../assets/santian-hifi-export.html", "../decisions/0011-blue-by-day-orange-by-night.md", "../hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md", "../hipster/deadline-badge-and-overdue-styling.md"]
+updated: 2026-10-06
+inputs: ["../../../ideas/santian/assets/exodus.css", "../../../ideas/santian/assets/tailwind.config.ts", "../../../ideas/santian/assets/santian-hifi-export.html", "../../../ideas/santian/decisions/0011-blue-by-day-orange-by-night.md", "../../../ideas/santian/hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md", "../hipster/deadline-badge-and-overdue-styling.md"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [theme-tokens-as-built](../../../ideas/santian/hacker/theme-tokens-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 `exodus.css` defines a full shadcn-style token set (colors, radius, shadows,
@@ -20,7 +22,7 @@ export only actually *uses* a fraction of it. What maps cleanly to Flutter's
 
 ## Short answer
 - Two independently authored `ColorScheme`s (light, dark) — per
-  [decision 0011](../decisions/0011-blue-by-day-orange-by-night.md), light's
+  [decision 0011](../../../ideas/santian/decisions/0011-blue-by-day-orange-by-night.md), light's
   `primary` is blue, dark's is orange, not one seed color varied by
   brightness.
 - **Confirmed dead, checked against actual usage in the export, not
@@ -83,7 +85,7 @@ directly rather than needing its own token.
 ### Confirmed-dead tokens
 Checked against the actual export, not assumed:
 - **`--secondary`** (`#b45309` light / `#7f1d1d` dark) — zero uses anywhere
-  in either mode. [The hi-fi critique](../hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md)
+  in either mode. [The hi-fi critique](../../../ideas/santian/hipster/hifi-mockup-is-a-google-tasks-clone-with-unused-theme-tokens.md)
   already flagged this app as "monochrome-plus-one-accent"; this confirms
   it precisely — there's no second UI color at all, just primary plus
   muted plus destructive.
@@ -153,4 +155,4 @@ wrong for the Tasks module.
   one genuinely contested piece (the primary color split).
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

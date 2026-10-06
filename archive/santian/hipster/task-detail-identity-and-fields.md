@@ -3,14 +3,16 @@ title: Task Detail — Star, List Selector, Title, Description, and Mark Complet
 idea: santian
 lens: hipster
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["../hacker/task-list-subtask-data-model.md", "../decisions/0004-clone-google-tasks-interactions.md", "../assets/santian-hifi-export.html", "./tasks-list-screen-interactions.md", "./task-detail-more-menu-and-delete.md", "./create-task-sheet-interactions.md"]
+updated: 2026-10-06
+inputs: ["../hacker/task-list-subtask-data-model.md", "../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md", "../../../ideas/santian/assets/santian-hifi-export.html", "./tasks-list-screen-interactions.md", "./task-detail-more-menu-and-delete.md", "./create-task-sheet-interactions.md"]
 tags: [artifact]
 ---
+
+> **Superseded 2026-10-06** by [task-detail-as-built](../../../ideas/santian/hipster/task-detail-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 Task Detail's `Top Bar`, `List Selector`, `Title Wrap`, `Description Field`,
@@ -99,4 +101,4 @@ spec question.
   incomplete", muted), not confirmed.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

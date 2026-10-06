@@ -8,7 +8,7 @@ source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
 updated: 2026-09-18
-inputs: ["../hacker/isar-or-sqflite.md", "../hacker/task-list-subtask-data-model.md", "../hacker/offline-task-module-architecture.md", "../decisions/0005-clockface-questions-dont-block-tasks-build.md"]
+inputs: ["../hacker/isar-or-sqflite.md", "../../../archive/santian/hacker/task-list-subtask-data-model.md", "../hacker/offline-task-module-architecture.md", "./0005-clockface-questions-dont-block-tasks-build.md"]
 tags: [artifact, decision]
 ---
 
@@ -25,7 +25,7 @@ Clockface or the list the source of truth" until decision 0005 narrowed it to
 a Tasks-only question, answerable from the three queries Tasks actually needs:
 by list, by star, by day. Those queries and the shape of the data are both
 now on record in
-[the Task/List/Subtask data model](../hacker/task-list-subtask-data-model.md),
+[the Task/List/Subtask data model](../../../archive/santian/hacker/task-list-subtask-data-model.md),
 so the question can be answered without waiting on the Clockface.
 
 ## What each lens said

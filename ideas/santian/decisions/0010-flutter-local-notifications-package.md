@@ -32,7 +32,7 @@ platform-side alarm/notification-center integration on Android and iOS).
 - **Hound:** not applicable.
 - **Hipster:** the two-independent-notifications behavior itself was already
   designed in
-  [the deadline badge spec](../hipster/deadline-badge-and-overdue-styling.md);
+  [the deadline badge spec](../../../archive/santian/hipster/deadline-badge-and-overdue-styling.md);
   this decision is purely about what fires them, not what they look like or
   when.
 - **Hacker:** this is the lens the decision lives in. The package needs to:

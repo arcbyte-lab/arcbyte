@@ -3,18 +3,20 @@ title: Isar schema — TaskList, Task, embedded Repeat and Subtask
 idea: santian
 lens: hacker
 kind: spec
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["./task-list-subtask-data-model.md", "../decisions/0006-isar-for-tasks-storage.md", "../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "../hipster/tasks-list-screen-interactions.md", "../hipster/repeat-dialog-interactions.md"]
+updated: 2026-10-06
+inputs: ["./task-list-subtask-data-model.md", "../../../ideas/santian/decisions/0006-isar-for-tasks-storage.md", "../../../ideas/santian/decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md", "../hipster/tasks-list-screen-interactions.md", "../hipster/repeat-dialog-interactions.md"]
 tags: [artifact]
 ---
 
+> **Superseded 2026-10-06** by [tasks-data-model-as-built](../../../ideas/santian/hacker/tasks-data-model-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
+
 ## Question
 [The data model note](./task-list-subtask-data-model.md) settled List,
-Task, and Subtask's *fields*. [Decision 0006](../decisions/0006-isar-for-tasks-storage.md)
+Task, and Subtask's *fields*. [Decision 0006](../../../ideas/santian/decisions/0006-isar-for-tasks-storage.md)
 picked Isar. Neither says what the actual Isar collections look like —
 types, indexes, embedded-vs-linked. What's the schema to actually write?
 
@@ -25,7 +27,7 @@ types, indexes, embedded-vs-linked. What's the schema to actually write?
   never queried independently.
 - **Naming collision, not in the data model:** the domain term is "List"
   (per [Arcbyte's own CONTEXT.md](../../../CONTEXT.md) and
-  [Santian's](../CONTEXT.md)), but `List` is a reserved built-in type in
+  [Santian's](../../../ideas/santian/CONTEXT.md)), but `List` is a reserved built-in type in
   Dart. The Isar collection class is named `TaskList` — this is
   [the Domain model rule](../../../CONTEXT.md) working as intended: code
   implements the domain model, it doesn't have to reuse the exact word when
@@ -145,14 +147,14 @@ existence outside its parent `Task.subtasks` list, so there's nothing for
 `taskId` to point at. The relationship is structural, not a stored field.
 
 ### Indexes: what the 3 confirmed queries actually need
-Per [decision 0006](../decisions/0006-isar-for-tasks-storage.md), Tasks
+Per [decision 0006](../../../ideas/santian/decisions/0006-isar-for-tasks-storage.md), Tasks
 needs exactly three query shapes: **by list**, **by star**, **by day**.
 This schema gives the first two direct `@Index()` fields (`listId`,
 `isStarred`). The third — **"by day" is not indexed here, and arguably
 isn't needed yet**: nothing in [the resolved Tasks screens](../hipster/tasks-list-screen-interactions.md)
 filters Tasks by a specific day — Tasks List filters by list or star only.
 "By day" reads like a Clockface-era query (a day view needs "what's
-scheduled today"), which [decision 0005](../decisions/0005-clockface-questions-dont-block-tasks-build.md)
+scheduled today"), which [decision 0005](../../../ideas/santian/decisions/0005-clockface-questions-dont-block-tasks-build.md)
 already deferred. Not dropped, just not built into this schema — add a
 `reminderAt`/`deadline` composite index when the Clockface's own storage
 question is actually answered, rather than guessing its shape now.
@@ -189,4 +191,4 @@ with a `taskId` link — a real schema migration, not a small tweak.
   until the Clockface actually needs it), not settled.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

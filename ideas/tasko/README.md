@@ -8,7 +8,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: none
 created: 2026-10-05
-updated: 2026-10-05
+updated: 2026-10-06
 tags: [anchor]
 ---
 
@@ -33,15 +33,30 @@ decision that says why.
 
 ## Status by lens
 - **Hound:** not started
-- **Hipster:** not started
-- **Hacker:** not started
+- **Hipster:** the owner's [home wireframe](./hipster/home-screen-wireframe.md) settles the tabs ([0002](./decisions/0002-tabs-are-workspaces-then-projects.md)) and the calendar ([0003](./decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md)). The task row and Task Detail are not drawn yet; [Santian's screens in a team app](./hipster/santian-screens-in-a-team-app.md) is the starting proposal.
+- **Hacker:** schema adopted ([0001](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)). Santian's behaviour mapped onto it: concepts and missing columns, and the rules that break in a team app.
 - **Hustler:** not started
 
 ## Next question to answer
 
+**Which `tasks.status` values exist, and what does the checkbox set?** The
+column has no check constraint. Completing a task, the calendar's "open"
+count ([0003](./decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md)),
+and the task row's look all depend on it. After that: does the star
+survive without a Star tab, and what is the slider icon in the header?
+
 
 ## Artifacts
-- none yet
+
+**Hipster**
+- [Home screen wireframe](./hipster/home-screen-wireframe.md) — header, monthly due-date calendar, workspace and project tabs
+- [Santian's screens in a team app](./hipster/santian-screens-in-a-team-app.md) — what each screen keeps and adds
+
+**Hacker**
+- [Santian's concepts mapped onto Tasko's schema](./hacker/santian-concepts-mapped-to-tasko-schema.md) — what fits, what has no column (List, star, reminder)
+- [Santian's rules that change in a team app](./hacker/santian-rules-that-change-in-a-team-app.md) — completion, repeat, undo, notifications, permissions
 
 ## Decisions
 - [0001 — Adopt sqlite-schema.sql over schema-zero](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)
+- [0002 — Tabs are workspaces, then projects; each task in exactly one tab](./decisions/0002-tabs-are-workspaces-then-projects.md) — 2026-10-06 (draft, owner approved in chat)
+- [0003 — The calendar is a due-date heatmap that filters the list](./decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md) — 2026-10-06 (draft, owner approved in chat)

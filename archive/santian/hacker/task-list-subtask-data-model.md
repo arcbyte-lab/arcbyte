@@ -3,14 +3,16 @@ title: Task, List and Subtask fields, read off the hi-fi mockup
 idea: santian
 lens: hacker
 kind: data-model
-status: draft
+status: superseded
 source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
-updated: 2026-09-18
-inputs: ["../assets/santian-hifi-export.html", "../decisions/0004-clone-google-tasks-interactions.md", "../hipster/date-time-picker-interactions.md"]
+updated: 2026-10-06
+inputs: ["../../../ideas/santian/assets/santian-hifi-export.html", "../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md", "../hipster/date-time-picker-interactions.md"]
 tags: [artifact, data-model]
 ---
+
+> **Superseded 2026-10-06** by [tasks-data-model-as-built](../../../ideas/santian/hacker/tasks-data-model-as-built.md). This describes the mockup-era plan, not the app as built. See [decision 0016](../../../ideas/santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md).
 
 ## Question
 What fields does a Task, a List, and a Subtask actually need, based on what the
@@ -77,12 +79,12 @@ Read from `Tasks List` rows and the `Task Detail` sheet:
 - `deadline` — a **separate** field, its own row below Description, currently
   empty ("Add deadline") on every screen shown. Behaviour confirmed by the
   owner (2026-09-18, in conversation) — see
-  [decision 0007](../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md):
+  [decision 0007](../../../ideas/santian/decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md):
   shown on the Tasks List row alongside `reminderAt` (`Task Time`), fires its
   own notification independent of `reminderAt`'s, and drives overdue styling
   when `isCompleted: false` and now is past `deadline`.
 - `repeat` — nullable. When set, matches real Google Tasks' Repeat dialog per
-  [decision 0004](../decisions/0004-clone-google-tasks-interactions.md),
+  [decision 0004](../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md),
   confirmed by the owner (2026-09-18, in conversation):
   - `frequency` — `daily` | `weekly` | `monthly` | `yearly` | `custom`
   - `interval` — int, N for "every N days/weeks/months/years" (custom only;
@@ -107,7 +109,7 @@ Every one of the four `Subtask Field` instances in this export is the same
 empty state: a `corner-down-right` icon and the text "Add subtasks". None is
 populated in the mockup. Fields confirmed by the owner (2026-09-18, in
 conversation), matching real Google Tasks behaviour per
-[decision 0004](../decisions/0004-clone-google-tasks-interactions.md):
+[decision 0004](../../../ideas/santian/decisions/0004-clone-google-tasks-interactions.md):
 
 - `id`
 - `taskId` — belongs to exactly one Task, renders indented under it
@@ -134,12 +136,12 @@ for what's still genuinely unresolved (none of it blocks the schema).
   `reminderAt` is a notification trigger; `deadline` is a target date with
   its own notification, its own list-row display, and overdue styling. This
   is genuine scope past Google Tasks parity, not a mockup artifact — see
-  [decision 0007](../decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md).
+  [decision 0007](../../../ideas/santian/decisions/0007-deadline-is-intentional-scope-beyond-google-tasks.md).
 - **The one time-range row.** Resolved 2026-09-18 — mockup slip, not real
   scope. The owner confirmed "Deep work: API migration"'s "11:00 AM – 1:00
   PM" doesn't reflect an intended feature; `reminderAt` stays a single point
   in time, and
-  [Is the Clockface or the list the source of truth?](./clockface-or-list-source-of-truth.md)'s
+  [Is the Clockface or the list the source of truth?](../../../ideas/santian/hacker/clockface-or-list-source-of-truth.md)'s
   point-only assumption about the Task model holds. That row gets rebuilt
   with a single time once the screen is implemented — see
   [the date/time picker spec](../hipster/date-time-picker-interactions.md).
@@ -150,4 +152,4 @@ for what's still genuinely unresolved (none of it blocks the schema).
 - **Subtask fields.** Resolved 2026-09-18 — see above.
 
 ---
-Part of [Santian](../README.md)
+Part of [Santian](../../../ideas/santian/README.md)

@@ -8,7 +8,7 @@ source: claude-sonnet-5 (cowork)
 evidence: none
 created: 2026-09-18
 updated: 2026-09-18
-inputs: ["./offline-task-module-architecture.md", "./isar-schema.md", "../decisions/0003-personal-tool-not-a-product.md", "../hipster/tasks-list-screen-interactions.md"]
+inputs: ["./offline-task-module-architecture.md", "../../../archive/santian/hacker/isar-schema.md", "../decisions/0003-personal-tool-not-a-product.md", "../../../archive/santian/hipster/tasks-list-screen-interactions.md"]
 tags: [artifact, question]
 ---
 
@@ -18,7 +18,7 @@ Cubit or full BLoC for the Tasks module's state management?
 ## Blocked by
 Nothing — unlike the Clockface's open hacker questions, this is answerable
 from what's already resolved: every Tasks-module screen has a settled
-interaction spec, and [the Isar schema](./isar-schema.md) exists to build
+interaction spec, and [the Isar schema](../../../archive/santian/hacker/isar-schema.md) exists to build
 against.
 
 ## Why it matters
