@@ -48,7 +48,7 @@ below is a guess, and is marked as one.
 | `reminderAt` | none. `reminder_notified_at` looks like a server flag for a reminder *derived from* `due_date` (guess) | ❌ | Per-user `task_reminders(user_id, task_id, remind_at)`, or drop personal reminders and keep only the server's due-soon reminder. |
 | `repeat` | `recurring_tasks` (`frequency`, `schedule_day(s)`, `due_time`, `next_run_at`, `Active/Paused`) → `tasks.recurring_task_id` | ⚠️ different model | See the rules note. Santian's Repeat dialog would edit a `recurring_tasks` row, not a field on the Task. |
 | `isStarred` | none | ❓ | The wireframe has no Star tab. If stars stay at all, use `task_stars(user_id, task_id)`, unique on the pair, not a `tasks` column. |
-| `isCompleted` | `tasks.status` (default `waiting`, **no check constraint**, values unknown) + `completed_date`, `review_date`, `cancelled_date` | ⚠️ | Pick which status means "checked". A required proof or a review can stand between "tick" and "done". |
+| `isCompleted` | `tasks.status`: `waiting` (default), `in_progress`, `review`, `done` (not enforced). Plus `completed_date`, `review_date`, `cancelled_date` | ✅ | The tick sets `review` if `required_proof_type` is set, otherwise `done` ([0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md)). Personal tasks use `todo/in_progress/done`. |
 | Subtask | `tasks.parent_id` (a full Task: own status, assignee, due date; cascades on delete) | ⚠️ richer | Santian's subtask is title + done + order only. Tasko has **no `position` on `tasks`**, so subtask drag-to-reorder needs one. |
 | Subtask `order` | none on `tasks`. `personal_tasks.position` exists | ❌ for team tasks | Add `tasks.position`, or drop reordering. |
 | Task order (by reminder, then id) | `due_date` and `created_at` available | ✅ | Sort by `due_date`. That also settles Santian's open question about grouping by deadline. |
@@ -75,7 +75,8 @@ on both. Their fields differ: `name`/`title`, `description`/`note`,
   form this schema dump does not show.
 
 ## Open questions
-- Which `tasks.status` values exist, and which one does the checkbox set?
+- ~~Which `tasks.status` values exist, and which one does the checkbox
+  set?~~ Settled by [0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md).
 - Does `reminder_notified_at` mean a personal reminder exists somewhere, or
   only a server-derived "due soon" reminder?
 - Does the star survive without a Star tab?
