@@ -36,14 +36,15 @@ separate from this repo. The owner promoted it on 2026-10-07; see
 ## Status by lens
 - **Hound:** not started
 - **Hipster:** the owner's [home wireframe](./hipster/home-screen-wireframe.md) settles the tabs ([0002](./decisions/0002-tabs-are-workspaces-then-projects.md)) and the calendar ([0003](./decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md)). The task row and Task Detail are not drawn yet; [Santian's screens in a team app](./hipster/santian-screens-in-a-team-app.md) is the starting proposal. The [lofi mockup tickets](./hipster/lofi-mockup-tickets-for-pen-dev.md) are ready to hand to pen.dev, and the [hifi mockup tickets](./hipster/hifi-mockup-tickets-for-pen-dev.md) restyle them with `modern-minimal.css`.
-- **Hacker:** schema adopted ([0001](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)). Santian's behaviour mapped onto it: concepts and missing columns, and the rules that break in a team app. v1 defaults set ([0005](./decisions/0005-v1-build-defaults.md)): Flutter + Cubit, online only. The [v1 home build tickets](./hacker/v1-home-build-tickets.md) are ready.
+- **Hacker:** schema adopted ([0001](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)). Santian's behaviour mapped onto it: concepts and missing columns, and the rules that break in a team app. v1 defaults set ([0005](./decisions/0005-v1-build-defaults.md)): Flutter + Cubit, online only. The app is built: every hifi screen except Repeat, on a fake API ([as built](./hacker/flutter-app-as-built.md)). The server API is not part of the app repo.
 - **Hustler:** not started
 
 ## Next question to answer
 
-**Does the Laravel app expose a JSON API today?** Login and the real
-`TasksApi` are blocked on it. The [v1 tickets](./hacker/v1-home-build-tickets.md)
-run on a fake API until then.
+**Which proof types exist, and how is a proof submitted?** It is the
+biggest gap left in the app: the proof chip, "submit proof" and ticking a
+proof task are all placeholders. The other open calls are listed in
+[choices to confirm](./hacker/build-choices-to-confirm.md).
 
 
 ## Artifacts
@@ -58,6 +59,8 @@ run on a fake API until then.
 - [Santian's concepts mapped onto Tasko's schema](./hacker/santian-concepts-mapped-to-tasko-schema.md) — what fits, what has no column (List, star, reminder)
 - [Santian's rules that change in a team app](./hacker/santian-rules-that-change-in-a-team-app.md) — completion, repeat, undo, notifications, permissions
 - [v1 home build tickets](./hacker/v1-home-build-tickets.md) — B0–B6: home screen and checkbox, Flutter + Cubit on a fake API
+- [Flutter app, as built](./hacker/flutter-app-as-built.md) — screens, Cubits, the fake API seam, folders
+- [Choices to confirm](./hacker/build-choices-to-confirm.md) — calls made while building, and the placeholders still open
 
 ## Decisions
 - [0001 — Adopt sqlite-schema.sql over schema-zero](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)

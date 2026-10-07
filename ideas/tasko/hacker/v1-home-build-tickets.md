@@ -16,6 +16,9 @@ tags: [artifact]
 What are the first build tickets for the Tasko app, so that someone
 (the owner or an agent) can pick them up one at a time?
 
+**Done:** everything below, and the screens after it, is built. See
+[the app as built](./flutter-app-as-built.md).
+
 ## Short answer
 - There are 7 tickets, **B0 to B6, in order**. Together they give a working
   home screen: header, calendar heatmap, workspace and project tabs, the
