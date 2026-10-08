@@ -9,7 +9,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: none
 created: 2026-10-05
-updated: 2026-10-07
+updated: 2026-10-08
 tags: [anchor]
 ---
 
@@ -22,7 +22,9 @@ tags: [anchor]
 `stage: project`. Code lives at
 [github.com/arcbyte-lab/Tasko-Flutter](https://github.com/arcbyte-lab/Tasko-Flutter),
 separate from this repo. The owner promoted it on 2026-10-07; see
-[0006](./decisions/0006-promote-tasko-to-project.md).
+[0006](./decisions/0006-promote-tasko-to-project.md). The server API is a
+second repo, checked out locally at `~/Projects/Dev/tasko-api` (no remote
+yet): a Hono scaffold on Cloudflare Workers, no endpoints.
 
 ## One line
 
@@ -36,7 +38,7 @@ separate from this repo. The owner promoted it on 2026-10-07; see
 ## Status by lens
 - **Hound:** not started
 - **Hipster:** the owner's [home wireframe](./hipster/home-screen-wireframe.md) settles the tabs ([0002](./decisions/0002-tabs-are-workspaces-then-projects.md)) and the calendar ([0003](./decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md)). The task row and Task Detail are not drawn yet; [Santian's screens in a team app](./hipster/santian-screens-in-a-team-app.md) is the starting proposal. The [lofi mockup tickets](./hipster/lofi-mockup-tickets-for-pen-dev.md) are ready to hand to pen.dev, and the [hifi mockup tickets](./hipster/hifi-mockup-tickets-for-pen-dev.md) restyle them with `modern-minimal.css`.
-- **Hacker:** schema adopted ([0001](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)). Santian's behaviour mapped onto it: concepts and missing columns, and the rules that break in a team app. v1 defaults set ([0005](./decisions/0005-v1-build-defaults.md)): Flutter + Cubit, online only. The app is built: every hifi screen except Repeat, on a fake API ([as built](./hacker/flutter-app-as-built.md)). The server API is not part of the app repo.
+- **Hacker:** schema adopted ([0001](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)). Santian's behaviour mapped onto it: concepts and missing columns, and the rules that break in a team app. v1 defaults set ([0005](./decisions/0005-v1-build-defaults.md)): Flutter + Cubit, online only. The app is built: every hifi screen except Repeat, on a fake API ([as built](./hacker/flutter-app-as-built.md)). The server API is not part of the app repo; it lives in `tasko-api` (see Stage).
 - **Hustler:** not started
 
 ## Next question to answer
