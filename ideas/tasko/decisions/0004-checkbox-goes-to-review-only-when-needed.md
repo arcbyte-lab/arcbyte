@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-07
 inputs: ["../assets/sqlite-schema.sql", "../hacker/santian-rules-that-change-in-a-team-app.md", "../hipster/santian-screens-in-a-team-app.md", "./0003-calendar-is-a-due-date-heatmap-that-filters.md"]
 tags: [artifact, decision]
 ---
@@ -97,10 +97,9 @@ its own flag.
 - ~~Self-review?~~ Allowed for a person-in-charge. Not yet confirmed for
   a division admin or supervisor reviewing their own division task.
 - ~~No reviewer?~~ Cannot happen: the project's author always reviews.
-- **Unticking:** does `done` go back to `waiting` or `in_progress`? Can an
-  assignee withdraw a task from `review`?
-- **`cancelled_date` exists, but there is no `cancelled` status.** How is a
-  task cancelled?
+- ~~Unticking?~~ `done` goes back to `waiting`. Withdrawing from `review`
+  is not in v1. See [0005](./0005-v1-build-defaults.md).
+- ~~How is a task cancelled?~~ Not in v1 ([0005](./0005-v1-build-defaults.md)).
 
 ---
 Part of [Tasko](../README.md)
