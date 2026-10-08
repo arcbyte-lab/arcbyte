@@ -134,7 +134,7 @@ def main():
                      key=lambda n: n.get("idea", ""))
     out += ["## Ideas", "",
             "One row per idea. `stage` says whether anyone has started building it.", "",
-            table([[link(n), n.get("stage", "-"), n.get("repo", "—"),
+            table([[link(n), n.get("stage", "-"), n.get("repo", "—").strip("[]"),
                     str(sum(1 for m in notes if m.get("idea") == n.get("idea")))]
                    for n in anchors],
                   ["idea", "stage", "code", "artifacts"]), ""]

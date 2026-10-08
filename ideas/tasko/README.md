@@ -2,7 +2,7 @@
 title: Tasko
 idea: tasko
 stage: project
-repo: https://github.com/arcbyte-lab/Tasko-Flutter
+repo: [https://github.com/arcbyte-lab/Tasko-Flutter, https://github.com/arcbyte-lab/Tasko-API]
 lens: intelligence
 kind: brief
 status: draft

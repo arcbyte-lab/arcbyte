@@ -1,7 +1,7 @@
 ---
 title: Index
 kind: meta
-updated: 2026-10-07
+updated: 2026-10-08
 ---
 
 # Index
@@ -16,7 +16,7 @@ One row per idea. `stage` says whether anyone has started building it.
 | idea | stage | code | artifacts |
 |---|---|---|---|
 | [Santian](ideas/santian/README.md) | project | https://github.com/arcbyte-lab/Santian | 44 |
-| [Tasko](ideas/tasko/README.md) | project | https://github.com/arcbyte-lab/Tasko-Flutter | 16 |
+| [Tasko](ideas/tasko/README.md) | project | https://github.com/arcbyte-lab/Tasko-Flutter, https://github.com/arcbyte-lab/Tasko-API | 16 |
 
 ## Still in draft
 

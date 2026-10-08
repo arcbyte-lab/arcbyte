@@ -161,7 +161,8 @@ for specs, the same split the **Domain model** entry in the root
 - `repo:` — anchor notes with `stage: project`. The durable reference (its
   git remote URL, e.g. `https://github.com/<org>/<repo>`), not the local
   path — the local checkout always follows the `../Dev/<idea>` convention
-  above, so it doesn't need recording per idea.
+  above, so it doesn't need recording per idea. An idea whose code spans
+  several repos lists them all, `[url, url]`, main repo first.
 
 ## Linking
 
