@@ -23,8 +23,10 @@ tags: [anchor]
 [github.com/arcbyte-lab/Tasko-Flutter](https://github.com/arcbyte-lab/Tasko-Flutter),
 separate from this repo. The owner promoted it on 2026-10-07; see
 [0006](./decisions/0006-promote-tasko-to-project.md). The server API is a
-second repo, checked out locally at `~/Projects/Dev/tasko-api` (no remote
-yet): a Hono scaffold on Cloudflare Workers, no endpoints.
+second repo,
+[github.com/arcbyte-lab/Tasko-API](https://github.com/arcbyte-lab/Tasko-API),
+checked out locally at `~/Projects/Dev/tasko-api`: a Hono scaffold on
+Cloudflare Workers, no endpoints.
 
 ## One line
 
