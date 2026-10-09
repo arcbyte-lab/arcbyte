@@ -8,7 +8,7 @@ source: claude-opus-5.5 (claude-code)
 evidence: strong
 created: 2026-10-07
 updated: 2026-10-09
-inputs: ["./v1-home-build-tickets.md", "../decisions/0005-v1-build-defaults.md", "../decisions/0007-server-rules-settled-in-the-api-review.md", "./tasko-api-as-built.md", "../hipster/hifi-mockup-tickets-for-pen-dev.md", "../../santian/hacker/tasks-architecture-as-built.md"]
+inputs: ["../decisions/0008-start-working-moves-a-task-to-in-progress.md", "./v1-home-build-tickets.md", "../decisions/0005-v1-build-defaults.md", "../decisions/0007-server-rules-settled-in-the-api-review.md", "./tasko-api-as-built.md", "../hipster/hifi-mockup-tickets-for-pen-dev.md", "../../santian/hacker/tasks-architecture-as-built.md"]
 tags: [artifact]
 ---
 
@@ -28,9 +28,10 @@ today, and where does each concern live?
   rule files with unit tests. The one seam is `TasksApi`.
 - 81 tests (rules, Cubits, widget flows, the HTTP client). CI runs
   `flutter analyze` and then `flutter test`.
-- **"start working" fails on the real API.** The server never moves a task
-  to `in_progress` ([0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md)),
-  so Task Detail's button gets a 422. Not decided yet.
+- Tested on an Android 16 phone against the live API on 2026-10-09: login,
+  tabs, ticking, proof, review, comments, create, notifications and log out
+  all work. "start working" was refused by the server then; the server now
+  allows it ([0008](../decisions/0008-start-working-moves-a-task-to-in-progress.md)).
 
 ## Detail
 Stack: Flutter 3.41.4 (Dart 3.11), `flutter_bloc` (Cubit only), `http`,
@@ -91,8 +92,6 @@ Log out and submit proof are built.
   seam moves, not the screens.
 
 ## Open questions
-- "start working": should the server allow `→ in_progress` from Task
-  Detail, or should the app drop the button?
 - Run on fake data without a server (a `--dart-define=FAKE=true`)? Not
   built.
 - See [choices made while building](./build-choices-to-confirm.md) for

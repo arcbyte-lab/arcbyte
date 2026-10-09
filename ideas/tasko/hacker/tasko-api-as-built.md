@@ -49,7 +49,9 @@ How it works:
   [0002](../decisions/0002-tabs-are-workspaces-then-projects.md) (membership
   comes only from the member tables),
   [0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md)
-  (the checkbox never sets `in_progress`; review needs a proof) and
+  (the checkbox never sets `in_progress`; review needs a proof),
+  [0008](../decisions/0008-start-working-moves-a-task-to-in-progress.md)
+  ("start working" moves `waiting`/`todo` to `in_progress`) and
   [0005](../decisions/0005-v1-build-defaults.md) (the status check
   constraint; the first review decision wins).
 - **Choices made in review:** the rules decided during the code review are
