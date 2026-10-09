@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
-updated: 2026-10-07
+updated: 2026-10-09
 inputs: ["./flutter-app-as-built.md", "../hipster/hifi-mockup-tickets-for-pen-dev.md", "../hipster/lofi-mockup-tickets-for-pen-dev.md", "../decisions/0004-checkbox-goes-to-review-only-when-needed.md"]
 tags: [artifact]
 ---
@@ -19,8 +19,9 @@ which still block UI?
 ## Short answer
 - Eight small calls were made so the build could go on. Each one is
   cheap to change. None of them is a decision until the owner says so.
-- Four open questions still leave an "action: …" placeholder in the app.
-  Proof is the one that blocks the most.
+- Four questions left an "action: …" placeholder in the app. Proof is
+  now answered by [0007](../decisions/0007-server-rules-settled-in-the-api-review.md);
+  three are still open.
 
 ## Detail
 ### Made while building (confirm or overrule)
@@ -36,14 +37,17 @@ which still block UI?
 | Notification times: "2h ago" all day | One rule for all of today | The hifi frame shows "8:00" |
 
 ### Still open (each one is an "action: …" placeholder in the app)
-- **Proof:** which proof types exist, and how is a proof submitted? This
-  blocks the proof chip, "submit proof", and ticking a proof task.
-  `required_proof_type` is a free `varchar`.
+- ~~**Proof:** which proof types exist, and how is a proof submitted?~~
+  Answered 2026-10-09 by [0007](../decisions/0007-server-rules-settled-in-the-api-review.md):
+  a proof is an http(s) link, sent with the tick to review. The app's
+  placeholders can now be built against the
+  [API](./tasko-api-as-built.md).
 - **Archive task:** tasks have no `archived` status, only `cancelled_date`.
   Is archive the same as cancel?
 - **The header's slider icon:** still unexplained, so it is left out.
-- **Account settings and log out:** what the settings screen holds, and
-  how sign-in works.
+- **Account settings and log out:** what the settings screen holds.
+  Sign-in itself now exists on the server: email and password, a 30-day
+  bearer token, `POST /auth/logout` ([API](./tasko-api-as-built.md)).
 
 ## Open questions
 - Should any row in the first table become a decision note?
