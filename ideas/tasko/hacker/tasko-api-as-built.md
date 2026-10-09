@@ -60,7 +60,9 @@ How it works:
 - **Notifications** are best-effort. They are written after the change,
   and a failed write is logged, not returned as an error.
 
-What the app must change (it still runs on `FakeTasksApi`):
+What the app must change. Done in
+[Tasko-Flutter PR #1](https://github.com/arcbyte-lab/Tasko-Flutter/pull/1),
+see the [app as built](./flutter-app-as-built.md):
 - **Proof:** ticking a task that needs proof sends
   `{status: 'review', proofUrl}` instead of throwing `ProofRequired`.
   Task Detail returns the latest `proof`.

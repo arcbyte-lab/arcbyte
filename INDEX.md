@@ -74,7 +74,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [v1 build defaults — Flutter + Cubit client, online only, and the open task rules closed the simple way](ideas/tasko/decisions/0005-v1-build-defaults.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-07 |
 | [Promote Tasko from idea to project](ideas/tasko/decisions/0006-promote-tasko-to-project.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-07 |
 | [Choices made while building the Tasko app, waiting for the owner](ideas/tasko/hacker/build-choices-to-confirm.md) | hacker | question | claude-opus-5.5 (claude-code) | 2026-10-07 |
-| [Tasko Flutter app, as built — screens, Cubits, one fake API seam, folders](ideas/tasko/hacker/flutter-app-as-built.md) | hacker | architecture | claude-opus-5.5 (claude-code) | 2026-10-07 |
+| [Tasko Flutter app, as built — screens, Cubits, one API seam on Tasko-API, folders](ideas/tasko/hacker/flutter-app-as-built.md) | hacker | architecture | claude-opus-5.5 (claude-code) | 2026-10-07 |
 | [v1 build tickets — the home screen and the checkbox, Flutter + Cubit on a fake API](ideas/tasko/hacker/v1-home-build-tickets.md) | hacker | spec | claude-opus-5.5 (claude-code) | 2026-10-07 |
 | [Hifi mockup tickets for pen.dev — restyle the lofi frames with modern-minimal.css](ideas/tasko/hipster/hifi-mockup-tickets-for-pen-dev.md) | hipster | spec | claude-opus-5.5 (claude-code) | 2026-10-07 |
 | [Lofi mockup tickets for pen.dev — thirteen prompts, pasted one at a time](ideas/tasko/hipster/lofi-mockup-tickets-for-pen-dev.md) | hipster | spec | claude-opus-5.5 (claude-code) | 2026-10-07 |
@@ -136,7 +136,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Tasks data model, as built — TaskList, Task, embedded Repeat and Subtask](ideas/santian/hacker/tasks-data-model-as-built.md) | santian | data-model | draft | strong | claude-opus-5.5 (claude-code) |
 | [Theme tokens, as built — colors, fonts, tracking, radii, the one shadow](ideas/santian/hacker/theme-tokens-as-built.md) | santian | spec | draft | strong | claude-opus-5.5 (claude-code) |
 | [Choices made while building the Tasko app, waiting for the owner](ideas/tasko/hacker/build-choices-to-confirm.md) | tasko | question | draft | weak | claude-opus-5.5 (claude-code) |
-| [Tasko Flutter app, as built — screens, Cubits, one fake API seam, folders](ideas/tasko/hacker/flutter-app-as-built.md) | tasko | architecture | draft | strong | claude-opus-5.5 (claude-code) |
+| [Tasko Flutter app, as built — screens, Cubits, one API seam on Tasko-API, folders](ideas/tasko/hacker/flutter-app-as-built.md) | tasko | architecture | draft | strong | claude-opus-5.5 (claude-code) |
 | [Santian's task concepts mapped onto Tasko's schema — what fits, what has no column](ideas/tasko/hacker/santian-concepts-mapped-to-tasko-schema.md) | tasko | analysis | draft | weak | claude-opus-5.5 (claude-code) |
 | [Santian's behaviour rules that change once tasks are shared, reviewed, and server-side](ideas/tasko/hacker/santian-rules-that-change-in-a-team-app.md) | tasko | analysis | draft | weak | claude-opus-5.5 (claude-code) |
 | [Tasko API, as built — Hono on Cloudflare Workers with D1, deployed, 22 routes](ideas/tasko/hacker/tasko-api-as-built.md) | tasko | architecture | draft | strong | claude-opus-5.5 (claude-code) |

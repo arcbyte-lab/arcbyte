@@ -39,15 +39,15 @@ which still block UI?
 ### Still open (each one is an "action: …" placeholder in the app)
 - ~~**Proof:** which proof types exist, and how is a proof submitted?~~
   Answered 2026-10-09 by [0007](../decisions/0007-server-rules-settled-in-the-api-review.md):
-  a proof is an http(s) link, sent with the tick to review. The app's
-  placeholders can now be built against the
-  [API](./tasko-api-as-built.md).
+  a proof is an http(s) link, sent with the tick to review. Built in the
+  [app](./flutter-app-as-built.md) on the [API](./tasko-api-as-built.md).
 - **Archive task:** tasks have no `archived` status, only `cancelled_date`.
   Is archive the same as cancel?
 - **The header's slider icon:** still unexplained, so it is left out.
 - **Account settings and log out:** what the settings screen holds.
-  Sign-in itself now exists on the server: email and password, a 30-day
-  bearer token, `POST /auth/logout` ([API](./tasko-api-as-built.md)).
+  Sign-in and log out are built in the app on the server's email and
+  password login ([app](./flutter-app-as-built.md)). Account settings is
+  still a placeholder.
 
 ## Open questions
 - Should any row in the first table become a decision note?
