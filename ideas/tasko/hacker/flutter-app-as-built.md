@@ -20,7 +20,7 @@ today, and where does each concern live?
 ## Short answer
 - Every screen in the hifi mockups is built except the Repeat screen (cut
   by [0005](../decisions/0005-v1-build-defaults.md)). Since
-  [PR #1](https://github.com/arcbyte-lab/Tasko-Flutter/pull/1) (open on
+  [PR #1](https://github.com/arcbyte-lab/Tasko-Flutter/pull/1) (merged
   2026-10-09) the app logs in and runs on the
   [Tasko API](./tasko-api-as-built.md). `FakeTasksApi` only runs the tests.
 - Same shape as [Santian](../../santian/hacker/tasks-architecture-as-built.md):
