@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-14
 inputs: ["../../santian/hacker/tasks-behaviour-rules-as-built.md", "../../santian/hacker/notifications-as-built.md", "../assets/sqlite-schema.sql", "./santian-concepts-mapped-to-tasko-schema.md"]
 tags: [artifact]
 ---
@@ -113,8 +113,9 @@ support would need a sync design that does not exist.
 - ~~Which status values exist, and which transitions can the checkbox
   trigger?~~ Settled by [0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md), including
   who reviews. Unticking is still open.
-- Repeat: show each occurrence as its own Task, or add "next one on
-  completion"?
+- ~~Repeat: show each occurrence as its own Task, or add "next one on
+  completion"?~~ Next one on completion, workspace tasks only:
+  [0009](../decisions/0009-workspace-tasks-repeat-on-completion.md).
 - Undo: delay the delete, or add soft delete?
 - Offline: required, or online-only is fine?
 

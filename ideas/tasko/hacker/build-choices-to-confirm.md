@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
-updated: 2026-10-09
+updated: 2026-10-14
 inputs: ["./flutter-app-as-built.md", "../hipster/hifi-mockup-tickets-for-pen-dev.md", "../hipster/lofi-mockup-tickets-for-pen-dev.md", "../decisions/0004-checkbox-goes-to-review-only-when-needed.md"]
 tags: [artifact]
 ---
@@ -28,7 +28,7 @@ which still block UI?
 | Choice | Why | Where it differs |
 |---|---|---|
 | "N open" counts tasks in review | The hifi day-selected frame counts them | [0004](../decisions/0004-checkbox-goes-to-review-only-when-needed.md) says review is not open. The calendar still follows 0004. |
-| No repeat row in Task Detail | [0005](../decisions/0005-v1-build-defaults.md) cut repeat | The hifi detail frame shows the row |
+| ~~No repeat row in Task Detail~~ | Built for workspace tasks by [0009](../decisions/0009-workspace-tasks-repeat-on-completion.md) | Project tasks still show no row |
 | Personal tasks show no code | `personal_tasks` has no `code` column | The hifi frame shows "PV-0007" |
 | FAB stays in the full-screen calendar | The hifi frame shows it | Lofi T3 hides it |
 | Tapping a day in the full-screen calendar collapses it | The filtered list is the point of the tap | Not specified |

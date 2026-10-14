@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: strong
 created: 2026-10-09
-updated: 2026-10-09
+updated: 2026-10-14
 inputs: ["../decisions/0002-tabs-are-workspaces-then-projects.md", "../decisions/0004-checkbox-goes-to-review-only-when-needed.md", "../decisions/0005-v1-build-defaults.md", "../decisions/0007-server-rules-settled-in-the-api-review.md", "./flutter-app-as-built.md"]
 tags: [artifact]
 ---
@@ -56,7 +56,14 @@ How it works:
   constraint; the first review decision wins).
 - **Choices made in review:** the rules decided during the code review are
   in [0007](../decisions/0007-server-rules-settled-in-the-api-review.md).
-- **Schema:** two migrations: `0001_init` (12 tables) and `0002_proofs`.
+- **Repeat** ([0009](../decisions/0009-workspace-tasks-repeat-on-completion.md)):
+  a task carries `repeat` (`{every, unit, weekdays, until, count}` or
+  null). It is set by create or `PATCH /tasks/:id`, for workspace tasks
+  with a due date only. When the task reaches `done` (ticked or approved),
+  the server creates the next task and moves the rule onto it. The date
+  maths is in `src/repeat.ts`.
+- **Schema:** three migrations: `0001_init` (12 tables), `0002_proofs`
+  and `0003_repeat` (`tasks.repeat`).
   `attachments`, `recurring_tasks` and the activity tables are not copied,
   because no route reads them.
 - **Notifications** are best-effort. They are written after the change,

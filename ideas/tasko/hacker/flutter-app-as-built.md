@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: strong
 created: 2026-10-07
-updated: 2026-10-09
+updated: 2026-10-14
 inputs: ["../decisions/0008-start-working-moves-a-task-to-in-progress.md", "./v1-home-build-tickets.md", "../decisions/0005-v1-build-defaults.md", "../decisions/0007-server-rules-settled-in-the-api-review.md", "./tasko-api-as-built.md", "../hipster/hifi-mockup-tickets-for-pen-dev.md", "../../santian/hacker/tasks-architecture-as-built.md"]
 tags: [artifact]
 ---
@@ -18,8 +18,8 @@ What does the code in
 today, and where does each concern live?
 
 ## Short answer
-- Every screen in the hifi mockups is built except the Repeat screen (cut
-  by [0005](../decisions/0005-v1-build-defaults.md)). Since
+- Every screen in the hifi mockups is built. The Repeat screen is only
+  for workspace tasks ([0009](../decisions/0009-workspace-tasks-repeat-on-completion.md)). Since
   [PR #1](https://github.com/arcbyte-lab/Tasko-Flutter/pull/1) (merged
   2026-10-09) the app logs in and runs on the
   [Tasko API](./tasko-api-as-built.md). `FakeTasksApi` only runs the tests.
@@ -66,6 +66,7 @@ notifications/             NotificationsCubit + screen
 | Create sheet | Title, note, chips for due date, priority, assignee and proof, each with a picker. Personal tasks get only date and priority. |
 | Task detail | Editable title and note, property rows, sub-tasks, discussion. The action bar follows status and viewer (`actionFor`). Menu items: extension request, archive. The proof row shows the latest proof link; "submit proof" asks for one. Review buttons: approve, reject. |
 | Notifications | NEW / EARLIER sections, "mark all read". |
+| Repeat | From Task Detail's repeat row, workspace tasks only (0009). Every N unit, weekday chips, ends never / on / after N, "stop repeating". The time and the start come from the due date. Ticking a repeating task reloads the tab, so the next task shows. |
 
 ### How state flows
 - `HomeCubit` loads **every tab's tasks and members** at start
