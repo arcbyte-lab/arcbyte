@@ -7,8 +7,8 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
-updated: 2026-10-07
-inputs: ["../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
+updated: 2026-10-14
+inputs: ["../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
 tags: [artifact]
 ---
 
@@ -287,6 +287,29 @@ Ticket H6 — Snackbars, then check the whole row
    - All text on #3B82F6 is white, and all body text is #333333 or #6B7280.
    List any frame that breaks a rule, then fix it.
 ```
+
+### H7 — Projects and members (drawn 2026-10-14)
+
+Drawn straight into `pencil-new.pen` by Claude, after the app was built
+([build tickets](../hacker/project-and-member-build-tickets.md),
+[0010](../decisions/0010-adding-a-project-member-needs-no-invitation.md)).
+These are the first hifi frames with **no lofi twin**: they copy the app as
+built, not a lofi layout. H6's "every lofi frame has one hifi twin" check
+does not apply to them. They sit in a new row at y=2266, below the hifi
+row, and follow H0 and H1. PNGs are in `assets/hi-fi snapshoots/`.
+
+| Frame | Shows | Built from |
+|---|---|---|
+| `hifi / home / account-menu-lead` | "new project" (plus icon) above "account settings", for a division admin or supervisor | `hifi / home / account-menu` |
+| `hifi / home / project-toolbar` | a `users` icon before search, on project tabs only | `hifi / home / default` |
+| `hifi / create / project` | "new project" title, a division chip (only when there is a choice), due date; "done" disabled until named | `hifi / create / team` |
+| `hifi / members / owner` | "tasko-web members", "add member" text button, rows with role and a ⋮ | `hifi / notifications` header, assignee-picker row style |
+| `hifi / members / row-menu` | the ⋮ menu: make owner / person-in-charge / viewer, "remove" in #EF4444 | `members / owner`, account-menu look |
+| `hifi / members / plain-member` | no "add member"; only the viewer's row has ⋮, with "leave project" in #EF4444 | `members / owner` |
+| `hifi / picker / add-member` | "ADD MEMBER", "search people", emails under names, one selected | `hifi / picker / assignee` over `members / owner` |
+
+The members screen, its menus and the picker are the layout the owner
+should judge: they were never sketched in lofi.
 
 ## What would change my mind
 - If the owner wants Tasko to look different from the lofi layout (not just

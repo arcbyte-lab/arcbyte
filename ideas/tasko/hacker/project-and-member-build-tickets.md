@@ -41,8 +41,8 @@ and the [API as built](./tasko-api-as-built.md). The phone walkthrough (`integra
 against a local API) passes all 21 steps, the new ones included. It found
 one bug the widget tests missed: after leaving, the app reloaded a member
 list the server no longer shows, and toasted "Not a member". Fixed in #11. "New project" sits in the account menu and the
-members icon in the project toolbar, as defaults; neither is in the hifi
-mockups yet.
+members icon in the project toolbar, as defaults; both are now drawn in the hifi
+mockups ([H7](../hipster/hifi-mockup-tickets-for-pen-dev.md)).
 
 ### Rules
 | Rule | Value |
@@ -181,8 +181,10 @@ outside the company needs to join, or when a project needs editing.
   project is a problem → limit search to the project's division.
 
 ## Open questions
-- Where the members icon and **new project** go is a hipster call. They
-  are not in the hifi mockups yet.
+- Are the defaults for **new project** (account menu) and the members icon
+  (project toolbar) the right places? They are drawn in the hifi mockups
+  ([H7](../hipster/hifi-mockup-tickets-for-pen-dev.md)) but the owner has not
+  judged them.
 
 ---
 Part of [Tasko](../README.md)
