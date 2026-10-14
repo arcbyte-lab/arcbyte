@@ -80,7 +80,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Lofi mockup tickets for pen.dev — thirteen prompts, pasted one at a time](ideas/tasko/hipster/lofi-mockup-tickets-for-pen-dev.md) | hipster | spec | claude-opus-5.5 (claude-code) | 2026-10-07 |
 | [Server rules settled in the Tasko API review — a proof is a link, who edits, one level of sub-tasks](ideas/tasko/decisions/0007-server-rules-settled-in-the-api-review.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-09 |
 | [Start working" in Task Detail moves a task to in progress](ideas/tasko/decisions/0008-start-working-moves-a-task-to-in-progress.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-09 |
-| [Tasko API, as built — Hono on Cloudflare Workers with D1, deployed, 22 routes](ideas/tasko/hacker/tasko-api-as-built.md) | hacker | architecture | claude-opus-5.5 (claude-code) | 2026-10-09 |
+| [Tasko API, as built — Hono on Cloudflare Workers with D1, deployed, 27 routes](ideas/tasko/hacker/tasko-api-as-built.md) | hacker | architecture | claude-opus-5.5 (claude-code) | 2026-10-09 |
 | [Workspace tasks repeat the Santian way — finishing one creates the next](ideas/tasko/decisions/0009-workspace-tasks-repeat-on-completion.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-14 |
 | [Adding a project member needs no invitation — division leads create projects, anyone active can be added](ideas/tasko/decisions/0010-adding-a-project-member-needs-no-invitation.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-14 |
 | [Project and member build tickets — create a project, add people directly, no invitation step](ideas/tasko/hacker/project-and-member-build-tickets.md) | hacker | spec | claude-opus-5.5 (claude-code) | 2026-10-14 |
@@ -144,7 +144,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Project and member build tickets — create a project, add people directly, no invitation step](ideas/tasko/hacker/project-and-member-build-tickets.md) | tasko | spec | draft | weak | claude-opus-5.5 (claude-code) |
 | [Santian's task concepts mapped onto Tasko's schema — what fits, what has no column](ideas/tasko/hacker/santian-concepts-mapped-to-tasko-schema.md) | tasko | analysis | draft | weak | claude-opus-5.5 (claude-code) |
 | [Santian's behaviour rules that change once tasks are shared, reviewed, and server-side](ideas/tasko/hacker/santian-rules-that-change-in-a-team-app.md) | tasko | analysis | draft | weak | claude-opus-5.5 (claude-code) |
-| [Tasko API, as built — Hono on Cloudflare Workers with D1, deployed, 22 routes](ideas/tasko/hacker/tasko-api-as-built.md) | tasko | architecture | draft | strong | claude-opus-5.5 (claude-code) |
+| [Tasko API, as built — Hono on Cloudflare Workers with D1, deployed, 27 routes](ideas/tasko/hacker/tasko-api-as-built.md) | tasko | architecture | draft | strong | claude-opus-5.5 (claude-code) |
 | [v1 build tickets — the home screen and the checkbox, Flutter + Cubit on a fake API](ideas/tasko/hacker/v1-home-build-tickets.md) | tasko | spec | draft | weak | claude-opus-5.5 (claude-code) |
 
 ### hustler

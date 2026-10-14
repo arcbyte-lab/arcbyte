@@ -28,7 +28,7 @@ second repo,
 checked out locally at `~/Projects/Dev/tasko-api`: Hono on Cloudflare
 Workers with D1, every route built and deployed at
 `https://tasko-api.vidtandjung.workers.dev` ([as built](./hacker/tasko-api-as-built.md)).
-The live database has no users yet.
+The live database holds the seed test data, not real users yet.
 
 ## One line
 
@@ -42,7 +42,7 @@ The live database has no users yet.
 ## Status by lens
 - **Hound:** not started
 - **Hipster:** the owner's [home wireframe](./hipster/home-screen-wireframe.md) settles the tabs ([0002](./decisions/0002-tabs-are-workspaces-then-projects.md)) and the calendar ([0003](./decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md)). The task row and Task Detail are not drawn yet; [Santian's screens in a team app](./hipster/santian-screens-in-a-team-app.md) is the starting proposal. The [lofi mockup tickets](./hipster/lofi-mockup-tickets-for-pen-dev.md) are ready to hand to pen.dev, and the [hifi mockup tickets](./hipster/hifi-mockup-tickets-for-pen-dev.md) restyle them with `modern-minimal.css`.
-- **Hacker:** schema adopted ([0001](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)). Santian's behaviour mapped onto it: concepts and missing columns, and the rules that break in a team app. v1 defaults set ([0005](./decisions/0005-v1-build-defaults.md)): Flutter + Cubit, online only. The app is built: every hifi screen, on a fake API ([as built](./hacker/flutter-app-as-built.md)). The server API is built and deployed in `tasko-api` ([as built](./hacker/tasko-api-as-built.md)); the rules settled while reviewing it, including "a proof is a link", are in [0007](./decisions/0007-server-rules-settled-in-the-api-review.md). The app runs on it, tested on a phone against the live API; "start working" is allowed by [0008](./decisions/0008-start-working-moves-a-task-to-in-progress.md). Workspace tasks repeat, Santian-style ([0009](./decisions/0009-workspace-tasks-repeat-on-completion.md)). Projects and members: add people directly, no invitation ([0010](./decisions/0010-adding-a-project-member-needs-no-invitation.md)); [build tickets](./hacker/project-and-member-build-tickets.md) all built, in open PRs (API #25–#28, app #9–#12), not merged or deployed yet.
+- **Hacker:** schema adopted ([0001](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)). Santian's behaviour mapped onto it: concepts and missing columns, and the rules that break in a team app. v1 defaults set ([0005](./decisions/0005-v1-build-defaults.md)): Flutter + Cubit, online only. The app is built: every hifi screen, on a fake API ([as built](./hacker/flutter-app-as-built.md)). The server API is built and deployed in `tasko-api` ([as built](./hacker/tasko-api-as-built.md)); the rules settled while reviewing it, including "a proof is a link", are in [0007](./decisions/0007-server-rules-settled-in-the-api-review.md). The app runs on it, tested on a phone against the live API; "start working" is allowed by [0008](./decisions/0008-start-working-moves-a-task-to-in-progress.md). Workspace tasks repeat, Santian-style ([0009](./decisions/0009-workspace-tasks-repeat-on-completion.md)). Projects and members: add people directly, no invitation ([0010](./decisions/0010-adding-a-project-member-needs-no-invitation.md)); [build tickets](./hacker/project-and-member-build-tickets.md) all built: the API side is merged and deployed, the app side is in open PRs (#9–#12), tested on a phone.
 - **Hustler:** not started
 
 ## Next question to answer
@@ -68,7 +68,7 @@ is a link. The calls still open are listed in
 - [v1 home build tickets](./hacker/v1-home-build-tickets.md) — B0–B6: home screen and checkbox, Flutter + Cubit on a fake API
 - [Flutter app, as built](./hacker/flutter-app-as-built.md) — screens, Cubits, the fake API seam, folders
 - [Choices to confirm](./hacker/build-choices-to-confirm.md) — calls made while building, and the placeholders still open
-- [Tasko API, as built](./hacker/tasko-api-as-built.md) — Hono + D1 on Workers, 22 routes, deployed; what the app must change to use it
+- [Tasko API, as built](./hacker/tasko-api-as-built.md) — Hono + D1 on Workers, 27 routes, deployed; what the app must change to use it
 - [Project and member build tickets](./hacker/project-and-member-build-tickets.md) — A9–A12 and B7–B10: create a project, add people directly with no invitation step
 
 ## Decisions
