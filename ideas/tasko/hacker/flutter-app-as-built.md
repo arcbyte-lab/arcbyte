@@ -8,7 +8,7 @@ source: claude-opus-5.5 (claude-code)
 evidence: strong
 created: 2026-10-07
 updated: 2026-10-14
-inputs: ["../decisions/0008-start-working-moves-a-task-to-in-progress.md", "./v1-home-build-tickets.md", "../decisions/0005-v1-build-defaults.md", "../decisions/0007-server-rules-settled-in-the-api-review.md", "./tasko-api-as-built.md", "../hipster/hifi-mockup-tickets-for-pen-dev.md", "../../santian/hacker/tasks-architecture-as-built.md"]
+inputs: ["../decisions/0008-start-working-moves-a-task-to-in-progress.md", "./v1-home-build-tickets.md", "../decisions/0005-v1-build-defaults.md", "../decisions/0007-server-rules-settled-in-the-api-review.md", "./tasko-api-as-built.md", "../hipster/hifi-mockup-tickets-for-pen-dev.md", "../../santian/hacker/tasks-architecture-as-built.md", "../decisions/0010-adding-a-project-member-needs-no-invitation.md", "./project-and-member-build-tickets.md"]
 tags: [artifact]
 ---
 
@@ -26,8 +26,13 @@ today, and where does each concern live?
 - Same shape as [Santian](../../santian/hacker/tasks-architecture-as-built.md):
   a pure `*View` plus a thin `*Panel`/`*Sheet` for wiring, Cubits, and pure
   rule files with unit tests. The one seam is `TasksApi`.
-- 81 tests (rules, Cubits, widget flows, the HTTP client). CI runs
+- 103 tests (rules, Cubits, widget flows, the HTTP client). CI runs
   `flutter analyze` and then `flutter test`.
+- Since 2026-10-14 (PRs #9–#12) a division lead creates projects, and a
+  project's owner or person-in-charge manages its members
+  ([0010](../decisions/0010-adding-a-project-member-needs-no-invitation.md)).
+  The phone walkthrough, `integration_test/live_test.dart`, covers it and
+  can run against a local API.
 - Tested on an Android 16 phone against the live API on 2026-10-09: login,
   tabs, ticking, proof, review, comments, create, notifications and log out
   all work. "start working" was refused by the server then; the server now
@@ -51,8 +56,10 @@ tasks/http_tasks_api.dart  HttpTasksApi, login(), ApiException, JSON mapping
 tasks/task_rules.dart      isOpen, isOverdue, taskOrder, dayGroup, dueCounts,
                            statusAfterTick, actionFor, relative times
 tasks/view_options.dart    group / sort / filter for the list
-tasks/*_cubit.dart         HomeCubit, CreateTaskCubit, TaskDetailCubit
-tasks/screens/             home, create sheet, task detail sheet
+tasks/*_cubit.dart         HomeCubit, CreateTaskCubit, TaskDetailCubit,
+                           MembersCubit
+tasks/screens/             home, create sheet, task detail sheet,
+                           new project sheet, members screen
 tasks/widgets/             pulse panel, tab strip, tab pages, task row,
                            pickers, reason sheets, view-options sheet
 notifications/             NotificationsCubit + screen
@@ -62,10 +69,12 @@ notifications/             NotificationsCubit + screen
 | Screen | What works |
 |---|---|
 | Login | Email and password. The token (30 days) is kept in secure storage. |
-| Home | Header with an unread dot and an account menu. Monthly heatmap (0003): swipe changes month, tapping a day filters the list, and a full-screen mode. Tabs (0002) as a `PageView`: the list follows the finger and the tab underline moves with it. Pinned toolbar: "N open", search, view options. Grouped list. Checkbox (0004/0005). A task that needs a proof asks for a link first (0007). |
+| Home | Header with an unread dot and an account menu. Monthly heatmap (0003): swipe changes month, tapping a day filters the list, and a full-screen mode. Tabs (0002) as a `PageView`: the list follows the finger and the tab underline moves with it. Pinned toolbar: "N open", members (project tabs only), search, view options. The account menu has "new project" for division admins and supervisors. Grouped list. Checkbox (0004/0005). A task that needs a proof asks for a link first (0007). |
 | Create sheet | Title, note, chips for due date, priority, assignee and proof, each with a picker. Personal tasks get only date and priority. |
 | Task detail | Editable title and note, property rows, sub-tasks, discussion. The action bar follows status and viewer (`actionFor`). Menu items: extension request, archive. The proof row shows the latest proof link; "submit proof" asks for one. Review buttons: approve, reject. |
-| Notifications | NEW / EARLIER sections, "mark all read". |
+| Notifications | NEW / EARLIER sections, "mark all read". Closing it reloads the tabs, so a project the viewer was just added to shows. |
+| New project | From the account menu (0010). Name, a division chip when there is a choice, a due date. The new tab is added last and opened. |
+| Members | From the project toolbar (0010). Owners and persons-in-charge add people from a server-side user search and change or remove roles; only owners touch the owner role. Anyone can leave, which drops the tab. |
 | Repeat | From Task Detail's repeat row, workspace tasks only (0009). Every N unit, weekday chips, ends never / on / after N, "stop repeating". The time and the start come from the due date. Ticking a repeating task reloads the tab, so the next task shows. |
 
 ### How state flows
@@ -73,6 +82,9 @@ notifications/             NotificationsCubit + screen
   (`tasksByTab`), so a swipe never waits on the network. Choosing a tab
   shows the cached list, then refreshes that tab. `HomeState.pageFor(tab)`
   is what a neighbouring page shows mid-swipe.
+- `HomeCubit.reloadTabs()` fetches the tab list again after the members
+  or notifications screen closes. It keeps cached tasks, loads new tabs,
+  and refreshes every tab's members and the viewer's role on each tab.
 - Task Detail keeps title and note edits as drafts and saves them before
   the sheet returns, so the list reloads with them.
 - **Talking to the server:** `HttpTasksApi` calls the deployed API, or a

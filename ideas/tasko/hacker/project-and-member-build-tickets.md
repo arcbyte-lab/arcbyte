@@ -32,12 +32,12 @@ Issues: API [#21](https://github.com/arcbyte-lab/Tasko-API/issues/21)–[#24](ht
 (A9–A12), app [#5](https://github.com/arcbyte-lab/Tasko-Flutter/issues/5)–[#8](https://github.com/arcbyte-lab/Tasko-Flutter/issues/8)
 (B7–B10).
 
-**Built, 2026-10-14.** The API tickets are merged
+**Built and merged, 2026-10-14.** The API tickets
 ([#25](https://github.com/arcbyte-lab/Tasko-API/pull/25)–[#28](https://github.com/arcbyte-lab/Tasko-API/pull/28))
-and deployed. The app tickets are in open pull requests,
-[#9](https://github.com/arcbyte-lab/Tasko-Flutter/pull/9)–[#12](https://github.com/arcbyte-lab/Tasko-Flutter/pull/12),
-each stacked on the one before: merge in order, moving each next PR's base
-to `main`. The phone walkthrough (`integration_test/live_test.dart`, run
+are merged and deployed; the app tickets
+([#9](https://github.com/arcbyte-lab/Tasko-Flutter/pull/9)–[#12](https://github.com/arcbyte-lab/Tasko-Flutter/pull/12))
+are merged into `main`. See the [app as built](./flutter-app-as-built.md)
+and the [API as built](./tasko-api-as-built.md). The phone walkthrough (`integration_test/live_test.dart`, run
 against a local API) passes all 21 steps, the new ones included. It found
 one bug the widget tests missed: after leaving, the app reloaded a member
 list the server no longer shows, and toasted "Not a member". Fixed in #11. "New project" sits in the account menu and the
