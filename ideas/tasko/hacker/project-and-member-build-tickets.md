@@ -32,6 +32,14 @@ Issues: API [#21](https://github.com/arcbyte-lab/Tasko-API/issues/21)–[#24](ht
 (A9–A12), app [#5](https://github.com/arcbyte-lab/Tasko-Flutter/issues/5)–[#8](https://github.com/arcbyte-lab/Tasko-Flutter/issues/8)
 (B7–B10).
 
+**Built, 2026-10-14:** every ticket is in an open pull request, not merged
+or deployed. API [#25](https://github.com/arcbyte-lab/Tasko-API/pull/25)–[#28](https://github.com/arcbyte-lab/Tasko-API/pull/28)
+(#28 is stacked on #27). App [#9](https://github.com/arcbyte-lab/Tasko-Flutter/pull/9)–[#12](https://github.com/arcbyte-lab/Tasko-Flutter/pull/12),
+each stacked on the one before. Merge in order, moving each next PR's base
+to the main branch. "New project" sits in the account menu and the
+members icon in the project toolbar, as defaults; neither is in the hifi
+mockups yet.
+
 ### Rules
 | Rule | Value |
 |---|---|
