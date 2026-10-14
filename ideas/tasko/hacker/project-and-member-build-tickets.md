@@ -28,6 +28,9 @@ create projects and manage who is in them?
   yet. Write a decision note before building them, or change them here.
 
 ## Detail
+Issues: API [#21](https://github.com/arcbyte-lab/Tasko-API/issues/21)–[#24](https://github.com/arcbyte-lab/Tasko-API/issues/24)
+(A9–A12), app [#5](https://github.com/arcbyte-lab/Tasko-Flutter/issues/5)–[#8](https://github.com/arcbyte-lab/Tasko-Flutter/issues/8)
+(B7–B10).
 
 ### Rules
 | Rule | Value |
