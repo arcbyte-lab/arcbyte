@@ -33,6 +33,10 @@ today, and where does each concern live?
   ([0010](../decisions/0010-adding-a-project-member-needs-no-invitation.md)).
   The phone walkthrough, `integration_test/live_test.dart`, covers it and
   can run against a local API.
+  Since [PR #13](https://github.com/arcbyte-lab/Tasko-Flutter/pull/13)
+  (merged 2026-10-19), "+ new project" sits at the end of the tab strip
+  ([0011](../decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md)).
+  The walkthrough passed all 21 steps on the phone against a local API.
 - Tested on an Android 16 phone against the live API on 2026-10-09: login,
   tabs, ticking, proof, review, comments, create, notifications and log out
   all work. "start working" was refused by the server then; the server now
