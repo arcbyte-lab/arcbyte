@@ -40,8 +40,8 @@ are merged into `main`. See the [app as built](./flutter-app-as-built.md)
 and the [API as built](./tasko-api-as-built.md). The phone walkthrough (`integration_test/live_test.dart`, run
 against a local API) passes all 21 steps, the new ones included. It found
 one bug the widget tests missed: after leaving, the app reloaded a member
-list the server no longer shows, and toasted "Not a member". Fixed in #11. "New project" sits in the account menu and the
-members icon in the project toolbar, as defaults; both are now drawn in the hifi
+list the server no longer shows, and toasted "Not a member". Fixed in #11. "New project" sits at the end of the tab strip ([0011](../decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md)) and the
+members icon in the project toolbar; both are now drawn in the hifi
 mockups ([H7](../hipster/hifi-mockup-tickets-for-pen-dev.md)).
 
 ### Rules
@@ -181,10 +181,11 @@ outside the company needs to join, or when a project needs editing.
   project is a problem → limit search to the project's division.
 
 ## Open questions
-- Are the defaults for **new project** (account menu) and the members icon
-  (project toolbar) the right places? They are drawn in the hifi mockups
-  ([H7](../hipster/hifi-mockup-tickets-for-pen-dev.md)) but the owner has not
-  judged them.
+- ~~Is the account menu the right place for **new project**?~~ No: the tab
+  strip ([0011](../decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md)).
+- Is the members icon (project toolbar) the right place? It is drawn in
+  the hifi mockups ([H7](../hipster/hifi-mockup-tickets-for-pen-dev.md)),
+  but the owner has not judged it.
 
 ---
 Part of [Tasko](../README.md)
