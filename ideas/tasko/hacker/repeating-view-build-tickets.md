@@ -37,7 +37,9 @@ App PRs, stacked in order:
 [#17](https://github.com/arcbyte-lab/Tasko-Flutter/pull/17),
 [#18](https://github.com/arcbyte-lab/Tasko-Flutter/pull/18),
 [#19](https://github.com/arcbyte-lab/Tasko-Flutter/pull/19); 119 tests pass.
-Not merged or deployed yet.
+**The API is merged and deployed** (2026-10-19, version `306ffe54`,
+migration `0004_series` applied): checked live, Ana gets the list, Mira
+gets 403. The app PRs are not merged yet.
 
 Changes from the tickets, made while building:
 - Task Detail gains `canRepeat`, set by the server (in #34). Its `tab`
