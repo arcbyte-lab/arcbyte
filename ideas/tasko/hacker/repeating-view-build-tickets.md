@@ -48,7 +48,7 @@ including three new repeating steps
 API [#35](https://github.com/arcbyte-lab/Tasko-API/pull/35) (143 tests,
 migration `0005_repeat_ended`) and app
 [#21](https://github.com/arcbyte-lab/Tasko-Flutter/pull/21) (121 tests),
-not merged yet.
+both merged; the API is deployed (version `fbdbbbc1`, migration applied).
 
 Changes from the tickets, made while building:
 - Task Detail gains `canRepeat`, set by the server (in #34). Its `tab`
