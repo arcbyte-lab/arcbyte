@@ -27,7 +27,9 @@ leads' "repeating" view in
   pinned toolbar. It shows on division tabs where the viewer is a lead.
 
 ## Detail
-Not built yet. No issues opened yet.
+Not built yet. Issues: API [#29](https://github.com/arcbyte-lab/Tasko-API/issues/29)–[#31](https://github.com/arcbyte-lab/Tasko-API/issues/31)
+(A13–A15), app [#14](https://github.com/arcbyte-lab/Tasko-Flutter/issues/14)–[#16](https://github.com/arcbyte-lab/Tasko-Flutter/issues/16)
+(B11–B13), opened 2026-10-19.
 
 ### Rules
 | Rule | Value |
