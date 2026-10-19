@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
-updated: 2026-10-14
+updated: 2026-10-19
 inputs: ["../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
 tags: [artifact]
 ---
@@ -300,7 +300,7 @@ row, and follow H0 and H1. PNGs are in `assets/hi-fi snapshoots/`.
 
 | Frame | Shows | Built from |
 |---|---|---|
-| `hifi / home / account-menu-lead` | "new project" (plus icon) above "account settings", for a division admin or supervisor | `hifi / home / account-menu` |
+| `hifi / home / new-project-tab` | "+ new project" (plus icon, #6B7280) after the last project tab, for a division admin or supervisor ([0011](../decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md); was `account-menu-lead`, 2026-10-19) | `hifi / home / default` |
 | `hifi / home / project-toolbar` | a `users` icon before search, on project tabs only | `hifi / home / default` |
 | `hifi / create / project` | "new project" title, a division chip (only when there is a choice), due date; "done" disabled until named | `hifi / create / team` |
 | `hifi / members / owner` | "tasko-web members", "add member" text button, rows with role and a ⋮ | `hifi / notifications` header, assignee-picker row style |

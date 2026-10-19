@@ -38,7 +38,8 @@ This answers the open question in the
   so the button sits where the new tab will appear. Google Tasks mobile
   puts "+ New list" at the end of its tabs. Santian already follows Google
   Tasks mobile ([Santian 0016](../../santian/decisions/0016-follow-google-tasks-mobile-over-the-mockup.md)).
-  The hifi frames `hifi / home / account-menu-lead` (H7) are now out of date.
+  The H7 frame `hifi / home / account-menu-lead` was redrawn as
+  `hifi / home / new-project-tab` on 2026-10-19.
 - **Hacker:** a view-only change. `TabStrip` takes an optional
   `onNewProject`. The panel wiring, the sheet, `POST /projects` and the
   rules don't change.
