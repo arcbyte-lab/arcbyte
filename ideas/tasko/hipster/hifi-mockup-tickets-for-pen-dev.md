@@ -323,7 +323,7 @@ can judge the layout first. Claude drew them straight into
 `assets/hi-fi snapshoots/`.
 
 Where the drawing differs from the prompt below:
-- **Task IDs use `TC-`.** The file had no tech prefix yet.
+- **Task IDs use `TECH-`,** the tech division's prefix in the API seed data.
 - **The create sheet's chips wrap onto two rows.** Due date and repeat
   are on the first row, then priority, assignee and proof. Five chips
   don't fit in one row.

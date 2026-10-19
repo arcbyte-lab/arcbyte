@@ -29,7 +29,23 @@ leads' "repeating" view in
 ## Detail
 Not built yet. Issues: API [#29](https://github.com/arcbyte-lab/Tasko-API/issues/29)–[#31](https://github.com/arcbyte-lab/Tasko-API/issues/31)
 (A13–A15), app [#14](https://github.com/arcbyte-lab/Tasko-Flutter/issues/14)–[#16](https://github.com/arcbyte-lab/Tasko-Flutter/issues/16)
-(B11–B13), opened 2026-10-19.
+(B11–B13), opened 2026-10-19. API PRs, stacked in order:
+[#32](https://github.com/arcbyte-lab/Tasko-API/pull/32),
+[#33](https://github.com/arcbyte-lab/Tasko-API/pull/33),
+[#34](https://github.com/arcbyte-lab/Tasko-API/pull/34); 140 tests pass.
+App PRs, stacked in order:
+[#17](https://github.com/arcbyte-lab/Tasko-Flutter/pull/17),
+[#18](https://github.com/arcbyte-lab/Tasko-Flutter/pull/18),
+[#19](https://github.com/arcbyte-lab/Tasko-Flutter/pull/19); 119 tests pass.
+Not merged or deployed yet.
+
+Changes from the tickets, made while building:
+- Task Detail gains `canRepeat`, set by the server (in #34). Its `tab`
+  has no role, so the app can't tell a lead from a member there.
+- The app sends `repeat` with every edit, so only a **changed** rule
+  needs a lead; members can still edit their repeating tasks.
+- `RepeatingSeries.recent` is a list of on-time flags, not occurrences.
+- The fake API now repeats tasks as the server does.
 
 ### Rules
 | Rule | Value |
@@ -69,9 +85,9 @@ tests in `test/` using `login()` and `api()`. Each ticket is done when
   series' division).
 - `GET /divisions/:id/repeating`: one row per live series, ordered by next
   due date:
-  `{task, rule, recent: [{dueDate, finishedAt, onTime}]}`. `task` is the
-  open task in the usual shape. `recent` is the last 5 finished
-  occurrences, newest first.
+  `{task, recent: [{dueDate, finishedAt, onTime}]}`. `task` is the
+  open task in the usual shape; its `repeat` is the rule. `recent` is the
+  last 5 finished occurrences, newest first.
 - `GET /series/:id`: every occurrence, newest first:
   `{task, finishedAt, onTime, proofUrl}`. `proofUrl` is the latest proof's
   link, or null. `onTime` is null while a task is open.
@@ -79,9 +95,9 @@ tests in `test/` using `login()` and `api()`. Each ticket is done when
   order, on time against late, and a proof task counted from `review_date`.
 
 **A15 — `DELETE /series/:id`**
-- 403 unless a lead. In one batch: remove the rule from the open task, then
-  delete it if it is `waiting`. 409 if the open task has been started.
-  Returns 204.
+- 403 unless a lead. Deletes the open task if it is `waiting`; the rule
+  lives on that row, so it goes with it. 409 if the open task has been
+  started. Returns 204.
 - "Stop repeating" needs no new route. It is
   `PATCH /tasks/:id {repeat: null}`, now lead-only (A13).
 - Tests: delete of a `waiting` task, 409 on `in_progress` and `review`,
