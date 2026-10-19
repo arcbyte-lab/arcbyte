@@ -76148,7 +76148,7 @@
       "id": "Oqxg2",
       "x": 719,
       "y": 2266,
-      "name": "hifi / home / account-menu-lead",
+      "name": "hifi / home / new-project-tab",
       "clip": true,
       "width": 426,
       "height": 930,
@@ -76834,7 +76834,92 @@
               "type": "ref",
               "ref": "cq1Vz",
               "name": "Tab Bar",
-              "width": "fill_container"
+              "width": "fill_container",
+              "descendants": {
+                "movD5": {
+                  "type": "frame",
+                  "id": "p0tTnr",
+                  "name": "Tabs",
+                  "height": 19,
+                  "gap": 19,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "XngIh",
+                      "name": "Tab tasko-app",
+                      "height": 29,
+                      "stroke": "#3B82F6",
+                      "strokeAlignment": "inner",
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "E4ImW",
+                          "name": "tasko-app",
+                          "fill": "#6B7280",
+                          "content": "tasko-app",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Si3IV",
+                      "name": "Tab tasko-web",
+                      "height": 29,
+                      "stroke": "#3B82F6",
+                      "strokeWidth": {
+                        "bottom": 2
+                      },
+                      "strokeAlignment": "inner",
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "aUUTv",
+                          "name": "tasko-web",
+                          "fill": "#333333",
+                          "content": "tasko-web",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "c68NNS",
+                      "name": "New project",
+                      "height": 29,
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "D7HMW",
+                          "name": "plus",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "plus",
+                          "library": "lucide",
+                          "fill": "#6B7280"
+                        },
+                        {
+                          "type": "text",
+                          "id": "d6Rp2z",
+                          "name": "new project",
+                          "fill": "#6B7280",
+                          "content": "new project",
+                          "fontFamily": "Inter",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
             },
             {
               "type": "frame",
@@ -77231,192 +77316,6 @@
               "icon": "plus",
               "library": "lucide",
               "fill": "#FFFFFF"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "lL58J",
-          "x": 186,
-          "y": 56,
-          "name": "Account Menu",
-          "width": 230,
-          "fill": "#FFFFFF",
-          "cornerRadius": 6,
-          "stroke": "#E5E7EB",
-          "strokeWidth": 1,
-          "strokeAlignment": "inner",
-          "effect": [
-            {
-              "type": "shadow",
-              "shadowType": "outer",
-              "color": "#0000001A",
-              "offset": {
-                "x": 0,
-                "y": 1
-              },
-              "blur": 3
-            },
-            {
-              "type": "shadow",
-              "shadowType": "outer",
-              "color": "#0000001A",
-              "offset": {
-                "x": 0,
-                "y": 4
-              },
-              "blur": 6
-            }
-          ],
-          "layout": "vertical",
-          "padding": [
-            6,
-            0
-          ],
-          "children": [
-            {
-              "type": "frame",
-              "id": "AJ0oK",
-              "name": "User",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": 2,
-              "padding": [
-                10,
-                14
-              ],
-              "children": [
-                {
-                  "type": "text",
-                  "id": "IesJH",
-                  "name": "Name",
-                  "fill": "#333333",
-                  "content": "<user_name>",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "normal"
-                },
-                {
-                  "type": "text",
-                  "id": "gHhbH",
-                  "name": "Email",
-                  "fill": "#6B7280",
-                  "content": "<user_email>",
-                  "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "rectangle",
-              "id": "o5iws",
-              "name": "Divider",
-              "fill": "#E5E7EB",
-              "width": "fill_container",
-              "height": 1
-            },
-            {
-              "type": "frame",
-              "id": "Y24n9",
-              "name": "new project",
-              "width": "fill_container",
-              "gap": 10,
-              "padding": [
-                10,
-                14
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "EEKsU",
-                  "name": "settings",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "plus",
-                  "library": "lucide",
-                  "fill": "#6B7280"
-                },
-                {
-                  "type": "text",
-                  "id": "WaWWC",
-                  "name": "Label",
-                  "fill": "#333333",
-                  "content": "new project",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "WqvZl",
-              "name": "account settings",
-              "width": "fill_container",
-              "gap": 10,
-              "padding": [
-                10,
-                14
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "WVx5B",
-                  "name": "settings",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "settings",
-                  "library": "lucide",
-                  "fill": "#6B7280"
-                },
-                {
-                  "type": "text",
-                  "id": "gJlQb",
-                  "name": "Label",
-                  "fill": "#333333",
-                  "content": "account settings",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "normal"
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "Re4fS",
-              "name": "log out",
-              "width": "fill_container",
-              "gap": 10,
-              "padding": [
-                10,
-                14
-              ],
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "icon",
-                  "id": "m9FDs",
-                  "name": "log-out",
-                  "width": 20,
-                  "height": 20,
-                  "icon": "log-out",
-                  "library": "lucide",
-                  "fill": "#EF4444"
-                },
-                {
-                  "type": "text",
-                  "id": "d9FBIU",
-                  "name": "Label",
-                  "fill": "#EF4444",
-                  "content": "log out",
-                  "fontFamily": "Inter",
-                  "fontSize": 15,
-                  "fontWeight": "normal"
-                }
-              ]
             }
           ]
         }
