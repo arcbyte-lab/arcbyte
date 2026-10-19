@@ -8,7 +8,7 @@ source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
 updated: 2026-10-19
-inputs: ["../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
+inputs: ["../decisions/0012-division-leads-run-repeats-from-a-repeating-view.md", "../hacker/repeating-view-build-tickets.md", "../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
 tags: [artifact]
 ---
 
@@ -17,7 +17,8 @@ What should pen.dev be asked to draw so that `pencil-new.pen` gets a hifi Tasko
 mockup that uses the [modern-minimal theme](../assets/modern-minimal.css)?
 
 ## Short answer
-- There are 7 tickets. Paste **H0 first**, then H1 to H6 in order.
+- There are 7 tickets. Paste **H0 first**, then H1 to H6 in order. H7 was drawn
+  after the app was built. H8 (the repeating view) was drawn before the app was built.
 - Hifi does **not** change any layout, copy or behaviour. Each ticket duplicates
   lofi frames from the [lofi tickets](./lofi-mockup-tickets-for-pen-dev.md) and
   restyles them. If a layout looks wrong, fix the lofi ticket, not this one.
@@ -310,6 +311,128 @@ row, and follow H0 and H1. PNGs are in `assets/hi-fi snapshoots/`.
 
 The members screen, its menus and the picker are the layout the owner
 should judge: they were never sketched in lofi.
+
+### H8 — Repeating view (drawn 2026-10-19)
+
+From [0012](../decisions/0012-division-leads-run-repeats-from-a-repeating-view.md)
+and the [repeating view build tickets](../hacker/repeating-view-build-tickets.md).
+Like H7, these frames have **no lofi twin**, and H6's twin check doesn't
+apply. Unlike H7, they were drawn **before** the app is built, so the owner
+can judge the layout first. Claude drew them straight into
+`pencil-new.pen` on 2026-10-19, in a row at y=3396. PNGs are in
+`assets/hi-fi snapshoots/`.
+
+Where the drawing differs from the prompt below:
+- **Task IDs use `TC-`.** The file had no tech prefix yet.
+- **The create sheet's chips wrap onto two rows.** Due date and repeat
+  are on the first row, then priority, assignee and proof. Five chips
+  don't fit in one row.
+- **The create frames sit over the repeating list.** So "server backup
+  check" is already in the list behind the sheet.
+- **Read-only shows only as a grey value.** Property rows have no
+  chevron anywhere, so the editable rows have no chevron to take away.
+  Frame 10 drops Sub-tasks and Discussion, and its action bar is
+  "start working", because the task is `waiting`.
+
+```text
+Ticket H8 — Repeating view, for division leads
+
+Follow H0 and the H1 components. These frames have no lofi twin: build each one
+from the hifi frame named in its step. Put them in a new row 200px below the H7
+row (the frames at y=2266), left to right in the order below, 60px apart.
+
+Sample data: the viewer is a lead of "tech". Today is Wednesday, Oct 7 2026.
+Task IDs use the tech division's prefix, as in the existing frames.
+
+1. "hifi / home / repeat-toolbar" (from "hifi / home / default", on the "tech" tab):
+   - The list toolbar shows "9 open", then three icons on the right: repeat,
+     search, sliders-horizontal. All #6B7280.
+   - The repeat icon is new. It sits left of search, with the same spacing as
+     search and sliders-horizontal.
+
+2. "hifi / repeating / list" (full screen; header from "hifi / members / owner"):
+   - Header: arrow-left #333333, "tech repeating" 20 semibold, and a "+ new" text
+     button on the right.
+   - One row per repeating task, 1px #E5E7EB line between rows:
+     line 1: the task name, 15 regular #333333; a 24px assignee avatar on the right.
+     line 2: the rule and the next due date, 12 #6B7280, e.g.
+       "every week on Mon · next Mon, Oct 12".
+     line 3: up to 5 dots, 8px, 6px apart, oldest on the left: #3B82F6 = done on
+       time, #EF4444 = done late. No dots yet = no line 3.
+   - Rows, in this order:
+     "server backup check", Budi, every week on Mon, next Mon, Oct 12, dots on
+       time, on time, late, on time, on time.
+     "expense report", Ana, every month, next Sat, Oct 31, dots on time, late, late.
+     "standup notes", Dimas, every day, next Thu, Oct 8, five on time.
+     "access review", Citra, every 3 months, next Tue, Jan 5. No dots: it starts
+       in the future.
+
+3. "hifi / repeating / empty" (from step 2):
+   - Same header. In the middle: a 40px #D1D5DB repeat icon above
+     "no repeating tasks yet" (15 medium #333333) and
+     "tap + new to set one up" (13 #6B7280). Same layout as the H2 empty state.
+
+4. "hifi / repeating / series" (full screen, for "server backup check"):
+   - Header: arrow-left, "server backup check" 20 semibold, a more-vertical icon
+     on the right.
+   - Summary box as in H5 (#F9FAFB, radius 6, repeat icon, 13 #6B7280):
+     "creates a new task every week on Mon, when this task is done."
+   - Group label "OCCURRENCES" (H0 style), then one row each, newest first:
+     line 1: task ID in JetBrains Mono 12 #6B7280, then the due date, 15 #333333.
+     line 2: a 20px assignee avatar and the name, 12 #6B7280; on the right a
+       status pill (H4 colours) or a result:
+       "on time" 12 medium #6B7280, or "late · 2 days" 12 medium #EF4444.
+     A 16px link icon #6B7280 at the far right when the occurrence has a proof.
+   - Rows:
+     due Mon, Oct 12, Budi, "waiting" pill (the open one).
+     due Mon, Oct 5, Budi, on time, link icon.
+     due Mon, Sep 28, Budi, on time, link icon.
+     due Mon, Sep 21, Ana, late · 2 days, link icon.
+     due Mon, Sep 14, Budi, on time.
+     due Mon, Sep 7, Budi, on time.
+
+5. "hifi / repeating / series-menu" (step 4 plus a menu):
+   - The more-vertical menu, in the H2 account-menu look, anchored top right:
+     "edit repeat", "stop repeating", and "delete" in #EF4444.
+
+6. "hifi / repeating / delete-confirm" (step 4 plus a sheet; sheet from the H4
+   decline sheet):
+   - Title "delete this repeating task?" 20 semibold.
+   - Body, 15 #6B7280: "the open task, due Mon, Oct 12, is deleted. finished
+     tasks stay."
+   - "cancel" outline button and "delete" destructive button, side by side.
+
+7. "hifi / repeating / delete-started" (step 4 plus a snackbar):
+   - The H0 snackbar: "already started — stop repeating instead".
+
+8. "hifi / create / repeating" (from "hifi / create / team", over step 2):
+   - Chips: due date "Mon, Oct 12" and a new "repeat" chip, both in the selected
+     chip look. The repeat chip has the repeat icon and says "every week · Mon".
+   - Title "server backup check". "done" is the primary button.
+
+9. "hifi / create / repeating-no-due" (from step 8):
+   - The due-date chip is empty (the unselected chip look) and "done" is disabled.
+   - Under the chips, 12 #EF4444: "a repeating task needs a due date".
+
+10. "hifi / detail / repeat-readonly" (from the H4 detail frame with a repeat row,
+    for a member who is not a lead):
+   - The repeat row shows "every week on Mon" in #6B7280, with no chevron.
+     Everything else is unchanged.
+
+Done when: all ten frames are in the new row, each name starts with "hifi /",
+and no colour or font is used outside H0.
+```
+
+Choices made in this ticket, for the owner to judge:
+- **Dots, not a percentage.** Five dots show the pattern ("late twice in a
+  row") that a number hides. On time is primary blue, not the success
+  green, so the list doesn't look like a status board.
+- **"Late · 2 days", not just "late".** A lead can tell a slip from a
+  problem.
+- **A missing due date shows as an inline error.** It isn't a toast,
+  because the sheet stays open.
+- **Frame 10 assumes members see the rule read-only.** That is an open
+  question in the build tickets.
 
 ## What would change my mind
 - If the owner wants Tasko to look different from the lofi layout (not just
