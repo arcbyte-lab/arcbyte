@@ -44,6 +44,12 @@ walkthrough passes all 24 steps on a Xiaomi phone against a local API,
 including three new repeating steps
 ([#20](https://github.com/arcbyte-lab/Tasko-Flutter/pull/20), merged).
 
+**Ended repeats stay** ([0013](../decisions/0013-ended-repeats-stay-until-deleted.md)):
+API [#35](https://github.com/arcbyte-lab/Tasko-API/pull/35) (143 tests,
+migration `0005_repeat_ended`) and app
+[#21](https://github.com/arcbyte-lab/Tasko-Flutter/pull/21) (121 tests),
+not merged yet.
+
 Changes from the tickets, made while building:
 - Task Detail gains `canRepeat`, set by the server (in #34). Its `tab`
   has no role, so the app can't tell a lead from a member there.

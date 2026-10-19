@@ -423,6 +423,15 @@ Done when: all ten frames are in the new row, each name starts with "hifi /",
 and no colour or font is used outside H0.
 ```
 
+Two more frames, drawn 2026-10-19 for
+[0013](../decisions/0013-ended-repeats-stay-until-deleted.md) at the end
+of the same row:
+
+| Frame | Shows | Built from |
+|---|---|---|
+| `hifi / repeating / list-ended` | an ended row last: name in #6B7280, "every week on Fri · ended", its dots kept | `hifi / repeating / list` |
+| `hifi / repeating / series-ended` | "ended. it created a new task every week on Mon, when each was done.", no open occurrence, the menu with only "delete" | `hifi / repeating / series-menu` |
+
 Choices made in this ticket, for the owner to judge:
 - **Dots, not a percentage.** Five dots show the pattern ("late twice in a
   row") that a number hides. On time is primary blue, not the success
