@@ -42,7 +42,7 @@ migration `0004_series` applied): checked live, Ana gets the list, Mira
 gets 403. The app PRs are merged into `main` (119 tests pass). The phone
 walkthrough passes all 24 steps on a Xiaomi phone against a local API,
 including three new repeating steps
-([#20](https://github.com/arcbyte-lab/Tasko-Flutter/pull/20), open).
+([#20](https://github.com/arcbyte-lab/Tasko-Flutter/pull/20), merged).
 
 Changes from the tickets, made while building:
 - Task Detail gains `canRepeat`, set by the server (in #34). Its `tab`
