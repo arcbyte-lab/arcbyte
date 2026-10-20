@@ -9,7 +9,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: none
 created: 2026-10-05
-updated: 2026-10-14
+updated: 2026-10-20
 tags: [anchor]
 ---
 
@@ -71,6 +71,7 @@ is a link. The calls still open are listed in
 - [Tasko API, as built](./hacker/tasko-api-as-built.md) — Hono + D1 on Workers, 27 routes, deployed; what the app must change to use it
 - [Project and member build tickets](./hacker/project-and-member-build-tickets.md) — A9–A12 and B7–B10: create a project, add people directly with no invitation step
 - [Repeating view build tickets](./hacker/repeating-view-build-tickets.md) — A13–A15 and B11–B13: leads list, follow, change, create, stop and delete repeating tasks
+- [Activity log build tickets](./hacker/activity-log-build-tickets.md) — A16–A18 and B14–B15: write every team action, read it as task, project, division and user logs
 
 ## Decisions
 - [0001 — Adopt sqlite-schema.sql over schema-zero](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)
@@ -86,3 +87,4 @@ is a link. The calls still open are listed in
 - [0011 — "New project" sits at the end of the tab strip](./decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md) — 2026-10-19 (draft, owner chose it in chat)
 - [0012 — Division leads run repeats from a "repeating" view](./decisions/0012-division-leads-run-repeats-from-a-repeating-view.md) — 2026-10-19 (draft, owner asked for it in chat)
 - [0013 — An ended repeat stays until a lead deletes it](./decisions/0013-ended-repeats-stay-until-deleted.md) — 2026-10-19 (draft, owner asked for it in chat)
+- [0014 — Tasks, projects, divisions and users each get an activity log](./decisions/0014-activity-logs-for-task-project-division-and-user.md) — 2026-10-20 (draft, owner chose scope and access in chat)
