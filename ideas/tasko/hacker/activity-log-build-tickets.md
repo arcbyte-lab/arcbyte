@@ -28,7 +28,9 @@ activity logs in
   and by tapping a person's name in any log.
 
 ## Detail
-Not built yet. No issues have been opened.
+Not built yet. Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues/36)–[#38](https://github.com/arcbyte-lab/Tasko-API/issues/38)
+(A16–A18), app [#22](https://github.com/arcbyte-lab/Tasko-Flutter/issues/22)–[#23](https://github.com/arcbyte-lab/Tasko-Flutter/issues/23)
+(B14–B15), opened 2026-10-20.
 
 ### Rules
 | Rule | Value |
