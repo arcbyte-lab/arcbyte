@@ -32,7 +32,8 @@ Not built yet. Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues
 (A16–A18), app [#22](https://github.com/arcbyte-lab/Tasko-Flutter/issues/22)–[#23](https://github.com/arcbyte-lab/Tasko-Flutter/issues/23)
 (B14–B15), opened 2026-10-20. API PRs, stacked in order:
 [#39](https://github.com/arcbyte-lab/Tasko-API/pull/39) (A16),
-[#40](https://github.com/arcbyte-lab/Tasko-API/pull/40) (A17); 168 tests
+[#40](https://github.com/arcbyte-lab/Tasko-API/pull/40) (A17),
+[#41](https://github.com/arcbyte-lab/Tasko-API/pull/41) (A18); 179 tests
 pass. Not merged or deployed yet. `sqlite-schema.sql` is updated to match.
 
 Changes from the tickets, made while building:
@@ -41,6 +42,7 @@ Changes from the tickets, made while building:
   gap is unassigned without a log row.
 - `logRow` takes an id the batch is still creating (`NewId`), because a
   new project's owner row is inserted after it.
+- A tab the viewer isn't in answers 403, as everywhere else, not 404.
 
 ### Rules
 | Rule | Value |
