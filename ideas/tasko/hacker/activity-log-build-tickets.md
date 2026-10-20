@@ -30,9 +30,17 @@ activity logs in
 ## Detail
 Not built yet. Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues/36)–[#38](https://github.com/arcbyte-lab/Tasko-API/issues/38)
 (A16–A18), app [#22](https://github.com/arcbyte-lab/Tasko-Flutter/issues/22)–[#23](https://github.com/arcbyte-lab/Tasko-Flutter/issues/23)
-(B14–B15), opened 2026-10-20. A16 is in PR
-[#39](https://github.com/arcbyte-lab/Tasko-API/pull/39) (157 tests pass), not
-merged or deployed yet; `sqlite-schema.sql` is updated to match.
+(B14–B15), opened 2026-10-20. API PRs, stacked in order:
+[#39](https://github.com/arcbyte-lab/Tasko-API/pull/39) (A16),
+[#40](https://github.com/arcbyte-lab/Tasko-API/pull/40) (A17); 168 tests
+pass. Not merged or deployed yet. `sqlite-schema.sql` is updated to match.
+
+Changes from the tickets, made while building:
+- A removal reads the tasks it will unassign just before its batch, not
+  inside it, so `logRow` stays the only writer. A task assigned in that
+  gap is unassigned without a log row.
+- `logRow` takes an id the batch is still creating (`NewId`), because a
+  new project's owner row is inserted after it.
 
 ### Rules
 | Rule | Value |
