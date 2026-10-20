@@ -189,18 +189,7 @@ CREATE TABLE IF NOT EXISTS "recurring_tasks"(
   foreign key("assignee_id") references "users"("id") on delete no action on update no action
 );
 CREATE INDEX "recurring_tasks_assignee_id_index" on "recurring_tasks"("assignee_id");
-CREATE TABLE IF NOT EXISTS "project_activities"(
-  "id" integer primary key autoincrement not null,
-  "project_id" integer not null,
-  "user_id" integer not null,
-  "activity_type" varchar not null,
-  "description" varchar not null,
-  "properties" text,
-  "created_at" datetime,
-  "updated_at" datetime,
-  foreign key("project_id") references "projects"("id") on delete cascade,
-  foreign key("user_id") references "users"("id") on delete cascade
-);
+-- ADR 0014: project_activities dropped; a project's log is activity_logs where project_id = ?.
 CREATE TABLE IF NOT EXISTS "projects"(
   "id" integer primary key autoincrement not null,
   "name" varchar not null,
@@ -375,10 +364,6 @@ CREATE INDEX "notifications_notifiable_type_notifiable_id_read_at_index" on "not
   "notifiable_id",
   "read_at"
 );
-CREATE INDEX "project_activities_project_id_created_at_index" on "project_activities"(
-  "project_id",
-  "created_at"
-);
 CREATE UNIQUE INDEX "users_nik_unique" on "users"("nik");
 CREATE TABLE IF NOT EXISTS "activity_logs"(
   "id" integer primary key autoincrement not null,
@@ -390,12 +375,18 @@ CREATE TABLE IF NOT EXISTS "activity_logs"(
   "subject_label" varchar,
   "division_id" integer,
   "project_id" integer,
+  -- ADR 0014: the person the action lands on (assignee, reviewed or commented task's assignee, member).
+  "target_user_id" integer,
   "changes" text,
   "description" varchar,
   "created_at" datetime,
   foreign key("actor_id") references "users"("id") on delete set null,
-  foreign key("division_id") references "divisions"("id") on delete set null
+  foreign key("division_id") references "divisions"("id") on delete set null,
+  foreign key("target_user_id") references "users"("id") on delete set null
 );
+CREATE INDEX "activity_logs_project_id_created_at_index" on "activity_logs"("project_id", "created_at");
+CREATE INDEX "activity_logs_actor_id_created_at_index" on "activity_logs"("actor_id", "created_at");
+CREATE INDEX "activity_logs_target_user_id_created_at_index" on "activity_logs"("target_user_id", "created_at");
 CREATE INDEX "activity_logs_created_at_index" on "activity_logs"("created_at");
 CREATE INDEX "activity_logs_division_id_created_at_index" on "activity_logs"(
   "division_id",

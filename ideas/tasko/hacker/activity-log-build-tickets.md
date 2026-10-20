@@ -30,7 +30,9 @@ activity logs in
 ## Detail
 Not built yet. Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues/36)–[#38](https://github.com/arcbyte-lab/Tasko-API/issues/38)
 (A16–A18), app [#22](https://github.com/arcbyte-lab/Tasko-Flutter/issues/22)–[#23](https://github.com/arcbyte-lab/Tasko-Flutter/issues/23)
-(B14–B15), opened 2026-10-20.
+(B14–B15), opened 2026-10-20. A16 is in PR
+[#39](https://github.com/arcbyte-lab/Tasko-API/pull/39) (157 tests pass), not
+merged or deployed yet; `sqlite-schema.sql` is updated to match.
 
 ### Rules
 | Rule | Value |
