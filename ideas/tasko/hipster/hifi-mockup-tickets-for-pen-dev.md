@@ -468,8 +468,9 @@ and the time in JetBrains Mono 12 #6B7280. Rows are split by a 1px #E5E7EB
 line. Days use the H0 group label: "TODAY", "YESTERDAY", "MON, OCT 5".
 "load more" is a 15 medium #3B82F6 text button, centred.
 
-Where the drawing differs from the app as built (B15), for the owner to
-judge:
+Where the drawing differed from the app as built (B15). The owner chose
+the drawing, so the app was aligned to all three in
+[Tasko-Flutter #26](https://github.com/arcbyte-lab/Tasko-Flutter/pull/26):
 - **Day labels.** The app writes "today" and "Mon, Oct 5" in plain 12
   #6B7280. The drawing uses the H0 group label (uppercase JetBrains Mono at
   50%), as every other list does.
