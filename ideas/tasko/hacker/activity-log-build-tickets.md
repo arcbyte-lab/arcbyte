@@ -43,6 +43,12 @@ App: B14 is merged ([#24](https://github.com/arcbyte-lab/Tasko-Flutter/pull/24),
 2026-10-22). B15 is merged ([#25](https://github.com/arcbyte-lab/Tasko-Flutter/pull/25),
 2026-10-22; 140 tests pass on `main`). **The phone walkthrough passes**
 (the owner reported it on 2026-10-22, after `GET /tasks/:id` shipped).
+Claude then ran the automated walkthrough on the owner's Xiaomi (Android
+16) against a local Tasko-API, with four new activity steps. The first run
+found a crash: leaving the log while Task Detail was open made the log's
+reload land on a closed Cubit. Fixed in
+[#28](https://github.com/arcbyte-lab/Tasko-Flutter/pull/28) (in review);
+the rerun passes **28/28**.
 
 Changes from the tickets, made while building:
 - A removal reads the tasks it will unassign just before its batch, not
