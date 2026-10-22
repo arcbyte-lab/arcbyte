@@ -56,7 +56,8 @@ Changes from the tickets, made while building:
   no route to fetch one task by id. Added afterwards: `GET /tasks/:id` in
   API [#42](https://github.com/arcbyte-lab/Tasko-API/pull/42) and the app
   side in [#27](https://github.com/arcbyte-lab/Tasko-Flutter/pull/27), both
-  in review. A task's own log doesn't link to itself. The log's first page
+  merged 2026-10-22; the API is deployed (version `901d3823`, no migration)
+  and was checked live. A task's own log doesn't link to itself. The log's first page
   loads before its screen opens, so a 403 shows only as a toast.
 - App: Task Detail's sheet now gets the api handed down. The assignee
   picker read it from a provider the sheet can't see, and would have
