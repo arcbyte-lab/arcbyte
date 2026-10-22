@@ -47,7 +47,7 @@ Claude then ran the automated walkthrough on the owner's Xiaomi (Android
 16) against a local Tasko-API, with four new activity steps. The first run
 found a crash: leaving the log while Task Detail was open made the log's
 reload land on a closed Cubit. Fixed in
-[#28](https://github.com/arcbyte-lab/Tasko-Flutter/pull/28) (in review);
+[#28](https://github.com/arcbyte-lab/Tasko-Flutter/pull/28) (merged 2026-10-22);
 the rerun passes **28/28**.
 
 Changes from the tickets, made while building:
