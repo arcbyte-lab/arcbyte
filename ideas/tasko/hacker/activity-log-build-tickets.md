@@ -28,13 +28,19 @@ activity logs in
   and by tapping a person's name in any log.
 
 ## Detail
-Not built yet. Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues/36)–[#38](https://github.com/arcbyte-lab/Tasko-API/issues/38)
+API built and deployed; app in progress. Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues/36)–[#38](https://github.com/arcbyte-lab/Tasko-API/issues/38)
 (A16–A18), app [#22](https://github.com/arcbyte-lab/Tasko-Flutter/issues/22)–[#23](https://github.com/arcbyte-lab/Tasko-Flutter/issues/23)
 (B14–B15), opened 2026-10-20. API PRs, stacked in order:
 [#39](https://github.com/arcbyte-lab/Tasko-API/pull/39) (A16),
 [#40](https://github.com/arcbyte-lab/Tasko-API/pull/40) (A17),
 [#41](https://github.com/arcbyte-lab/Tasko-API/pull/41) (A18); 179 tests
-pass. Not merged or deployed yet. `sqlite-schema.sql` is updated to match.
+pass. **The API is merged and deployed** (2026-10-20, version `8b25f629`,
+migration `0006_activity_logs` applied): checked live, Ana gets the tech
+log, Mira gets 403, and Task Detail carries `canViewLog`.
+`sqlite-schema.sql` is updated to match.
+
+App: B14 is in PR [#24](https://github.com/arcbyte-lab/Tasko-Flutter/pull/24)
+(133 tests pass), not merged yet. B15 is not started.
 
 Changes from the tickets, made while building:
 - A removal reads the tasks it will unassign just before its batch, not
@@ -43,6 +49,8 @@ Changes from the tickets, made while building:
 - `logRow` takes an id the batch is still creating (`NewId`), because a
   new project's owner row is inserted after it.
 - A tab the viewer isn't in answers 403, as everywhere else, not 404.
+- App: one `TabLog` scope covers projects and divisions; `subject` is a
+  record, not a class; `sentence` also takes `now`, to format dates.
 
 ### Rules
 | Rule | Value |
