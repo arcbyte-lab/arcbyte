@@ -39,8 +39,9 @@ migration `0006_activity_logs` applied): checked live, Ana gets the tech
 log, Mira gets 403, and Task Detail carries `canViewLog`.
 `sqlite-schema.sql` is updated to match.
 
-App: B14 is in PR [#24](https://github.com/arcbyte-lab/Tasko-Flutter/pull/24)
-(133 tests pass), not merged yet. B15 is not started.
+App: B14 is merged ([#24](https://github.com/arcbyte-lab/Tasko-Flutter/pull/24),
+2026-10-22). B15 is in PR [#25](https://github.com/arcbyte-lab/Tasko-Flutter/pull/25)
+(140 tests pass), not merged yet; no phone walkthrough yet.
 
 Changes from the tickets, made while building:
 - A removal reads the tasks it will unassign just before its batch, not
@@ -51,6 +52,12 @@ Changes from the tickets, made while building:
 - A tab the viewer isn't in answers 403, as everywhere else, not 404.
 - App: one `TabLog` scope covers projects and divisions; `subject` is a
   record, not a class; `sentence` also takes `now`, to format dates.
+- App: tapping a row doesn't open Task Detail. There is no route to fetch
+  one task by id, and the sheet needs the whole task. The log's first page
+  loads before its screen opens, so a 403 shows only as a toast.
+- App: Task Detail's sheet now gets the api handed down. The assignee
+  picker read it from a provider the sheet can't see, and would have
+  thrown on tap.
 
 ### Rules
 | Rule | Value |
