@@ -28,7 +28,7 @@ activity logs in
   and by tapping a person's name in any log.
 
 ## Detail
-API built and deployed; app in progress. Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues/36)–[#38](https://github.com/arcbyte-lab/Tasko-API/issues/38)
+Built: API deployed, app merged. Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues/36)–[#38](https://github.com/arcbyte-lab/Tasko-API/issues/38)
 (A16–A18), app [#22](https://github.com/arcbyte-lab/Tasko-Flutter/issues/22)–[#23](https://github.com/arcbyte-lab/Tasko-Flutter/issues/23)
 (B14–B15), opened 2026-10-20. API PRs, stacked in order:
 [#39](https://github.com/arcbyte-lab/Tasko-API/pull/39) (A16),
@@ -40,8 +40,8 @@ log, Mira gets 403, and Task Detail carries `canViewLog`.
 `sqlite-schema.sql` is updated to match.
 
 App: B14 is merged ([#24](https://github.com/arcbyte-lab/Tasko-Flutter/pull/24),
-2026-10-22). B15 is in PR [#25](https://github.com/arcbyte-lab/Tasko-Flutter/pull/25)
-(140 tests pass), not merged yet; no phone walkthrough yet.
+2026-10-22). B15 is merged ([#25](https://github.com/arcbyte-lab/Tasko-Flutter/pull/25),
+2026-10-22; 140 tests pass on `main`). No phone walkthrough yet.
 
 Changes from the tickets, made while building:
 - A removal reads the tasks it will unassign just before its batch, not
