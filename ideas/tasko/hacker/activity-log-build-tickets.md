@@ -41,7 +41,8 @@ log, Mira gets 403, and Task Detail carries `canViewLog`.
 
 App: B14 is merged ([#24](https://github.com/arcbyte-lab/Tasko-Flutter/pull/24),
 2026-10-22). B15 is merged ([#25](https://github.com/arcbyte-lab/Tasko-Flutter/pull/25),
-2026-10-22; 140 tests pass on `main`). No phone walkthrough yet.
+2026-10-22; 140 tests pass on `main`). **The phone walkthrough passes**
+(the owner reported it on 2026-10-22, after `GET /tasks/:id` shipped).
 
 Changes from the tickets, made while building:
 - A removal reads the tasks it will unassign just before its batch, not
