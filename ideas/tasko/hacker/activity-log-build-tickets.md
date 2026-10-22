@@ -194,7 +194,10 @@ Same shape as now: a pure `*View`, a thin `*Screen`, and Cubits behind the
   don't exist yet; each adds its action when built.
 - Filters by action or person inside a log. Add them when leads ask.
 - Retention or clean-up of old rows.
-- The hifi frame. It needs drawing as H9 before B15 is styled for good.
+- The hifi frames. They are drawn as
+  [H9](../hipster/hifi-mockup-tickets-for-pen-dev.md) (2026-10-22), after
+  B15. H9 lists three small ways the drawing differs from the app: the day
+  labels, the time's font, and the empty hint.
 
 ## What would change my mind
 - The write batches make status changes noticeably slower. Then measure

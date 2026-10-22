@@ -7,8 +7,8 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
-updated: 2026-10-19
-inputs: ["../decisions/0012-division-leads-run-repeats-from-a-repeating-view.md", "../hacker/repeating-view-build-tickets.md", "../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
+updated: 2026-10-22
+inputs: ["../decisions/0014-activity-logs-for-task-project-division-and-user.md", "../hacker/activity-log-build-tickets.md", "../decisions/0012-division-leads-run-repeats-from-a-repeating-view.md", "../hacker/repeating-view-build-tickets.md", "../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
 tags: [artifact]
 ---
 
@@ -19,6 +19,7 @@ mockup that uses the [modern-minimal theme](../assets/modern-minimal.css)?
 ## Short answer
 - There are 7 tickets. Paste **H0 first**, then H1 to H6 in order. H7 was drawn
   after the app was built. H8 (the repeating view) was drawn before the app was built.
+  H9 (the activity log) was drawn after it.
 - Hifi does **not** change any layout, copy or behaviour. Each ticket duplicates
   lofi frames from the [lofi tickets](./lofi-mockup-tickets-for-pen-dev.md) and
   restyles them. If a layout looks wrong, fix the lofi ticket, not this one.
@@ -442,6 +443,41 @@ Choices made in this ticket, for the owner to judge:
   because the sheet stays open.
 - **Frame 10 assumes members see the rule read-only.** That is an open
   question in the build tickets.
+
+### H9 — Activity log (drawn 2026-10-22)
+
+From [0014](../decisions/0014-activity-logs-for-task-project-division-and-user.md)
+and the [activity log build tickets](../hacker/activity-log-build-tickets.md).
+Like H7, drawn **after** the app was built (B15), so it records the
+as-built screen in the H0 theme. There's no lofi twin. Claude drew it
+straight into `pencil-new.pen` on 2026-10-22, in a row at y=4526, 200px
+below H8. PNGs are in `assets/hi-fi snapshoots/`.
+
+| Frame | Shows | Built from |
+|---|---|---|
+| `hifi / home / activity-toolbar` | tech's toolbar: repeat, **history** (new), search, sliders | `hifi / home / repeat-toolbar` |
+| `hifi / activity / division` | "tech activity": tech's own rows, tasko-web's member and project rows, "load more" | `hifi / repeating / list` header |
+| `hifi / activity / user` | "Budi activity": by and to Budi; each time is followed by the tab, "09:12 · tech" | the division frame |
+| `hifi / activity / task` | "Review PR #42 activity": the task goes unnamed ("Budi started it") | the division frame |
+| `hifi / activity / empty` | history icon, "no activity yet", "changes from now on show up here" | `hifi / repeating / empty` |
+| `hifi / detail / activity-menu` | the "More" menu for a lead: "activity · leads only", then "archive task" | `hifi / detail / menu` |
+| `hifi / home / my-activity-menu` | the account menu with "my activity" above "account settings" | `hifi / home / account-menu` |
+
+A row: a 24px avatar (H0 colours), the sentence in 15 #333333 (wraps),
+and the time in JetBrains Mono 12 #6B7280. Rows are split by a 1px #E5E7EB
+line. Days use the H0 group label: "TODAY", "YESTERDAY", "MON, OCT 5".
+"load more" is a 15 medium #3B82F6 text button, centred.
+
+Where the drawing differs from the app as built (B15), for the owner to
+judge:
+- **Day labels.** The app writes "today" and "Mon, Oct 5" in plain 12
+  #6B7280. The drawing uses the H0 group label (uppercase JetBrains Mono at
+  50%), as every other list does.
+- **Times.** The app uses Inter for the time. The drawing uses JetBrains
+  Mono, as H0 does for the repeat screen's times.
+- **Empty hint.** The app shows only "no activity yet". The drawing adds
+  the hint, because a task created before the log existed has no rows.
+- **The detail menu.** The app lists "activity" first, as drawn.
 
 ## What would change my mind
 - If the owner wants Tasko to look different from the lofi layout (not just
