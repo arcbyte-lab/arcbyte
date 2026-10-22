@@ -52,8 +52,11 @@ Changes from the tickets, made while building:
 - A tab the viewer isn't in answers 403, as everywhere else, not 404.
 - App: one `TabLog` scope covers projects and divisions; `subject` is a
   record, not a class; `sentence` also takes `now`, to format dates.
-- App: tapping a row doesn't open Task Detail. There is no route to fetch
-  one task by id, and the sheet needs the whole task. The log's first page
+- App: tapping a row didn't open Task Detail at first, because there was
+  no route to fetch one task by id. Added afterwards: `GET /tasks/:id` in
+  API [#42](https://github.com/arcbyte-lab/Tasko-API/pull/42) and the app
+  side in [#27](https://github.com/arcbyte-lab/Tasko-Flutter/pull/27), both
+  in review. A task's own log doesn't link to itself. The log's first page
   loads before its screen opens, so a 403 shows only as a toast.
 - App: Task Detail's sheet now gets the api handed down. The assignee
   picker read it from a provider the sheet can't see, and would have
