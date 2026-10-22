@@ -470,7 +470,8 @@ line. Days use the H0 group label: "TODAY", "YESTERDAY", "MON, OCT 5".
 
 Where the drawing differed from the app as built (B15). The owner chose
 the drawing, so the app was aligned to all three in
-[Tasko-Flutter #26](https://github.com/arcbyte-lab/Tasko-Flutter/pull/26):
+[Tasko-Flutter #26](https://github.com/arcbyte-lab/Tasko-Flutter/pull/26)
+(merged 2026-10-22):
 - **Day labels.** The app writes "today" and "Mon, Oct 5" in plain 12
   #6B7280. The drawing uses the H0 group label (uppercase JetBrains Mono at
   50%), as every other list does.
