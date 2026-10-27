@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-20
-updated: 2026-10-20
+updated: 2026-10-27
 inputs: ["../decisions/0014-activity-logs-for-task-project-division-and-user.md", "./tasko-api-as-built.md", "./flutter-app-as-built.md", "./repeating-view-build-tickets.md"]
 tags: [artifact]
 ---
@@ -28,27 +28,10 @@ activity logs in
   and by tapping a person's name in any log.
 
 ## Detail
-Built: API deployed, app merged. Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues/36)–[#38](https://github.com/arcbyte-lab/Tasko-API/issues/38)
+Issues: API [#36](https://github.com/arcbyte-lab/Tasko-API/issues/36)–[#38](https://github.com/arcbyte-lab/Tasko-API/issues/38)
 (A16–A18), app [#22](https://github.com/arcbyte-lab/Tasko-Flutter/issues/22)–[#23](https://github.com/arcbyte-lab/Tasko-Flutter/issues/23)
-(B14–B15), opened 2026-10-20. API PRs, stacked in order:
-[#39](https://github.com/arcbyte-lab/Tasko-API/pull/39) (A16),
-[#40](https://github.com/arcbyte-lab/Tasko-API/pull/40) (A17),
-[#41](https://github.com/arcbyte-lab/Tasko-API/pull/41) (A18); 179 tests
-pass. **The API is merged and deployed** (2026-10-20, version `8b25f629`,
-migration `0006_activity_logs` applied): checked live, Ana gets the tech
-log, Mira gets 403, and Task Detail carries `canViewLog`.
-`sqlite-schema.sql` is updated to match.
-
-App: B14 is merged ([#24](https://github.com/arcbyte-lab/Tasko-Flutter/pull/24),
-2026-10-22). B15 is merged ([#25](https://github.com/arcbyte-lab/Tasko-Flutter/pull/25),
-2026-10-22; 140 tests pass on `main`). **The phone walkthrough passes**
-(the owner reported it on 2026-10-22, after `GET /tasks/:id` shipped).
-Claude then ran the automated walkthrough on the owner's Xiaomi (Android
-16) against a local Tasko-API, with four new activity steps. The first run
-found a crash: leaving the log while Task Detail was open made the log's
-reload land on a closed Cubit. Fixed in
-[#28](https://github.com/arcbyte-lab/Tasko-Flutter/pull/28) (merged 2026-10-22);
-the rerun passes **28/28**.
+(B14–B15). Status lives on the issues and their PRs
+([0015](../decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md)).
 
 Changes from the tickets, made while building:
 - A removal reads the tasks it will unassign just before its batch, not
@@ -62,9 +45,8 @@ Changes from the tickets, made while building:
 - App: tapping a row didn't open Task Detail at first, because there was
   no route to fetch one task by id. Added afterwards: `GET /tasks/:id` in
   API [#42](https://github.com/arcbyte-lab/Tasko-API/pull/42) and the app
-  side in [#27](https://github.com/arcbyte-lab/Tasko-Flutter/pull/27), both
-  merged 2026-10-22; the API is deployed (version `901d3823`, no migration)
-  and was checked live. A task's own log doesn't link to itself. The log's first page
+  side in [#27](https://github.com/arcbyte-lab/Tasko-Flutter/pull/27).
+  A task's own log doesn't link to itself. The log's first page
   loads before its screen opens, so a 403 shows only as a toast.
 - App: Task Detail's sheet now gets the api handed down. The assignee
   picker read it from a provider the sheet can't see, and would have

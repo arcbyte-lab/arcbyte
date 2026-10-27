@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-14
-updated: 2026-10-14
+updated: 2026-10-27
 inputs: ["../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../decisions/0002-tabs-are-workspaces-then-projects.md", "../decisions/0007-server-rules-settled-in-the-api-review.md", "./tasko-api-as-built.md", "./flutter-app-as-built.md", "../assets/sqlite-schema.sql"]
 tags: [artifact]
 ---
@@ -30,17 +30,12 @@ create projects and manage who is in them?
 ## Detail
 Issues: API [#21](https://github.com/arcbyte-lab/Tasko-API/issues/21)–[#24](https://github.com/arcbyte-lab/Tasko-API/issues/24)
 (A9–A12), app [#5](https://github.com/arcbyte-lab/Tasko-Flutter/issues/5)–[#8](https://github.com/arcbyte-lab/Tasko-Flutter/issues/8)
-(B7–B10).
+(B7–B10). Status lives on the issues and their PRs
+([0015](../decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md)).
+See the [app as built](./flutter-app-as-built.md) and the
+[API as built](./tasko-api-as-built.md).
 
-**Built and merged, 2026-10-14.** The API tickets
-([#25](https://github.com/arcbyte-lab/Tasko-API/pull/25)–[#28](https://github.com/arcbyte-lab/Tasko-API/pull/28))
-are merged and deployed; the app tickets
-([#9](https://github.com/arcbyte-lab/Tasko-Flutter/pull/9)–[#12](https://github.com/arcbyte-lab/Tasko-Flutter/pull/12))
-are merged into `main`. See the [app as built](./flutter-app-as-built.md)
-and the [API as built](./tasko-api-as-built.md). The phone walkthrough (`integration_test/live_test.dart`, run
-against a local API) passes all 21 steps, the new ones included. It found
-one bug the widget tests missed: after leaving, the app reloaded a member
-list the server no longer shows, and toasted "Not a member". Fixed in #11. "New project" sits at the end of the tab strip ([0011](../decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md)) and the
+"New project" sits at the end of the tab strip ([0011](../decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md)) and the
 members icon in the project toolbar; both are now drawn in the hifi
 mockups ([H7](../hipster/hifi-mockup-tickets-for-pen-dev.md)).
 

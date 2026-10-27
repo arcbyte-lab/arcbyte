@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-10-27
 inputs: ["../decisions/0012-division-leads-run-repeats-from-a-repeating-view.md", "../decisions/0009-workspace-tasks-repeat-on-completion.md", "./tasko-api-as-built.md", "./flutter-app-as-built.md", "./project-and-member-build-tickets.md"]
 tags: [artifact]
 ---
@@ -27,28 +27,14 @@ leads' "repeating" view in
   pinned toolbar. It shows on division tabs where the viewer is a lead.
 
 ## Detail
-Not built yet. Issues: API [#29](https://github.com/arcbyte-lab/Tasko-API/issues/29)–[#31](https://github.com/arcbyte-lab/Tasko-API/issues/31)
+Issues: API [#29](https://github.com/arcbyte-lab/Tasko-API/issues/29)–[#31](https://github.com/arcbyte-lab/Tasko-API/issues/31)
 (A13–A15), app [#14](https://github.com/arcbyte-lab/Tasko-Flutter/issues/14)–[#16](https://github.com/arcbyte-lab/Tasko-Flutter/issues/16)
-(B11–B13), opened 2026-10-19. API PRs, stacked in order:
-[#32](https://github.com/arcbyte-lab/Tasko-API/pull/32),
-[#33](https://github.com/arcbyte-lab/Tasko-API/pull/33),
-[#34](https://github.com/arcbyte-lab/Tasko-API/pull/34); 140 tests pass.
-App PRs, stacked in order:
-[#17](https://github.com/arcbyte-lab/Tasko-Flutter/pull/17),
-[#18](https://github.com/arcbyte-lab/Tasko-Flutter/pull/18),
-[#19](https://github.com/arcbyte-lab/Tasko-Flutter/pull/19); 119 tests pass.
-**The API is merged and deployed** (2026-10-19, version `306ffe54`,
-migration `0004_series` applied): checked live, Ana gets the list, Mira
-gets 403. The app PRs are merged into `main` (119 tests pass). The phone
-walkthrough passes all 24 steps on a Xiaomi phone against a local API,
-including three new repeating steps
-([#20](https://github.com/arcbyte-lab/Tasko-Flutter/pull/20), merged).
+(B11–B13). Status lives on the issues and their PRs
+([0015](../decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md)).
 
 **Ended repeats stay** ([0013](../decisions/0013-ended-repeats-stay-until-deleted.md)):
-API [#35](https://github.com/arcbyte-lab/Tasko-API/pull/35) (143 tests,
-migration `0005_repeat_ended`) and app
-[#21](https://github.com/arcbyte-lab/Tasko-Flutter/pull/21) (121 tests),
-both merged; the API is deployed (version `fbdbbbc1`, migration applied).
+API [#35](https://github.com/arcbyte-lab/Tasko-API/pull/35) and app
+[#21](https://github.com/arcbyte-lab/Tasko-Flutter/pull/21).
 
 Changes from the tickets, made while building:
 - Task Detail gains `canRepeat`, set by the server (in #34). Its `tab`
