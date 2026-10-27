@@ -65,11 +65,14 @@ him thinking about everything at once.
 
 ## Tickets and code work
 
-For an idea at `stage: project` (piloted on Tasko, see
-[0015](./ideas/tasko/decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md)):
+For every idea at `stage: project`. Adopted first on Tasko, see
+[0015](./ideas/tasko/decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md):
 
 - A build ticket is a GitHub issue in the code repo. Its body links its
   spec: `Spec: arcbyte/ideas/<idea>/<lens>/<note>.md`.
+- Every code repo carries `.github/ISSUE_TEMPLATE/ticket.md` and
+  `.github/pull_request_template.md`. A new project copies them from
+  Tasko-API and changes the idea name.
 - One branch per issue. The PR says `Closes #<n>`, and `Decision: <idea>/NNNN`
   when it implements or changes a decision.
 - **Status lives on GitHub.** Do not commit "record X as merged/deployed"
