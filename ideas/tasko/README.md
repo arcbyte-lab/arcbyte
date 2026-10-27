@@ -88,3 +88,4 @@ is a link. The calls still open are listed in
 - [0012 — Division leads run repeats from a "repeating" view](./decisions/0012-division-leads-run-repeats-from-a-repeating-view.md) — 2026-10-19 (draft, owner asked for it in chat)
 - [0013 — An ended repeat stays until a lead deletes it](./decisions/0013-ended-repeats-stay-until-deleted.md) — 2026-10-19 (draft, owner asked for it in chat)
 - [0014 — Tasks, projects, divisions and users each get an activity log](./decisions/0014-activity-logs-for-task-project-division-and-user.md) — 2026-10-20 (draft, owner chose scope and access in chat)
+- [0015 — GitHub holds ticket status; Arcbyte holds the spec and the why](./decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md) — 2026-10-27 (draft, owner said "start" in chat)

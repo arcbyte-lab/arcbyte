@@ -63,6 +63,20 @@ him thinking about everything at once.
 | Something you cannot place yet | `inbox/` |
 | Code | not here. It lives in the idea's own repository. |
 
+## Tickets and code work
+
+For an idea at `stage: project` (piloted on Tasko, see
+[0015](./ideas/tasko/decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md)):
+
+- A build ticket is a GitHub issue in the code repo. Its body links its
+  spec: `Spec: arcbyte/ideas/<idea>/<lens>/<note>.md`.
+- One branch per issue. The PR says `Closes #<n>`, and `Decision: <idea>/NNNN`
+  when it implements or changes a decision.
+- **Status lives on GitHub.** Do not commit "record X as merged/deployed"
+  edits. Edit a ticket note only when the spec changes.
+- Reasoning settled in a PR becomes a decision note here before the PR
+  merges.
+
 ## Note shape
 
 Copy the frontmatter block from `templates/artifact.md`, then:
