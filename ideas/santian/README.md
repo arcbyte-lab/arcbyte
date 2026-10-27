@@ -9,7 +9,7 @@ status: draft
 source: me
 evidence: none
 created: 2026-09-16
-updated: 2026-10-06
+updated: 2026-10-27
 tags: [anchor]
 ---
 
@@ -69,8 +69,8 @@ This is a personal tool for the owner, not a product aimed at strangers — see
 | lens | where it stands |
 |---|---|
 | [Hound](../../lenses/hound.md) | Nothing. No real person has been asked anything. One open question. |
-| [Hipster](../../lenses/hipster.md) | The Tasks module is built. Its screens are described **as built** (Santian at `f64e2c0`, 2026-10-02): [Tasks List](./hipster/tasks-list-screen-as-built.md), [task row](./hipster/task-row-as-built.md), [create sheets](./hipster/create-sheets-as-built.md), [Task Detail](./hipster/task-detail-as-built.md), [date pickers and Repeat](./hipster/date-pickers-and-repeat-as-built.md). Where the app follows Google Tasks rather than the hi-fi mockup, the app wins — [decision 0016](./decisions/0016-follow-google-tasks-mobile-over-the-mockup.md). The mockup-era specs are in [`archive/santian/`](../../archive/santian/) as `superseded`. |
-| [Hacker](../../lenses/hacker.md) | Described as built: [data model](./hacker/tasks-data-model-as-built.md), [behaviour rules](./hacker/tasks-behaviour-rules-as-built.md) (written to be portable to Tasko), [notifications](./hacker/notifications-as-built.md), [architecture](./hacker/tasks-architecture-as-built.md), [theme tokens](./hacker/theme-tokens-as-built.md). Stack decisions stand: Isar ([0006](./decisions/0006-isar-for-tasks-storage.md)), Cubit ([0009](./decisions/0009-cubit-for-state-management.md)), flutter_local_notifications ([0010](./decisions/0010-flutter-local-notifications-package.md)), blue by day / orange by night ([0011](./decisions/0011-blue-by-day-orange-by-night.md)). One known defect: completing a repeating Task from Task Detail. Clockface questions are still open and still don't block Tasks ([0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md)). |
+| [Hipster](../../lenses/hipster.md) | The Tasks module's screens are described **as built** (Santian at `f64e2c0`, 2026-10-02): [Tasks List](./hipster/tasks-list-screen-as-built.md), [task row](./hipster/task-row-as-built.md), [create sheets](./hipster/create-sheets-as-built.md), [Task Detail](./hipster/task-detail-as-built.md), [date pickers and Repeat](./hipster/date-pickers-and-repeat-as-built.md). Where the app follows Google Tasks rather than the hi-fi mockup, the app wins — [decision 0016](./decisions/0016-follow-google-tasks-mobile-over-the-mockup.md). The mockup-era specs are in [`archive/santian/`](../../archive/santian/) as `superseded`. |
+| [Hacker](../../lenses/hacker.md) | Described as built: [data model](./hacker/tasks-data-model-as-built.md), [behaviour rules](./hacker/tasks-behaviour-rules-as-built.md) (written to be portable to Tasko), [notifications](./hacker/notifications-as-built.md), [architecture](./hacker/tasks-architecture-as-built.md), [theme tokens](./hacker/theme-tokens-as-built.md). Stack decisions stand: Isar ([0006](./decisions/0006-isar-for-tasks-storage.md)), Cubit ([0009](./decisions/0009-cubit-for-state-management.md)), flutter_local_notifications ([0010](./decisions/0010-flutter-local-notifications-package.md)), blue by day / orange by night ([0011](./decisions/0011-blue-by-day-orange-by-night.md)). Known defects are listed in the [behaviour rules](./hacker/tasks-behaviour-rules-as-built.md). Clockface questions are still open and still don't block Tasks ([0005](./decisions/0005-clockface-questions-dont-block-tasks-build.md)). **Build status:** the [Santian issues and PRs](https://github.com/arcbyte-lab/Santian/issues) ([AGENTS.md](../../AGENTS.md#tickets-and-code-work)). |
 | [Hustler](../../lenses/hustler.md) | Mostly closed for this idea — no market, no pricing, no channel. See decision 0003. |
 
 ## Next question to answer
