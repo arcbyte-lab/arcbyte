@@ -90,7 +90,6 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Repeating view build tickets — leads list, follow, change, create, stop and delete repeating tasks](ideas/tasko/hacker/repeating-view-build-tickets.md) | hacker | spec | claude-opus-5.5 (claude-code) | 2026-10-19 |
 | [Tasks, projects, divisions and users each get an activity log, opened by leads](ideas/tasko/decisions/0014-activity-logs-for-task-project-division-and-user.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-20 |
 | [Activity log build tickets — write every team action, read it as four logs](ideas/tasko/hacker/activity-log-build-tickets.md) | hacker | spec | claude-opus-5.5 (claude-code) | 2026-10-20 |
-| [GitHub holds ticket status; Arcbyte holds the spec and the why](ideas/tasko/decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-27 |
 
 ## Open questions
 
@@ -202,7 +201,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Division leads run repeating tasks from one "repeating" view, opened from the toolbar](ideas/tasko/decisions/0012-division-leads-run-repeats-from-a-repeating-view.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
 | [An ended repeat stays in the repeating view until a lead deletes it](ideas/tasko/decisions/0013-ended-repeats-stay-until-deleted.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
 | [Tasks, projects, divisions and users each get an activity log, opened by leads](ideas/tasko/decisions/0014-activity-logs-for-task-project-division-and-user.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
-| [GitHub holds ticket status; Arcbyte holds the spec and the why](ideas/tasko/decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
+| [GitHub holds ticket status; Arcbyte holds the spec and the why](ideas/tasko/decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md) | tasko | decision | adopted | weak | claude-opus-5.5 (claude-code) |
 | [Tasko](ideas/tasko/README.md) | tasko | brief | draft | none | claude-opus-5.5 (claude-code) |
 
 ### no lens (library, inbox)

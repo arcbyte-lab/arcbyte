@@ -3,7 +3,7 @@ title: GitHub holds ticket status; Arcbyte holds the spec and the why
 idea: tasko
 lens: intelligence
 kind: decision
-status: draft
+status: adopted
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-27
