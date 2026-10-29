@@ -98429,16 +98429,6 @@
                           "fontFamily": "Inter",
                           "fontSize": 22,
                           "fontWeight": "normal"
-                        },
-                        {
-                          "type": "icon",
-                          "id": "ZNuGr",
-                          "name": "chevron-down",
-                          "width": 20,
-                          "height": 20,
-                          "icon": "chevron-down",
-                          "library": "lucide",
-                          "fill": "#6B7280"
                         }
                       ]
                     },

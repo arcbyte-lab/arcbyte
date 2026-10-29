@@ -69,8 +69,8 @@ source in this conversation. That's why `evidence: none`. Drawn in
 - **The calendar folds by dragging, not by tapping** (after B17): drag the
   tab bar or the bar under the calendar down to open the month, up to fold
   it to a week. It follows the finger. The chevron after the year and the
-  bar's tap are gone, so the `day-selected` frame's chevron-down is out of
-  date.
+  bar's tap are gone; the `day-selected` frame was redrawn without the
+  chevron the same day.
 
 All four are recorded in [0016](../decisions/0016-calendar-follows-the-iphone-calendar.md).
 
