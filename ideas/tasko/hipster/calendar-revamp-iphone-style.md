@@ -53,6 +53,15 @@ source in this conversation. That's why `evidence: none`. Drawn in
 | Day tapped | grid stays, list filters | grid collapses to that week. Tap the title (chevron-down) or drag the grabber to open the month again |
 | Full screen | bigger squares with a count | day number plus up to 3 task pills (10 medium, #E0F2FE / #1E3A8A, radius 3, cut to one line). Overdue pills: #EF4444 on #EF4444 at 12%. More than 3: 2 pills and "+N more" |
 
+### Settled by the owner in chat (2026-10-29)
+- **A second tap on the selected day does not clear the filter.** The "×"
+  on the "Oct 14" chip clears it.
+- **Months change by swiping sideways**, as now. Not up and down like the
+  iPhone.
+- **Tapping a task title in full screen opens that day**: the panel goes
+  back to normal size, collapsed to that day's week, with the list filtered
+  to that day (the `day-selected` frame). It does not open Task Detail.
+
 Kept: the panel's #F9FAFB background, the maximize/minimize icon, the
 "Oct 14 ×" chip, and every part below the panel.
 
@@ -63,9 +72,11 @@ list gains more than that back.
 ### Where this pushes on 0003
 [0003](../decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md) says
 the days are "shaded". Dots still show the same count, in the same steps,
-but they are not shading. It also answers two of its open questions: the
-scale is three steps, and overdue days are red. Changing what 0003 says is an
-intelligence call, so it is not edited here.
+but they are not shading. 0003 also says "tapping it again clears the
+filter", and the owner has now said a second tap does not clear it. This
+note also answers two of 0003's open questions: the scale is three steps,
+and overdue days are red. Changing what 0003 says is an intelligence call,
+so it is not edited here.
 
 ## What would change my mind
 - Dots are too small to read the load at a glance on a real phone. Then go
@@ -74,13 +85,10 @@ intelligence call, so it is not edited here.
   only costs taps.
 
 ## Open questions
-- Does a day tap still clear on a second tap (0003), or is "×" on the chip /
-  "Today" the only way out now that the grid collapses?
+- Does "Today" only move the calendar to today, or also select today and
+  filter the list?
 - Does the week strip keep the selected weekday when you swipe to the next
   week, like iPhone does?
-- Swipe direction between months: sideways (as now) or up and down (iPhone)?
-  Up and down fights the list scroll in full screen.
-- Does tapping a task pill in full screen open Task Detail, or the day?
 
 ---
 Part of [Tasko](../README.md)
