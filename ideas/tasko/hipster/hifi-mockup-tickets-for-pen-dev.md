@@ -137,8 +137,8 @@ named "hifi / <name>". Later tickets use these, not the lofi ones.
    in review = 1.5px #3B82F6 border, lower half #E0F2FE
    done = #3B82F6 fill, white check
    Done rows: title struck through, #6B7280.
-3. Tab bar: tabs in JetBrains Mono 13 medium (Inter until 2026-10-29; frames
-   drawn before then still show Inter). Active tab #333333 with a 2px #3B82F6 underline;
+3. Tab bar: tabs in JetBrains Mono 13 medium (Inter until 2026-10-29, when
+   every hifi frame's tabs were switched). Active tab #333333 with a 2px #3B82F6 underline;
    others #6B7280. Group labels per H0 (uppercase).
 4. Chips: height 32, radius 6, #F3F4F6 fill, no border, no shadow, 13 medium
    #4B5563, icon 16px. Selected chip: #3B82F6 fill, white text and icon.

@@ -36016,7 +36016,7 @@
                       "name": "private",
                       "fill": "#6B7280",
                       "content": "private",
-                      "fontFamily": "Inter",
+                      "fontFamily": "JetBrains Mono",
                       "fontSize": 13,
                       "fontWeight": "500"
                     }
@@ -36037,7 +36037,7 @@
                       "name": "tech",
                       "fill": "#6B7280",
                       "content": "tech",
-                      "fontFamily": "Inter",
+                      "fontFamily": "JetBrains Mono",
                       "fontSize": 13,
                       "fontWeight": "500"
                     }
@@ -36095,7 +36095,7 @@
                       "name": "tasko-app",
                       "fill": "#6B7280",
                       "content": "tasko-app",
-                      "fontFamily": "Inter",
+                      "fontFamily": "JetBrains Mono",
                       "fontSize": 13,
                       "fontWeight": "500"
                     }
@@ -36119,7 +36119,7 @@
                       "name": "tasko-web",
                       "fill": "#333333",
                       "content": "tasko-web",
-                      "fontFamily": "Inter",
+                      "fontFamily": "JetBrains Mono",
                       "fontSize": 13,
                       "fontWeight": "500"
                     }
@@ -76836,6 +76836,12 @@
               "name": "Tab Bar",
               "width": "fill_container",
               "descendants": {
+                "ReEGK": {
+                  "fontFamily": "JetBrains Mono"
+                },
+                "JZNcC": {
+                  "fontFamily": "JetBrains Mono"
+                },
                 "movD5": {
                   "type": "frame",
                   "id": "p0tTnr",
@@ -76858,7 +76864,7 @@
                           "name": "tasko-app",
                           "fill": "#6B7280",
                           "content": "tasko-app",
-                          "fontFamily": "Inter",
+                          "fontFamily": "JetBrains Mono",
                           "fontSize": 13,
                           "fontWeight": "500"
                         }
@@ -76882,7 +76888,7 @@
                           "name": "tasko-web",
                           "fill": "#333333",
                           "content": "tasko-web",
-                          "fontFamily": "Inter",
+                          "fontFamily": "JetBrains Mono",
                           "fontSize": 13,
                           "fontWeight": "500"
                         }
@@ -76911,7 +76917,7 @@
                           "name": "new project",
                           "fill": "#6B7280",
                           "content": "new project",
-                          "fontFamily": "Inter",
+                          "fontFamily": "JetBrains Mono",
                           "fontSize": 13,
                           "fontWeight": "500"
                         }
@@ -103693,7 +103699,7 @@
                               "name": "my tasks",
                               "fill": "#333333",
                               "content": "my tasks",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
@@ -103748,7 +103754,7 @@
                               "name": "private",
                               "fill": "#6B7280",
                               "content": "private",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
@@ -103767,7 +103773,7 @@
                               "name": "tech",
                               "fill": "#6B7280",
                               "content": "tech",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
@@ -103822,7 +103828,7 @@
                               "name": "tasko-app",
                               "fill": "#6B7280",
                               "content": "tasko-app",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
@@ -103841,7 +103847,7 @@
                               "name": "tasko-web",
                               "fill": "#6B7280",
                               "content": "tasko-web",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
@@ -105190,7 +105196,7 @@
                               "name": "my tasks",
                               "fill": "#333333",
                               "content": "my tasks",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
@@ -105245,7 +105251,7 @@
                               "name": "private",
                               "fill": "#6B7280",
                               "content": "private",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
@@ -105264,7 +105270,7 @@
                               "name": "tech",
                               "fill": "#6B7280",
                               "content": "tech",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
@@ -105319,7 +105325,7 @@
                               "name": "tasko-app",
                               "fill": "#6B7280",
                               "content": "tasko-app",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
@@ -105338,7 +105344,7 @@
                               "name": "tasko-web",
                               "fill": "#6B7280",
                               "content": "tasko-web",
-                              "fontFamily": "Inter",
+                              "fontFamily": "JetBrains Mono",
                               "fontSize": 13,
                               "fontWeight": "500"
                             }
