@@ -27,7 +27,9 @@ What are the build tickets for the calendar revamp in
 
 ## Detail
 Read against Tasko-Flutter `main` at `be6f21a` (2026-10-29). Status lives on
-the issues and their PRs once they are opened
+the issues and their PRs: app
+[#30](https://github.com/arcbyte-lab/Tasko-Flutter/issues/30) (B16) and
+[#31](https://github.com/arcbyte-lab/Tasko-Flutter/issues/31) (B17)
 ([0015](../decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md)).
 
 ### Rules
