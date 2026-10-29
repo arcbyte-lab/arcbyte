@@ -61,6 +61,7 @@ is a link. The calls still open are listed in
 - [Santian's screens in a team app](./hipster/santian-screens-in-a-team-app.md) — what each screen keeps and adds
 - [Lofi mockup tickets for pen.dev](./hipster/lofi-mockup-tickets-for-pen-dev.md) — 13 prompts that draw every blueprint screen in `pencil-new.pen`
 - [Hifi mockup tickets for pen.dev](./hipster/hifi-mockup-tickets-for-pen-dev.md) — 7 prompts that restyle the lofi frames with `modern-minimal.css`, plus H7–H8 drawn directly
+- [Calendar revamp, iPhone style](./hipster/calendar-revamp-iphone-style.md) — dots instead of heatmap squares, a week strip when a day is picked, task titles in full screen
 
 **Hacker**
 - [Santian's concepts mapped onto Tasko's schema](./hacker/santian-concepts-mapped-to-tasko-schema.md) — what fits, what has no column (List, star, reminder)
