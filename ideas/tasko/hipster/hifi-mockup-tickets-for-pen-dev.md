@@ -19,7 +19,8 @@ mockup that uses the [modern-minimal theme](../assets/modern-minimal.css)?
 ## Short answer
 - There are 7 tickets. Paste **H0 first**, then H1 to H6 in order. H7 was drawn
   after the app was built. H8 (the repeating view) was drawn before the app was built.
-  H9 (the activity log) was drawn after it.
+  H9 (the activity log) was drawn after it. H10 (the "my tasks" tab) was drawn
+  before it.
 - Hifi does **not** change any layout, copy or behaviour. Each ticket duplicates
   lofi frames from the [lofi tickets](./lofi-mockup-tickets-for-pen-dev.md) and
   restyles them. If a layout looks wrong, fix the lofi ticket, not this one.
@@ -480,6 +481,25 @@ the drawing, so the app was aligned to all three in
 - **Empty hint.** The app shows only "no activity yet". The drawing adds
   the hint, because a task created before the log existed has no rows.
 - **The detail menu.** The app lists "activity" first, as drawn.
+
+### H10 — The "my tasks" tab (drawn 2026-10-29)
+
+From [0017](../decisions/0017-a-my-tasks-tab-gathers-the-users-tasks.md).
+Drawn **before** the app is built, straight into `pencil-new.pen` in a row
+at y=6786, 200px below the calendar frames. PNGs are in
+`assets/hi-fi snapshoots/`.
+
+| Frame | Shows | Built from |
+|---|---|---|
+| `hifi / my tasks / default` | "my tasks" active and first in the strip; the user's tasks and reviews from private, tech, tasko-app and tasko-web, grouped by day; dots for the same tasks | `hifi / calendar / month` |
+| `hifi / my tasks / day-selected` | Oct 14 picked: the week strip and the five things due that day, from three tabs | `hifi / calendar / day-selected` |
+
+- The "my tasks" tab sits before WORKSPACES. It has no group label; its label
+  line is kept but hidden, so its tab lines up with the others.
+- Each row's meta line ends with the tab: " · tasko-web" in 12 #6B7280,
+  also on overdue rows, where the date before it stays red.
+- A task waiting for the user's review shows the in-review checkbox.
+- The toolbar has search and view options only.
 
 ## What would change my mind
 - If the owner wants Tasko to look different from the lofi layout (not just
