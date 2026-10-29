@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-06
-updated: 2026-10-06
+updated: 2026-10-29
 inputs: ["../assets/home-wireframe-snapshot.png", "../hipster/home-screen-wireframe.md", "./0002-tabs-are-workspaces-then-projects.md"]
 tags: [artifact, decision]
 ---
@@ -18,6 +18,9 @@ The calendar on the home screen shows each day of the month, shaded by how
 many **open** tasks in the **active tab** are due that day. Tapping a day
 filters the task list below to that day. Tapping it again clears the
 filter.
+
+Changed by [0016](./0016-calendar-follows-the-iphone-calendar.md):
+dots instead of shading, and a second tap no longer clears the filter.
 
 ## Context
 

@@ -61,6 +61,9 @@ source in this conversation. That's why `evidence: none`. Drawn in
 - **Tapping a task title in full screen opens that day**: the panel goes
   back to normal size, collapsed to that day's week, with the list filtered
   to that day (the `day-selected` frame). It does not open Task Detail.
+- **"Today" selects today and filters the list.**
+
+All four are recorded in [0016](../decisions/0016-calendar-follows-the-iphone-calendar.md).
 
 Kept: the panel's #F9FAFB background, the maximize/minimize icon, the
 "Oct 14 ×" chip, and every part below the panel.
@@ -76,7 +79,7 @@ but they are not shading. 0003 also says "tapping it again clears the
 filter", and the owner has now said a second tap does not clear it. This
 note also answers two of 0003's open questions: the scale is three steps,
 and overdue days are red. Changing what 0003 says is an intelligence call,
-so it is not edited here.
+so it is not edited here. [0016](../decisions/0016-calendar-follows-the-iphone-calendar.md) records the change.
 
 ## What would change my mind
 - Dots are too small to read the load at a glance on a real phone. Then go
@@ -85,8 +88,6 @@ so it is not edited here.
   only costs taps.
 
 ## Open questions
-- Does "Today" only move the calendar to today, or also select today and
-  filter the list?
 - Does the week strip keep the selected weekday when you swipe to the next
   week, like iPhone does?
 

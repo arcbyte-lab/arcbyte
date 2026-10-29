@@ -1,0 +1,75 @@
+---
+title: The home calendar follows the iPhone Calendar app — dots, a week strip on tap, task titles in full screen
+idea: tasko
+lens: intelligence
+kind: decision
+status: draft
+source: claude-opus-5.5 (claude-code)
+evidence: none
+created: 2026-10-29
+updated: 2026-10-29
+inputs: ["../hipster/calendar-revamp-iphone-style.md", "./0003-calendar-is-a-due-date-heatmap-that-filters.md"]
+tags: [artifact, decision]
+---
+
+## Decision
+
+The home calendar is redrawn after the iPhone Calendar app, as in the
+[calendar revamp](../hipster/calendar-revamp-iphone-style.md). It still
+counts open tasks due per day in the active tab and still filters the list
+([0003](./0003-calendar-is-a-due-date-heatmap-that-filters.md)). These rules
+change:
+
+1. **Dots, not shading.** Under each day number: 1 dot for 1 open task,
+   2 dots for 2–3, 3 dots for 4 or more. A past day with open tasks gets red
+   dots.
+2. **Tapping a day selects it and collapses the month to that day's week.**
+   The list shows only that day's tasks.
+3. **A second tap on the selected day does nothing.** Only the "×" on the
+   date chip clears the filter. This replaces 0003's "tapping it again
+   clears the filter".
+4. **"Today" selects today and filters the list**, the same as tapping
+   today's date.
+5. **Months change by swiping sideways.** The chevrons are gone.
+6. **Full screen shows task titles.** Each day shows up to three titles,
+   or two and "+N more" when there are more. Tapping a title opens that
+   day: the calendar goes back to its normal size, collapsed to that week,
+   with the list filtered to that day. It does not open Task Detail.
+
+## Context
+
+The owner asked for the calendar to be revamped, using the iPhone Calendar
+app as the reference (2026-10-29). Claude drew it in hifi, and the owner
+answered the open points in chat the same day: no clearing on a second tap,
+swipe sideways, a title opens its day, "Today" selects and filters. It stays
+`draft` until the owner promotes it.
+
+## What each lens said
+
+- **Hound:** no user input. The iPhone behaviour comes from general
+  knowledge of iOS Calendar, not from a source here.
+- **Hipster:** see the [revamp note](../hipster/calendar-revamp-iphone-style.md).
+  Dots keep the old heatmap's steps, so the load reads the same. The week
+  strip gives the filtered list more room.
+- **Hacker:** the per-day count is unchanged. Full screen also needs the
+  titles of the open tasks due each day, not just the count. Not checked
+  yet whether the app already holds them for the active tab.
+- **Hustler:** not consulted.
+
+## Options rejected
+
+- **A second tap clears the filter** (0003's rule). Rejected by the owner.
+  The "×" on the chip is the one way out.
+- **"Today" only scrolls to today.** Rejected. It selects today and filters.
+- **Swiping up and down between months, like the iPhone.** Rejected. It
+  would fight the list scroll.
+- **A title in full screen opens Task Detail.** Rejected. It opens the day.
+
+## How we will know we were wrong
+
+- People can't read the load from dots at phone size. Then the days go back
+  to tinted cells.
+- People can't find how to clear a selected day without a second tap.
+
+---
+Part of [Tasko](../README.md)
