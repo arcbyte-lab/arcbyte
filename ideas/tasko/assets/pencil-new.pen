@@ -96260,7 +96260,7 @@
               "padding": [
                 0,
                 0,
-                6,
+                4,
                 0
               ],
               "children": [
@@ -97930,6 +97930,30 @@
                       "layout": "vertical",
                       "gap": 2,
                       "alignItems": "center"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WCHTY",
+                  "name": "Grabber",
+                  "width": "fill_container",
+                  "padding": [
+                    4,
+                    0,
+                    2,
+                    0
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 2,
+                      "id": "GWacZ",
+                      "name": "Handle",
+                      "fill": "#D1D5DB",
+                      "width": 36,
+                      "height": 4
                     }
                   ]
                 }
