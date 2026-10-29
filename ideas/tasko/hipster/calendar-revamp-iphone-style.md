@@ -62,6 +62,10 @@ source in this conversation. That's why `evidence: none`. Drawn in
   back to normal size, collapsed to that day's week, with the list filtered
   to that day (the `day-selected` frame). It does not open Task Detail.
 - **"Today" selects today and filters the list.**
+- **Swiping the week strip only moves the view.** The selected day stays
+  until another day is tapped. This differs from the iPhone, which moves
+  the selection with the week.
+- **Switching tabs keeps the selected day** and its filter.
 
 All four are recorded in [0016](../decisions/0016-calendar-follows-the-iphone-calendar.md).
 
@@ -88,8 +92,7 @@ so it is not edited here. [0016](../decisions/0016-calendar-follows-the-iphone-c
   only costs taps.
 
 ## Open questions
-- Does the week strip keep the selected weekday when you swipe to the next
-  week, like iPhone does?
+- None yet.
 
 ---
 Part of [Tasko](../README.md)

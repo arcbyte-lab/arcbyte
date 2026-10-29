@@ -39,7 +39,8 @@ the issues and their PRs once they are opened
 | Second tap on the selected day | Nothing happens. Only the chip's "×" (`clearDay`) clears |
 | "Today" | Selects today: month = today's month, the list filtered to today, collapsed to the week |
 | Tap a title in full screen | The same as tapping its day |
-| Swipe sideways | Month open: next or previous month. Week strip: next or previous week, keeping the weekday (Wed 14 → Wed 21). The selected day moves with it, and so does the filter |
+| Swipe sideways | Month open: next or previous month. Week strip: next or previous week. Swiping only moves the view: the selected day and the filter stay until a day is tapped |
+| Switch tabs | The selected day and its filter stay. The calendar shows the new tab's dots |
 | Open the month again | Tap the title or drag the grabber down. The day stays selected and the list stays filtered |
 | Full-screen titles | Open tasks due that day, in `taskOrder`. 3 or fewer: all. More: the first 2 and "+N more" |
 
@@ -59,20 +60,28 @@ Same shape as now: a pure `*View`, a thin `*Screen`, Cubits behind the
 - `HomeState`:
   - gains `monthOpen` (bool, default true). The week strip shows when
     `selectedDay != null && !monthOpen`.
+  - gains `week`: the Monday of the week the strip shows. It is separate
+    from `selectedDay`, so the strip can show a week the selected day isn't
+    in.
   - gains `dueByDayThisMonth`, for B17's full-screen titles.
 - `HomeCubit`:
   - `selectDay(day)`: always sets `selectedDay`. Sets `monthOpen: false` and
-    `calendarExpanded: false`, and moves `month` to the day's month. The
-    toggle is gone.
+    `calendarExpanded: false`, and moves `week` to the day's week and `month`
+    to the day's month. The toggle is gone.
   - `goToToday()`: `selectDay(state.today)`.
-  - `changeWeek(int delta)`: `selectDay(selectedDay + 7 * delta days)`.
+  - `changeWeek(int delta)`: moves `week` by 7 days and sets `month` to
+    the new Monday's month. It does not touch `selectedDay`.
   - `openMonth()`: `monthOpen: true`.
   - `clearDay()`: also sets `monthOpen: true`.
-- Tests in `home_cubit_test.dart`. Rewrite "selecting a day filters;
-  selecting it again clears", because a second tap now keeps the filter.
-  Add tests for: `goToToday` from another month, `changeWeek` across a
-  month end (Oct 28 + 1 week = Nov 4, and `month` follows), and `clearDay`
-  reopening the month.
+- `HomeState.pageFor`: stop resetting `selectedDay`, so switching tabs
+  keeps the day. It still resets `showCompleted` and the view filters.
+- Tests in `home_cubit_test.dart`. Rewrite two tests that now expect the
+  wrong thing: "selecting a day filters; selecting it again clears" (a
+  second tap keeps the filter) and "changing tab loads its tasks and clears
+  the day filter" (the day now stays). Add tests for: `goToToday` from
+  another month, `changeWeek` across a month end (week of Oct 26 + 1 = week
+  of Nov 2, `month` becomes November, `selectedDay` and `listed`
+  unchanged), and `clearDay` reopening the month.
 
 **B17 — Redraw `PulsePanel`**
 Match the three `hifi / calendar / …` frames. The numbers are in the
@@ -126,11 +135,8 @@ Match the three `hifi / calendar / …` frames. The numbers are in the
   back as a clear (0016 names this signal).
 
 ## Open questions
-- Should the week strip keep the weekday when you swipe (Wed → Wed, the
-  iPhone way, assumed above), or keep the selected day and only move the
-  view?
-- Does changing tab keep the selected day? Today it clears it (there's a
-  test for it). The tickets keep that.
+- None yet. The owner settled the week swipe and the tab switch in chat on
+  2026-10-29.
 
 ---
 Part of [Tasko](../README.md)

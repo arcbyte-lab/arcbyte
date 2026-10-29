@@ -30,8 +30,12 @@ change:
    clears the filter".
 4. **"Today" selects today and filters the list**, the same as tapping
    today's date.
-5. **Months change by swiping sideways.** The chevrons are gone.
-6. **Full screen shows task titles.** Each day shows up to three titles,
+5. **Months change by swiping sideways.** The chevrons are gone. In the
+   week strip, a sideways swipe changes the week but not the selected day.
+   Only a tap selects a day.
+6. **Switching tabs keeps the selected day.** The new tab's list is
+   filtered to the same day. Before, a tab switch cleared it.
+7. **Full screen shows task titles.** Each day shows up to three titles,
    or two and "+N more" when there are more. Tapping a title opens that
    day: the calendar goes back to its normal size, collapsed to that week,
    with the list filtered to that day. It does not open Task Detail.
@@ -41,7 +45,8 @@ change:
 The owner asked for the calendar to be revamped, using the iPhone Calendar
 app as the reference (2026-10-29). Claude drew it in hifi, and the owner
 answered the open points in chat the same day: no clearing on a second tap,
-swipe sideways, a title opens its day, "Today" selects and filters. It stays
+swipe sideways, a title opens its day, "Today" selects and filters,
+swiping the week strip doesn't select, and a tab switch keeps the day. It stays
 `draft` until the owner promotes it.
 
 ## What each lens said
