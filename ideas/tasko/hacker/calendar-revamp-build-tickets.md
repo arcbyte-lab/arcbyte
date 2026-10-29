@@ -44,6 +44,18 @@ Changes from the tickets, made while building B17
   strip off the bottom. 40% still fits a six-week month in portrait.
 - The month title shrinks to fit rather than overflow with large text.
 
+Changed after B17, on the owner's ask
+([#34](https://github.com/arcbyte-lab/Tasko-Flutter/pull/34), 0016 rule 8):
+- The month opens and folds by a vertical drag on the tab bar or the bar
+  under the calendar, following the finger. `CalendarFold` owns a 0–1
+  fold; letting go past half way, or a flick over 300px/s, finishes it.
+- Dragging up folds to the selected day's week, else today's
+  (`foldWeek`, `HomeCubit.foldToWeek`), so the week strip no longer needs a
+  selected day: `showsWeek` is just `!monthOpen`.
+- The chevron after the year, the title's tap and the bar's tap are gone.
+  The rows "Open the month again" below and B17's header and grabber
+  bullets describe the B17 build, not the app now.
+
 ### Rules
 | Rule | Value |
 |---|---|

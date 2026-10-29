@@ -39,6 +39,12 @@ change:
    or two and "+N more" when there are more. Tapping a title opens that
    day: the calendar goes back to its normal size, collapsed to that week,
    with the list filtered to that day. It does not open Task Detail.
+8. **The calendar folds by dragging, with the finger.** Dragging the tab
+   bar (or the bar under the calendar) down opens the month from the week
+   strip. Dragging up folds the month to a week: the selected day's, else
+   today's. Nothing is selected by folding. There is no tap for this: the
+   chevron after the year and the bar's tap are gone. A day tap, "Today"
+   and the chip's "×" animate the same fold.
 
 ## Context
 
@@ -46,7 +52,9 @@ The owner asked for the calendar to be revamped, using the iPhone Calendar
 app as the reference (2026-10-29). Claude drew it in hifi, and the owner
 answered the open points in chat the same day: no clearing on a second tap,
 swipe sideways, a title opens its day, "Today" selects and filters,
-swiping the week strip doesn't select, and a tab switch keeps the day. It stays
+swiping the week strip doesn't select, and a tab switch keeps the day.
+After using the build, the owner asked the same day for rule 8: the switch
+between week and month by a drag that follows the finger, not by taps. It stays
 `draft` until the owner promotes it.
 
 ## What each lens said
@@ -70,6 +78,8 @@ swiping the week strip doesn't select, and a tab switch keeps the day. It stays
 - **Swiping up and down between months, like the iPhone.** Rejected. It
   would fight the list scroll.
 - **A title in full screen opens Task Detail.** Rejected. It opens the day.
+- **Tapping the title or the bar to open the month.** Built in B17, then
+  dropped by the owner for the drag (rule 8).
 
 ## How we will know we were wrong
 
