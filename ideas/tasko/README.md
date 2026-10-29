@@ -74,6 +74,7 @@ is a link. The calls still open are listed in
 - [Repeating view build tickets](./hacker/repeating-view-build-tickets.md) — A13–A15 and B11–B13: leads list, follow, change, create, stop and delete repeating tasks
 - [Activity log build tickets](./hacker/activity-log-build-tickets.md) — A16–A18 and B14–B15: write every team action, read it as task, project, division and user logs
 - [Calendar revamp build tickets](./hacker/calendar-revamp-build-tickets.md) — B16–B17: a tap always selects, "Today" selects today, week strip, dots and full-screen titles; no API change
+- [My tasks build tickets](./hacker/my-tasks-build-tickets.md) — B18–B19: a first tab gathering the user's tasks and reviews, and a tab picker to create from it; no API change
 
 ## Decisions
 - [0001 — Adopt sqlite-schema.sql over schema-zero](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)

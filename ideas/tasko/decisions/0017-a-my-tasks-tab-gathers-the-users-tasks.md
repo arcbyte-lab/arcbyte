@@ -63,6 +63,7 @@ chat the same day. It stays `draft` until the owner promotes it.
   (`HomeCubit.tasksByTab`) and knows the user's role in each tab
   (`TaskTab.role`), so `my tasks` is built in the app from what it has.
   Within a tab a task appears once, so `my tasks` has no duplicates.
+  ([build tickets](../hacker/my-tasks-build-tickets.md))
 - **Hustler:** not consulted.
 
 ## Options rejected
