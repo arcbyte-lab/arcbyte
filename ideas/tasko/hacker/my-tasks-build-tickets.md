@@ -31,7 +31,9 @@ Read against Tasko-Flutter `main` at `c4a39d2` (2026-10-29). The drawing is
 [H10](../hipster/hifi-mockup-tickets-for-pen-dev.md):
 `hifi / my tasks / default` and `hifi / my tasks / day-selected` in
 `pencil-new.pen`, PNGs in `assets/hi-fi snapshoots/`. Status lives on the
-issues and their PRs once they are opened
+issues and their PRs: app
+[#35](https://github.com/arcbyte-lab/Tasko-Flutter/issues/35) (B18) and
+[#36](https://github.com/arcbyte-lab/Tasko-Flutter/issues/36) (B19)
 ([0015](../decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md)).
 
 ### Rules
