@@ -52,8 +52,9 @@ swipe sideways, a title opens its day, "Today" selects and filters. It stays
   Dots keep the old heatmap's steps, so the load reads the same. The week
   strip gives the filtered list more room.
 - **Hacker:** the per-day count is unchanged. Full screen also needs the
-  titles of the open tasks due each day, not just the count. Not checked
-  yet whether the app already holds them for the active tab.
+  titles of the open tasks due each day. The app already holds every tab's
+  tasks, so there is no API change
+  ([build tickets](../hacker/calendar-revamp-build-tickets.md)).
 - **Hustler:** not consulted.
 
 ## Options rejected
