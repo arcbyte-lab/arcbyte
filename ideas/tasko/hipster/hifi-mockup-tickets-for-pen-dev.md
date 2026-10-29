@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
-updated: 2026-10-22
+updated: 2026-10-29
 inputs: ["../decisions/0014-activity-logs-for-task-project-division-and-user.md", "../hacker/activity-log-build-tickets.md", "../decisions/0012-division-leads-run-repeats-from-a-repeating-view.md", "../hacker/repeating-view-build-tickets.md", "../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
 tags: [artifact]
 ---
@@ -60,7 +60,7 @@ Radius: 6 (`--radius: 0.375rem`). Small 2, medium 4, large 6, extra large 10.
 Shadow-sm: `0 1px 3px rgba(0,0,0,.10), 0 1px 2px -1px rgba(0,0,0,.10)`.
 Shadow-lg: `0 1px 3px rgba(0,0,0,.10), 0 4px 6px -1px rgba(0,0,0,.10)`.
 Fonts: Inter for everything. JetBrains Mono for task IDs like "TW-0042", group
-labels, and the repeat screen's times and dates.
+labels, tab names (owner, 2026-10-29), and the repeat screen's times and dates.
 
 ### H0 — Ground rules
 
@@ -99,7 +99,7 @@ Theme (light, from modern-minimal.css):
 
 Type:
 - Font: Inter everywhere. JetBrains Mono for task IDs ("TW-0042"), group labels,
-  and the repeat screen's times and dates.
+  tab names, and the repeat screen's times and dates.
 - Sizes: 20 semibold for big titles, 15 regular for body, 13 medium for labels,
   12 regular for meta. Group labels: JetBrains Mono 12 medium, #6B7280 at 50%
   opacity, uppercase, letter-spacing 0.5 ("OVERDUE" is #EF4444 at 50%).
@@ -137,7 +137,8 @@ named "hifi / <name>". Later tickets use these, not the lofi ones.
    in review = 1.5px #3B82F6 border, lower half #E0F2FE
    done = #3B82F6 fill, white check
    Done rows: title struck through, #6B7280.
-3. Tab bar: tabs in 13 medium. Active tab #333333 with a 2px #3B82F6 underline;
+3. Tab bar: tabs in JetBrains Mono 13 medium (Inter until 2026-10-29; frames
+   drawn before then still show Inter). Active tab #333333 with a 2px #3B82F6 underline;
    others #6B7280. Group labels per H0 (uppercase).
 4. Chips: height 32, radius 6, #F3F4F6 fill, no border, no shadow, 13 medium
    #4B5563, icon 16px. Selected chip: #3B82F6 fill, white text and icon.
