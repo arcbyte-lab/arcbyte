@@ -32,6 +32,18 @@ the issues and their PRs: app
 [#31](https://github.com/arcbyte-lab/Tasko-Flutter/issues/31) (B17)
 ([0015](../decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md)).
 
+Changes from the tickets, made while building B17
+([#33](https://github.com/arcbyte-lab/Tasko-Flutter/pull/33)):
+- `PulsePanel` takes `dueOn`, open tasks keyed by date (a new
+  `dueByDate` in `task_rules.dart`), not `dueByDay` for one month. The
+  week strip can cross a month end (Oct 26 – Nov 1) and needs dots for
+  both months. Overdue is now "a day before today with open tasks", so
+  `HomeState.overdueDays` is gone.
+- `HomeView` caps the panel at 40% of the screen height, and the month
+  scrolls inside it. On the Xiaomi in landscape, 55% still pushed the tab
+  strip off the bottom. 40% still fits a six-week month in portrait.
+- The month title shrinks to fit rather than overflow with large text.
+
 ### Rules
 | Rule | Value |
 |---|---|
