@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
-updated: 2026-10-29
+updated: 2026-11-05
 inputs: ["../decisions/0014-activity-logs-for-task-project-division-and-user.md", "../hacker/activity-log-build-tickets.md", "../decisions/0012-division-leads-run-repeats-from-a-repeating-view.md", "../hacker/repeating-view-build-tickets.md", "../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
 tags: [artifact]
 ---
@@ -24,6 +24,11 @@ mockup that uses the [modern-minimal theme](../assets/modern-minimal.css)?
 - Hifi does **not** change any layout, copy or behaviour. Each ticket duplicates
   lofi frames from the [lofi tickets](./lofi-mockup-tickets-for-pen-dev.md) and
   restyles them. If a layout looks wrong, fix the lofi ticket, not this one.
+- The lofi and grey-block frames were deleted from `pencil-new.pen` on
+  2026-11-05 (owner). Their PNGs in `assets/lofi-snapshoots/` are the layout
+  reference now. H0 to H6 below are kept as they were run. New hifi frames are
+  built like H7 to H10: from the `hifi / ...` components and existing hifi frames,
+  in a new row below the lowest hifi frame.
 - Light theme only. The CSS also has a `.dark` theme; that is a later pass.
 
 ## Detail
@@ -45,7 +50,7 @@ converted here. They match Tailwind's default grey and blue scales.
 | primary | #3B82F6 | buttons, active tab, selection, checkbox |
 | primary-foreground | #FFFFFF | text on primary |
 | destructive | #EF4444 | overdue, urgent, unread dot, decline |
-| border, input | #E5E7EB | lines, field borders |
+| border, input | #E5E7EB | field and menu borders (no divider lines) |
 | chart-2 / 3 / 4 | #2563EB / #1D4ED8 / #1E40AF | heatmap steps (only #1E40AF is used) |
 | heatmap-empty | #D7D7D9 | heatmap cell with 0 tasks (not in the CSS; chosen by the owner) |
 | control-border | #D1D5DB | empty checkbox and radio, empty priority bars, empty-state icon |
@@ -59,8 +64,8 @@ as built. The last five rows are not in `modern-minimal.css`.
 Radius: 6 (`--radius: 0.375rem`). Small 2, medium 4, large 6, extra large 10.
 Shadow-sm: `0 1px 3px rgba(0,0,0,.10), 0 1px 2px -1px rgba(0,0,0,.10)`.
 Shadow-lg: `0 1px 3px rgba(0,0,0,.10), 0 4px 6px -1px rgba(0,0,0,.10)`.
-Fonts: Inter for everything. JetBrains Mono for task IDs like "TW-0042", group
-labels, tab names (owner, 2026-10-29), and the repeat screen's times and dates.
+Fonts: Space Grotesk for everything, the same as lofi (owner, 2026-11-04). Until
+then hifi used Inter, with JetBrains Mono for IDs, group labels, tab names and times.
 
 ### H0 — Ground rules
 
@@ -80,7 +85,7 @@ says otherwise. Hifi changes the look, never the layout or the copy.
 
 Theme (light, from modern-minimal.css):
 - Background #FFFFFF. Main text #333333. Secondary text and resting icons #6B7280.
-- Lines and field borders: 1px #E5E7EB.
+- Field borders: 1px #E5E7EB. No horizontal divider lines between rows or under bars (owner, 2026-11-04).
 - Primary #3B82F6 with white text: main buttons, active tab, selected states,
   checked checkboxes, the FAB.
 - Secondary #F3F4F6 with #4B5563 text: chips, outlined-looking buttons, disabled buttons.
@@ -98,10 +103,12 @@ Theme (light, from modern-minimal.css):
   Nothing else gets a shadow. No gradients.
 
 Type:
-- Font: Inter everywhere. JetBrains Mono for task IDs ("TW-0042"), group labels,
-  tab names, and the repeat screen's times and dates.
+- Font: Space Grotesk everywhere (Inter and JetBrains Mono until 2026-11-04).
+- Case: UI text in sentence case ("Due date", "Submit proof"); group labels stay
+  uppercase; workspace and project names (private, tech, tasko-web) and emails keep
+  their own case (owner, 2026-11-04).
 - Sizes: 20 semibold for big titles, 15 regular for body, 13 medium for labels,
-  12 regular for meta. Group labels: JetBrains Mono 12 medium, #6B7280 at 50%
+  12 regular for meta. Group labels: 12 medium, #6B7280 at 50%
   opacity, uppercase, letter-spacing 0.5 ("OVERDUE" is #EF4444 at 50%).
   No italics.
 
@@ -129,17 +136,27 @@ named "hifi / <name>". Later tickets use these, not the lofi ones.
 
 1. Top bar: "welcome, <user_name>" in 15 medium #333333. Icons #6B7280. The bell's
    dot is 6px #EF4444 with a 1.5px white ring. The account square becomes a 24px
-   avatar circle (the "me" look from H0). Bottom line #E5E7EB.
-2. Task row: title 15 regular #333333; meta line 12 #6B7280. In the meta line the
-   priority word is coloured: urgent #EF4444, high #333333, medium and low #6B7280.
-   Overdue dates are #EF4444. Checkbox 20x20, radius 4:
-   open = 1.5px #D1D5DB border, white fill
-   in review = 1.5px #3B82F6 border, lower half #E0F2FE
-   done = #3B82F6 fill, white check
-   Done rows: title struck through, #6B7280.
-3. Tab bar: tabs in JetBrains Mono 13 medium (Inter until 2026-10-29, when
-   every hifi frame's tabs were switched). Active tab #333333 with a 2px #3B82F6 underline;
+   avatar circle (the "me" look from H0). No bottom line.
+2. Task row (owner, 2026-11-04, same as lofi): no checkbox. Line 1: title 15
+   regular #333333, due date 12 #6B7280 on the right ("Overdue Oct 3" in #EF4444).
+   Line 2: the task ID (12 #6B7280, e.g. "TW-0042") and the priority badge on
+   the left, the status badge on the right (ID added by the owner, 2026-11-04). Badges: 12
+   medium, radius 6, padding 2/8, 1px border. Colours follow the app's
+   PRIORITY_MAP and TASK_DETAIL_STATUS_MAP (light mode):
+   urgent #FDA4AF / #FFE4E6 60% / #BE123C, high #FECACA / #FEF2F2 50% / #DC2626,
+   medium #FDE68A / #FFFBEB 50% / #B45309, low #BFDBFE / #EFF6FF 50% / #2563EB.
+   The status badge has a 6px dot first: Waiting and To Do slate
+   (#E2E8F0 / #F8FAFC 50% / #475569, dot #64748B), In Progress blue
+   (#BFDBFE / #EFF6FF 50% / #2563EB, dot #3B82F6), Under Review orange
+   (#FED7AA / #FFF7ED 50% / #EA580C, dot #F97316), Done emerald
+   (#A7F3D0 / #ECFDF5 50% / #059669, dot #10B981).
+   Done rows: title #6B7280.
+3. Tab bar: tabs 13 medium.
+   Active tab #333333 with a 2px #3B82F6 underline;
    others #6B7280. Group labels per H0 (uppercase).
+   A 36x4 #D1D5DB grabber, radius 2, sits top-centre in the tab bar (8px top
+   padding). It marks the bar as the drag handle that folds and opens the calendar
+   (0016 rule 8). The calendar panel has no grabber of its own (owner, 2026-11-04).
 4. Chips: height 32, radius 6, #F3F4F6 fill, no border, no shadow, 13 medium
    #4B5563, icon 16px. Selected chip: #3B82F6 fill, white text and icon.
 5. Buttons: height 44, radius 6, 15 medium.
@@ -151,6 +168,13 @@ named "hifi / <name>". Later tickets use these, not the lofi ones.
 6. Fields: height 40, radius 6, 1px #E5E7EB border, 15 regular, placeholder
    #9CA3AF. Focused: 2px #3B82F6 border with a 3px #3B82F6 ring at 20%.
 7. Sheet: white, top corners 18, a 36x4 #E5E7EB handle, scrim per H0.
+   Sheet pattern (owner, 2026-11-04): the panel fits its content; content padding
+   12/20/20/20, 24 between blocks. Actions are text buttons at the bottom right
+   (Done/Apply/Send #3B82F6, Cancel/Reset #6B7280, Delete/Decline #EF4444).
+   Create sheets: title and note, then one toolbar row with icon-only property
+   buttons (20px, no label, no pill) on the left and "Done" on the right. An icon
+   is #3B82F6 when its value is set, #9CA3AF when not, #EF4444 when it blocks saving.
+   A create sheet behind a picker is the picker's height + 56, so its title peeks out.
 8. Snackbar: per H0.
 9. Keyboard: keep the lofi block, fill #F3F4F6, label #9CA3AF.
 
@@ -167,20 +191,13 @@ Duplicate every "lofi / home / ..." frame (default, day-selected, private, empty
 pulse-fullscreen, search, view-options, account-menu, snackbar) and restyle with H0
 and the H1 components.
 
-Pulse panel:
-- Panel background #F9FAFB, 1px #E5E7EB bottom line.
-- "MONTHLY" as a group label, "October" in 20 semibold. Chevrons and maximize-2 #6B7280.
-- Weekday initials 12 medium #6B7280.
-- Heatmap cells, radius 4:
-  0 tasks = #D7D7D9
-  1 task  = #E0F2FE
-  2-3     = #3B82F6
-  4+      = #1E40AF
-- Today: 1.5px #333333 outline. Overdue dot under the cell: 4px #EF4444.
-- day-selected: the selected cell gets a 2px #3B82F6 outline with a 2px white gap.
-  The "Oct 14 ×" chip uses the selected chip look.
-- pulse-fullscreen: day number 13 medium, open count 12 regular. On cells with
-  #3B82F6 or #1E40AF fill, both are white.
+Pulse panel: the iPhone-style calendar from the
+[calendar revamp](./calendar-revamp-iphone-style.md) and
+[0016](../decisions/0016-calendar-follows-the-iphone-calendar.md): day numbers
+with dots, "October 2026" with a "Today" button, the week strip when a day is
+selected, task titles in full screen. The heatmap squares are gone. Since
+2026-11-04 every hifi screen with the panel uses this one (the drawn panel
+shows tasko-web's dots on every screen).
 
 List toolbar: white background (same as the list), "9 open" in 12 #6B7280.
 Group headers (OVERDUE, TODAY, TOMORROW, LATER): H0 group-label style. The
@@ -233,7 +250,7 @@ Duplicate every "lofi / detail / ..." frame, including the seven
 "lofi / detail / action / ..." bars. Restyle with H0 and H1.
 
 Detail panel: white, radius 18, shadow-lg, on the 40% scrim.
-- Header: "tasko-web" 12 medium #6B7280, then "TW-0042" in JetBrains Mono 12 #6B7280.
+- Header: "tasko-web" 12 medium #6B7280, then "TW-0042" in 12 #6B7280.
 - Title 20 semibold. Note 15 #6B7280.
 - Property rows: icon #6B7280, label 13 #6B7280, value 15 #333333 on the right.
   Status value is a small pill: in progress = #E0F2FE / #1E3A8A, waiting and to do =
@@ -268,7 +285,7 @@ H0 and H1.
 - Row labels 13 medium #6B7280. Number boxes and the "week" dropdown use the H1 field.
 - Weekday chips: 36x36 circles. Selected = #3B82F6 with white letter, others
   #F3F4F6 with #4B5563 letter.
-- "09:00" and dates in JetBrains Mono 15.
+- "09:00" and dates in 15.
 - Radios per H3.
 - Summary: a #F9FAFB box, radius 6, 13 #6B7280, with a repeat icon on the left.
 - monthly-edit: the greyed "starts" row uses #9CA3AF text and a lock icon in place
@@ -286,8 +303,7 @@ Ticket H6 — Snackbars, then check the whole row
 2. Check the whole hifi row:
    - Every lofi frame has exactly one hifi twin with the same name after "hifi /".
    - No colour outside the H0 list.
-   - No JetBrains Mono except task IDs, group labels, and the repeat screen's
-     times and dates.
+   - Space Grotesk only; no Inter or JetBrains Mono.
    - All text on #3B82F6 is white, and all body text is #333333 or #6B7280.
    List any frame that breaks a rule, then fix it.
 ```
@@ -356,7 +372,7 @@ Task IDs use the tech division's prefix, as in the existing frames.
 2. "hifi / repeating / list" (full screen; header from "hifi / members / owner"):
    - Header: arrow-left #333333, "tech repeating" 20 semibold, and a "+ new" text
      button on the right.
-   - One row per repeating task, 1px #E5E7EB line between rows:
+   - One row per repeating task, no line between rows:
      line 1: the task name, 15 regular #333333; a 24px assignee avatar on the right.
      line 2: the rule and the next due date, 12 #6B7280, e.g.
        "every week on Mon · next Mon, Oct 12".
@@ -381,7 +397,7 @@ Task IDs use the tech division's prefix, as in the existing frames.
    - Summary box as in H5 (#F9FAFB, radius 6, repeat icon, 13 #6B7280):
      "creates a new task every week on Mon, when this task is done."
    - Group label "OCCURRENCES" (H0 style), then one row each, newest first:
-     line 1: task ID in JetBrains Mono 12 #6B7280, then the due date, 15 #333333.
+     line 1: task ID in 12 #6B7280, then the due date, 15 #333333.
      line 2: a 20px assignee avatar and the name, 12 #6B7280; on the right a
        status pill (H4 colours) or a result:
        "on time" 12 medium #6B7280, or "late · 2 days" 12 medium #EF4444.
@@ -466,8 +482,8 @@ below H8. PNGs are in `assets/hi-fi snapshoots/`.
 | `hifi / home / my-activity-menu` | the account menu with "my activity" above "account settings" | `hifi / home / account-menu` |
 
 A row: a 24px avatar (H0 colours), the sentence in 15 #333333 (wraps),
-and the time in JetBrains Mono 12 #6B7280. Rows are split by a 1px #E5E7EB
-line. Days use the H0 group label: "TODAY", "YESTERDAY", "MON, OCT 5".
+and the time in 12 #6B7280. Rows have no line between them.
+Days use the H0 group label: "TODAY", "YESTERDAY", "MON, OCT 5".
 "load more" is a 15 medium #3B82F6 text button, centred.
 
 Where the drawing differed from the app as built (B15). The owner chose
@@ -492,15 +508,70 @@ at y=6786, 200px below the calendar frames. PNGs are in
 
 | Frame | Shows | Built from |
 |---|---|---|
-| `hifi / my tasks / default` | "my tasks" active and first in the strip; the user's tasks and reviews from private, tech, tasko-app and tasko-web, grouped by day; dots for the same tasks | `hifi / calendar / month` |
-| `hifi / my tasks / day-selected` | Oct 14 picked: the week strip and the five things due that day, from three tabs | `hifi / calendar / day-selected` |
+| `hifi / my tasks / default` | "my tasks" active and first in the strip; the user's tasks and reviews from private, tech, tasko-app and tasko-web, grouped by day; dots for the same tasks | `hifi / home / default` |
+| `hifi / my tasks / day-selected` | Oct 14 picked: the week strip and the five things due that day, from three tabs | `hifi / home / day-selected` |
 
+- Since 2026-11-04 the shared `hifi / Tab Bar` has the "my tasks" tab, so it
+  shows on every hifi screen.
 - The "my tasks" tab sits before WORKSPACES. It has no group label; its label
   line is kept but hidden, so its tab lines up with the others.
-- Each row's meta line ends with the tab: " · tasko-web" in 12 #6B7280,
-  also on overdue rows, where the date before it stays red.
-- A task waiting for the user's review shows the in-review checkbox.
+- Each row's date ends with the tab: "Oct 7 · tasko-web" in 12 #6B7280,
+  also on overdue rows, where the whole date stays red.
+- A task waiting for the user's review shows the Under Review badge.
 - The toolbar has search and view options only.
+
+### H11 — Detail tabs and quick actions (drawn 2026-11-05)
+
+The owner redrew `hifi / detail / team-top`; every detail frame now follows it.
+This replaces the H4 panel, menu and action-bar rules.
+
+| Frame | Shows | Built from |
+| --- | --- | --- |
+| `hifi / detail / team-discussion` | the Discussion tab: two comments, an empty comment field | `hifi / detail / team-scrolled` |
+
+- Panel: x 9, y 121, 408×787, radius 18, on a 40% scrim with a 4px background blur.
+  Every scrim gets the same blur, including the `hifi / Sheet` scrim (transparent
+  stacked sheets under a picker keep it off).
+  With the keyboard on it stays at y 121 and is 575 tall.
+- Tabs under the note: Brief / Sub tasks / Discussion (`hifi / detail / Tab Bar`),
+  13 medium, active #333333 with a 2px #3B82F6 underline, the rest #6B7280.
+  Brief holds the property rows. The section labels inside the tabs are hidden.
+  A private task has no Discussion tab.
+- `team-scrolled` now shows the Sub tasks tab; `keyboard-on` shows Discussion.
+- Quick actions replace the more-vertical menu (`hifi / detail / Quick Actions`):
+  45px #F7F9FA circles with #6B7280 icons, gap 8, right-aligned with the panel at y 64.
+  file-up = submit proof, calendar-clock = request extension, pencil = edit,
+  trash-2 = archive. Leads get history (activity) first. A private task shows
+  only edit and archive.
+- `detail / menu` and `detail / activity-menu` no longer draw a dropdown; they show
+  the member and the lead button rows.
+- Action bar: a 382×44 pill (radius 100) at x 22, y 852; buttons inside are pills too.
+
+### H12 — Workload strip on home (drawn 2026-11-05)
+
+Every screen with the Pulse calendar has a black strip (`hifi / Stats`, 100 tall)
+between the top bar and the calendar, except `pulse-fullscreen`. The owner picked
+variant C of four (stat row, filter chips, grouped, overdue first; the others were deleted).
+
+| Frame | Shows | Built from |
+| --- | --- | --- |
+| `hifi / home / stats-minimized` | the strip after dragging the calendar grabber up | `hifi / home / default` |
+
+- Full (`hifi / Stats`): MY WORK (in progress, to review) and DEADLINES (due soon,
+  overdue), no card fill. Group label 11 medium #9CA3AF, letter spacing 0.5.
+  Each stat: count 18 semibold in its colour (blue, orange, #FCD34D, #F87171),
+  then a 6px dot and a 12 #9CA3AF label.
+- Minimized (`hifi / Stats / minimized`, 72 tall): the two group labels over four
+  30px chips, each an icon and a count, tinted 15% fill and 40% border in the colour.
+- Calendar (`hifi / Pulse Panel`): radius 16 on the top corners, a 36×4 #D1D5DB
+  grabber centred at the top, week rows 44 tall. Dragging the grabber up minimizes
+  the strip. The day-selected, my-tasks and fullscreen calendars keep their own
+  content with the same radius and grabber.
+- In progress = tasks assigned to me that I started. To review = tasks I made and
+  assigned to someone else, now waiting on my review.
+- A task can count twice (in progress and overdue), so the strip shows no total.
+- Open: how close is "due soon", and does the strip follow the project tab or
+  always count all of my tasks?
 
 ## What would change my mind
 - If the owner wants Tasko to look different from the lofi layout (not just
@@ -515,8 +586,8 @@ at y=6786, 200px below the calendar frames. PNGs are in
 - Should `modern-minimal.css` get warning, success, heatmap-empty, control-border
   and placeholder tokens? The mockup uses them as standard (see the token table),
   but the CSS does not define them yet.
-- Is Inter the right font for a mobile app, or should it follow the platform
-  (SF Pro / Roboto)? The CSS says Inter, so the tickets use it.
+- Is Space Grotesk the right font for a mobile app, or should it follow the platform
+  (SF Pro / Roboto)? The CSS said Inter; the owner chose Space Grotesk on 2026-11-04.
 
 ---
 Part of [Tasko](../README.md)

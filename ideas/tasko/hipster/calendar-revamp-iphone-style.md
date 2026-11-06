@@ -37,6 +37,10 @@ source in this conversation. That's why `evidence: none`. Drawn in
 | `hifi / calendar / day-selected` | Oct 14 tapped: one week strip, a grabber, the "Oct 14 ×" chip and that day's list | `hifi / home / day-selected` |
 | `hifi / calendar / fullscreen` | the month with task titles in each day | `hifi / home / pulse-fullscreen` |
 
+On 2026-11-04 the three frames replaced the frames they were built from and took
+their names (`hifi / home / default`, `/ day-selected`, `/ pulse-fullscreen`).
+Every other hifi screen got the new month panel.
+
 
 ### What changes, part by part
 
