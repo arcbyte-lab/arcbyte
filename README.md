@@ -28,6 +28,7 @@ means — then [SCHEMA.md](./SCHEMA.md). If you are an AI, read
 |---|---|---|
 | [Santian](./ideas/santian/README.md) | idea | A day planner with a circular Clockface and a Block list. Flutter, once it starts. |
 | [Tasko](./ideas/tasko/README.md) | idea | Not written yet. |
+| [Avalanche](./ideas/avalanche/README.md) | idea | An app to document event badges and work access cards and share them. 3D lanyard badge, like Vercel's. |
 
 ## Folder map
 
