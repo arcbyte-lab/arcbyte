@@ -7,7 +7,7 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
-updated: 2026-10-07
+updated: 2026-11-05
 inputs: ["../assets/blueprint.md", "../assets/pencil-new.pen", "../assets/home-wireframe-snapshot.png", "../assets/tasko-app-wireframe-snapshoot.png", "../decisions/0002-tabs-are-workspaces-then-projects.md", "../decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md", "../decisions/0004-checkbox-goes-to-review-only-when-needed.md"]
 tags: [artifact]
 ---
@@ -17,6 +17,9 @@ What should pen.dev be asked to draw so that `pencil-new.pen` gets a full
 lofi mockup of Tasko built from the [blueprint](../assets/blueprint.md)?
 
 ## Short answer
+- The frames these tickets drew, plus "Main Frame" and the grey-block wireframes,
+  were deleted from `pencil-new.pen` on 2026-11-05. PNGs of all of them are in
+  `assets/lofi-snapshoots/`.
 - There are 13 tickets. Paste **T0 first** in a pen.dev session, then T1 to T12 in
   order. Each ticket is one fenced block.
 - They follow the blueprint, the owner's two wireframes, and decisions
