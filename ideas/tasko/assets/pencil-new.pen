@@ -43684,6 +43684,204 @@
                       "fill": "#9CA3AF"
                     }
                   ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nUAuI",
+                  "name": "swipe up to back to home",
+                  "width": "fill_container",
+                  "height": "fit_content(66)",
+                  "fill": "#FFFFFF",
+                  "stroke": "#E5E7EB",
+                  "strokeAlignment": "inner",
+                  "gap": 5,
+                  "padding": [
+                    8,
+                    15,
+                    0,
+                    15
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "k4aiH",
+                      "x": 15,
+                      "y": 8,
+                      "name": "Workspaces",
+                      "enabled": false,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        10,
+                        10,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "bb01c",
+                          "name": "Group Label",
+                          "opacity": 0.5,
+                          "fill": "#6B7280",
+                          "content": "WORKSPACES",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        },
+                        {
+                          "type": "frame",
+                          "id": "XIVCG",
+                          "name": "Tabs",
+                          "height": 19,
+                          "gap": 19,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "FAyZc",
+                              "name": "Tab private",
+                              "height": 29,
+                              "stroke": "#2563EB",
+                              "strokeAlignment": "inner",
+                              "layout": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "p8VWi",
+                                  "name": "private",
+                                  "fill": "#6B7280",
+                                  "content": "private",
+                                  "fontFamily": "Space Grotesk",
+                                  "fontSize": 13,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "M8FcJ",
+                              "name": "Tab tech",
+                              "height": 29,
+                              "stroke": "#2563EB",
+                              "strokeAlignment": "inner",
+                              "layout": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "JsIdQ",
+                                  "name": "tech",
+                                  "fill": "#6B7280",
+                                  "content": "tech",
+                                  "fontFamily": "Space Grotesk",
+                                  "fontSize": 13,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Mop5w",
+                      "x": 123,
+                      "y": 8,
+                      "name": "Projects",
+                      "enabled": false,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "padding": [
+                        10,
+                        10,
+                        10,
+                        0
+                      ],
+                      "justifyContent": "end",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "O8i8G5",
+                          "name": "Group Label",
+                          "opacity": 0.5,
+                          "fill": "#6B7280",
+                          "content": "PROJECTS",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Nt6t8",
+                          "name": "Tabs",
+                          "height": 19,
+                          "gap": 19,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "KqcST",
+                              "name": "Tab tasko-app",
+                              "height": 29,
+                              "stroke": "#2563EB",
+                              "strokeAlignment": "inner",
+                              "layout": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "NyeBX",
+                                  "name": "tasko-app",
+                                  "fill": "#6B7280",
+                                  "content": "tasko-app",
+                                  "fontFamily": "Space Grotesk",
+                                  "fontSize": 13,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "vIlS4",
+                              "name": "Tab tasko-web",
+                              "height": 29,
+                              "stroke": "#2563EB",
+                              "strokeWidth": {
+                                "bottom": 2
+                              },
+                              "strokeAlignment": "inner",
+                              "layout": "vertical",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "GuJAt",
+                                  "name": "tasko-web",
+                                  "fill": "#333333",
+                                  "content": "tasko-web",
+                                  "fontFamily": "Space Grotesk",
+                                  "fontSize": 13,
+                                  "fontWeight": "500"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 2,
+                      "id": "MYY8O",
+                      "layoutPosition": "absolute",
+                      "x": 195,
+                      "y": 6,
+                      "name": "Grabber",
+                      "fill": "#D1D5DB",
+                      "width": 36,
+                      "height": 4
+                    }
+                  ]
                 }
               ]
             }
@@ -43746,7 +43944,9 @@
               "type": "ref",
               "ref": "cq1Vz",
               "name": "Tab Bar",
-              "width": "fill_container"
+              "width": "fill_container",
+              "x": 0,
+              "y": 285
             },
             {
               "type": "frame",

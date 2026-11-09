@@ -598,8 +598,9 @@ The button for an open mode or sheet is active: #2563EB fill, white icon.
 **My Workspace** stays dark. Its Tab Bar has "my tasks" (active) and "private",
 on black with a #27272A border and a #3B82F6 underline.
 Swiping down on the calendar in `hifi / home / default` moves to
-`hifi / My Workspace / default`, animated. The canvas cannot show motion, and the way
-back is not decided. H12's grabber is a separate gesture: dragging it up minimizes the strip.
+`hifi / My Workspace / default`, animated: the white section slides down and stays
+peeking at the bottom with a grabber (`swipe up to back to home`). Swiping it up returns
+home. The canvas cannot show motion. H12's grabber is a separate gesture: dragging it up minimizes the strip.
 
 | Frame | Shows | Built from |
 | --- | --- | --- |
