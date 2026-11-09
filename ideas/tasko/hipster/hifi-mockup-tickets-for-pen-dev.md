@@ -7,8 +7,8 @@ status: draft
 source: claude-opus-5.5 (claude-code)
 evidence: weak
 created: 2026-10-07
-updated: 2026-11-05
-inputs: ["../decisions/0014-activity-logs-for-task-project-division-and-user.md", "../hacker/activity-log-build-tickets.md", "../decisions/0012-division-leads-run-repeats-from-a-repeating-view.md", "../hacker/repeating-view-build-tickets.md", "../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
+updated: 2026-11-09
+inputs: ["../decisions/0007-server-rules-settled-in-the-api-review.md", "../decisions/0014-activity-logs-for-task-project-division-and-user.md", "../hacker/activity-log-build-tickets.md", "../decisions/0012-division-leads-run-repeats-from-a-repeating-view.md", "../hacker/repeating-view-build-tickets.md", "../decisions/0010-adding-a-project-member-needs-no-invitation.md", "../hacker/project-and-member-build-tickets.md", "../assets/modern-minimal.css", "./lofi-mockup-tickets-for-pen-dev.md", "../assets/pencil-new.pen", "../assets/lofi-snapshoots/"]
 tags: [artifact]
 ---
 
@@ -204,6 +204,7 @@ Group headers (OVERDUE, TODAY, TOMORROW, LATER): H0 group-label style. The
 "OVERDUE" label is #EF4444.
 "completed (3)" row: 13 medium #6B7280.
 FAB: 56x56 circle, #3B82F6, white plus, shadow-sm. Same position as lofi.
+(Replaced by the rails on 2026-11-09, see H13.)
 Empty state: a 40px #D1D5DB inbox icon above "no tasks here" (15 medium #333333)
 and "tap + to add one" (13 #6B7280).
 View-options sheet: chips per H1; the "asc | desc" toggle is a segmented control,
@@ -299,7 +300,7 @@ Ticket H6 — Snackbars, then check the whole row
 
 1. Duplicate "lofi / home / snackbar" and every "lofi / snackbar / ..." frame.
    Restyle per H0. In "hifi / home / snackbar" the FAB still sits 16px above the
-   snackbar.
+   snackbar. (Now the rails, see H13.)
 2. Check the whole hifi row:
    - Every lofi frame has exactly one hifi twin with the same name after "hifi /".
    - No colour outside the H0 list.
@@ -540,8 +541,8 @@ This replaces the H4 panel, menu and action-bar rules.
 - `team-scrolled` now shows the Sub tasks tab; `keyboard-on` shows Discussion.
 - Quick actions replace the more-vertical menu (`hifi / detail / Quick Actions`):
   45px #F7F9FA circles with #6B7280 icons, gap 8, right-aligned with the panel at y 64.
-  file-up = submit proof, calendar-clock = request extension, pencil = edit,
-  trash-2 = archive. Leads get history (activity) first. A private task shows
+  file-up = list of submitted proofs (changed 2026-11-09, see H13), calendar-clock =
+  request extension, pencil = edit, trash-2 = archive. Leads get history (activity) first. A private task shows
   only edit and archive.
 - `detail / menu` and `detail / activity-menu` no longer draw a dropdown; they show
   the member and the lead button rows.
@@ -572,6 +573,60 @@ variant C of four (stat row, filter chips, grouped, overdue first; the others we
 - A task can count twice (in progress and overdue), so the strip shows no total.
 - Open: how close is "due soon", and does the strip follow the project tab or
   always count all of my tasks?
+
+### H13 — Rails, edit mode, Media and Discussion (drawn 2026-11-09)
+
+The owner's calls in a pen.dev session. Media and Discussion follow the live web
+pages (tasko.scuto.co.id): real task names and codes, but previews and people are
+trimmed sample data. The 7 on the badge is sample data too. This replaces the FAB
+rules in H2 and H6.
+
+**Rails.** `hifi / Rails / Navigations` (Home, Media, Discussion) and
+`hifi / Rails / Actions` (new project, new task), built from `hifi / Rail Item`.
+
+- 50% white fill, 16px background blur, 1px #E5E7EB border, 64 tall as components.
+  On a screen they sit at x 19.5, y 840, in a 52-tall `rails` frame.
+- Active item: #E0F2FE pill, #1E3A8A icon and label. Home is active by default.
+- They replace the FAB on all 29 frames that had one. On `home / snackbar` they sit
+  at y 798, 16px above the snackbar.
+- Hidden when a sheet or the detail panel is open, and on `home / calendar-fullscreen`.
+- Discussion carries a 16px #EF4444 unread badge. `Rail Item` has it hidden for the rest.
+
+**Quick actions.** Archive is destructive on the component: #EF4444 fill, white icon.
+The button for an open mode or sheet is active: #2563EB fill, white icon.
+
+**My Workspace** stays dark. Its Tab Bar has "my tasks" (active) and "private",
+on black with a #27272A border and a #3B82F6 underline.
+
+| Frame | Shows | Built from |
+| --- | --- | --- |
+| `hifi / detail / edit` | pencil active; title, note, priority and assignee are `hifi / Field` boxes | `hifi / detail / team-top` |
+| `hifi / detail / edit / creator-reviewer` | as above, due date is a field too; no extension button | `hifi / detail / edit` |
+| `hifi / detail / edit / extension` | the request sheet over edit mode | `hifi / detail / edit`, sheet from `hifi / detail / extension` |
+| `hifi / detail / extension-pending` | grey "Oct 10 pending" pill by the due date; extension button disabled | `hifi / detail / team-top` |
+| `hifi / detail / archive-confirm` | "Archive this task?" sheet | `hifi / detail / team-top`, sheet from `hifi / repeating / delete-confirm` |
+| `hifi / detail / proof-list` | "Submitted proofs" sheet, newest first, top one tagged Latest | `hifi / detail / team-top` |
+| `hifi / media / default` | project and division folder tabs, one row per folder | new |
+| `hifi / media / project` | back header, one row per task folder | `hifi / media / default` |
+| `hifi / media / files` | All / Images / Documents chips, two-column file grid | `hifi / media / project` |
+| `hifi / discussion / default` | the chat list, opened from the Discussion rail; unread row is #F9FAFB with a bold title and a 6px #EF4444 dot | `hifi / media / default` |
+| `hifi / discussion / conversation` | one chat: bubbles, date pills, message field; rails hidden | `hifi / discussion / default` |
+| `hifi / discussion / conversation-images` | one message with five images, three per row | `hifi / discussion / conversation` |
+
+The Media and Discussion frames are in a row at y=5656; the detail frames end the
+row at y=1136. Also added to `hifi / detail / extension`: its button is active.
+
+- **In edit mode, status, repeat and proof stay plain.** Status moves through the
+  action bar, repeats belong to division leads (0012), proof goes through its own flow.
+- **Assignees cannot edit the due date.** They use the extension request. Creators
+  and reviewers edit it directly. [0007](../decisions/0007-server-rules-settled-in-the-api-review.md)
+  lets all three edit a task, so it needs this exception if the rule is kept.
+- **Tapping an image opens the phone's browser,** as the web does. No viewer is drawn.
+- Open: what does archive do? (`hacker/build-choices-to-confirm.md` asks too; the
+  sheet's wording is a placeholder.) The proof list needs every proof from the API,
+  which returns only the latest today. `hifi / My Workspace / default` has no rails.
+  The edit frames still show "Submit proof" in the action bar. Do edits save on
+  their own, or need a save button?
 
 ## What would change my mind
 - If the owner wants Tasko to look different from the lofi layout (not just
