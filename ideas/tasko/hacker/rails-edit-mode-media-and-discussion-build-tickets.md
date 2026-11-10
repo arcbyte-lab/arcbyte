@@ -68,11 +68,17 @@ Files live in Cloudflare R2, metadata in D1
 - Match the live web pages (tasko.scuto.co.id). Access follows project and
   division membership.
 
-**A6 — Discussion** ([#51](https://github.com/arcbyte-lab/Tasko-API/issues/51)). New tables for chats and messages.
-- `GET /discussions` (list with `unread` and the last message),
-  `GET /discussions/:id/messages`, `POST /discussions/:id/messages`,
-  `PATCH /discussions/:id/read`.
-- Access follows membership. The unread count feeds the rails badge.
+**A6 — Discussion** ([#51](https://github.com/arcbyte-lab/Tasko-API/issues/51), API [PR #55](https://github.com/arcbyte-lab/Tasko-API/pull/55)).
+A discussion is a task's comment thread, as in the web app, so there is no
+chat table; only a read mark is new.
+- `GET /discussions?q=`: one row per task with a comment, in the viewer's
+  tabs, newest first: `taskId`, `code`, `name`, `tab`, `last` message and
+  `unread`; plus `unread`, the number of chats with something unread, for the
+  rails badge (chats, not messages). `q` matches the task name or code.
+- `POST /discussions/:id/read`: opening a conversation marks it read.
+- The conversation is the existing `GET /tasks/:id/detail` (`comments`) and
+  sending is the existing `POST /tasks/:id/comments`. Messages with images
+  wait for A5.
 
 ### App (Tasko-Flutter)
 Each ticket is done when `flutter analyze` and `flutter test` pass.
@@ -126,7 +132,7 @@ of title and note with Save and Cancel.
 
 ## Open questions
 - None for A3 and A5; both settled in 0019. The R2 bucket and its binding are set up by the owner.
-- Does the badge count chats or messages? The drawing shows 7 as sample data.
+- None for the badge: it counts chats with something unread (A6).
 
 ---
 Part of [Tasko](../README.md)
