@@ -115,7 +115,7 @@ of title and note with Save and Cancel.
   ("swipe up to back to home"). Swiping up returns home.
 - My Workspace stays dark: Tab Bar with "my tasks" (active) and
   "private", on black with a #27272A border and a #3B82F6 underline.
-  The Actions rail only (New project, New task), above the grabber strip, so a task can still be created from "my tasks"; the drawing has none.
+  The Actions rail only (New project, New task), above the grabber strip, so a task can still be created from "my tasks". It has a dark look there (a white 10% fill, a #27272A border, #9CA3AF icons and labels); the pen has the same since 2026-11-10.
 - Tests: the gesture switches both ways. The animation is not tested.
 
 ### Not in these tickets

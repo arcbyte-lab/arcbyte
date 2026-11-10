@@ -636,7 +636,7 @@ row at y=1136. Also added to `hifi / detail / extension`: its button is active.
 - **Tapping an image opens the phone's browser,** as the web does. No viewer is drawn.
 - Open: what does archive do? (`hacker/build-choices-to-confirm.md` asks too; the
   sheet's wording is a placeholder.) The proof list needs every proof from the API,
-  which returns only the latest today. `hifi / My Workspace / default` has no rails; the app shows the Actions rail there (2026-11-10), so the pen file needs it too.
+  which returns only the latest today. `hifi / My Workspace / default` has only the Actions rail, in a dark look (2026-11-10, 0020).
   The edit frames still show "Submit proof" in the action bar. Do edits save on
   their own, or need a save button?
 
