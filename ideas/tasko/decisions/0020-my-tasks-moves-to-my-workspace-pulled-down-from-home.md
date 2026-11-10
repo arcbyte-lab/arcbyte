@@ -27,8 +27,9 @@ tasks" shows is unchanged, but where it lives is not.
    bottom; a tap or a swipe up on it returns to home, on the tab it left.
 3. **My Workspace has the Actions rail** (New project, New task), not the
    Navigations rail, so a task can still be created from "my tasks" with
-   0017's tab picker. The drawing `hifi / My Workspace / default` has no
-   rails; the pen file needs the Actions rail added.
+   0017's tab picker. `hifi / My Workspace / default` has it since
+   2026-11-10, in a dark look (a white 10% fill, a #27272A border, icons
+   and labels #9CA3AF), because the light rail is unreadable on black.
 4. The rest of 0017 stands: the same tasks, the same dots, rows that name
    their tab.
 
@@ -38,8 +39,9 @@ The hifi frames drew home without "my tasks" and My Workspace with it, which
 contradicted 0017's "first tab, opened on start". The owner chose, on
 2026-11-10, to follow the drawings and move it. Item 3 was the owner's call
 the same day, after the app lost its only way to create from "my tasks".
-`private` is only on My Workspace (the owner, 2026-11-10); `hifi / home /
-default` still draws it on home, so the pen file needs it removed there.
+`private` is only on My Workspace (the owner, 2026-11-10); the pen file's
+`hifi / Tab Bar` lost its `private` tab the same day, so every home frame
+follows.
 Built in app PR #56. Stays `draft` until the owner promotes it.
 
 ---
