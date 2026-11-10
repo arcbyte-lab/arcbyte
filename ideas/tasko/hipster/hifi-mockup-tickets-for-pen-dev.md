@@ -134,9 +134,10 @@ Ticket H1 — Restyle the shared components first
 Duplicate each lofi component and restyle it with H0. Make each one a new component
 named "hifi / <name>". Later tickets use these, not the lofi ones.
 
-1. Top bar (as drawn 2026-11-10: "HOME" in 15, white on black; the icons sit in one
-   outlined pill, 124×36: sliders, bell, avatar. The text below is the older
-   "welcome" version): "welcome, <user_name>" in 15 medium #333333. Icons #6B7280. The bell's
+1. Top bar (as drawn 2026-11-10: 61 tall, black, "HOME" in 15 medium white with letter
+   spacing -1; Log (git-commit-vertical), bell and avatar are three 36×28 #262626 pills
+   inside one 1px #262626 outlined pill, gap 4, padding 4; the avatar is a 20px #2563EB
+   circle. The text below is the older "welcome" version): "welcome, <user_name>" in 15 medium #333333. Icons #6B7280. The bell's
    dot is 6px #EF4444 with a 1.5px white ring. The account square becomes a 24px
    avatar circle (the "me" look from H0). No bottom line.
 2. Task row (owner, 2026-11-04, same as lofi): no checkbox. Line 1: title 15
