@@ -584,27 +584,6 @@
               "children": [
                 {
                   "type": "frame",
-                  "id": "MCo0f",
-                  "name": "Tab private",
-                  "height": 29,
-                  "stroke": "#2563EB",
-                  "strokeAlignment": "inner",
-                  "layout": "vertical",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "ReEGK",
-                      "name": "private",
-                      "fill": "#6B7280",
-                      "content": "private",
-                      "fontFamily": "Space Grotesk",
-                      "fontSize": 13,
-                      "fontWeight": "500"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
                   "id": "sHYYU",
                   "name": "Tab tech",
                   "height": 29,
@@ -1528,14 +1507,6 @@
               "name": "Tab Bar",
               "width": "fill_container",
               "descendants": {
-                "MCo0f": {
-                  "strokeWidth": {
-                    "bottom": 2
-                  }
-                },
-                "ReEGK": {
-                  "fill": "#333333"
-                },
                 "Dbdmb": {
                   "strokeWidth": 0
                 },
@@ -6245,14 +6216,6 @@
               "name": "Tab Bar",
               "width": "fill_container",
               "descendants": {
-                "MCo0f": {
-                  "strokeWidth": {
-                    "bottom": 2
-                  }
-                },
-                "ReEGK": {
-                  "fill": "#333333"
-                },
                 "Dbdmb": {
                   "strokeWidth": 0
                 },
@@ -26124,9 +26087,6 @@
               "name": "Tab Bar",
               "width": "fill_container",
               "descendants": {
-                "ReEGK": {
-                  "fontFamily": "Space Grotesk"
-                },
                 "JZNcC": {
                   "fontFamily": "Space Grotesk"
                 },
@@ -43180,27 +43140,6 @@
                           "children": [
                             {
                               "type": "frame",
-                              "id": "FAyZc",
-                              "name": "Tab private",
-                              "height": 29,
-                              "stroke": "#2563EB",
-                              "strokeAlignment": "inner",
-                              "layout": "vertical",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "p8VWi",
-                                  "name": "private",
-                                  "fill": "#6B7280",
-                                  "content": "private",
-                                  "fontFamily": "Space Grotesk",
-                                  "fontSize": 13,
-                                  "fontWeight": "500"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "frame",
                               "id": "M8FcJ",
                               "name": "Tab tech",
                               "height": 29,
@@ -43227,7 +43166,7 @@
                     {
                       "type": "frame",
                       "id": "Mop5w",
-                      "x": 123,
+                      "x": 112,
                       "y": 8,
                       "name": "Projects",
                       "enabled": false,
@@ -43326,6 +43265,44 @@
               ]
             }
           ]
+        },
+        {
+          "id": "aiyVB",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock (actions only)",
+          "x": 0,
+          "y": 774,
+          "descendants": {
+            "j95Gc": {
+              "justifyContent": "end"
+            },
+            "L8HqW": {
+              "enabled": false
+            },
+            "RCAHg": {
+              "fill": "#FFFFFF1A",
+              "stroke": "#27272A"
+            },
+            "RCAHg/e5YiIq/E7RRS": {
+              "fill": "#9CA3AF"
+            },
+            "RCAHg/e5YiIq/Lr1f1": {
+              "fill": "#9CA3AF"
+            },
+            "RCAHg/e5YiIq/kWuTl": {
+              "fill": "#9CA3AF"
+            },
+            "RCAHg/EtH0r/E7RRS": {
+              "fill": "#9CA3AF"
+            },
+            "RCAHg/EtH0r/Lr1f1": {
+              "fill": "#9CA3AF"
+            },
+            "RCAHg/EtH0r/kWuTl": {
+              "fill": "#9CA3AF"
+            }
+          }
         }
       ]
     },
