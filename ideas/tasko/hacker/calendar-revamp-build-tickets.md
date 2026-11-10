@@ -21,7 +21,7 @@ What are the build tickets for the calendar revamp in
   already holds every tab's tasks (`tasksByTab`), so the counts, the dots
   and the full-screen titles all come from tasks the app already has.
 - B16 changes the rules and the Cubit: a tap always selects, "Today"
-  selects today, the week strip moves by week. B17 redraws `PulsePanel`.
+  selects today, the week strip moves by week. B17 redraws `CalendarPanel`.
 - The drawing is the spec: `hifi / calendar / month`, `/ day-selected`,
   `/ fullscreen` in `pencil-new.pen`, PNGs in `assets/hi-fi snapshoots/`.
 
@@ -34,7 +34,7 @@ the issues and their PRs: app
 
 Changes from the tickets, made while building B17
 ([#33](https://github.com/arcbyte-lab/Tasko-Flutter/pull/33)):
-- `PulsePanel` takes `dueOn`, open tasks keyed by date (a new
+- `CalendarPanel` takes `dueOn`, open tasks keyed by date (a new
   `dueByDate` in `task_rules.dart`), not `dueByDay` for one month. The
   week strip can cross a month end (Oct 26 – Nov 1) and needs dots for
   both months. Overdue is now "a day before today with open tasks", so
@@ -59,7 +59,7 @@ Changed after B17, on the owner's ask
 ### Rules
 | Rule | Value |
 |---|---|
-| Dots | 0 open tasks = none, 1 = 1 dot, 2–3 = 2, 4+ = 3. The same steps as `PulsePanel.cellColor` today |
+| Dots | 0 open tasks = none, 1 = 1 dot, 2–3 = 2, 4+ = 3. The same steps as `CalendarPanel.cellColor` today |
 | Dot colour | #EF4444 on a day in `overdueDays`, else #3B82F6 |
 | Tap a day | Selects it, always. Never clears. Collapses the full screen and the month to that day's week |
 | Second tap on the selected day | Nothing happens. Only the chip's "×" (`clearDay`) clears |
@@ -109,7 +109,7 @@ Same shape as now: a pure `*View`, a thin `*Screen`, Cubits behind the
   of Nov 2, `month` becomes November, `selectedDay` and `listed`
   unchanged), and `clearDay` reopening the month.
 
-**B17 — Redraw `PulsePanel`**
+**B17 — Redraw `CalendarPanel`**
 Match the three `hifi / calendar / …` frames. The numbers are in the
 [revamp note](../hipster/calendar-revamp-iphone-style.md).
 - Header: "October" (22 w600 `foreground`) and "2026" (22 regular
@@ -135,12 +135,12 @@ Match the three `hifi / calendar / …` frames. The numbers are in the
   `destructive` text on `destructive` at 12%. Tapping a pill or a cell
   calls `onDayTap(date)`.
 - `HomeView` and `HomePanel` wire the new callbacks: `goToToday`,
-  `changeWeek`, `openMonth`. `PulsePanel` takes `dueByDay` in place of
+  `changeWeek`, `openMonth`. `CalendarPanel` takes `dueByDay` in place of
   `counts`, since the count is the list's length.
 - Accessibility: each day keeps `Semantics(button, selected, label)`. The
   label also says the count, e.g. "Day 14, 5 open". The grabber and the
   title get labels too ("Show month").
-- Delete `PulsePanel.cellColor`, `AppColors.heatmapEmpty` and
+- Delete `CalendarPanel.cellColor`, `AppColors.heatmapEmpty` and
   `AppColors.heatmapBusiest`. Nothing uses them after this.
 - Update the widget tests that find the old chevrons or the "MONTHLY"
   label.

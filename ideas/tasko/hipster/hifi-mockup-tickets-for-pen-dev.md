@@ -42,7 +42,7 @@ converted here. They match Tailwind's default grey and blue scales.
 | background, card, popover | #FFFFFF | screens, sheets, menus |
 | foreground | #333333 | main text |
 | muted-foreground | #6B7280 | secondary text, meta, icons at rest |
-| muted | #F9FAFB | pulse panel, unread notification rows, summary box |
+| muted | #F9FAFB | calendar, unread notification rows, summary box |
 | secondary | #F3F4F6 | chips, disabled buttons, segmented-control track |
 | secondary-foreground | #4B5563 | text on secondary |
 | accent | #E0F2FE | selected rows, hover, light heatmap |
@@ -90,7 +90,7 @@ Theme (light, from modern-minimal.css):
   checked checkboxes, the FAB.
 - Secondary #F3F4F6 with #4B5563 text: chips, outlined-looking buttons, disabled buttons.
 - Accent #E0F2FE with #1E3A8A text: the selected row in a list or menu.
-- Muted #F9FAFB: background of the pulse panel. The list toolbar is white, like
+- Muted #F9FAFB: background of the calendar. The list toolbar is white, like
   the list.
 - Destructive #EF4444: unread dots, overdue dates, "urgent" priority, "decline".
 - Extra greys: #D1D5DB for empty checkboxes, radios and bars; #9CA3AF for
@@ -191,16 +191,18 @@ reads as clearly "the same thing" as its lofi twin.
 Ticket H2 — Home frames
 
 Duplicate every "lofi / home / ..." frame (default, day-selected, private, empty,
-pulse-fullscreen, search, view-options, account-menu, snackbar) and restyle with H0
+calendar-fullscreen, search, view-options, account-menu, snackbar) and restyle with H0
 and the H1 components.
 
-Pulse panel: the iPhone-style calendar from the
+Calendar (it was "Pulse panel" until 2026-11-10): the iPhone-style calendar from the
 [calendar revamp](./calendar-revamp-iphone-style.md) and
-[0016](../decisions/0016-calendar-follows-the-iphone-calendar.md): day numbers
-with dots, "October 2026" with a "Today" button, the week strip when a day is
-selected, task titles in full screen. The heatmap squares are gone. Since
-2026-11-04 every hifi screen with the panel uses this one (the drawn panel
-shows tasko-web's dots on every screen).
+[0016](../decisions/0016-calendar-follows-the-iphone-calendar.md): "October 2026"
+with a "Today" button, the week strip when a day is selected, task titles in
+full screen. The days are discs with rings, not dots
+([0021](../decisions/0021-calendar-days-are-rings-not-dots.md)); the full spec is
+the [calendar spec](./calendar-spec.md). Since 2026-11-04 every hifi screen with
+the calendar uses this one (the drawn calendar shows tasko-web's tasks on every
+screen).
 
 List toolbar: white background (same as the list), "9 open" in 12 #6B7280.
 Group headers (OVERDUE, TODAY, TOMORROW, LATER): H0 group-label style. The
@@ -553,8 +555,8 @@ This replaces the H4 panel, menu and action-bar rules.
 
 ### H12 — Workload strip on home (drawn 2026-11-05)
 
-Every screen with the Pulse calendar has a black strip (`hifi / Stats`, 80 tall, directly under the 61-tall top bar)
-between the top bar and the calendar, except `pulse-fullscreen`. The owner picked
+Every screen with the calendar has a black strip (`hifi / Stats`, 80 tall, directly under the 61-tall top bar)
+between the top bar and the calendar, except `calendar-fullscreen`. The owner picked
 variant C of four (stat row, filter chips, grouped, overdue first; the others were deleted).
 
 - Full (`hifi / Stats`): MY WORK (in progress, to review) and DEADLINES (due soon,
@@ -563,9 +565,12 @@ variant C of four (stat row, filter chips, grouped, overdue first; the others we
   then a 6px dot and a 12 #9CA3AF label.
 - The strip does not minimize (owner, 2026-11-10); the minimized frame and
   component are removed.
-- Calendar (`hifi / Pulse Panel`): radius 16 on the top corners, a 36×4 #D1D5DB
-  grabber centred at the top, week rows 44 tall. The day-selected, my-tasks and fullscreen calendars keep their own
-  content with the same radius and grabber.
+- Calendar (`hifi / Calendar`): the white section under it has radius 16 on its
+  top corners, the 36×4 #D1D5DB grabber stays under the month, week rows are 44
+  tall and the month is always 6 rows. Days are rings
+  ([0021](../decisions/0021-calendar-days-are-rings-not-dots.md)). The full
+  screen has its own rounded top and a decorative grabber at the top. See the
+  [calendar spec](./calendar-spec.md).
 - In progress = tasks assigned to me that I started. To review = tasks I made and
   assigned to someone else, now waiting on my review.
 - A task can count twice (in progress and overdue), so the strip shows no total.

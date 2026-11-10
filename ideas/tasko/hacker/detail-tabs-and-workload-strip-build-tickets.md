@@ -49,7 +49,7 @@ API [#44](https://github.com/arcbyte-lab/Tasko-API/issues/44) (A1), app
 | Due soon | open task due within the next 48 hours, not yet overdue |
 | Overdue | `isOverdue(task, now)` |
 | Totals | None: a task may count twice |
-| Hidden | On `pulse-fullscreen`, as in the mockup |
+| Hidden | On `calendar-fullscreen`, as in the mockup |
 
 ### App (Tasko-Flutter)
 Each ticket is done when `flutter analyze` and `flutter test` pass.

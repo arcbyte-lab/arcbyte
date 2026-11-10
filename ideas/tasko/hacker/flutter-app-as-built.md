@@ -64,7 +64,7 @@ tasks/*_cubit.dart         HomeCubit, CreateTaskCubit, TaskDetailCubit,
                            MembersCubit
 tasks/screens/             home, create sheet, task detail sheet,
                            new project sheet, members screen
-tasks/widgets/             pulse panel, tab strip, tab pages, task row,
+tasks/widgets/             calendar panel, tab strip, tab pages, task row,
                            pickers, reason sheets, view-options sheet
 notifications/             NotificationsCubit + screen
 ```

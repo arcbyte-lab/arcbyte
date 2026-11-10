@@ -87,16 +87,16 @@ Sample data: the user is in workspaces "private" and "tech", and in projects
 Oct 7 2026. October 2026 starts on a Thursday.
 ```
 
-### T1 — Home: top bar and pulse panel
+### T1 — Home: top bar and calendar
 
 ```text
-Ticket T1 — Home: top bar and pulse panel
+Ticket T1 — Home: top bar and calendar
 
 Frame: "lofi / home / default". Duplicate "Main Frame", then change it as below.
 
 Top bar: keep it as it is.
 
-Pulse panel (below the top bar, about 230px tall):
+Calendar (below the top bar, about 230px tall):
 - Top left: "monthly" (12px) above "October" (21px). A small chevron-left and
   chevron-right on either side of "October" show that you can swipe to other months.
 - Top right: a maximize-2 icon. It opens the panel full screen (see T3).
@@ -117,7 +117,7 @@ Done when: the grid reads as October 2026 at a glance and today is easy to find.
 ```text
 Ticket T2 — Home: tabs, list toolbar and task rows
 
-Frame: continue in "lofi / home / default", below the pulse panel.
+Frame: continue in "lofi / home / default", below the calendar.
 
 Tab bar: copy it from "Main Frame". Group labels "workspaces" (private, tech) and
 "projects" (tasko-app, tasko-web). The active tab is "tasko-web": black text with a
@@ -169,7 +169,7 @@ Duplicate "lofi / home / default" four times. In each copy, change only what tha
 3. "lofi / home / empty": the "tech" tab is active and has no tasks. Every calendar
    cell is 0. In the middle of the list area: "no tasks here", and under it in
    secondary text "tap + to add one".
-4. "lofi / home / pulse-fullscreen": the pulse panel fills the screen under the top bar.
+4. "lofi / home / calendar-fullscreen": the calendar fills the screen under the top bar.
    The tabs, list and FAB are hidden. Cells are bigger (about 48x48) and show the day
    number and the open count, e.g. "14" and "3". The top-right icon becomes minimize-2.
 ```
