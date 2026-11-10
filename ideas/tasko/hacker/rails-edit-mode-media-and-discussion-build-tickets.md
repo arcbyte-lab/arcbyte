@@ -13,107 +13,96 @@ tags: [artifact]
 ---
 
 ## Question
-What are the build tickets for the rails, edit mode, Media and Discussion
-([H13](../hipster/hifi-mockup-tickets-for-pen-dev.md))?
+What is left to build for the rails, edit mode, Media and Discussion
+([H13](../hipster/hifi-mockup-tickets-for-pen-dev.md)), and what is already
+built?
 
 ## Short answer
-- 3 API tickets, **A19** to **A21**, and 5 app tickets, **B22** to **B26**.
-- The API side is the risk. Today it has no archive state, returns only the
-  latest proof, and has no media or discussion routes. Those routes were
-  not checked against the web app's server yet (see Open questions).
-- Order: B22 first (nothing else depends on it, and it removes the FAB).
-  A19 and A20 before B23. A21 before B24 and B25. B26 is independent.
+- Already done: the rails (app [#40](https://github.com/arcbyte-lab/Tasko-Flutter/issues/40)),
+  the submitted proofs sheet (app [#47](https://github.com/arcbyte-lab/Tasko-Flutter/issues/47))
+  and the API's `proofs` list (API [#46](https://github.com/arcbyte-lab/Tasko-API/issues/46), A2).
+- Open: edit mode, app [#49](https://github.com/arcbyte-lab/Tasko-Flutter/issues/49) (B23).
+- New: 4 API tickets, **A3** to **A6**, and 4 app tickets, **B24** to **B27**.
+- The API side is the risk. Read on 2026-11-10: Tasko-API has no media or
+  discussion tables or routes (`comments` is per task), and `tasks.status`
+  has no `archived` value (only `projects.status` does).
+- Order: A4 before B23's due-date field and B24. A3 before B24. A5 before
+  B25. A6 before B26. B27 is independent.
 
 ## Detail
 Drawings: H13 in `pencil-new.pen`. These tickets build on
-[B20 and B21](./detail-tabs-and-workload-strip-build-tickets.md): B23 adds
-to the quick actions B20 creates.
+[B20 and B21](./detail-tabs-and-workload-strip-build-tickets.md).
 
 ### Rules
 | Rule | Value |
 |---|---|
-| Rails | Navigations (Home, Media, Discussion) and Actions (new project, new task) in a `Rails Dock` at the bottom. They replace the FAB. Home is active by default |
-| Hidden | Under a sheet or the detail panel, on the full-screen calendar, and on the conversation screen |
-| Unread badge | On Discussion: the count of unread chats |
-| Edit mode | Pencil quick action. Title, note, priority, assignee are fields. Due date too, but only for creators and reviewers. Status, repeat and proof stay plain. Save and Cancel replace the action bar ([0018](../decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) item 1) |
+| Edit mode | Pencil quick action ([#49](https://github.com/arcbyte-lab/Tasko-Flutter/issues/49)). Title, note, priority, assignee are fields; the due date too, but only for creators and reviewers. Status, repeat and proof stay plain. Save and Cancel replace the action bar ([0018](../decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) item 1) |
 | Due date | The API rejects a due-date change from a user who is only the assignee (0018 item 2) |
-| Proof list | The file-up quick action opens "Submitted proofs", newest first, top one tagged Latest |
 | Extension pending | Grey "Oct 10 pending" pill by the due date; extension button disabled |
+| Archive | Creator only. Confirm sheet "Archive this task?". Archived tasks drop out of every tab |
 | Images | Tapping one opens the phone's browser. No viewer |
 
 ### API (Tasko-API)
-**A19 — Archive a task.** 0018 item 4 leaves the meaning to the backend.
-Pick one: a task `archived` status, or reuse `cancelled_date`. Write it as
-a decision, then add `POST /tasks/:id/archive` (creator only, which
-`canArchive` already says) and write an activity log entry. Archived tasks
-drop out of every tab. Until this is decided, B23 keeps the placeholder
-sheet wording.
+**A3 — Archive a task** ([#48](https://github.com/arcbyte-lab/Tasko-API/issues/48)). 0018 item 4 leaves the meaning to the backend.
+Tasks have `waiting`, `in_progress`, `review`, `done`; only projects have
+`archived`. Pick one: add `archived` to the task status check (a
+migration), or reuse `cancelled_date`. Write the choice as a decision,
+then add `POST /tasks/:id/archive` (creator only, as `canArchive` says),
+log it, and leave archived tasks out of every tab and the workload.
 
-**A20 — Edit rules and the proof list.**
-- `PATCH /tasks/:id`: reject a `dueDate` change when the caller is only the
-  assignee, with a message the app shows as a toast.
-- Task detail returns `proofs` (every proof, newest first) beside `proof`
-  (the latest). Keep `proof` so the current app works.
-- Task detail returns `pendingExtension` (the requested date, or null) for
-  the grey pill.
-- Tests: the rejection, the order of `proofs`, the pending date.
+**A4 — Due-date rule and the pending extension** ([#49](https://github.com/arcbyte-lab/Tasko-API/issues/49)).
+- `PATCH /tasks/:id` today lets the assignee change any field but the
+  assignee. Reject a `dueDate` change when the caller is neither the
+  creator nor a reviewer, with a message the app shows as a toast.
+  The app sends the date with every edit, so only a *change* is refused.
+- Task detail returns `pendingExtension`: the requested date of the task's
+  pending row in `task_deadline_requests`, or null.
+- Tests: the refusal, an unchanged date passing, the pending date.
 
-**A21 — Media and discussion reads.** Match the live web pages
-(tasko.scuto.co.id).
-- `GET /media/folders` (project and division tabs), `GET /media/folders/:id`
-  (task folders), `GET /media/tasks/:id/files?kind=all|images|documents`.
-- `GET /discussions` (chat list with `unread` and the last message),
+**A5 — Media** ([#50](https://github.com/arcbyte-lab/Tasko-API/issues/50)). New tables (the old `attachments` table was never copied)
+and a place to keep files, which is a decision before the ticket starts.
+- `GET /media/folders` (project and division tabs),
+  `GET /media/folders/:id` (task folders),
+  `GET /media/tasks/:id/files?kind=all|images|documents`.
+- Match the live web pages (tasko.scuto.co.id). Access follows project and
+  division membership.
+
+**A6 — Discussion** ([#51](https://github.com/arcbyte-lab/Tasko-API/issues/51)). New tables for chats and messages.
+- `GET /discussions` (list with `unread` and the last message),
   `GET /discussions/:id/messages`, `POST /discussions/:id/messages`,
   `PATCH /discussions/:id/read`.
-- Tests: access follows project and division membership.
+- Access follows membership. The unread count feeds the rails badge.
 
 ### App (Tasko-Flutter)
 Each ticket is done when `flutter analyze` and `flutter test` pass.
 
-**B22 — Rails.**
-- `widgets/rails.dart`: `RailItem` (44 tall pill, 20px icon over an 8px
-  uppercase label; 76 wide in Navigations, 70 in Actions) and `Rails`
-  with the two groups in the dock (426×100 at the bottom, 16px blur, 50%
-  white, 1px #E5E7EB border). Active: #E0F2FE pill, #1E3A8A.
-- Remove the FAB from `HomeView`. New task opens the create sheet and New
-  project the new-project sheet, as the FAB and "+ new project" do now.
-- Remove "+ new project" from the tab strip, and show the PROJECTS group
-  only when the user has a project tab (0018 item 7). This supersedes 0011.
-- Hide on a sheet, the detail panel, the full-screen calendar and the
-  conversation. On the snackbar frame, sit 16px above the toast.
-- Discussion badge: 16px #EF4444, white count; hidden at zero.
-- Tests: each item navigates; hidden in each case above; badge at 0 and 7.
+**B23 — Edit mode** is [#49](https://github.com/arcbyte-lab/Tasko-Flutter/issues/49).
+Needs A4 for the due-date refusal. Replaces today's save-on-close drafts
+of title and note with Save and Cancel.
 
-**B23 — Edit mode, proof list, archive confirm, pending pill.** Needs A19
-and A20.
-- `task_detail_sheet.dart`: the pencil in `_QuickActions` toggles edit
-  mode. Fields are `Field` boxes for title, note, priority, assignee, and
-  due date unless the viewer is only the assignee. A creator or reviewer
-  gets no extension button in edit mode.
-- Action bar in edit mode: Save (one `PATCH`, one log entry) and Cancel
-  (drop the draft). This replaces today's save-on-close drafts of title
-  and note.
-- The file-up circle opens the "Submitted proofs" sheet from `proofs`.
-- Archive opens the "Archive this task?" confirm sheet, then calls A19.
-- Grey pending pill and disabled extension button from `pendingExtension`.
-- Tests: Save sends one update; Cancel sends none; an assignee has no
-  due-date field; the proof list order; archive removes the task.
+**B24 — Archive confirm and the pending pill** ([#51](https://github.com/arcbyte-lab/Tasko-Flutter/issues/51)). Needs A3 and A4.
+- Archive opens the "Archive this task?" sheet, then calls A3 and closes
+  the panel. The task leaves the list.
+- Grey pending pill by the due date and a disabled extension button from
+  `pendingExtension`.
+- Tests: archive removes the task; the pill and the disabled button.
 
-**B24 — Media.** Needs A21.
+**B25 — Media** ([#52](https://github.com/arcbyte-lab/Tasko-Flutter/issues/52)). Needs A5.
 - `media/` feature: `MediaCubit` and three screens: `default` (project and
   division folder tabs), `project` (back header, one row per task folder)
   and `files` (All / Images / Documents chips, two-column grid).
 - Tapping an image or document opens it with `url_launcher`.
 - Tests: tabs, chips filter, empty folder.
 
-**B25 — Discussion.** Needs A21.
-- `discussion/` feature: the list (unread row #F9FAFB, bold title, 6px
-  red dot), the conversation (bubbles, date pills, message field, rails
+**B26 — Discussion** ([#53](https://github.com/arcbyte-lab/Tasko-Flutter/issues/53)). Needs A6.
+- `discussion/` feature: the list (unread row #F9FAFB, bold title, 6px red
+  dot), the conversation (bubbles, date pills, message field, rails
   hidden), and a message with several images in rows of three.
-- Opening a chat calls `read`, then refreshes the rails badge.
-- Tests: unread clears on open; sending appends the message; image rows.
+- Opening a chat calls `read`, then refreshes the rails badge. The badge
+  counts unread chats.
+- Tests: unread clears on open; sending appends; image rows.
 
-**B26 — My Workspace pull.**
+**B27 — My Workspace pull** ([#54](https://github.com/arcbyte-lab/Tasko-Flutter/issues/54)).
 - Swiping down on the calendar in home moves to My Workspace: the white
   section slides down and stays peeking at the bottom with a grabber
   ("swipe up to back to home"). Swiping up returns home.
@@ -124,15 +113,17 @@ and A20.
 
 ### Not in these tickets
 - Viewing images inside the app. Not drawn.
+- Checking that #40 also removed "+ new project" from the tab strip and
+  shows the PROJECTS group only when needed (0018 item 7). Check the
+  merged code before calling the rails done.
 
 ## What would change my mind
-- If A21's routes already exist in the web app's server, A21 shrinks to
-  "let the mobile token use them".
+- If the web app's server already has media and chat tables, A5 and A6
+  shrink to "expose them to the mobile token". Tasko-API does not have them.
 
 ## Open questions
-- What does archive do? A19 decides.
-- Do the web's media and discussion endpoints exist in Tasko-API, or only
-  in the web app's own server? A21 assumes they do not.
+- What does archive do? A3 decides.
+- Where do uploaded files live (A5)? Nothing in Tasko-API stores files yet.
 - Does the badge count chats or messages? The drawing shows 7 as sample data.
 
 ---
