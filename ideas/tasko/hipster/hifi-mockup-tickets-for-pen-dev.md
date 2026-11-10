@@ -583,7 +583,7 @@ rules in H2 and H6.
 `hifi / Rails / Actions` (new project, new task), built from `hifi / Rail Item`.
 
 - 50% white fill, 16px background blur, 1px #E5E7EB border, 64 tall as components.
-  On a screen they sit in a 426×100 `Rails Dock` frame at y 830, as a 406×52 `rails` frame
+  On a screen they sit in a 426×100 `Rails Dock` frame at y 830 (16px background blur, 50% white fill), as a 406×52 `rails` frame
   inset 10 (so y 840): Navigations 245 wide on the left, Actions 152 wide on the right.
 - Each item is a 44-tall pill, 76 wide in Navigations and 70 in Actions: a 20px icon over an 8px uppercase label (HOME, MEDIA,
   DISCUSSION, NEW PROJECT, NEW TASK). The layers are still named Workspaces, Messages
