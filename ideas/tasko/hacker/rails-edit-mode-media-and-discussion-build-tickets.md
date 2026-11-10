@@ -45,10 +45,10 @@ Drawings: H13 in `pencil-new.pen`. These tickets build on
 ### API (Tasko-API)
 **A3 — Archive a task** ([#48](https://github.com/arcbyte-lab/Tasko-API/issues/48)). 0018 item 4 leaves the meaning to the backend.
 Tasks have `waiting`, `in_progress`, `review`, `done`; only projects have
-`archived`. Pick one: add `archived` to the task status check (a
-migration), or reuse `cancelled_date`. Write the choice as a decision,
-then add `POST /tasks/:id/archive` (creator only, as `canArchive` says),
-log it, and leave archived tasks out of every tab and the workload.
+`archived`. [0019](../decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md)
+reuses `cancelled_date`: no migration. Add `POST /tasks/:id/archive`
+(creator only, as `canArchive` says) that sets it, log it, and leave
+archived tasks out of every tab and the workload.
 
 **A4 — Due-date rule and the pending extension** ([#49](https://github.com/arcbyte-lab/Tasko-API/issues/49)).
 - `PATCH /tasks/:id` today lets the assignee change any field but the
@@ -59,8 +59,9 @@ log it, and leave archived tasks out of every tab and the workload.
   pending row in `task_deadline_requests`, or null.
 - Tests: the refusal, an unchanged date passing, the pending date.
 
-**A5 — Media** ([#50](https://github.com/arcbyte-lab/Tasko-API/issues/50)). New tables (the old `attachments` table was never copied)
-and a place to keep files, which is a decision before the ticket starts.
+**A5 — Media** ([#50](https://github.com/arcbyte-lab/Tasko-API/issues/50)). New tables (the old `attachments` table was never copied).
+Files live in Cloudflare R2, metadata in D1
+([0019](../decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md)).
 - `GET /media/folders` (project and division tabs),
   `GET /media/folders/:id` (task folders),
   `GET /media/tasks/:id/files?kind=all|images|documents`.
@@ -124,8 +125,7 @@ of title and note with Save and Cancel.
   shrink to "expose them to the mobile token". Tasko-API does not have them.
 
 ## Open questions
-- What does archive do? A3 decides.
-- Where do uploaded files live (A5)? Nothing in Tasko-API stores files yet.
+- None for A3 and A5; both settled in 0019. The R2 bucket and its binding are set up by the owner.
 - Does the badge count chats or messages? The drawing shows 7 as sample data.
 
 ---
