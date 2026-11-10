@@ -142,8 +142,12 @@ named "hifi / <name>". Later tickets use these, not the lofi ones.
    avatar circle (the "me" look from H0). No bottom line.
 2. Task row (owner, 2026-11-04, same as lofi): no checkbox. Line 1: title 15
    regular #333333, due date 12 #6B7280 on the right ("Overdue Oct 3" in #EF4444).
-   Line 2: the task ID (12 #6B7280, e.g. "TW-0042") and the priority badge on
-   the left, the status badge on the right (ID added by the owner, 2026-11-04). Badges: 12
+   Line 2: the task ID and where the task lives (12 #6B7280, "TW-0042 · tasko-web": the
+   code, a dot with a space each side, then the division or project, or "private") and the
+   priority badge on the left, the status badge on the right, flush with the date
+   above it (ID added by the owner, 2026-11-04; the scope moved here from the date
+   line, 2026-11-10; a personal task has no code, so its row says just "private").
+   Badges: 12
    medium, radius 6, padding 2/8, 1px border. Colours follow the app's
    PRIORITY_MAP and TASK_DETAIL_STATUS_MAP (light mode):
    urgent #FDA4AF / #FFE4E6 60% / #BE123C, high #FECACA / #FEF2F2 50% / #DC2626,
