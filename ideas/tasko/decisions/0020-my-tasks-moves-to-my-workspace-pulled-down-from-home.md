@@ -17,14 +17,14 @@ tags: [artifact, decision]
 Amends [0017](./0017-a-my-tasks-tab-gathers-the-users-tasks.md): what "my
 tasks" shows is unchanged, but where it lives is not.
 
-1. **Home no longer has a "my tasks" tab.** Its tab strip is the workspaces
-   (`private`, divisions) and the projects, as `hifi / home / default` draws
-   it. The app opens on the first of them.
+1. **Home no longer has a "my tasks" or a `private` tab.** Its tab strip is
+   the divisions and the projects. The app opens on the first of them. (A
+   user with no division or project still gets `private` on home, so the
+   strip is never empty.)
 2. **"My tasks" lives on My Workspace**, a dark screen pulled down over home
    by swiping down on the open month calendar. Its tab bar has `my tasks`
    (opened first) and `private`. A white strip with a grabber stays at the
    bottom; a tap or a swipe up on it returns to home, on the tab it left.
-   `private` is on both screens.
 3. **My Workspace has the Actions rail** (New project, New task), not the
    Navigations rail, so a task can still be created from "my tasks" with
    0017's tab picker. The drawing `hifi / My Workspace / default` has no
@@ -38,8 +38,8 @@ The hifi frames drew home without "my tasks" and My Workspace with it, which
 contradicted 0017's "first tab, opened on start". The owner chose, on
 2026-11-10, to follow the drawings and move it. Item 3 was the owner's call
 the same day, after the app lost its only way to create from "my tasks".
-Item 2's `private` on both screens follows the drawings; the owner's first
-answer said both would live only on My Workspace, so this is worth a glance.
+`private` is only on My Workspace (the owner, 2026-11-10); `hifi / home /
+default` still draws it on home, so the pen file needs it removed there.
 Built in app PR #56. Stays `draft` until the owner promotes it.
 
 ---
