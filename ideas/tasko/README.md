@@ -76,6 +76,7 @@ is a link. The calls still open are listed in
 - [Calendar revamp build tickets](./hacker/calendar-revamp-build-tickets.md) — B16–B17: a tap always selects, "Today" selects today, week strip, dots and full-screen titles; no API change
 - [My tasks build tickets](./hacker/my-tasks-build-tickets.md) — B18–B19: a first tab gathering the user's tasks and reviews, and a tab picker to create from it; no API change
 - [Detail tabs and workload strip build tickets](./hacker/detail-tabs-and-workload-strip-build-tickets.md) — B20–B21: detail tabs with quick actions, and the workload strip on home; no API change
+- [Rails, edit mode, Media and Discussion build tickets](./hacker/rails-edit-mode-media-and-discussion-build-tickets.md) — A3–A6 and B23–B27: what is left of H13 after the rails and proofs sheet: edit mode, archive, Media, Discussion and the My Workspace pull
 
 ## Decisions
 - [0001 — Adopt sqlite-schema.sql over schema-zero](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)
@@ -96,3 +97,5 @@ is a link. The calls still open are listed in
 - [0016 — The home calendar follows the iPhone Calendar app](./decisions/0016-calendar-follows-the-iphone-calendar.md) — 2026-10-29 (draft, owner answered the open points in chat)
 - [0017 — A "my tasks" tab gathers the user's tasks and reviews from every tab](./decisions/0017-a-my-tasks-tab-gathers-the-users-tasks.md) — 2026-10-29 (draft, owner chose reviews, opening on it, and the name in chat)
 - [0018 — Detail edit saves with a button; assignees cannot edit the due date; the strip counts all my tasks; archive is the backend's call; every proof listed; Media and Discussion deferred](./decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) — 2026-11-10 (draft, settles the H12/H13 open questions)
+- [0019 — Archiving a task reuses cancelled_date; Media files live in Cloudflare R2](./decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) — 2026-11-10 (draft, unblocks A3 and A5)
+- [0020 — "My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](./decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) — 2026-11-10 (draft, amends 0017)

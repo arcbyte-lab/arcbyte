@@ -17,7 +17,7 @@ One row per idea. `stage` says whether anyone has started building it.
 |---|---|---|---|
 | [Avalanche](ideas/avalanche/README.md) | idea | — | 3 |
 | [Santian](ideas/santian/README.md) | project | https://github.com/arcbyte-lab/Santian | 44 |
-| [Tasko](ideas/tasko/README.md) | project | https://github.com/arcbyte-lab/Tasko-Flutter, https://github.com/arcbyte-lab/Tasko-API | 36 |
+| [Tasko](ideas/tasko/README.md) | project | https://github.com/arcbyte-lab/Tasko-Flutter, https://github.com/arcbyte-lab/Tasko-API | 39 |
 
 ## Still in draft
 
@@ -101,7 +101,10 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Avalanche](ideas/avalanche/README.md) | intelligence | brief | claude-opus-5.5 (claude-code) | 2026-10-30 |
 | [Building an interactive 3D event badge with React Three Fiber](library/vercel-interactive-3d-event-badge.md) | - | analysis | article | 2026-10-30 |
 | [Detail edit saves with a button, assignees cannot edit the due date, the strip counts all my tasks, archive is the backend's call](ideas/tasko/decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
+| [Archiving a task reuses cancelled_date, Media files live in Cloudflare R2](ideas/tasko/decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
+| ["My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Detail tabs and workload strip build tickets — H11 and H12](ideas/tasko/hacker/detail-tabs-and-workload-strip-build-tickets.md) | hacker | spec | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
+| [Rails, edit mode, Media and Discussion build tickets — H13](ideas/tasko/hacker/rails-edit-mode-media-and-discussion-build-tickets.md) | hacker | spec | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 
 ## Open questions
 
@@ -164,6 +167,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Choices made while building the Tasko app, waiting for the owner](ideas/tasko/hacker/build-choices-to-confirm.md) | tasko | question | draft | weak | claude-opus-5.5 (claude-code) |
 | [Calendar revamp build tickets — dots, a week strip, task titles in full screen](ideas/tasko/hacker/calendar-revamp-build-tickets.md) | tasko | spec | draft | weak | claude-opus-5.5 (claude-code) |
 | [Detail tabs and workload strip build tickets — H11 and H12](ideas/tasko/hacker/detail-tabs-and-workload-strip-build-tickets.md) | tasko | spec | draft | weak | claude-sonnet-5.5 (claude-code) |
+| [Rails, edit mode, Media and Discussion build tickets — H13](ideas/tasko/hacker/rails-edit-mode-media-and-discussion-build-tickets.md) | tasko | spec | draft | weak | claude-sonnet-5.5 (claude-code) |
 | [Tasko Flutter app, as built — screens, Cubits, one API seam on Tasko-API, folders](ideas/tasko/hacker/flutter-app-as-built.md) | tasko | architecture | draft | strong | claude-opus-5.5 (claude-code) |
 | [My tasks build tickets — a first tab that gathers the user's tasks and reviews](ideas/tasko/hacker/my-tasks-build-tickets.md) | tasko | spec | draft | weak | claude-opus-5.5 (claude-code) |
 | [Project and member build tickets — create a project, add people directly, no invitation step](ideas/tasko/hacker/project-and-member-build-tickets.md) | tasko | spec | draft | weak | claude-opus-5.5 (claude-code) |
@@ -224,6 +228,8 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [The home calendar follows the iPhone Calendar app — dots, a week strip on tap, task titles in full screen](ideas/tasko/decisions/0016-calendar-follows-the-iphone-calendar.md) | tasko | decision | draft | none | claude-opus-5.5 (claude-code) |
 | [A "my tasks" tab, first and opened on start, gathers the user's tasks and reviews from every tab](ideas/tasko/decisions/0017-a-my-tasks-tab-gathers-the-users-tasks.md) | tasko | decision | draft | none | claude-opus-5.5 (claude-code) |
 | [Detail edit saves with a button, assignees cannot edit the due date, the strip counts all my tasks, archive is the backend's call](ideas/tasko/decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
+| [Archiving a task reuses cancelled_date, Media files live in Cloudflare R2](ideas/tasko/decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
+| ["My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | [Tasko](ideas/tasko/README.md) | tasko | brief | draft | none | claude-opus-5.5 (claude-code) |
 
 ### no lens (library, inbox)
