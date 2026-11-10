@@ -105,6 +105,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Archiving a task reuses cancelled_date, Media files live in Cloudflare R2](ideas/tasko/decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | ["My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Calendar days are rings, not dots; the month is 6 weeks tall; the full screen shows every task](ideas/tasko/decisions/0021-calendar-days-are-rings-not-dots.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
+| [A task is moved on in Task Detail, not by a checkbox in the list](ideas/tasko/decisions/0022-a-task-is-moved-on-in-task-detail-not-by-a-list-checkbox.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Detail tabs and workload strip build tickets — H11 and H12](ideas/tasko/hacker/detail-tabs-and-workload-strip-build-tickets.md) | hacker | spec | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Rails, edit mode, Media and Discussion build tickets — H13](ideas/tasko/hacker/rails-edit-mode-media-and-discussion-build-tickets.md) | hacker | spec | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 
@@ -234,6 +235,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Archiving a task reuses cancelled_date, Media files live in Cloudflare R2](ideas/tasko/decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | ["My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | [Calendar days are rings, not dots; the month is 6 weeks tall; the full screen shows every task](ideas/tasko/decisions/0021-calendar-days-are-rings-not-dots.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
+| [A task is moved on in Task Detail, not by a checkbox in the list](ideas/tasko/decisions/0022-a-task-is-moved-on-in-task-detail-not-by-a-list-checkbox.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | [Tasko](ideas/tasko/README.md) | tasko | brief | draft | none | claude-opus-5.5 (claude-code) |
 
 ### no lens (library, inbox)

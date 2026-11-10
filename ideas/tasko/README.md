@@ -101,3 +101,4 @@ is a link. The calls still open are listed in
 - [0019 — Archiving a task reuses cancelled_date; Media files live in Cloudflare R2](./decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) — 2026-11-10 (draft, unblocks A3 and A5)
 - [0020 — "My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](./decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) — 2026-11-10 (draft, amends 0017)
 - [0021 — Calendar days are rings, not dots; the month is 6 weeks tall; the full screen shows every task](./decisions/0021-calendar-days-are-rings-not-dots.md) — 2026-11-10 (draft, amends 0016)
+- [0022 — A task is moved on in Task Detail, not by a checkbox in the list](./decisions/0022-a-task-is-moved-on-in-task-detail-not-by-a-list-checkbox.md) — 2026-11-10 (draft, amends 0004)
