@@ -12,6 +12,10 @@ inputs: ["../decisions/0003-calendar-is-a-due-date-heatmap-that-filters.md", "./
 tags: [artifact]
 ---
 
+> **Superseded in part, 2026-11-10.** The dots in this note became rings,
+> and the month is 6 weeks tall: see the [calendar spec](./calendar-spec.md) and
+> [0021](../decisions/0021-calendar-days-are-rings-not-dots.md). The rest still reads true.
+
 ## Question
 The owner asked to revamp the home calendar, with the iPhone Calendar app as
 the reference. What does that look like in Tasko's hifi theme?
@@ -35,10 +39,11 @@ source in this conversation. That's why `evidence: none`. Drawn in
 |---|---|---|
 | `hifi / calendar / month` | the home screen with the new month panel | `hifi / home / default` |
 | `hifi / calendar / day-selected` | Oct 14 tapped: one week strip, a grabber, the "Oct 14 ×" chip and that day's list | `hifi / home / day-selected` |
-| `hifi / calendar / fullscreen` | the month with task titles in each day | `hifi / home / pulse-fullscreen` |
+| `hifi / calendar / fullscreen` | the month with task titles in each day | `hifi / home / calendar-fullscreen` (then `pulse-fullscreen`) |
 
 On 2026-11-04 the three frames replaced the frames they were built from and took
-their names (`hifi / home / default`, `/ day-selected`, `/ pulse-fullscreen`).
+their names (`hifi / home / default`, `/ day-selected`, `/ calendar-fullscreen`, which was
+`/ pulse-fullscreen` until 2026-11-10).
 Every other hifi screen got the new month panel.
 
 

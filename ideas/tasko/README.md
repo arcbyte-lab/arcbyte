@@ -62,6 +62,7 @@ is a link. The calls still open are listed in
 - [Lofi mockup tickets for pen.dev](./hipster/lofi-mockup-tickets-for-pen-dev.md) — 13 prompts that draw every blueprint screen in `pencil-new.pen`
 - [Hifi mockup tickets for pen.dev](./hipster/hifi-mockup-tickets-for-pen-dev.md) — 7 prompts that restyle the lofi frames with `modern-minimal.css`, plus H7–H8 drawn directly
 - [Calendar revamp, iPhone style](./hipster/calendar-revamp-iphone-style.md) — dots instead of heatmap squares, a week strip when a day is picked, task titles in full screen
+- [Calendar spec](./hipster/calendar-spec.md) — the calendar as built: rings, a 6 week month, full screen; "Pulse panel" is now "Calendar"
 
 **Hacker**
 - [Santian's concepts mapped onto Tasko's schema](./hacker/santian-concepts-mapped-to-tasko-schema.md) — what fits, what has no column (List, star, reminder)
@@ -99,3 +100,4 @@ is a link. The calls still open are listed in
 - [0018 — Detail edit saves with a button; assignees cannot edit the due date; the strip counts all my tasks; archive is the backend's call; every proof listed; Media and Discussion deferred](./decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) — 2026-11-10 (draft, settles the H12/H13 open questions)
 - [0019 — Archiving a task reuses cancelled_date; Media files live in Cloudflare R2](./decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) — 2026-11-10 (draft, unblocks A3 and A5)
 - [0020 — "My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](./decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) — 2026-11-10 (draft, amends 0017)
+- [0021 — Calendar days are rings, not dots; the month is 6 weeks tall; the full screen shows every task](./decisions/0021-calendar-days-are-rings-not-dots.md) — 2026-11-10 (draft, amends 0016)

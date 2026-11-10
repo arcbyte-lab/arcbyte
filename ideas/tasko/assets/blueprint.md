@@ -17,8 +17,8 @@ _handle_
 2. topbar: open notification
 3. topbar: account setting
 4. topbar: log out
-5. pulse-panel: toggle fullscreen
-6. pulse-panel: swipe month
+5. calendar: toggle fullscreen
+6. calendar: swipe month
 7. tasks-list-panel: group *by attr
 8. tasks-list-panel: sort *asc/dsc attr
 9. tasks-list-panel: filter *by attr val

@@ -12,6 +12,9 @@ inputs: ["../hipster/calendar-revamp-iphone-style.md", "./0003-calendar-is-a-due
 tags: [artifact, decision]
 ---
 
+> **Amended 2026-11-10 by [0021](./0021-calendar-days-are-rings-not-dots.md):** rule 1
+> (dots) and rule 7 (open tasks only in full screen) changed.
+
 ## Decision
 
 The home calendar is redrawn after the iPhone Calendar app, as in the

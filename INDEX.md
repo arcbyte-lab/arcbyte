@@ -17,7 +17,7 @@ One row per idea. `stage` says whether anyone has started building it.
 |---|---|---|---|
 | [Avalanche](ideas/avalanche/README.md) | idea | — | 3 |
 | [Santian](ideas/santian/README.md) | project | https://github.com/arcbyte-lab/Santian | 44 |
-| [Tasko](ideas/tasko/README.md) | project | https://github.com/arcbyte-lab/Tasko-Flutter, https://github.com/arcbyte-lab/Tasko-API | 39 |
+| [Tasko](ideas/tasko/README.md) | project | https://github.com/arcbyte-lab/Tasko-Flutter, https://github.com/arcbyte-lab/Tasko-API | 41 |
 
 ## Still in draft
 
@@ -96,6 +96,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Calendar revamp build tickets — dots, a week strip, task titles in full screen](ideas/tasko/hacker/calendar-revamp-build-tickets.md) | hacker | spec | claude-opus-5.5 (claude-code) | 2026-10-29 |
 | [My tasks build tickets — a first tab that gathers the user's tasks and reviews](ideas/tasko/hacker/my-tasks-build-tickets.md) | hacker | spec | claude-opus-5.5 (claude-code) | 2026-10-29 |
 | [Calendar revamp — the home calendar redrawn after the iPhone Calendar app](ideas/tasko/hipster/calendar-revamp-iphone-style.md) | hipster | wireframe | claude-opus-5.5 (claude-code) | 2026-10-29 |
+| [Calendar spec — the home calendar as built: month, week and full screen](ideas/tasko/hipster/calendar-spec.md) | hipster | wireframe | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Badge data comes from a form or a photo](ideas/avalanche/hipster/badge-data-comes-from-a-form-or-a-photo.md) | hipster | flow | claude-opus-5.5 (claude-code) | 2026-10-30 |
 | [The badge shows only eight fields](ideas/avalanche/hipster/badge-shows-only-eight-fields.md) | hipster | spec | claude-opus-5.5 (claude-code) | 2026-10-30 |
 | [Avalanche](ideas/avalanche/README.md) | intelligence | brief | claude-opus-5.5 (claude-code) | 2026-10-30 |
@@ -103,6 +104,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Detail edit saves with a button, assignees cannot edit the due date, the strip counts all my tasks, archive is the backend's call](ideas/tasko/decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Archiving a task reuses cancelled_date, Media files live in Cloudflare R2](ideas/tasko/decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | ["My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
+| [Calendar days are rings, not dots; the month is 6 weeks tall; the full screen shows every task](ideas/tasko/decisions/0021-calendar-days-are-rings-not-dots.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Detail tabs and workload strip build tickets — H11 and H12](ideas/tasko/hacker/detail-tabs-and-workload-strip-build-tickets.md) | hacker | spec | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Rails, edit mode, Media and Discussion build tickets — H13](ideas/tasko/hacker/rails-edit-mode-media-and-discussion-build-tickets.md) | hacker | spec | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 
@@ -142,6 +144,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Tasks List screen, as built — card, tabs, swipe, day groups, Completed, List options](ideas/santian/hipster/tasks-list-screen-as-built.md) | santian | spec | draft | strong | claude-opus-5.5 (claude-code) |
 | [Wireframe geometry spec](ideas/santian/hipster/wireframe-geometry-spec.md) | santian | wireframe | draft | weak | unknown (pasted by owner) |
 | [Calendar revamp — the home calendar redrawn after the iPhone Calendar app](ideas/tasko/hipster/calendar-revamp-iphone-style.md) | tasko | wireframe | draft | none | claude-opus-5.5 (claude-code) |
+| [Calendar spec — the home calendar as built: month, week and full screen](ideas/tasko/hipster/calendar-spec.md) | tasko | wireframe | draft | weak | claude-sonnet-5.5 (claude-code) |
 | [Hifi mockup tickets for pen.dev — restyle the lofi frames with modern-minimal.css](ideas/tasko/hipster/hifi-mockup-tickets-for-pen-dev.md) | tasko | spec | draft | weak | claude-opus-5.5 (claude-code) |
 | [Home screen wireframe — header, monthly due-date calendar, workspace and project tabs](ideas/tasko/hipster/home-screen-wireframe.md) | tasko | wireframe | draft | weak | claude-opus-5.5 (claude-code) |
 | [Lofi mockup tickets for pen.dev — thirteen prompts, pasted one at a time](ideas/tasko/hipster/lofi-mockup-tickets-for-pen-dev.md) | tasko | spec | draft | weak | claude-opus-5.5 (claude-code) |
@@ -230,6 +233,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Detail edit saves with a button, assignees cannot edit the due date, the strip counts all my tasks, archive is the backend's call](ideas/tasko/decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | [Archiving a task reuses cancelled_date, Media files live in Cloudflare R2](ideas/tasko/decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | ["My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
+| [Calendar days are rings, not dots; the month is 6 weeks tall; the full screen shows every task](ideas/tasko/decisions/0021-calendar-days-are-rings-not-dots.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | [Tasko](ideas/tasko/README.md) | tasko | brief | draft | none | claude-opus-5.5 (claude-code) |
 
 ### no lens (library, inbox)
