@@ -134,7 +134,9 @@ Ticket H1 — Restyle the shared components first
 Duplicate each lofi component and restyle it with H0. Make each one a new component
 named "hifi / <name>". Later tickets use these, not the lofi ones.
 
-1. Top bar: "welcome, <user_name>" in 15 medium #333333. Icons #6B7280. The bell's
+1. Top bar (as drawn 2026-11-10: "HOME" in 15, white on black; the icons sit in one
+   outlined pill, 124×36: sliders, bell, avatar. The text below is the older
+   "welcome" version): "welcome, <user_name>" in 15 medium #333333. Icons #6B7280. The bell's
    dot is 6px #EF4444 with a 1.5px white ring. The account square becomes a 24px
    avatar circle (the "me" look from H0). No bottom line.
 2. Task row (owner, 2026-11-04, same as lofi): no checkbox. Line 1: title 15
@@ -550,7 +552,7 @@ This replaces the H4 panel, menu and action-bar rules.
 
 ### H12 — Workload strip on home (drawn 2026-11-05)
 
-Every screen with the Pulse calendar has a black strip (`hifi / Stats`, 100 tall)
+Every screen with the Pulse calendar has a black strip (`hifi / Stats`, 80 tall, directly under the 61-tall top bar)
 between the top bar and the calendar, except `pulse-fullscreen`. The owner picked
 variant C of four (stat row, filter chips, grouped, overdue first; the others were deleted).
 
@@ -580,12 +582,17 @@ rules in H2 and H6.
 `hifi / Rails / Actions` (new project, new task), built from `hifi / Rail Item`.
 
 - 50% white fill, 16px background blur, 1px #E5E7EB border, 64 tall as components.
-  On a screen they sit at x 19.5, y 840, in a 52-tall `rails` frame.
+  On a screen they sit at x 20, y 840, in a 387×52 `rails` frame: Navigations 226 wide on
+  the left, Actions 152 wide on the right.
+- Each item is a 70×44 pill: a 20px icon over an 8px uppercase label (HOME, MEDIA,
+  DISCUSSION, NEW PROJECT, NEW TASK). The layers are still named Workspaces, Messages
+  and New workspace. Icons, left to right: house, cube, message bubble, grid with a plus,
+  file with a plus.
 - Active item: #E0F2FE pill, #1E3A8A icon and label. Home is active by default.
 - They replace the FAB on all 29 frames that had one. On `home / snackbar` they sit
   at y 798, 16px above the snackbar.
 - Hidden when a sheet or the detail panel is open, and on `home / calendar-fullscreen`.
-- Discussion carries a 16px #EF4444 unread badge. `Rail Item` has it hidden for the rest.
+- Discussion carries a 16px #EF4444 unread badge with a white 10px count (7, sample data). `Rail Item` has it hidden for the rest.
 
 **Quick actions.** Archive is destructive on the component: #EF4444 fill, white icon.
 The button for an open mode or sheet is active: #2563EB fill, white icon.

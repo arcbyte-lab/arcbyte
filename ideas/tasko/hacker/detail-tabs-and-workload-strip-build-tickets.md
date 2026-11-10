@@ -87,7 +87,7 @@ Each ticket is done when `flutter analyze` and `flutter test` pass.
   overdue), and the 48-hour edge.
 - `HomeState`: `workload` computed from every tab's tasks via `isMine`,
   independent of `activeTab`.
-- `widgets/stats_strip.dart`: the strip (100 tall, black; MY WORK and
+- `widgets/stats_strip.dart`: the strip (80 tall, black; MY WORK and
   DEADLINES labels 11 medium #9CA3AF, four stats as count 18 semibold, 6px
   dot, 12 label). Blue in progress, orange to review, yellow due soon, red
   overdue, as in `hifi ! home ! default.png`.
