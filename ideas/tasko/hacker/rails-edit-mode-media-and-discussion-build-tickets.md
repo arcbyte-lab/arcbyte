@@ -113,9 +113,11 @@ of title and note with Save and Cancel.
 
 ### Not in these tickets
 - Viewing images inside the app. Not drawn.
-- Checking that #40 also removed "+ new project" from the tab strip and
-  shows the PROJECTS group only when needed (0018 item 7). Check the
-  merged code before calling the rails done.
+- The rails' "+ new project" and PROJECTS group: checked in Tasko-Flutter on
+  2026-11-10, #40 has them (`tab_strip.dart` has no "new project" and shows
+  PROJECTS only when there is a project tab; `rails.dart` hides New project
+  unless the viewer may create one). Media and Discussion only show a message
+  on tap until B25 and B26.
 
 ## What would change my mind
 - If the web app's server already has media and chat tables, A5 and A6
