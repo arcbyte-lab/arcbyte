@@ -1518,7 +1518,7 @@
               "id": "F4ihy",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -2043,7 +2043,7 @@
               "id": "oHfxo",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -2255,7 +2255,7 @@
               "id": "sUyrS",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -2908,7 +2908,7 @@
               "id": "e5rTfL",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -3084,7 +3084,7 @@
               "id": "nTXOQ",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -4144,7 +4144,7 @@
               "id": "RIet1",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -5505,7 +5505,7 @@
               "id": "mFRVk",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -6235,7 +6235,7 @@
               "id": "M5qVQ",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -6925,7 +6925,7 @@
               "id": "VGVvt",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -7688,7 +7688,7 @@
               "id": "KbmmM",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -8892,7 +8892,7 @@
               "id": "VTfvU",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -11085,7 +11085,7 @@
               "id": "Fsz76",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -12561,7 +12561,7 @@
               "id": "Y6onEi",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -13418,7 +13418,7 @@
               "id": "BrAej",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -14663,7 +14663,7 @@
               "id": "UvKAg",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -15596,7 +15596,7 @@
               "id": "AFaB5",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -17190,7 +17190,7 @@
               "id": "jlFxn",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -18435,7 +18435,7 @@
               "id": "NW7f3",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -19939,7 +19939,7 @@
               "id": "s5x7s6",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -26114,7 +26114,7 @@
               "id": "NWk43",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -26714,7 +26714,7 @@
               "id": "qHr1d",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -27233,7 +27233,7 @@
               "id": "I0nH0c",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -28001,7 +28001,7 @@
               "id": "Q5wJ6",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -34461,7 +34461,7 @@
               "id": "yke98",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -36746,7 +36746,7 @@
               "id": "Oxd65",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -39499,7 +39499,7 @@
               "id": "GIbAm",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -40749,7 +40749,7 @@
               "id": "VFjUI",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -41442,7 +41442,7 @@
               "id": "nH1h4",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container",
               "height": "fit_content",
               "fill": "#f2f3f5ff"
@@ -43376,7 +43376,7 @@
               "id": "jrBET",
               "type": "ref",
               "ref": "nNI2E",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -43702,7 +43702,7 @@
             {
               "type": "frame",
               "id": "lZlSs",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container",
               "height": "fill_container",
               "fill": "#F9FAFB",
@@ -47080,7 +47080,7 @@
               "id": "n9o1Zc",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -51640,7 +51640,7 @@
               "id": "XwF2d",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -52615,7 +52615,7 @@
               "id": "WV0zK",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -53629,7 +53629,7 @@
               "id": "Q2FQz8",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -54861,7 +54861,7 @@
               "id": "cbGfc",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -55734,7 +55734,7 @@
               "id": "h04iql",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
@@ -56707,7 +56707,7 @@
               "id": "eq3bm",
               "type": "ref",
               "ref": "BZn0t",
-              "name": "Pulse Panel",
+              "name": "Calendar",
               "width": "fill_container"
             },
             {
