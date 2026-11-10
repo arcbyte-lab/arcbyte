@@ -1976,43 +1976,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "ua1q2",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "P9vINU",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "lYqgm",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "hgQqp",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -2208,43 +2188,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "W0JrU",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "O5vHj",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "z3yjeP",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "l7l3Rh",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -2737,43 +2697,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "vsXNH",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "e9xyf",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "BLIsK",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "D1Ddmy",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "frame",
@@ -3069,43 +3009,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "srYYN",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "TCdMR",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "RN0m0",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "RQBC2",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "iF5n5",
@@ -3606,44 +3526,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "vXG35",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "RjUhj",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "T1PM9",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "fKxt4",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "v5Eiy",
@@ -4686,43 +4586,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "XheIW",
-          "x": 19.5,
-          "y": 798,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "BnRx3",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "yuhdS",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 788,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "OEcIC",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "mhRPX",
@@ -6067,44 +5947,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "I3xu9",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "T4ctWL",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "bdF7q",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "VoQwE",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "Wvnvg",
@@ -6833,44 +6693,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "vPHpq",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "kvdmt",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "kjcCT",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "IE1UY",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "q0Q01V",
@@ -7527,44 +7367,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "BaxJS",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "epcLC",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "c4pcsU",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "z4HUQ",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "ucZP0",
@@ -8310,44 +8130,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "IFAtl",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "AHFoK",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "w11TWP",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "mS2Qr",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "T8mnPL",
@@ -9534,44 +9334,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "p5M4OA",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "WusQz",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "hIpIV",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "j6h6wB",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "vgNoJ",
@@ -11747,44 +11527,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "zCPcN",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "z9OK1",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "vuYTN",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "j1xSG",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "k8OK20",
@@ -13243,44 +13003,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "wJJGC",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "LcMOE",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "QmAAx",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "N1ZSb",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -14120,44 +13860,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "ezwzy",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "RhnW6",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "l71BlY",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "ki9k4",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -15385,44 +15105,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "cJz9M",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "CneCM",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "M3hn4s",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "XeLjN",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -16338,44 +16038,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "h4q5I",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "WGfSY",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "u2gsb",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "ZhgsG",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -17952,44 +17632,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "nIGNt",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "vFHbJ",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "K5SrQ",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "f7wrH1",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -19217,44 +18877,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "OyaIr",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "NXcyy",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "a6Sb4",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "oeaFE",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -20741,44 +20381,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "DxEQo",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "oZH0J",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "tY35L",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "TNbEr",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -27027,43 +26647,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "w0KtSi",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "M999J",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "LxFmL",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "Atqmr",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -27566,43 +27166,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "m685qo",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "j5qFUv",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "WoW1L",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "BMs4T",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -28095,44 +27675,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "cEvVW",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "E8KaWc",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "rFpF0",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "J93pAR",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "id": "Nig73",
@@ -28909,43 +28469,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "zXl6m",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "EsGhK",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "y1QrC",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "G9KJu",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -35363,44 +34903,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "vo5Ps",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "J74vLB",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "xAorO",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "j6llxl",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -37704,43 +37224,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "fdtbd",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "cSiPp",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "DehLz",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "k0iG7",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -40441,44 +39941,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "UlFWC",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "MHFdW",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "X7741g",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "Dbp9X",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -41711,43 +41191,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "dQpzg",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "n756d",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "nAzzs",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "Qoo8L",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "frame",
@@ -42908,43 +42368,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "JIFxG",
-          "x": 19.5,
-          "y": 840,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "qeBds",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "n6TTSi",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "BEdAJ",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -44203,43 +43643,23 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "UZgKY",
-          "x": 19.5,
-          "y": 840,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "Y6D0rJ",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "jZqoz",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "gKuhs",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -47463,44 +46883,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "FYhfd",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "yXpjZ",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "Kl5Q1",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "fASQy",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -48122,44 +47522,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "C0vMW",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "mA7EP",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "zRUXQ",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "ajPt9",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -50992,6 +50372,8 @@
       "name": "hifi / Rails / Navigations",
       "reusable": true,
       "clip": true,
+      "width": "fill_container(226)",
+      "height": "fill_container(64)",
       "fill": "#FFFFFF80",
       "cornerRadius": 100,
       "stroke": "#E5E7EB",
@@ -51007,11 +50389,10 @@
           "type": "frame",
           "id": "Jdob9",
           "name": "Frame 6",
-          "width": 226,
-          "height": 64,
+          "width": "fill_container",
+          "height": "fill_container",
           "gap": 4,
           "padding": 4,
-          "justifyContent": "space_between",
           "alignItems": "center",
           "children": [
             {
@@ -51079,7 +50460,7 @@
       "name": "hifi / Rails / Actions",
       "reusable": true,
       "width": 152,
-      "height": 64,
+      "height": "fill_container(64)",
       "fill": "#FFFFFF80",
       "cornerRadius": 100,
       "stroke": "#E5E7EB",
@@ -51134,7 +50515,7 @@
       "name": "hifi / Rail Item",
       "reusable": true,
       "width": "fill_container(70)",
-      "height": 52,
+      "height": "fill_container(52)",
       "fill": "#FFFFFF00",
       "cornerRadius": 100,
       "layout": "vertical",
@@ -52701,44 +52082,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "c5pUJe",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "DUEQl",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "iDtxx",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "JfhwX",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -53696,44 +53057,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "v7NoHf",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "GzAdf",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "wyjoF",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "ZvgTI",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -54730,44 +54071,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "z3bLI",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "iGE8V",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "LDzgW",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "jefo1",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -55982,44 +55303,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "ijjHl",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "YKbrr",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "v21lD",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "KIQYg",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -56875,44 +56176,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "l1zHuv",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "MNI3W",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "s5WcA",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "HQWhS",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -57868,44 +57149,24 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "AfGeM",
-          "x": 19.5,
-          "y": 839.5,
-          "name": "rails",
+          "id": "gdrgL",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "adUwA",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#E0F2FE"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
             },
-            {
-              "id": "pU2xR",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         },
         {
           "type": "rectangle",
@@ -59064,52 +58325,32 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "M6ETgk",
-          "x": 19.5,
-          "y": 840,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "NSM3f",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#FFFFFF00"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#6B7280"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#6B7280"
-                },
-                "tqEVy": {
-                  "fill": "#E0F2FE"
-                },
-                "tqEVy/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "tqEVy/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "wsiYo",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#FFFFFF00"
             },
-            {
-              "id": "x3HCI",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/tqEVy": {
+              "fill": "#E0F2FE"
+            },
+            "L8HqW/tqEVy/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/tqEVy/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -60303,52 +59544,32 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "h5GRSX",
-          "x": 19.5,
-          "y": 840,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "R59ev",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#FFFFFF00"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#6B7280"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#6B7280"
-                },
-                "tqEVy": {
-                  "fill": "#E0F2FE"
-                },
-                "tqEVy/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "tqEVy/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "duSCW",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#FFFFFF00"
             },
-            {
-              "id": "AHfkK",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/tqEVy": {
+              "fill": "#E0F2FE"
+            },
+            "L8HqW/tqEVy/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/tqEVy/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -60641,52 +59862,32 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "SPpFq",
-          "x": 19.5,
-          "y": 840,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "J3NkL",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#FFFFFF00"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#6B7280"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#6B7280"
-                },
-                "tqEVy": {
-                  "fill": "#E0F2FE"
-                },
-                "tqEVy/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "tqEVy/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "T9eD61",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#FFFFFF00"
             },
-            {
-              "id": "G6Zjqy",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/tqEVy": {
+              "fill": "#E0F2FE"
+            },
+            "L8HqW/tqEVy/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/tqEVy/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -61604,61 +60805,41 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "f9LoaX",
-          "x": 19.5,
-          "y": 840,
-          "name": "rails",
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "f6Lt0g",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#FFFFFF00"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#6B7280"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#6B7280"
-                },
-                "tqEVy": {
-                  "fill": "#FFFFFF00"
-                },
-                "tqEVy/E7RRS": {
-                  "fill": "#6B7280"
-                },
-                "tqEVy/Lr1f1": {
-                  "fill": "#6B7280"
-                },
-                "hJ4QH": {
-                  "fill": "#E0F2FE"
-                },
-                "hJ4QH/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "hJ4QH/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "id": "b6K2g",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#FFFFFF00"
             },
-            {
-              "id": "pq3s6",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/tqEVy": {
+              "fill": "#FFFFFF00"
+            },
+            "L8HqW/tqEVy/E7RRS": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/tqEVy/Lr1f1": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/hJ4QH": {
+              "fill": "#E0F2FE"
+            },
+            "L8HqW/hJ4QH/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/hJ4QH/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -62124,62 +61305,42 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "gpqez",
-          "x": 19.5,
-          "y": 840,
-          "name": "rails",
+          "id": "OXviW",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
-          "height": 52,
-          "gap": 9,
-          "children": [
-            {
-              "id": "vWd30",
-              "type": "ref",
-              "ref": "rSWcD",
-              "name": "navigations",
-              "height": "fill_container",
-              "descendants": {
-                "Jdob9": {
-                  "height": "fill_container"
-                },
-                "iq2Np": {
-                  "fill": "#FFFFFF00"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#6B7280"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#6B7280"
-                },
-                "tqEVy": {
-                  "fill": "#FFFFFF00"
-                },
-                "tqEVy/E7RRS": {
-                  "fill": "#6B7280"
-                },
-                "tqEVy/Lr1f1": {
-                  "fill": "#6B7280"
-                },
-                "hJ4QH": {
-                  "fill": "#E0F2FE"
-                },
-                "hJ4QH/E7RRS": {
-                  "fill": "#1E3A8A"
-                },
-                "hJ4QH/Lr1f1": {
-                  "fill": "#1E3A8A"
-                }
-              }
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#FFFFFF00"
             },
-            {
-              "id": "amydn",
-              "type": "ref",
-              "ref": "KTC3r",
-              "name": "actions",
-              "height": "fill_container"
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/tqEVy": {
+              "fill": "#FFFFFF00"
+            },
+            "L8HqW/tqEVy/E7RRS": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/tqEVy/Lr1f1": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/hJ4QH": {
+              "fill": "#E0F2FE"
+            },
+            "L8HqW/hJ4QH/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/hJ4QH/Lr1f1": {
+              "fill": "#1E3A8A"
             }
-          ]
+          }
         }
       ]
     },
@@ -62596,56 +61757,92 @@
           ]
         },
         {
-          "type": "frame",
-          "id": "b8kuj",
-          "x": 19.5,
-          "y": 840,
-          "name": "rails",
+          "id": "A0qTcf",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
           "enabled": false,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#FFFFFF00"
+            },
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/tqEVy": {
+              "fill": "#FFFFFF00"
+            },
+            "L8HqW/tqEVy/E7RRS": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/tqEVy/Lr1f1": {
+              "fill": "#6B7280"
+            },
+            "L8HqW/hJ4QH": {
+              "fill": "#E0F2FE"
+            },
+            "L8HqW/hJ4QH/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/hJ4QH/Lr1f1": {
+              "fill": "#1E3A8A"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "sRzmd",
+      "x": -445,
+      "y": 830,
+      "name": "hifi / Rails / Dock",
+      "reusable": true,
+      "width": 426,
+      "height": 100,
+      "layout": "vertical",
+      "gap": 10,
+      "padding": 10,
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "j95Gc",
+          "name": "rails",
+          "width": "fill_container",
           "height": 52,
           "gap": 9,
           "children": [
             {
-              "id": "cEVtC",
+              "id": "L8HqW",
               "type": "ref",
               "ref": "rSWcD",
               "name": "navigations",
               "height": "fill_container",
               "descendants": {
                 "Jdob9": {
-                  "height": "fill_container"
+                  "height": "fill_container",
+                  "justifyContent": "start",
+                  "width": "fill_container"
                 },
                 "iq2Np": {
-                  "fill": "#FFFFFF00"
-                },
-                "iq2Np/E7RRS": {
-                  "fill": "#6B7280"
-                },
-                "iq2Np/Lr1f1": {
-                  "fill": "#6B7280"
-                },
-                "tqEVy": {
-                  "fill": "#FFFFFF00"
-                },
-                "tqEVy/E7RRS": {
-                  "fill": "#6B7280"
-                },
-                "tqEVy/Lr1f1": {
-                  "fill": "#6B7280"
-                },
-                "hJ4QH": {
                   "fill": "#E0F2FE"
                 },
-                "hJ4QH/E7RRS": {
+                "iq2Np/E7RRS": {
                   "fill": "#1E3A8A"
                 },
-                "hJ4QH/Lr1f1": {
+                "iq2Np/Lr1f1": {
                   "fill": "#1E3A8A"
                 }
               }
             },
             {
-              "id": "OUGMc",
+              "id": "RCAHg",
               "type": "ref",
               "ref": "KTC3r",
               "name": "actions",
