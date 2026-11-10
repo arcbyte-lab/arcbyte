@@ -94,3 +94,4 @@ is a link. The calls still open are listed in
 - [0015 — GitHub holds ticket status; Arcbyte holds the spec and the why](./decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md) — 2026-10-27 (adopted by the owner in chat)
 - [0016 — The home calendar follows the iPhone Calendar app](./decisions/0016-calendar-follows-the-iphone-calendar.md) — 2026-10-29 (draft, owner answered the open points in chat)
 - [0017 — A "my tasks" tab gathers the user's tasks and reviews from every tab](./decisions/0017-a-my-tasks-tab-gathers-the-users-tasks.md) — 2026-10-29 (draft, owner chose reviews, opening on it, and the name in chat)
+- [0018 — Detail edit saves with a button; assignees cannot edit the due date; the strip counts all my tasks; archive is the backend's call; every proof listed; Media and Discussion deferred](./decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) — 2026-11-10 (draft, settles the H12/H13 open questions)
