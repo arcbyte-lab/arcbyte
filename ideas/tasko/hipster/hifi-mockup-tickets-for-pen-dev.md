@@ -134,7 +134,10 @@ Ticket H1 — Restyle the shared components first
 Duplicate each lofi component and restyle it with H0. Make each one a new component
 named "hifi / <name>". Later tickets use these, not the lofi ones.
 
-1. Top bar: "welcome, <user_name>" in 15 medium #333333. Icons #6B7280. The bell's
+1. Top bar (as drawn 2026-11-10: 61 tall, black, "HOME" in 15 medium white with letter
+   spacing -1; Log (git-commit-vertical), bell and avatar are three 36×28 #262626 pills
+   inside one 1px #262626 outlined pill, gap 4, padding 4; the avatar is a 20px #2563EB
+   circle. The text below is the older "welcome" version): "welcome, <user_name>" in 15 medium #333333. Icons #6B7280. The bell's
    dot is 6px #EF4444 with a 1.5px white ring. The account square becomes a 24px
    avatar circle (the "me" look from H0). No bottom line.
 2. Task row (owner, 2026-11-04, same as lofi): no checkbox. Line 1: title 15
@@ -550,29 +553,24 @@ This replaces the H4 panel, menu and action-bar rules.
 
 ### H12 — Workload strip on home (drawn 2026-11-05)
 
-Every screen with the Pulse calendar has a black strip (`hifi / Stats`, 100 tall)
+Every screen with the Pulse calendar has a black strip (`hifi / Stats`, 80 tall, directly under the 61-tall top bar)
 between the top bar and the calendar, except `pulse-fullscreen`. The owner picked
 variant C of four (stat row, filter chips, grouped, overdue first; the others were deleted).
-
-| Frame | Shows | Built from |
-| --- | --- | --- |
-| `hifi / home / stats-minimized` | the strip after dragging the calendar grabber up | `hifi / home / default` |
 
 - Full (`hifi / Stats`): MY WORK (in progress, to review) and DEADLINES (due soon,
   overdue), no card fill. Group label 11 medium #9CA3AF, letter spacing 0.5.
   Each stat: count 18 semibold in its colour (blue, orange, #FCD34D, #F87171),
   then a 6px dot and a 12 #9CA3AF label.
-- Minimized (`hifi / Stats / minimized`, 72 tall): the two group labels over four
-  30px chips, each an icon and a count, tinted 15% fill and 40% border in the colour.
+- The strip does not minimize (owner, 2026-11-10); the minimized frame and
+  component are removed.
 - Calendar (`hifi / Pulse Panel`): radius 16 on the top corners, a 36×4 #D1D5DB
-  grabber centred at the top, week rows 44 tall. Dragging the grabber up minimizes
-  the strip. The day-selected, my-tasks and fullscreen calendars keep their own
+  grabber centred at the top, week rows 44 tall. The day-selected, my-tasks and fullscreen calendars keep their own
   content with the same radius and grabber.
 - In progress = tasks assigned to me that I started. To review = tasks I made and
   assigned to someone else, now waiting on my review.
 - A task can count twice (in progress and overdue), so the strip shows no total.
-- Open: how close is "due soon", and does the strip follow the project tab or
-  always count all of my tasks?
+- "Due soon" is 48 hours and the strip counts all my tasks, whatever the tab
+  ([0018](../decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md)).
 
 ### H13 — Rails, edit mode, Media and Discussion (drawn 2026-11-09)
 
@@ -585,12 +583,17 @@ rules in H2 and H6.
 `hifi / Rails / Actions` (new project, new task), built from `hifi / Rail Item`.
 
 - 50% white fill, 16px background blur, 1px #E5E7EB border, 64 tall as components.
-  On a screen they sit at x 19.5, y 840, in a 52-tall `rails` frame.
+  On a screen they sit in a 426×100 `Rails Dock` frame at y 830 (16px background blur, 50% white fill), as a 406×52 `rails` frame
+  inset 10 (so y 840): Navigations 245 wide on the left, Actions 152 wide on the right.
+- Each item is a 44-tall pill, 76 wide in Navigations and 70 in Actions: a 20px icon over an 8px uppercase label (HOME, MEDIA,
+  DISCUSSION, NEW PROJECT, NEW TASK). The layers are still named Workspaces, Messages
+  and New workspace. Icons, left to right: house, cube, message bubble, grid with a plus,
+  file with a plus.
 - Active item: #E0F2FE pill, #1E3A8A icon and label. Home is active by default.
 - They replace the FAB on all 29 frames that had one. On `home / snackbar` they sit
   at y 798, 16px above the snackbar.
 - Hidden when a sheet or the detail panel is open, and on `home / calendar-fullscreen`.
-- Discussion carries a 16px #EF4444 unread badge. `Rail Item` has it hidden for the rest.
+- Discussion carries a 16px #EF4444 unread badge with a white 10px count (7, sample data). `Rail Item` has it hidden for the rest.
 
 **Quick actions.** Archive is destructive on the component: #EF4444 fill, white icon.
 The button for an open mode or sheet is active: #2563EB fill, white icon.
@@ -600,7 +603,7 @@ on black with a #27272A border and a #3B82F6 underline.
 Swiping down on the calendar in `hifi / home / default` moves to
 `hifi / My Workspace / default`, animated: the white section slides down and stays
 peeking at the bottom with a grabber (`swipe up to back to home`). Swiping it up returns
-home. The canvas cannot show motion. H12's grabber is a separate gesture: dragging it up minimizes the strip.
+home. The canvas cannot show motion.
 
 | Frame | Shows | Built from |
 | --- | --- | --- |
