@@ -76,6 +76,7 @@ is a link. The calls still open are listed in
 - [Calendar revamp build tickets](./hacker/calendar-revamp-build-tickets.md) — B16–B17: a tap always selects, "Today" selects today, week strip, dots and full-screen titles; no API change
 - [My tasks build tickets](./hacker/my-tasks-build-tickets.md) — B18–B19: a first tab gathering the user's tasks and reviews, and a tab picker to create from it; no API change
 - [Detail tabs and workload strip build tickets](./hacker/detail-tabs-and-workload-strip-build-tickets.md) — B20–B21: detail tabs with quick actions, and the workload strip on home; no API change
+- [Rails, edit mode, Media and Discussion build tickets](./hacker/rails-edit-mode-media-and-discussion-build-tickets.md) — A19–A21 and B22–B26: the rails, edit mode with Save, Media, Discussion and the My Workspace pull
 
 ## Decisions
 - [0001 — Adopt sqlite-schema.sql over schema-zero](./decisions/0001-adopt-sqlite-schema-over-schema-zero.md)
