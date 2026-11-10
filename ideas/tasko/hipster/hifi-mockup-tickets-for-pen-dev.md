@@ -554,25 +554,20 @@ Every screen with the Pulse calendar has a black strip (`hifi / Stats`, 100 tall
 between the top bar and the calendar, except `pulse-fullscreen`. The owner picked
 variant C of four (stat row, filter chips, grouped, overdue first; the others were deleted).
 
-| Frame | Shows | Built from |
-| --- | --- | --- |
-| `hifi / home / stats-minimized` | the strip after dragging the calendar grabber up | `hifi / home / default` |
-
 - Full (`hifi / Stats`): MY WORK (in progress, to review) and DEADLINES (due soon,
   overdue), no card fill. Group label 11 medium #9CA3AF, letter spacing 0.5.
   Each stat: count 18 semibold in its colour (blue, orange, #FCD34D, #F87171),
   then a 6px dot and a 12 #9CA3AF label.
-- Minimized (`hifi / Stats / minimized`, 72 tall): the two group labels over four
-  30px chips, each an icon and a count, tinted 15% fill and 40% border in the colour.
+- The strip does not minimize (owner, 2026-11-10); the minimized frame and
+  component are removed.
 - Calendar (`hifi / Pulse Panel`): radius 16 on the top corners, a 36×4 #D1D5DB
-  grabber centred at the top, week rows 44 tall. Dragging the grabber up minimizes
-  the strip. The day-selected, my-tasks and fullscreen calendars keep their own
+  grabber centred at the top, week rows 44 tall. The day-selected, my-tasks and fullscreen calendars keep their own
   content with the same radius and grabber.
 - In progress = tasks assigned to me that I started. To review = tasks I made and
   assigned to someone else, now waiting on my review.
 - A task can count twice (in progress and overdue), so the strip shows no total.
-- Open: how close is "due soon", and does the strip follow the project tab or
-  always count all of my tasks?
+- "Due soon" is 48 hours and the strip counts all my tasks, whatever the tab
+  ([0018](../decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md)).
 
 ### H13 — Rails, edit mode, Media and Discussion (drawn 2026-11-09)
 
@@ -600,7 +595,7 @@ on black with a #27272A border and a #3B82F6 underline.
 Swiping down on the calendar in `hifi / home / default` moves to
 `hifi / My Workspace / default`, animated: the white section slides down and stays
 peeking at the bottom with a grabber (`swipe up to back to home`). Swiping it up returns
-home. The canvas cannot show motion. H12's grabber is a separate gesture: dragging it up minimizes the strip.
+home. The canvas cannot show motion.
 
 | Frame | Shows | Built from |
 | --- | --- | --- |

@@ -25,14 +25,13 @@ on home (H12)?
   for quick-action circles, and makes the action bar a pill. B20 builds only
   what exists today: activity, extension, archive. Pencil (edit) and
   file-up (proof list) wait for the H13 tickets.
-- B21 adds the black strip above the calendar and its minimized form.
+- B21 adds the black strip above the calendar. It does not minimize.
 - Order: A1 before B21. B20 is independent.
 
 ## Detail
 Read against Tasko-Flutter `main` at `cb40900` (2026-10-29), before the
 rails PR #41. Drawings: H11 and H12 in `pencil-new.pen`, PNGs
-`hifi ! detail ! team-top.png`, `hifi ! home ! default.png` and
-`hifi ! home ! stats-minimized.png`. Status lives on the issues and PRs
+`hifi ! detail ! team-top.png`, and `hifi ! home ! default.png`. Status lives on the issues and PRs
 ([0015](../decisions/0015-github-holds-ticket-status-arcbyte-holds-the-why.md)):
 API [#44](https://github.com/arcbyte-lab/Tasko-API/issues/44) (A1), app
 [#42](https://github.com/arcbyte-lab/Tasko-Flutter/issues/42) (B20) and
@@ -88,15 +87,14 @@ Each ticket is done when `flutter analyze` and `flutter test` pass.
   overdue), and the 48-hour edge.
 - `HomeState`: `workload` computed from every tab's tasks via `isMine`,
   independent of `activeTab`.
-- `widgets/stats_strip.dart`: full strip (100 tall, black; MY WORK and
+- `widgets/stats_strip.dart`: the strip (100 tall, black; MY WORK and
   DEADLINES labels 11 medium #9CA3AF, four stats as count 18 semibold, 6px
-  dot, 12 label) and minimized (72 tall, four 30px icon-and-count chips,
-  15% tinted fill and 40% border).
-- `HomeView`: strip between the top bar and calendar; `minimized` is local
-  state. What flips it is open (see questions). Hidden when
-  `calendarExpanded`.
-- Tests: counts follow the data not the tab; minimize and restore; hidden
-  on the full-screen calendar.
+  dot, 12 label). Blue in progress, orange to review, yellow due soon, red
+  overdue, as in `hifi ! home ! default.png`.
+- `HomeView`: strip between the top bar and calendar, always full size.
+  Hidden when `calendarExpanded`.
+- Tests: counts follow the data not the tab; hidden on the full-screen
+  calendar.
 
 ### Not in these tickets
 - Edit mode, proof list sheet, archive confirm, extension-pending pill:
@@ -108,17 +106,9 @@ Each ticket is done when `flutter analyze` and `flutter test` pass.
   "my tasks" rule in 0017 changes first.
 
 ## Open questions
-- There are two grabbers already, both outside this ticket. (1) The calendar
-  grabber folds the month to a week strip once a day is selected
-  (`CalendarFold`, built). (2) Pulling the white section down opens My
-  Workspace, and the peeking white section pulls up to return home (H13,
-  its own ticket). H12 and H13 also mention a grabber that "minimizes the
-  strip", which neither of these is. What gesture minimizes the strip: a
-  third grabber on the strip itself, or the calendar fold (the strip
-  minimizes when the calendar folds to a week)?
-- Stat colours: H12 gives four colours (blue, orange, yellow, red) and four
-  stats (in progress, to review, due soon, overdue). The tickets pair them in
-  that order. Change if wrong.
+- None for B21. The strip does not minimize and the colour pairing matches
+  the drawing. The calendar fold and the My Workspace pull (H13) are other
+  gestures with their own tickets.
 
 ---
 Part of [Tasko](../README.md)
