@@ -1,7 +1,7 @@
 ---
 title: Index
 kind: meta
-updated: 2026-11-20
+updated: 2026-11-24
 ---
 
 # Index
@@ -80,12 +80,12 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Hifi mockup tickets for pen.dev — restyle the lofi frames with modern-minimal.css](ideas/tasko/hipster/hifi-mockup-tickets-for-pen-dev.md) | hipster | spec | claude-opus-5.5 (claude-code) | 2026-10-07 |
 | [Lofi mockup tickets for pen.dev — thirteen prompts, pasted one at a time](ideas/tasko/hipster/lofi-mockup-tickets-for-pen-dev.md) | hipster | spec | claude-opus-5.5 (claude-code) | 2026-10-07 |
 | [Server rules settled in the Tasko API review — a proof is a link, who edits, one level of sub-tasks](ideas/tasko/decisions/0007-server-rules-settled-in-the-api-review.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-09 |
-| [Start working" in Task Detail moves a task to in progress](ideas/tasko/decisions/0008-start-working-moves-a-task-to-in-progress.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-09 |
+| ["Start working" in Task Detail moves a task to in progress](ideas/tasko/decisions/0008-start-working-moves-a-task-to-in-progress.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-09 |
 | [Tasko API, as built — Hono on Cloudflare Workers with D1, deployed, 27 routes](ideas/tasko/hacker/tasko-api-as-built.md) | hacker | architecture | claude-opus-5.5 (claude-code) | 2026-10-09 |
 | [Workspace tasks repeat the Santian way — finishing one creates the next](ideas/tasko/decisions/0009-workspace-tasks-repeat-on-completion.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-14 |
 | [Adding a project member needs no invitation — division leads create projects, anyone active can be added](ideas/tasko/decisions/0010-adding-a-project-member-needs-no-invitation.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-14 |
 | [Project and member build tickets — create a project, add people directly, no invitation step](ideas/tasko/hacker/project-and-member-build-tickets.md) | hacker | spec | claude-opus-5.5 (claude-code) | 2026-10-14 |
-| [New project" sits at the end of the tab strip, not in the account menu or behind the FAB](ideas/tasko/decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-19 |
+| ["New project" sits at the end of the tab strip, not in the account menu or behind the FAB](ideas/tasko/decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-19 |
 | [Division leads run repeating tasks from one "repeating" view, opened from the toolbar](ideas/tasko/decisions/0012-division-leads-run-repeats-from-a-repeating-view.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-19 |
 | [An ended repeat stays in the repeating view until a lead deletes it](ideas/tasko/decisions/0013-ended-repeats-stay-until-deleted.md) | intelligence | decision | claude-opus-5.5 (claude-code) | 2026-10-19 |
 | [Repeating view build tickets — leads list, follow, change, create, stop and delete repeating tasks](ideas/tasko/hacker/repeating-view-build-tickets.md) | hacker | spec | claude-opus-5.5 (claude-code) | 2026-10-19 |
@@ -102,7 +102,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [Building an interactive 3D event badge with React Three Fiber](library/vercel-interactive-3d-event-badge.md) | - | analysis | article | 2026-10-30 |
 | [Detail edit saves with a button, assignees cannot edit the due date, the strip counts all my tasks, archive is the backend's call](ideas/tasko/decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Archiving a task reuses cancelled_date, Media files live in Cloudflare R2](ideas/tasko/decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
-| [My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
+| ["My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Calendar days are rings, not dots; the month is 6 weeks tall; the full screen shows every task](ideas/tasko/decisions/0021-calendar-days-are-rings-not-dots.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [A task is moved on in Task Detail, not by a checkbox in the list](ideas/tasko/decisions/0022-a-task-is-moved-on-in-task-detail-not-by-a-list-checkbox.md) | intelligence | decision | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
 | [Detail tabs and workload strip build tickets — H11 and H12](ideas/tasko/hacker/detail-tabs-and-workload-strip-build-tickets.md) | hacker | spec | claude-sonnet-5.5 (claude-code) | 2026-11-10 |
@@ -223,10 +223,10 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [v1 build defaults — Flutter + Cubit client, online only, and the open task rules closed the simple way](ideas/tasko/decisions/0005-v1-build-defaults.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
 | [Promote Tasko from idea to project](ideas/tasko/decisions/0006-promote-tasko-to-project.md) | tasko | decision | draft | none | claude-opus-5.5 (claude-code) |
 | [Server rules settled in the Tasko API review — a proof is a link, who edits, one level of sub-tasks](ideas/tasko/decisions/0007-server-rules-settled-in-the-api-review.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
-| [Start working" in Task Detail moves a task to in progress](ideas/tasko/decisions/0008-start-working-moves-a-task-to-in-progress.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
+| ["Start working" in Task Detail moves a task to in progress](ideas/tasko/decisions/0008-start-working-moves-a-task-to-in-progress.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
 | [Workspace tasks repeat the Santian way — finishing one creates the next](ideas/tasko/decisions/0009-workspace-tasks-repeat-on-completion.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
 | [Adding a project member needs no invitation — division leads create projects, anyone active can be added](ideas/tasko/decisions/0010-adding-a-project-member-needs-no-invitation.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
-| [New project" sits at the end of the tab strip, not in the account menu or behind the FAB](ideas/tasko/decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
+| ["New project" sits at the end of the tab strip, not in the account menu or behind the FAB](ideas/tasko/decisions/0011-new-project-sits-at-the-end-of-the-tab-strip.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
 | [Division leads run repeating tasks from one "repeating" view, opened from the toolbar](ideas/tasko/decisions/0012-division-leads-run-repeats-from-a-repeating-view.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
 | [An ended repeat stays in the repeating view until a lead deletes it](ideas/tasko/decisions/0013-ended-repeats-stay-until-deleted.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
 | [Tasks, projects, divisions and users each get an activity log, opened by leads](ideas/tasko/decisions/0014-activity-logs-for-task-project-division-and-user.md) | tasko | decision | draft | weak | claude-opus-5.5 (claude-code) |
@@ -235,7 +235,7 @@ Notes nobody has properly read yet. Shortest path to a tidy vault is reading the
 | [A "my tasks" tab, first and opened on start, gathers the user's tasks and reviews from every tab](ideas/tasko/decisions/0017-a-my-tasks-tab-gathers-the-users-tasks.md) | tasko | decision | draft | none | claude-opus-5.5 (claude-code) |
 | [Detail edit saves with a button, assignees cannot edit the due date, the strip counts all my tasks, archive is the backend's call](ideas/tasko/decisions/0018-detail-edit-saves-explicitly-and-the-strip-counts-all-my-tasks.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | [Archiving a task reuses cancelled_date, Media files live in Cloudflare R2](ideas/tasko/decisions/0019-archiving-a-task-reuses-cancelled-date-and-media-files-live-in-r2.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
-| [My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
+| ["My tasks" moves to My Workspace, pulled down from home; the Actions rail follows it](ideas/tasko/decisions/0020-my-tasks-moves-to-my-workspace-pulled-down-from-home.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | [Calendar days are rings, not dots; the month is 6 weeks tall; the full screen shows every task](ideas/tasko/decisions/0021-calendar-days-are-rings-not-dots.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | [A task is moved on in Task Detail, not by a checkbox in the list](ideas/tasko/decisions/0022-a-task-is-moved-on-in-task-detail-not-by-a-list-checkbox.md) | tasko | decision | draft | none | claude-sonnet-5.5 (claude-code) |
 | [Tasko](ideas/tasko/README.md) | tasko | brief | draft | none | claude-opus-5.5 (claude-code) |

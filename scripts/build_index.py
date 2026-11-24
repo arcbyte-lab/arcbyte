@@ -48,7 +48,10 @@ def parse_frontmatter(text):
         if ":" not in line:
             continue
         k, v = line.split(":", 1)
-        v = v.strip().strip('"').strip("'")
+        v = v.strip()
+        # Unwrap one matching pair only: `"My tasks" moves...` keeps its quotes.
+        if len(v) >= 2 and v[0] == v[-1] and v[0] in "\"'":
+            v = v[1:-1]
         out[k.strip()] = v
     return out
 
