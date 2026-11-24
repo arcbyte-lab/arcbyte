@@ -705,6 +705,350 @@
     },
     {
       "type": "frame",
+      "id": "JMDct",
+      "x": 586,
+      "y": -356,
+      "name": "hifi / Tab Bar",
+      "width": 426,
+      "fill": "#FFFFFF",
+      "stroke": "#E5E7EB",
+      "strokeAlignment": "inner",
+      "gap": 5,
+      "padding": [
+        8,
+        15,
+        0,
+        15
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "FNUsP",
+          "name": "Workspaces",
+          "layout": "vertical",
+          "gap": 4,
+          "padding": [
+            10,
+            10,
+            10,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "nXu7f",
+              "name": "Group Label",
+              "opacity": 0.5,
+              "fill": "#6B7280",
+              "content": "WORKSPACES",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 12,
+              "fontWeight": "500",
+              "letterSpacing": 0.5
+            },
+            {
+              "type": "frame",
+              "id": "s3foF",
+              "name": "Tabs",
+              "height": 19,
+              "gap": 19,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OGCgY",
+                  "name": "Tab tech",
+                  "height": 29,
+                  "stroke": "#2563EB",
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "WgeyN",
+                      "name": "tech",
+                      "fill": "#6B7280",
+                      "content": "tech",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "M3LnAU",
+          "name": "Projects",
+          "layout": "vertical",
+          "gap": 4,
+          "padding": [
+            10,
+            10,
+            10,
+            0
+          ],
+          "justifyContent": "end",
+          "children": [
+            {
+              "type": "text",
+              "id": "uIX0g",
+              "name": "Group Label",
+              "opacity": 0.5,
+              "fill": "#6B7280",
+              "content": "PROJECTS",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 12,
+              "fontWeight": "500",
+              "letterSpacing": 0.5
+            },
+            {
+              "type": "frame",
+              "id": "NFcae",
+              "name": "Tabs",
+              "height": 19,
+              "gap": 19,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "B54oxh",
+                  "name": "Tab tasko-app",
+                  "height": 29,
+                  "stroke": "#2563EB",
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ASsvw",
+                      "name": "tasko-app",
+                      "fill": "#6B7280",
+                      "content": "tasko-app",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "K3Vc7w",
+                  "name": "Tab tasko-web",
+                  "height": 29,
+                  "stroke": "#2563EB",
+                  "strokeWidth": {
+                    "bottom": 2
+                  },
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "ez5Vc",
+                      "name": "tasko-web",
+                      "fill": "#333333",
+                      "content": "tasko-web",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "FfDVF",
+          "layoutPosition": "absolute",
+          "x": 195,
+          "y": 6,
+          "name": "Grabber",
+          "fill": "#D1D5DB",
+          "width": 36,
+          "height": 4
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "jLAyL",
+      "x": 1437,
+      "y": -1269,
+      "name": "hifi / Tab Bar",
+      "width": 426,
+      "fill": "#FFFFFF",
+      "stroke": "#E5E7EB",
+      "strokeAlignment": "inner",
+      "gap": 5,
+      "padding": [
+        8,
+        15,
+        0,
+        15
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "xD7Ue",
+          "name": "Workspaces",
+          "layout": "vertical",
+          "gap": 4,
+          "padding": [
+            10,
+            10,
+            10,
+            0
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "Vgz0t",
+              "name": "Group Label",
+              "opacity": 0.5,
+              "fill": "#6B7280",
+              "content": "WORKSPACES",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 12,
+              "fontWeight": "500",
+              "letterSpacing": 0.5
+            },
+            {
+              "type": "frame",
+              "id": "Fq7z2",
+              "name": "Tabs",
+              "height": 19,
+              "gap": 19,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SpxjF",
+                  "name": "Tab tech",
+                  "height": 29,
+                  "stroke": "#2563EB",
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nMK70",
+                      "name": "tech",
+                      "fill": "#6B7280",
+                      "content": "tech",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Bhaw2",
+          "name": "Projects",
+          "layout": "vertical",
+          "gap": 4,
+          "padding": [
+            10,
+            10,
+            10,
+            0
+          ],
+          "justifyContent": "end",
+          "children": [
+            {
+              "type": "text",
+              "id": "zs6Zs",
+              "name": "Group Label",
+              "opacity": 0.5,
+              "fill": "#6B7280",
+              "content": "PROJECTS",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 12,
+              "fontWeight": "500",
+              "letterSpacing": 0.5
+            },
+            {
+              "type": "frame",
+              "id": "yz1FT",
+              "name": "Tabs",
+              "height": 19,
+              "gap": 19,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "SLHv9",
+                  "name": "Tab tasko-app",
+                  "height": 29,
+                  "stroke": "#2563EB",
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "xtNjv",
+                      "name": "tasko-app",
+                      "fill": "#6B7280",
+                      "content": "tasko-app",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ZOpBm",
+                  "name": "Tab tasko-web",
+                  "height": 29,
+                  "stroke": "#2563EB",
+                  "strokeWidth": {
+                    "bottom": 2
+                  },
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "F3yK3",
+                      "name": "tasko-web",
+                      "fill": "#333333",
+                      "content": "tasko-web",
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": 13,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 2,
+          "id": "beARP",
+          "layoutPosition": "absolute",
+          "x": 195,
+          "y": 6,
+          "name": "Grabber",
+          "fill": "#D1D5DB",
+          "width": 36,
+          "height": 4
+        }
+      ]
+    },
+    {
+      "type": "frame",
       "id": "U0YkEc",
       "x": 1691,
       "y": 148,
@@ -910,7 +1254,7 @@
       "reusable": true,
       "width": 396,
       "height": 40,
-      "cornerRadius": 6,
+      "cornerRadius": 100,
       "stroke": "#3B82F633",
       "strokeAlignment": "outer",
       "children": [
@@ -921,7 +1265,7 @@
           "width": "fill_container",
           "height": "fill_container",
           "fill": "#FFFFFF",
-          "cornerRadius": 6,
+          "cornerRadius": 100,
           "stroke": "#E5E7EB",
           "strokeWidth": 1,
           "strokeAlignment": "inner",
@@ -1132,7 +1476,7 @@
       "type": "frame",
       "id": "v4yeV",
       "x": 529,
-      "y": 690,
+      "y": 765,
       "name": "hifi / Task Row states",
       "width": 426,
       "fill": "#FFFFFF",
@@ -41408,6 +41752,13 @@
               "fill": "#f2f3f5ff"
             },
             {
+              "id": "Z2CdrP",
+              "type": "ref",
+              "ref": "MEs9d",
+              "x": 0,
+              "y": 461
+            },
+            {
               "type": "frame",
               "id": "zZb6e",
               "name": "Frame 1",
@@ -41415,22 +41766,6 @@
               "height": 501,
               "layout": "vertical",
               "children": [
-                {
-                  "id": "XS9j0",
-                  "type": "ref",
-                  "ref": "cq1Vz",
-                  "name": "Tab Bar",
-                  "width": "fill_container",
-                  "height": "fit_content",
-                  "x": 0,
-                  "y": 0,
-                  "descendants": {
-                    "sziFP": {
-                      "x": 195,
-                      "enabled": false
-                    }
-                  }
-                },
                 {
                   "type": "frame",
                   "id": "KohYJ",
@@ -41441,61 +41776,6 @@
                   "fill": "#FFFFFF",
                   "layout": "vertical",
                   "children": [
-                    {
-                      "type": "frame",
-                      "id": "tWZOK",
-                      "name": "List Toolbar",
-                      "width": "fill_container",
-                      "height": 36,
-                      "fill": "#FFFFFF",
-                      "padding": [
-                        0,
-                        15
-                      ],
-                      "justifyContent": "space_between",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "HwTUO",
-                          "name": "Count",
-                          "fill": "#6B7280",
-                          "content": "9 open",
-                          "fontFamily": "Space Grotesk",
-                          "fontSize": 12,
-                          "fontWeight": "normal"
-                        },
-                        {
-                          "type": "frame",
-                          "id": "q6xhpy",
-                          "name": "Tools",
-                          "gap": 15,
-                          "alignItems": "center",
-                          "children": [
-                            {
-                              "type": "icon",
-                              "id": "rJAmk",
-                              "name": "search",
-                              "width": 20,
-                              "height": 20,
-                              "icon": "search",
-                              "library": "lucide",
-                              "fill": "#6B7280"
-                            },
-                            {
-                              "type": "icon",
-                              "id": "xLNTC",
-                              "name": "sliders-horizontal",
-                              "width": 20,
-                              "height": 20,
-                              "icon": "sliders-horizontal",
-                              "library": "lucide",
-                              "fill": "#6B7280"
-                            }
-                          ]
-                        }
-                      ]
-                    },
                     {
                       "type": "frame",
                       "id": "CLypI",
@@ -42351,7 +42631,7 @@
     {
       "type": "frame",
       "id": "n7uno",
-      "x": -445,
+      "x": -2454,
       "y": 1182,
       "name": "hifi / My Workspace / default",
       "clip": true,
@@ -43084,185 +43364,187 @@
                       "fill": "#9CA3AF"
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "nUAuI",
+          "x": 0,
+          "y": 874,
+          "name": "swipe up to back to home",
+          "width": "fill_container(426)",
+          "height": "fit_content(66)",
+          "fill": "#FFFFFF",
+          "stroke": "#E5E7EB",
+          "strokeAlignment": "inner",
+          "gap": 5,
+          "padding": [
+            8,
+            15,
+            0,
+            15
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "k4aiH",
+              "x": 15,
+              "y": 8,
+              "name": "Workspaces",
+              "enabled": false,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                10,
+                10,
+                10,
+                0
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "bb01c",
+                  "name": "Group Label",
+                  "opacity": 0.5,
+                  "fill": "#6B7280",
+                  "content": "WORKSPACES",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 0.5
                 },
                 {
                   "type": "frame",
-                  "id": "nUAuI",
-                  "name": "swipe up to back to home",
-                  "width": "fill_container",
-                  "height": "fit_content(66)",
-                  "fill": "#FFFFFF",
-                  "stroke": "#E5E7EB",
-                  "strokeAlignment": "inner",
-                  "gap": 5,
-                  "padding": [
-                    8,
-                    15,
-                    0,
-                    15
-                  ],
-                  "alignItems": "center",
+                  "id": "XIVCG",
+                  "name": "Tabs",
+                  "height": 19,
+                  "gap": 19,
                   "children": [
                     {
                       "type": "frame",
-                      "id": "k4aiH",
-                      "x": 15,
-                      "y": 8,
-                      "name": "Workspaces",
-                      "enabled": false,
+                      "id": "M8FcJ",
+                      "name": "Tab tech",
+                      "height": 29,
+                      "stroke": "#2563EB",
+                      "strokeAlignment": "inner",
                       "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        10,
-                        10,
-                        10,
-                        0
-                      ],
                       "children": [
                         {
                           "type": "text",
-                          "id": "bb01c",
-                          "name": "Group Label",
-                          "opacity": 0.5,
+                          "id": "JsIdQ",
+                          "name": "tech",
                           "fill": "#6B7280",
-                          "content": "WORKSPACES",
+                          "content": "tech",
                           "fontFamily": "Space Grotesk",
-                          "fontSize": 12,
-                          "fontWeight": "500",
-                          "letterSpacing": 0.5
-                        },
-                        {
-                          "type": "frame",
-                          "id": "XIVCG",
-                          "name": "Tabs",
-                          "height": 19,
-                          "gap": 19,
-                          "children": [
-                            {
-                              "type": "frame",
-                              "id": "M8FcJ",
-                              "name": "Tab tech",
-                              "height": 29,
-                              "stroke": "#2563EB",
-                              "strokeAlignment": "inner",
-                              "layout": "vertical",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "JsIdQ",
-                                  "name": "tech",
-                                  "fill": "#6B7280",
-                                  "content": "tech",
-                                  "fontFamily": "Space Grotesk",
-                                  "fontSize": 13,
-                                  "fontWeight": "500"
-                                }
-                              ]
-                            }
-                          ]
+                          "fontSize": 13,
+                          "fontWeight": "500"
                         }
                       ]
-                    },
-                    {
-                      "type": "frame",
-                      "id": "Mop5w",
-                      "x": 112,
-                      "y": 8,
-                      "name": "Projects",
-                      "enabled": false,
-                      "layout": "vertical",
-                      "gap": 4,
-                      "padding": [
-                        10,
-                        10,
-                        10,
-                        0
-                      ],
-                      "justifyContent": "end",
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "O8i8G5",
-                          "name": "Group Label",
-                          "opacity": 0.5,
-                          "fill": "#6B7280",
-                          "content": "PROJECTS",
-                          "fontFamily": "Space Grotesk",
-                          "fontSize": 12,
-                          "fontWeight": "500",
-                          "letterSpacing": 0.5
-                        },
-                        {
-                          "type": "frame",
-                          "id": "Nt6t8",
-                          "name": "Tabs",
-                          "height": 19,
-                          "gap": 19,
-                          "children": [
-                            {
-                              "type": "frame",
-                              "id": "KqcST",
-                              "name": "Tab tasko-app",
-                              "height": 29,
-                              "stroke": "#2563EB",
-                              "strokeAlignment": "inner",
-                              "layout": "vertical",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "NyeBX",
-                                  "name": "tasko-app",
-                                  "fill": "#6B7280",
-                                  "content": "tasko-app",
-                                  "fontFamily": "Space Grotesk",
-                                  "fontSize": 13,
-                                  "fontWeight": "500"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "frame",
-                              "id": "vIlS4",
-                              "name": "Tab tasko-web",
-                              "height": 29,
-                              "stroke": "#2563EB",
-                              "strokeWidth": {
-                                "bottom": 2
-                              },
-                              "strokeAlignment": "inner",
-                              "layout": "vertical",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "id": "GuJAt",
-                                  "name": "tasko-web",
-                                  "fill": "#333333",
-                                  "content": "tasko-web",
-                                  "fontFamily": "Space Grotesk",
-                                  "fontSize": 13,
-                                  "fontWeight": "500"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 2,
-                      "id": "MYY8O",
-                      "layoutPosition": "absolute",
-                      "x": 195,
-                      "y": 6,
-                      "name": "Grabber",
-                      "fill": "#D1D5DB",
-                      "width": 36,
-                      "height": 4
                     }
                   ]
                 }
               ]
+            },
+            {
+              "type": "frame",
+              "id": "Mop5w",
+              "x": 112,
+              "y": 8,
+              "name": "Projects",
+              "enabled": false,
+              "layout": "vertical",
+              "gap": 4,
+              "padding": [
+                10,
+                10,
+                10,
+                0
+              ],
+              "justifyContent": "end",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "O8i8G5",
+                  "name": "Group Label",
+                  "opacity": 0.5,
+                  "fill": "#6B7280",
+                  "content": "PROJECTS",
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 0.5
+                },
+                {
+                  "type": "frame",
+                  "id": "Nt6t8",
+                  "name": "Tabs",
+                  "height": 19,
+                  "gap": 19,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KqcST",
+                      "name": "Tab tasko-app",
+                      "height": 29,
+                      "stroke": "#2563EB",
+                      "strokeAlignment": "inner",
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "NyeBX",
+                          "name": "tasko-app",
+                          "fill": "#6B7280",
+                          "content": "tasko-app",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "vIlS4",
+                      "name": "Tab tasko-web",
+                      "height": 29,
+                      "stroke": "#2563EB",
+                      "strokeWidth": {
+                        "bottom": 2
+                      },
+                      "strokeAlignment": "inner",
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GuJAt",
+                          "name": "tasko-web",
+                          "fill": "#333333",
+                          "content": "tasko-web",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 2,
+              "id": "MYY8O",
+              "layoutPosition": "absolute",
+              "x": 195,
+              "y": 6,
+              "name": "Grabber",
+              "fill": "#D1D5DB",
+              "width": 36,
+              "height": 4
             }
           ]
         },
@@ -43282,7 +43564,16 @@
             },
             "RCAHg": {
               "fill": "#FFFFFF1A",
-              "stroke": "#27272A"
+              "stroke": "#27272A",
+              "width": 79,
+              "height": "fill_container",
+              "flipX": false,
+              "flipY": false,
+              "x": 327,
+              "y": 0
+            },
+            "RCAHg/e5YiIq": {
+              "enabled": false
             },
             "RCAHg/e5YiIq/E7RRS": {
               "fill": "#9CA3AF"
@@ -43357,11 +43648,9 @@
               "width": "fill_container"
             },
             {
-              "id": "Fe45U",
+              "id": "hLX4F",
               "type": "ref",
-              "ref": "cq1Vz",
-              "name": "Tab Bar",
-              "width": "fill_container",
+              "ref": "MEs9d",
               "x": 0,
               "y": 285
             },
@@ -43375,61 +43664,6 @@
               "fill": "#FFFFFF",
               "layout": "vertical",
               "children": [
-                {
-                  "type": "frame",
-                  "id": "eYkj3",
-                  "name": "List Toolbar",
-                  "width": "fill_container",
-                  "height": 36,
-                  "fill": "#FFFFFF",
-                  "padding": [
-                    0,
-                    15
-                  ],
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "WmdzG",
-                      "name": "Count",
-                      "fill": "#6B7280",
-                      "content": "5 open",
-                      "fontFamily": "Space Grotesk",
-                      "fontSize": 12,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "OtHd5",
-                      "name": "Tools",
-                      "gap": 15,
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "type": "icon",
-                          "id": "d4DMR5",
-                          "name": "search",
-                          "width": 20,
-                          "height": 20,
-                          "icon": "search",
-                          "library": "lucide",
-                          "fill": "#6B7280"
-                        },
-                        {
-                          "type": "icon",
-                          "id": "OfEW4",
-                          "name": "sliders-horizontal",
-                          "width": 20,
-                          "height": 20,
-                          "icon": "sliders-horizontal",
-                          "library": "lucide",
-                          "fill": "#6B7280"
-                        }
-                      ]
-                    }
-                  ]
-                },
                 {
                   "id": "eaWlz",
                   "type": "ref",
@@ -50935,7 +51169,7 @@
       "y": 388,
       "fill": "#ffffff",
       "content": "overdue",
-      "fontFamily": "Inter",
+      "fontFamily": "Space Grotesk",
       "fontSize": 16,
       "fontWeight": "normal"
     },
@@ -50946,7 +51180,7 @@
       "y": 442,
       "fill": "#ffffff",
       "content": "review",
-      "fontFamily": "Inter",
+      "fontFamily": "Space Grotesk",
       "fontSize": 16,
       "fontWeight": "normal"
     },
@@ -50957,7 +51191,7 @@
       "y": 414,
       "fill": "#ffffff",
       "content": "waiting / in progress",
-      "fontFamily": "Inter",
+      "fontFamily": "Space Grotesk",
       "fontSize": 16,
       "fontWeight": "normal"
     },
@@ -50968,15 +51202,15 @@
       "y": 470,
       "fill": "#ffffff",
       "content": "done",
-      "fontFamily": "Inter",
+      "fontFamily": "Space Grotesk",
       "fontSize": 16,
       "fontWeight": "normal"
     },
     {
       "type": "frame",
       "id": "nNI2E",
-      "x": 529,
-      "y": 978,
+      "x": 59,
+      "y": 323,
       "name": "hifi / Calendar / Week",
       "reusable": true,
       "width": 426,
@@ -61824,6 +62058,388 @@
               "ref": "KTC3r",
               "name": "actions",
               "height": "fill_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "id": "MEs9d",
+      "x": 529,
+      "y": 625,
+      "name": "Tasks List Tools",
+      "reusable": true,
+      "children": [
+        {
+          "type": "frame",
+          "id": "msQY9",
+          "x": 0,
+          "y": 0,
+          "name": "Frame 21",
+          "width": 426,
+          "fill": "#ffffffff",
+          "layout": "vertical",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "AzXeJ",
+              "name": "Frame 22",
+              "layout": "vertical",
+              "gap": 10,
+              "padding": [
+                4,
+                10,
+                2,
+                10
+              ],
+              "children": [
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 2,
+                  "id": "HB6tw",
+                  "name": "Grabber",
+                  "fill": "#D1D5DB",
+                  "width": 36,
+                  "height": 4
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Dan0j",
+              "name": "List Toolbar",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "padding": [
+                8,
+                15,
+                4,
+                15
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "N1VNmm",
+                  "name": "Tools",
+                  "width": "fill_container",
+                  "cornerRadius": 100,
+                  "stroke": "#6b72801f",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "gap": 4,
+                  "padding": 4,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "vbysV",
+                      "name": "Frame 13",
+                      "width": "fill_container",
+                      "fill": "#6b72801f",
+                      "cornerRadius": 100,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": [
+                        4,
+                        8
+                      ],
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "bsNvS",
+                          "name": "search",
+                          "width": 20,
+                          "height": 20,
+                          "icon": "search",
+                          "library": "lucide",
+                          "fill": "#6B7280"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "SJL1w",
+                      "name": "Frame 14",
+                      "fill": "#6b72801f",
+                      "cornerRadius": 100,
+                      "layout": "vertical",
+                      "gap": 10,
+                      "padding": [
+                        4,
+                        8
+                      ],
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "G20xc",
+                          "name": "sliders-horizontal",
+                          "width": 20,
+                          "height": 20,
+                          "icon": "sliders-horizontal",
+                          "library": "lucide",
+                          "fill": "#6B7280"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "l1R6ab",
+              "name": "List Toolbar",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "padding": [
+                0,
+                15
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "FPUlD",
+                  "name": "Frame 15",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    10,
+                    0
+                  ],
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "K0Nf3i",
+                      "name": "Frame 17",
+                      "width": "fill_container",
+                      "gap": 4,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xKTUv",
+                          "name": "Frame 12",
+                          "fill": "#3b82f5ff",
+                          "cornerRadius": 100,
+                          "layout": "vertical",
+                          "gap": 10,
+                          "padding": [
+                            4,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "CpF4r",
+                              "name": "Count",
+                              "fill": "#ffffffff",
+                              "content": "HO:IT",
+                              "fontFamily": "Space Grotesk",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ESaYB",
+                          "name": "Frame 12",
+                          "cornerRadius": 100,
+                          "stroke": "#dcdcdeff",
+                          "strokeWidth": 1,
+                          "strokeAlignment": "inner",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "padding": [
+                            4,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "WT2aC",
+                              "name": "Count",
+                              "fill": "#404040ff",
+                              "content": "HO:Marketing",
+                              "fontFamily": "Space Grotesk",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "path",
+                          "id": "AAl0x",
+                          "geometry": "M0 0l0 12",
+                          "width": 0,
+                          "height": 21,
+                          "stroke": "#d1d1d1ff",
+                          "strokeWidth": 1
+                        },
+                        {
+                          "type": "frame",
+                          "id": "n5JUs",
+                          "name": "Frame 12",
+                          "cornerRadius": 100,
+                          "stroke": "#dcdcdeff",
+                          "strokeWidth": 1,
+                          "strokeAlignment": "inner",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "padding": [
+                            4,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "S5305",
+                              "name": "Count",
+                              "fill": "#404040ff",
+                              "content": "TASKO APP",
+                              "fontFamily": "Space Grotesk",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "OvJq5",
+                          "name": "Frame 12",
+                          "cornerRadius": 100,
+                          "stroke": "#dcdcdeff",
+                          "strokeWidth": 1,
+                          "strokeAlignment": "inner",
+                          "layout": "vertical",
+                          "gap": 10,
+                          "padding": [
+                            4,
+                            8
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "XpKwH",
+                              "name": "Count",
+                              "fill": "#404040ff",
+                              "content": "TASKO WEB",
+                              "fontFamily": "Space Grotesk",
+                              "fontSize": 12,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "S7pFM",
+                      "x": 0,
+                      "y": 43,
+                      "name": "Frame 16",
+                      "enabled": false,
+                      "width": "fill_container(396)",
+                      "height": "fit_content(23)",
+                      "gap": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "G5tEbm",
+      "x": -644,
+      "y": 670,
+      "fill": "#ffffff",
+      "content": "simplify",
+      "fontFamily": "Inter",
+      "fontSize": 16,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "frame",
+      "id": "xzs1e",
+      "x": -1950,
+      "y": 1325,
+      "name": "Frame 18",
+      "height": 17,
+      "cornerRadius": 100,
+      "stroke": "#ffffffff",
+      "strokeWidth": 1,
+      "strokeAlignment": "inner",
+      "children": [
+        {
+          "type": "frame",
+          "id": "TIxOb",
+          "name": "Frame 19",
+          "height": "fit_content(17)",
+          "layout": "vertical",
+          "gap": 10,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "n6FOBz",
+              "name": "my tasks",
+              "fill": "#F3F4F6",
+              "textGrowth": "fixed-width-height",
+              "width": 64,
+              "height": "fill_container",
+              "content": "ALL TASKS",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 13,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lubiA",
+          "name": "Frame 20",
+          "height": "fit_content(17)",
+          "layout": "vertical",
+          "gap": 10,
+          "padding": [
+            4,
+            8
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "PmmVV",
+              "name": "private",
+              "fill": "#F3F4F6",
+              "textGrowth": "fixed-width-height",
+              "width": 49,
+              "height": "fill_container",
+              "content": "PRIVATE",
+              "fontFamily": "Space Grotesk",
+              "fontSize": 13,
+              "fontWeight": "500"
             }
           ]
         }
