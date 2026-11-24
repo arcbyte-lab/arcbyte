@@ -4,8 +4,8 @@
       "command": "C:\\Program Files\\ArtCraft\\FigCraft\\figcraft-cli.exe",
       "args": [
         "mcp",
-        "--automation-write-root",
-        "D:\\Projects\\arcbyte"
+        "--attach",
+        "9222"
       ]
     }
   }

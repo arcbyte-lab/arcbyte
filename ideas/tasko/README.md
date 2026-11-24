@@ -63,6 +63,7 @@ is a link. The calls still open are listed in
 - [Hifi mockup tickets for pen.dev](./hipster/hifi-mockup-tickets-for-pen-dev.md) — 7 prompts that restyle the lofi frames with `modern-minimal.css`, plus H7–H8 drawn directly
 - [Calendar revamp, iPhone style](./hipster/calendar-revamp-iphone-style.md) — dots instead of heatmap squares, a week strip when a day is picked, task titles in full screen
 - [Calendar spec](./hipster/calendar-spec.md) — the calendar as built: rings, a 6 week month, full screen; "Pulse panel" is now "Calendar"
+- [Search bar and context pills](./hipster/search-and-context-pills-spec.md) — the restyled section under the calendar on Home, and how My Workspace gets it
 
 **Hacker**
 - [Santian's concepts mapped onto Tasko's schema](./hacker/santian-concepts-mapped-to-tasko-schema.md) — what fits, what has no column (List, star, reminder)

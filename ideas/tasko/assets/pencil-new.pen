@@ -1,5 +1,5 @@
 {
-  "version": "2.22",
+  "version": "2.25",
   "children": [
     {
       "type": "frame",
@@ -42630,6 +42630,1025 @@
     },
     {
       "type": "frame",
+      "id": "yu8Ei",
+      "x": -478,
+      "y": -3188,
+      "name": "hifi / home / default",
+      "clip": true,
+      "width": 426,
+      "height": 930,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "h8ven7",
+          "x": 0,
+          "y": 0,
+          "name": "Layout",
+          "width": 426,
+          "height": 930,
+          "layout": "vertical",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "zXG96",
+              "type": "ref",
+              "ref": "hdo9m",
+              "name": "Status Bar",
+              "width": "fill_container"
+            },
+            {
+              "id": "zb3zq",
+              "type": "ref",
+              "ref": "HYeAg",
+              "name": "Top Bar",
+              "width": "fill_container"
+            },
+            {
+              "id": "WYdFI",
+              "type": "ref",
+              "ref": "ikPcd",
+              "name": "Stats",
+              "width": "fill_container",
+              "flipX": false,
+              "flipY": false,
+              "height": "fit_content",
+              "x": 0,
+              "y": 85
+            },
+            {
+              "id": "DW8dR",
+              "type": "ref",
+              "ref": "BZn0t",
+              "name": "Calendar",
+              "width": "fill_container",
+              "height": "fit_content",
+              "fill": "#f2f3f5ff"
+            },
+            {
+              "id": "sVdfF",
+              "type": "ref",
+              "ref": "MEs9d",
+              "x": 0,
+              "y": 461
+            },
+            {
+              "type": "frame",
+              "id": "Lv2Tk",
+              "name": "Frame 1",
+              "width": "fill_container",
+              "height": 501,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Mx9Yn",
+                  "name": "Task List",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "clFZy",
+                      "name": "Group overdue",
+                      "width": "fill_container",
+                      "fill": "#ffffffff",
+                      "padding": [
+                        10,
+                        15,
+                        4,
+                        15
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "iL8Lv",
+                          "name": "Label",
+                          "opacity": 0.5,
+                          "fill": "#EF4444",
+                          "content": "OVERDUE",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "id": "Tt0HN",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Fix login redirect",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Fix login redirect"
+                        },
+                        "szDAK": {
+                          "content": "Overdue Oct 3",
+                          "fill": "#EF4444"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0042 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#FDA4AF",
+                          "fill": "#FFE4E699"
+                        },
+                        "DkLxZ": {
+                          "content": "Urgent",
+                          "fill": "#BE123C"
+                        },
+                        "x8CP4": {
+                          "stroke": "#BFDBFE",
+                          "fill": "#EFF6FF80"
+                        },
+                        "qyOMj": {
+                          "fill": "#2563EB"
+                        },
+                        "uG8Qb": {
+                          "content": "In Progress",
+                          "fill": "#2563EB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ENUl6",
+                      "name": "Group today",
+                      "width": "fill_container",
+                      "fill": "#ffffffff",
+                      "padding": [
+                        10,
+                        15,
+                        4,
+                        15
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "yngsl",
+                          "name": "Label",
+                          "opacity": 0.5,
+                          "fill": "#6B7280",
+                          "content": "TODAY",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "id": "S2jNBN",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Write onboarding copy",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Write onboarding copy"
+                        },
+                        "szDAK": {
+                          "content": "Oct 7"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0045 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#FDE68A",
+                          "fill": "#FFFBEB80"
+                        },
+                        "DkLxZ": {
+                          "content": "Medium",
+                          "fill": "#B45309"
+                        },
+                        "x8CP4": {
+                          "stroke": "#E2E8F0",
+                          "fill": "#F8FAFC80"
+                        },
+                        "qyOMj": {
+                          "fill": "#64748B"
+                        },
+                        "uG8Qb": {
+                          "content": "Waiting",
+                          "fill": "#475569"
+                        }
+                      }
+                    },
+                    {
+                      "id": "Abell",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Review PR #42",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Review PR #42"
+                        },
+                        "szDAK": {
+                          "content": "Oct 7"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0039 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#FECACA",
+                          "fill": "#FEF2F280"
+                        },
+                        "DkLxZ": {
+                          "content": "High",
+                          "fill": "#DC2626"
+                        },
+                        "x8CP4": {
+                          "stroke": "#FED7AA",
+                          "fill": "#FFF7ED80"
+                        },
+                        "qyOMj": {
+                          "fill": "#F97316"
+                        },
+                        "uG8Qb": {
+                          "content": "Under Review",
+                          "fill": "#EA580C"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "erdRO",
+                      "name": "Group tomorrow",
+                      "width": "fill_container",
+                      "fill": "#ffffffff",
+                      "padding": [
+                        10,
+                        15,
+                        4,
+                        15
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "j05WtP",
+                          "name": "Label",
+                          "opacity": 0.5,
+                          "fill": "#6B7280",
+                          "content": "TOMORROW",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "id": "PknPv",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Deploy staging",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Deploy staging"
+                        },
+                        "szDAK": {
+                          "content": "Oct 8"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0047 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#FECACA",
+                          "fill": "#FEF2F280"
+                        },
+                        "DkLxZ": {
+                          "content": "High",
+                          "fill": "#DC2626"
+                        },
+                        "x8CP4": {
+                          "stroke": "#E2E8F0",
+                          "fill": "#F8FAFC80"
+                        },
+                        "qyOMj": {
+                          "fill": "#64748B"
+                        },
+                        "uG8Qb": {
+                          "content": "Waiting",
+                          "fill": "#475569"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wtYcr",
+                      "name": "Group later",
+                      "width": "fill_container",
+                      "fill": "#ffffffff",
+                      "padding": [
+                        10,
+                        15,
+                        4,
+                        15
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "DnhN3",
+                          "name": "Label",
+                          "opacity": 0.5,
+                          "fill": "#6B7280",
+                          "content": "LATER",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "id": "S4mbt",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Design empty state",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Design empty state"
+                        },
+                        "szDAK": {
+                          "content": "Oct 14"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0036 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#BFDBFE",
+                          "fill": "#EFF6FF80"
+                        },
+                        "DkLxZ": {
+                          "content": "Low",
+                          "fill": "#2563EB"
+                        },
+                        "x8CP4": {
+                          "stroke": "#E2E8F0",
+                          "fill": "#F8FAFC80"
+                        },
+                        "qyOMj": {
+                          "fill": "#64748B"
+                        },
+                        "uG8Qb": {
+                          "content": "Waiting",
+                          "fill": "#475569"
+                        }
+                      }
+                    },
+                    {
+                      "id": "FFFeU",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Update favicon",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Update favicon"
+                        },
+                        "szDAK": {
+                          "content": "Oct 20"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0051 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#BFDBFE",
+                          "fill": "#EFF6FF80"
+                        },
+                        "DkLxZ": {
+                          "content": "Low",
+                          "fill": "#2563EB"
+                        },
+                        "x8CP4": {
+                          "stroke": "#BFDBFE",
+                          "fill": "#EFF6FF80"
+                        },
+                        "qyOMj": {
+                          "fill": "#2563EB"
+                        },
+                        "uG8Qb": {
+                          "content": "In Progress",
+                          "fill": "#2563EB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "h3jIE",
+                      "name": "Completed (collapsed)",
+                      "width": "fill_container",
+                      "height": 44,
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        15
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "lw9Nt",
+                          "name": "Label",
+                          "fill": "#6B7280",
+                          "content": "Completed (3)",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "CTthZ",
+                          "name": "chevron-down",
+                          "width": 20,
+                          "height": 20,
+                          "icon": "chevron-down",
+                          "library": "lucide",
+                          "fill": "#6B7280"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "xq29n",
+              "name": "Frame 1",
+              "width": "fill_container",
+              "height": 501,
+              "layout": "vertical",
+              "children": [
+                {
+                  "id": "ke6dK",
+                  "type": "ref",
+                  "ref": "cq1Vz",
+                  "name": "Tab Bar",
+                  "width": "fill_container",
+                  "height": "fit_content",
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "sziFP": {
+                      "x": 195,
+                      "enabled": false
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "PGJ3B",
+                  "name": "Task List",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#FFFFFF",
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "FTBmw",
+                      "name": "List Toolbar",
+                      "width": "fill_container",
+                      "height": 36,
+                      "fill": "#FFFFFF",
+                      "padding": [
+                        0,
+                        15
+                      ],
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FKuBV",
+                          "name": "Count",
+                          "fill": "#6B7280",
+                          "content": "9 open",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "gGT0l",
+                          "name": "Tools",
+                          "gap": 15,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "z8cm0N",
+                              "name": "search",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "search",
+                              "library": "lucide",
+                              "fill": "#6B7280"
+                            },
+                            {
+                              "type": "icon",
+                              "id": "qMi0Z",
+                              "name": "sliders-horizontal",
+                              "width": 20,
+                              "height": 20,
+                              "icon": "sliders-horizontal",
+                              "library": "lucide",
+                              "fill": "#6B7280"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "i4bXY3",
+                      "name": "Group overdue",
+                      "width": "fill_container",
+                      "fill": "#ffffffff",
+                      "padding": [
+                        10,
+                        15,
+                        4,
+                        15
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jlWKJ",
+                          "name": "Label",
+                          "opacity": 0.5,
+                          "fill": "#EF4444",
+                          "content": "OVERDUE",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "id": "MPb64",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Fix login redirect",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Fix login redirect"
+                        },
+                        "szDAK": {
+                          "content": "Overdue Oct 3",
+                          "fill": "#EF4444"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0042 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#FDA4AF",
+                          "fill": "#FFE4E699"
+                        },
+                        "DkLxZ": {
+                          "content": "Urgent",
+                          "fill": "#BE123C"
+                        },
+                        "x8CP4": {
+                          "stroke": "#BFDBFE",
+                          "fill": "#EFF6FF80"
+                        },
+                        "qyOMj": {
+                          "fill": "#2563EB"
+                        },
+                        "uG8Qb": {
+                          "content": "In Progress",
+                          "fill": "#2563EB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "f8w7L",
+                      "name": "Group today",
+                      "width": "fill_container",
+                      "fill": "#ffffffff",
+                      "padding": [
+                        10,
+                        15,
+                        4,
+                        15
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "B99yk",
+                          "name": "Label",
+                          "opacity": 0.5,
+                          "fill": "#6B7280",
+                          "content": "TODAY",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "id": "eNamb",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Write onboarding copy",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Write onboarding copy"
+                        },
+                        "szDAK": {
+                          "content": "Oct 7"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0045 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#FDE68A",
+                          "fill": "#FFFBEB80"
+                        },
+                        "DkLxZ": {
+                          "content": "Medium",
+                          "fill": "#B45309"
+                        },
+                        "x8CP4": {
+                          "stroke": "#E2E8F0",
+                          "fill": "#F8FAFC80"
+                        },
+                        "qyOMj": {
+                          "fill": "#64748B"
+                        },
+                        "uG8Qb": {
+                          "content": "Waiting",
+                          "fill": "#475569"
+                        }
+                      }
+                    },
+                    {
+                      "id": "Ppnec",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Review PR #42",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Review PR #42"
+                        },
+                        "szDAK": {
+                          "content": "Oct 7"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0039 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#FECACA",
+                          "fill": "#FEF2F280"
+                        },
+                        "DkLxZ": {
+                          "content": "High",
+                          "fill": "#DC2626"
+                        },
+                        "x8CP4": {
+                          "stroke": "#FED7AA",
+                          "fill": "#FFF7ED80"
+                        },
+                        "qyOMj": {
+                          "fill": "#F97316"
+                        },
+                        "uG8Qb": {
+                          "content": "Under Review",
+                          "fill": "#EA580C"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "VnXjv",
+                      "name": "Group tomorrow",
+                      "width": "fill_container",
+                      "fill": "#ffffffff",
+                      "padding": [
+                        10,
+                        15,
+                        4,
+                        15
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "LFwdR",
+                          "name": "Label",
+                          "opacity": 0.5,
+                          "fill": "#6B7280",
+                          "content": "TOMORROW",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "id": "JE4fs",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Deploy staging",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Deploy staging"
+                        },
+                        "szDAK": {
+                          "content": "Oct 8"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0047 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#FECACA",
+                          "fill": "#FEF2F280"
+                        },
+                        "DkLxZ": {
+                          "content": "High",
+                          "fill": "#DC2626"
+                        },
+                        "x8CP4": {
+                          "stroke": "#E2E8F0",
+                          "fill": "#F8FAFC80"
+                        },
+                        "qyOMj": {
+                          "fill": "#64748B"
+                        },
+                        "uG8Qb": {
+                          "content": "Waiting",
+                          "fill": "#475569"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GnbbK",
+                      "name": "Group later",
+                      "width": "fill_container",
+                      "fill": "#ffffffff",
+                      "padding": [
+                        10,
+                        15,
+                        4,
+                        15
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "s7xQL4",
+                          "name": "Label",
+                          "opacity": 0.5,
+                          "fill": "#6B7280",
+                          "content": "LATER",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "id": "qRTvS",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Design empty state",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Design empty state"
+                        },
+                        "szDAK": {
+                          "content": "Oct 14"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0036 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#BFDBFE",
+                          "fill": "#EFF6FF80"
+                        },
+                        "DkLxZ": {
+                          "content": "Low",
+                          "fill": "#2563EB"
+                        },
+                        "x8CP4": {
+                          "stroke": "#E2E8F0",
+                          "fill": "#F8FAFC80"
+                        },
+                        "qyOMj": {
+                          "fill": "#64748B"
+                        },
+                        "uG8Qb": {
+                          "content": "Waiting",
+                          "fill": "#475569"
+                        }
+                      }
+                    },
+                    {
+                      "id": "i6MBDf",
+                      "type": "ref",
+                      "ref": "TgYQ8",
+                      "name": "Update favicon",
+                      "width": "fill_container",
+                      "descendants": {
+                        "bpd9o": {
+                          "content": "Update favicon"
+                        },
+                        "szDAK": {
+                          "content": "Oct 20"
+                        },
+                        "EtE9O": {
+                          "content": "TW-0051 · tasko-web"
+                        },
+                        "Rmk7F": {
+                          "stroke": "#BFDBFE",
+                          "fill": "#EFF6FF80"
+                        },
+                        "DkLxZ": {
+                          "content": "Low",
+                          "fill": "#2563EB"
+                        },
+                        "x8CP4": {
+                          "stroke": "#BFDBFE",
+                          "fill": "#EFF6FF80"
+                        },
+                        "qyOMj": {
+                          "fill": "#2563EB"
+                        },
+                        "uG8Qb": {
+                          "content": "In Progress",
+                          "fill": "#2563EB"
+                        }
+                      }
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ZinXc",
+                      "name": "Completed (collapsed)",
+                      "width": "fill_container",
+                      "height": 44,
+                      "gap": 8,
+                      "padding": [
+                        0,
+                        15
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VMKAL",
+                          "name": "Label",
+                          "fill": "#6B7280",
+                          "content": "Completed (3)",
+                          "fontFamily": "Space Grotesk",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "icon",
+                          "id": "voQpX",
+                          "name": "chevron-down",
+                          "width": 20,
+                          "height": 20,
+                          "icon": "chevron-down",
+                          "library": "lucide",
+                          "fill": "#6B7280"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ZpRMX",
+          "type": "ref",
+          "ref": "sRzmd",
+          "name": "Rails Dock",
+          "x": 0,
+          "y": 830,
+          "descendants": {
+            "L8HqW/iq2Np": {
+              "fill": "#E0F2FE"
+            },
+            "L8HqW/iq2Np/E7RRS": {
+              "fill": "#1E3A8A"
+            },
+            "L8HqW/iq2Np/Lr1f1": {
+              "fill": "#1E3A8A"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "LZSub",
+      "x": 49,
+      "y": -3188,
+      "name": "hifi / home / default",
+      "clip": true,
+      "width": 426,
+      "height": 930,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "cornerRadius": 23,
+          "id": "M3UHAJ",
+          "x": 6,
+          "y": 13,
+          "fill": "#ffffffff",
+          "width": 413,
+          "height": 392
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 23,
+          "id": "Qu1g2",
+          "x": 6,
+          "y": 414.0997679814386,
+          "fill": "#ffffffff",
+          "width": 413,
+          "height": 392
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "Gt50B",
+          "x": 40,
+          "y": 841,
+          "fill": "#CCCCCC",
+          "width": 54,
+          "height": 55
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "gFhXr",
+          "x": 181,
+          "y": 841,
+          "fill": "#CCCCCC",
+          "width": 54,
+          "height": 55
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "vXjbU",
+          "x": 112,
+          "y": 841,
+          "fill": "#CCCCCC",
+          "width": 54,
+          "height": 55
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "kqDqo",
+          "x": 253,
+          "y": 841,
+          "fill": "#CCCCCC",
+          "width": 54,
+          "height": 55
+        },
+        {
+          "type": "rectangle",
+          "cornerRadius": 18,
+          "id": "izpAN",
+          "x": 321,
+          "y": 841,
+          "fill": "#CCCCCC",
+          "width": 54,
+          "height": 55
+        }
+      ]
+    },
+    {
+      "type": "frame",
       "id": "n7uno",
       "x": -2454,
       "y": 1182,
@@ -62376,74 +63395,6 @@
       "fontFamily": "Inter",
       "fontSize": 16,
       "fontWeight": "normal"
-    },
-    {
-      "type": "frame",
-      "id": "xzs1e",
-      "x": -1950,
-      "y": 1325,
-      "name": "Frame 18",
-      "height": 17,
-      "cornerRadius": 100,
-      "stroke": "#ffffffff",
-      "strokeWidth": 1,
-      "strokeAlignment": "inner",
-      "children": [
-        {
-          "type": "frame",
-          "id": "TIxOb",
-          "name": "Frame 19",
-          "height": "fit_content(17)",
-          "layout": "vertical",
-          "gap": 10,
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "n6FOBz",
-              "name": "my tasks",
-              "fill": "#F3F4F6",
-              "textGrowth": "fixed-width-height",
-              "width": 64,
-              "height": "fill_container",
-              "content": "ALL TASKS",
-              "fontFamily": "Space Grotesk",
-              "fontSize": 13,
-              "fontWeight": "500"
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "lubiA",
-          "name": "Frame 20",
-          "height": "fit_content(17)",
-          "layout": "vertical",
-          "gap": 10,
-          "padding": [
-            4,
-            8
-          ],
-          "justifyContent": "center",
-          "alignItems": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "PmmVV",
-              "name": "private",
-              "fill": "#F3F4F6",
-              "textGrowth": "fixed-width-height",
-              "width": 49,
-              "height": "fill_container",
-              "content": "PRIVATE",
-              "fontFamily": "Space Grotesk",
-              "fontSize": 13,
-              "fontWeight": "500"
-            }
-          ]
-        }
-      ]
     }
   ],
   "fileToken": "e1532f3c-6b08-4d63-9b90-b1fcdfffca39"
